@@ -1,0 +1,93 @@
+09-21 08:37:08.203 V/SplashScreenExceptionList(  316): SplashScreen checking exception for package lmah.vn (target sdk:21) -> false
+09-21 08:37:08.206 V/WindowManagerShell(  514): Transition requested: android.os.BinderProxy@3aac8c9 TransitionRequestInfo { type = 1, triggerTask = TaskInfo{userId=0 taskId=19 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=lmah.vn/.MainActivity } baseActivity=ComponentInfo{lmah.vn/lmah.vn.MainActivity} topActivity=ComponentInfo{lmah.vn/lmah.vn.MainActivity} origActivity=null realActivity=ComponentInfo{lmah.vn/lmah.vn.MainActivity} numActivities=1 lastActiveTime=1992350 supportsMultiWindow=true resizeMode=6 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@d5aebce} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=null topActivityInfo=ActivityInfo{2e35aef lmah.vn.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false isLetterboxDoubleTapEnabled= false topActivityEligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 isUserFullscreenOverrideEnabled=false isTopActivityTransparent=false locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null, flags = 0 }
+09-21 08:37:08.207 I/ActivityTaskManager(  316): START u0 {flg=0x10000000 cmp=lmah.vn/.MainActivity} with LAUNCH_SINGLE_TOP from uid 0 (BAL_ALLOW_ALLOWLISTED_UID) result code=0
+09-21 08:37:08.216 I/ActivityManager(  316): Start proc 3016:lmah.vn/u0a111 for next-top-activity {lmah.vn/lmah.vn.MainActivity}
+09-21 08:37:08.225 D/CoreBackPreview(  316): Window{b1e2e1c u0 Splash Screen lmah.vn}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@46f73a1, mPriority=0, mIsAnimationCallback=false}
+09-21 08:37:08.229 I/lmah.vn ( 3016): Using CollectorTypeCC GC.
+09-21 08:37:08.234 I/houdini ( 3016): [3016] Houdini now in android app mode
+09-21 08:37:08.234 I/houdini ( 3016): [3016] Intel Bridge Technology for Leidian Android Emulator only, Copyright(C) Intel Corp. 2012-2025.
+09-21 08:37:08.234 I/houdini ( 3016): [3016] Use permitted only under a valid evaluation software license agreement - all other rights reserved. Expire date 20261101.
+09-21 08:37:08.234 I/houdini ( 3016): [3016] Initialize library(version: 14.0.0_y.leidian_com1.0 RELEASE)... successfully.
+09-21 08:37:08.236 E/lmah.vn ( 3016): Not starting debugger since process cannot load the jdwp agent.
+09-21 08:37:08.263 V/WindowManager(  316): Sent Transition #41 createdAt=09-21 08:37:08.201 via request=TransitionRequestInfo { type = 1, triggerTask = TaskInfo{userId=0 taskId=19 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=lmah.vn/.MainActivity } baseActivity=ComponentInfo{lmah.vn/lmah.vn.MainActivity} topActivity=ComponentInfo{lmah.vn/lmah.vn.MainActivity} origActivity=null realActivity=ComponentInfo{lmah.vn/lmah.vn.MainActivity} numActivities=1 lastActiveTime=1992350 supportsMultiWindow=true resizeMode=6 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{2acd820 Task{ccd2069 #19 type=standard A=10111:lmah.vn}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=null topActivityInfo=ActivityInfo{631f5d9 lmah.vn.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isSleeping=false topActivityInSizeCompat=false topActivityEligibleForLetterboxEducation= false isLetterboxDoubleTapEnabled= false topActivityEligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 isUserFullscreenOverrideEnabled=false isTopActivityTransparent=false locusId=null displayAreaFeatureId=1 cameraCompatControlState=hidden}, remoteTransition = null, displayChange = null, flags = 0 }
+09-21 08:37:08.263 V/WindowManager(  316):     info={id=41 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{RemoteToken{2acd820 Task{ccd2069 #19 type=standard A=10111:lmah.vn}}} m=OPEN f=NONE leash=Surface(name=Task=19)/@0x7ff6c52 sb=Rect(0, 0 - 960, 540) eb=Rect(0, 0 - 960, 540) d=0 endFixedRotation=3},{WCT{RemoteToken{b7afa84 Task{8461191 #1 type=home}}} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0xc13bf39 sb=Rect(0, 0 - 960, 540) eb=Rect(0, 0 - 960, 540) d=0}]}
+09-21 08:37:08.285 D/nativeloader( 3016): Configuring clns-6 for other apk /system/framework/org.apache.http.legacy.jar. target_sdk_version=21, uses_libraries=ALL, library_path=/data/app/~~OxATu14755aIJcz0pSpWMg==/lmah.vn-OW2or4JXLO1HVB_UhUqm6g==/lib/arm:/system/fake-libs:/data/app/~~OxATu14755aIJcz0pSpWMg==/lmah.vn-OW2or4JXLO1HVB_UhUqm6g==/base.apk!/lib/armeabi, permitted_path=/data:/mnt/expand:/data/user/0/lmah.vn
+09-21 08:37:08.289 D/nativeloader( 3016): Configuring clns-7 for other apk /data/app/~~OxATu14755aIJcz0pSpWMg==/lmah.vn-OW2or4JXLO1HVB_UhUqm6g==/base.apk. target_sdk_version=21, uses_libraries=, library_path=/data/app/~~OxATu14755aIJcz0pSpWMg==/lmah.vn-OW2or4JXLO1HVB_UhUqm6g==/lib/arm:/system/fake-libs:/data/app/~~OxATu14755aIJcz0pSpWMg==/lmah.vn-OW2or4JXLO1HVB_UhUqm6g==/base.apk!/lib/armeabi, permitted_path=/data:/mnt/expand:/data/user/0/lmah.vn
+09-21 08:37:08.305 V/GraphicsEnvironment( 3016): Currently set values for:
+09-21 08:37:08.305 V/GraphicsEnvironment( 3016):   angle_gl_driver_selection_pkgs=[]
+09-21 08:37:08.305 V/GraphicsEnvironment( 3016):   angle_gl_driver_selection_values=[]
+09-21 08:37:08.305 V/GraphicsEnvironment( 3016): ANGLE GameManagerService for lmah.vn: false
+09-21 08:37:08.305 V/GraphicsEnvironment( 3016): lmah.vn is not listed in per-application setting
+09-21 08:37:08.305 V/GraphicsEnvironment( 3016): Neither updatable production driver nor prerelease driver is supported.
+09-21 08:37:08.394 I/houdini ( 3016): [3016] Expected CPU feature >> AES << is not supported.
+09-21 08:37:08.394 I/houdini ( 3016): [3016] Expected CPU feature >> PCLMULQDQ << is not supported.
+09-21 08:37:08.641 V/WindowManager(  316):     info={id=42 t=CHANGE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{WCT{RemoteToken{2acd820 Task{ccd2069 #19 type=standard A=10111:lmah.vn}}} m=CHANGE f=NONE p=WCT{RemoteToken{2540cb4 DefaultTaskDisplayArea@187655198}} leash=Surface(name=Task=19)/@0x7ff6c52 sb=Rect(0, 0 - 960, 540) eb=Rect(0, 0 - 540, 960) d=0 r=0->3:-1},{WCT{RemoteToken{2540cb4 DefaultTaskDisplayArea@187655198}} m=CHANGE f=NONE p=WCT{RemoteToken{e070dd Display{#0 state=ON size=540x960 ROTATION_270}}} leash=Surface(name=DefaultTaskDisplayArea)/@0xefc6b00 sb=Rect(0, 0 - 960, 540) eb=Rect(0, 0 - 540, 960) d=0 r=0->3:-1},{WCT{RemoteToken{e070dd Display{#0 state=ON size=540x960 ROTATION_270}}} m=CHANGE f=IS_DISPLAY leash=Surface(name=WindowedMagnification:0:31)/@0x11245c3 sb=Rect(0, 0 - 960, 540) eb=Rect(0, 0 - 540, 960) d=0 r=0->3:3}]}
+09-21 08:37:08.741 I/lmah.vn ( 3016): fastpipe: Connect success
+09-21 08:37:08.745 I/lmah.vn ( 3016): fastpipe: Connect success
+09-21 08:37:08.747 D/HostConnection( 3016): HostRPC::connect sucess: app=lmah.vn, pid=3016, tid=3016, this=0xeaed2800
+09-21 08:37:08.733 I/lmah.vn ( 3016): type=1400 audit(0.0:3224): avc:  denied  { read write } for  name="fastpipe" dev="tmpfs" ino=521 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1 app=lmah.vn
+09-21 08:37:08.749 D/HostConnection( 3016): queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:lmah.vn
+09-21 08:37:08.733 I/lmah.vn ( 3016): type=1400 audit(0.0:3225): avc:  denied  { open } for  path="/dev/fastpipe" dev="tmpfs" ino=521 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1 app=lmah.vn
+09-21 08:37:08.736 I/lmah.vn ( 3016): type=1400 audit(0.0:3226): avc:  denied  { map } for  path="/dev/fastpipe" dev="tmpfs" ino=521 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1 app=lmah.vn
+09-21 08:37:08.736 I/lmah.vn ( 3016): type=1400 audit(0.0:3227): avc:  denied  { ioctl } for  path="/dev/fastpipe" dev="tmpfs" ino=521 ioctlcmd=0x6864 scontext=u:r:untrusted_app_25:s0:c512,c768 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1 app=lmah.vn
+09-21 08:37:08.773 W/TelephonyPermissions(  698): reportAccessDeniedToReadIdentifiers:lmah.vn:getDeviceId:1
+09-21 08:37:08.774 I/AppsFlyer_1.8( 3016): Start tracking package: lmah.vn
+09-21 08:37:08.774 E/ZaloSDK ( 3016): Field R.attr.environment not found
+09-21 08:37:08.774 E/ZaloSDK ( 3016): Field R.attr.horizontal_alignment not found
+09-21 08:37:08.782 E/ZaloSDK ( 3016): Field R.styleable.WalletFragmentOptions_environment not found
+09-21 08:37:08.783 E/ZaloSDK ( 3016): Field R.styleable.com_facebook_like_view_horizontal_alignment not found
+09-21 08:37:08.785 W/TelephonyPermissions(  698): reportAccessDeniedToReadIdentifiers:lmah.vn:getDeviceId:1
+09-21 08:37:08.791 W/TelephonyPermissions(  698): reportAccessDeniedToReadIdentifiers:lmah.vn:getDeviceId:1
+09-21 08:37:08.796 D/CoreBackPreview(  316): Window{d137bb2 u0 lmah.vn/lmah.vn.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@3e6e680, mPriority=0, mIsAnimationCallback=false}
+09-21 08:37:08.803 I/lmah.vn ( 3016): fastpipe: Connect success
+09-21 08:37:08.804 D/HostConnection( 3016): HostRPC::connect sucess: app=lmah.vn, pid=3016, tid=3032, this=0xea952540
+09-21 08:37:08.805 D/HostConnection( 3016): queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:lmah.vn
+09-21 08:37:08.812 I/lmah.vn ( 3016): fastpipe: Connect success
+09-21 08:37:08.813 D/HostConnection( 3016): HostRPC::connect sucess: app=lmah.vn, pid=3016, tid=3038, this=0xea8fbc80
+09-21 08:37:08.815 D/HostConnection( 3016): queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:lmah.vn
+09-21 08:37:08.882 W/system_server(  316): Failed to determine oat file name for dex location /data/app/~~OxATu14755aIJcz0pSpWMg==/lmah.vn-OW2or4JXLO1HVB_UhUqm6g==/base.apk: Dalvik cache directory does not exist
+09-21 08:37:08.882 W/ziparchive(  316): Unable to open '/data/app/~~OxATu14755aIJcz0pSpWMg==/lmah.vn-OW2or4JXLO1HVB_UhUqm6g==/base.dm': No such file or directory
+09-21 08:37:08.883 I/ActivityTaskManager(  316): Displayed lmah.vn/.MainActivity for user 0: +681ms
+09-21 08:37:08.893 I/AppsFlyer_1.8-954628781( 3016): url: https://track.appsflyer.com/api/v2.3/androidevent?buildnumber=1.8&app_id=lmah.vn
+09-21 08:37:08.905 I/ImeTracker(  316): lmah.vn:13ab3e9f: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+09-21 08:37:08.905 I/ImeTracker(  316): lmah.vn:13ab3e9f: onCancelled at PHASE_SERVER_SHOULD_HIDE
+09-21 08:37:09.205 V/NME     ( 3016): Send on lost
+09-21 08:37:09.255 D/CoreBackPreview(  316): Window{b1e2e1c u0 Splash Screen lmah.vn EXITING}: Setting back callback null
+09-21 08:37:09.255 W/InputManager-JNI(  316): Input channel object 'b1e2e1c Splash Screen lmah.vn (client)' was disposed without first being removed with the input manager!
+09-21 08:37:09.407 D/FacebookSession( 3016): Init facebook:lmah.vn
+09-21 08:37:09.854 I/AppsFlyer_1.8( 3016): Calling server for attribution url: https://api.appsflyer.com/install_data/v3/lmah.vn?devkey=wwtGAFtsrXCG8gXMjnhTGF&device_id=1789906407417-8482440172984002861
+09-21 08:37:10.255 I/AppsFlyer_1.8( 3016): AttributionIdFetcher response code: 400  url: https://api.appsflyer.com/install_data/v3/lmah.vn?devkey=wwtGAFtsrXCG8gXMjnhTGF&device_id=1789906407417-8482440172984002861
+09-21 08:37:19.918 I/ImeTracker( 3016): lmah.vn:e5cb75e6: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+09-21 08:37:19.918 I/ImeTracker(  316): lmah.vn:e5cb75e6: onCancelled at PHASE_SERVER_SHOULD_HIDE
+09-21 08:37:24.863 I/ImeTracker( 3016): lmah.vn:f0fa61e: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+09-21 08:37:24.863 I/ImeTracker(  316): lmah.vn:f0fa61e: onCancelled at PHASE_SERVER_SHOULD_HIDE
+09-21 08:37:26.072 V/FBSession( 3016): logEvent: name Crash params [Ljava.lang.String;@417caab
+09-21 08:37:26.072 V/FBSession( 3016): logEvent: id LastState value logined
+09-21 08:37:34.706 I/houdini ( 3016): [3038] meet illegal address: bbed3890 without executable permission.
+09-21 08:37:34.727 I/houdini ( 3016): [3038] 
+09-21 08:37:34.727 I/houdini ( 3016): [3038] arm backtrace: pc = bbed3890, lr = 0567603c
+09-21 08:37:34.727 I/houdini ( 3016): [3038]   #00  pc 00100890 <anonymous:0xbbdd3000>
+09-21 08:37:34.727 I/houdini ( 3016): [3038]   #01  pc 00c76038 /data/app/~~OxATu14755aIJcz0pSpWMg==/lmah.vn-OW2or4JXLO1HVB_UhUqm6g==/lib/arm/libApplicationMain.so
+09-21 08:37:34.727 I/houdini ( 3016): [3038]   #02  pc 00086f8c /data/app/~~OxATu14755aIJcz0pSpWMg==/lmah.vn-OW2or4JXLO1HVB_UhUqm6g==/lib/arm/liblime.so
+09-21 08:37:34.727 I/houdini ( 3016): [3038]   #03  pc 000ad91c /data/app/~~OxATu14755aIJcz0pSpWMg==/lmah.vn-OW2or4JXLO1HVB_UhUqm6g==/lib/arm/liblime.so
+09-21 08:37:34.727 I/houdini ( 3016): [3038] 
+09-21 08:37:34.727 F/libc    ( 3016): Fatal signal 11 (SIGSEGV), code 2 (SEGV_ACCERR), fault addr 0xdead1007 in tid 3038 (GLThread 27), pid 3016 (lmah.vn)
+09-21 08:37:34.733 I/crash_dump32( 3096): type=1400 audit(0.0:3286): avc:  denied  { getattr } for  path="/data/local/cfg-hydan/app_sysprop" dev="sdb2" ino=134262 scontext=u:r:crash_dump:s0:c512,c768 tcontext=u:object_r:system_data_file:s0 tclass=file permissive=1 app=lmah.vn
+09-21 08:37:34.733 I/crash_dump32( 3096): type=1400 audit(0.0:3287): avc:  denied  { open } for  path="/data/local/cfg-hydan/app_sysprop" dev="sdb2" ino=134262 scontext=u:r:crash_dump:s0:c512,c768 tcontext=u:object_r:system_data_file:s0 tclass=file permissive=1 app=lmah.vn
+09-21 08:37:34.819 I/crash_dump32( 3097): type=1400 audit(0.0:3288): avc:  denied  { read } for  name="data@resource-cache@com.android.systemui-dynamic-OKN5.frro@idmap" dev="sdb2" ino=917941 scontext=u:r:crash_dump:s0:c512,c768 tcontext=u:object_r:resourcecache_data_file:s0 tclass=file permissive=1 app=lmah.vn
+09-21 08:37:34.819 I/crash_dump32( 3097): type=1400 audit(0.0:3289): avc:  denied  { open } for  path="/data/resource-cache/data@resource-cache@com.android.systemui-dynamic-OKN5.frro@idmap" dev="sdb2" ino=917941 scontext=u:r:crash_dump:s0:c512,c768 tcontext=u:object_r:resourcecache_data_file:s0 tclass=file permissive=1 app=lmah.vn
+09-21 08:37:34.819 I/crash_dump32( 3097): type=1400 audit(0.0:3290): avc:  denied  { getattr } for  path="/data/resource-cache/data@resource-cache@com.android.systemui-dynamic-OKN5.frro@idmap" dev="sdb2" ino=917941 scontext=u:r:crash_dump:s0:c512,c768 tcontext=u:object_r:resourcecache_data_file:s0 tclass=file permissive=1 app=lmah.vn
+09-21 08:37:34.819 I/crash_dump32( 3097): type=1400 audit(0.0:3291): avc:  denied  { map } for  path="/data/resource-cache/data@resource-cache@com.android.systemui-dynamic-OKN5.frro@idmap" dev="sdb2" ino=917941 scontext=u:r:crash_dump:s0:c512,c768 tcontext=u:object_r:resourcecache_data_file:s0 tclass=file permissive=1 app=lmah.vn
+09-21 08:37:34.853 F/DEBUG   ( 3097): Cmdline: lmah.vn
+09-21 08:37:34.853 F/DEBUG   ( 3097): pid: 3016, tid: 3038, name: GLThread 27  >>> lmah.vn <<<
+09-21 08:37:34.853 F/DEBUG   ( 3097):       #00 pc 0027f2ba  /system/vendor/lib/libhoudini.so (BuildId: d0bea18b701e0f1e3912bbceb672c72573237453)
+09-21 08:37:34.877 W/ActivityTaskManager(  316):   Force finishing activity lmah.vn/.MainActivity
+09-21 08:37:34.902 W/ActivityTaskManager(  316): Failed to send top-resumed=false to ActivityRecord{6d2f0 u0 lmah.vn/.MainActivity t19 f}}
+09-21 08:37:34.904 I/ImeTracker(  316): lmah.vn:b793eb40: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_REMOVE_CLIENT
+09-21 08:37:34.904 I/ImeTracker(  316): lmah.vn:b793eb40: onCancelled at PHASE_SERVER_SHOULD_HIDE
+09-21 08:37:34.969 E/ActivityTaskManager(  316): Failed to schedule configuration change: ProcessRecord{b1d7fa 3016:lmah.vn/u0a111}
+09-21 08:37:34.969 E/ActivityTaskManager(  316): 	at com.android.server.wm.WindowProcessController.onMergedOverrideConfigurationChanged(WindowProcessController.java:1587)
+09-21 08:37:34.971 I/WindowManager(  316): WIN DEATH: Window{d137bb2 u0 lmah.vn/lmah.vn.MainActivity}
+09-21 08:37:34.971 W/InputManager-JNI(  316): Input channel object 'd137bb2 lmah.vn/lmah.vn.MainActivity (client)' was disposed without first being removed with the input manager!
+09-21 08:37:34.986 I/ActivityManager(  316): Process lmah.vn (pid 3016) has died: fg  TOP 
+09-21 08:37:35.013 I/CoreService( 1053): notifyClosing notify tab closed taskPackageName:lmah.vn

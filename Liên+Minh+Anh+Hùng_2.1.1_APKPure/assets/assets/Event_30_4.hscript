@@ -1,0 +1,2521 @@
+//start include
+var Date			= Type.resolveClass ("Date");
+var Map				= Type.resolveClass ("Map");
+var StringMap		= Type.resolveClass ("haxe.ds.StringMap");
+var Math			= Type.resolveClass ("Math");
+var String			= Type.resolveClass ("String");
+
+var Matrix			= Type.resolveClass ("flash.geom.Matrix");
+if (Matrix == null)
+	Matrix			= Type.resolveClass ("openfl._v2.geom.Matrix");
+
+var Point			= Type.resolveClass ("flash.geom.Point");
+if (Point == null)
+	Point			= Type.resolveClass ("openfl._v2.geom.Point");
+
+var GradientType	= Type.resolveEnum ("flash.display.GradientType");
+if (GradientType == null)
+	GradientType	= Type.resolveEnum ("openfl.display.GradientType");
+if (GradientType == null)
+	GradientType	= Type.resolveEnum ("openfl._v2.display.GradientType");
+
+var Actuate			= Type.resolveClass ("motion.Actuate");
+var Linear			= Type.resolveClass ("motion.easing.Linear;");
+
+var MouseEvent		= Type.resolveClass ("flash.events.MouseEvent");
+if (MouseEvent == null)
+	MouseEvent		= Type.resolveClass ("openfl._v2.events.MouseEvent");
+	
+var Event		= Type.resolveClass ("flash.events.Event");
+if (Event == null)
+	Event		= Type.resolveClass ("openfl._v2.events.Event");
+	
+TabsEvent			= Type.resolveClass ("TabsEvent");
+
+var SoftDefines		= Type.resolveClass ("SoftDefines");
+var DF_UI			= Type.resolveClass ("DF_UI");
+var DF_LISTITEM		= Type.resolveClass ("DF_LISTITEM");
+var DF_COMBOUI		= Type.resolveClass ("DF_COMBOUI");
+var Fonts			= Type.resolveClass ("Fonts");
+var Anchor			= Type.resolveClass ("Anchor");
+var FBEvent			= Type.resolveClass ("FBEvent");
+var Request			= Type.resolveClass ("Request");
+var FBObjectOutput	= Type.resolveClass ("FBObjectOutput");
+var Commands		= Type.resolveClass ("Commands");
+var Keys			= Type.resolveClass ("Keys");
+
+var Resource		= Type.resolveClass ("Resource");
+var TextWrapper		= Type.resolveClass ("TextWrapper");
+var ArmorSet		= Type.resolveClass ("ArmorSet");
+var PageScrollable	= Type.resolveClass ("PageScrollable");
+var GameItem		= Type.resolveClass ("GameItem");
+var ShopItem		= Type.resolveClass ("ShopItem");
+var SpecialItemInfo	= Type.resolveClass ("SpecialItemInfo");
+var ResourceDesc	= Type.resolveClass ("ResourceDesc");
+var GameItemType	= Type.resolveEnum("GameItemType");
+
+var ShopElement		= Type.resolveClass("ShopElement");
+var ShopUtilities	= Type.resolveClass("ShopUtilities");
+
+var PixmaGame		= Type.resolveClass ("PixmaGame");
+var StockManager	= Type.resolveClass ("StockManager");
+var UserInfo		= Type.resolveClass ("UserInfo");
+var RewardItemInfo	= Type.resolveClass ("RewardItemInfo");
+var RequestGennarator	= Type.resolveClass ("RequestGennarator");
+var HomeState		= Type.resolveClass ("HomeState");
+var Utilities		= Type.resolveClass ("Utilities");
+
+var EquipInfo		= Type.resolveClass ("EquipInfo");
+var ParseObject		= Type.resolveClass ("ParseObject");
+var SmallIcon		= Type.resolveClass ("SmallIcon");
+var Button			= Type.resolveClass ("Button");
+var VTabs			= Type.resolveClass ("VTabs");
+var Layer			= Type.resolveClass ("Layer");
+var DisplayObject	= Type.resolveClass ("DisplayObject");
+var Label			= Type.resolveClass ("Label");
+var Popup			= Type.resolveClass ("Popup");
+var Border			= Type.resolveClass ("Border");
+var ColorRect		= Type.resolveClass ("ColorRect");
+var FlyingObject	= Type.resolveClass ("FlyingObject");
+var Hint			= Type.resolveClass ("Hint");
+var TextFormat		= Type.resolveClass ("flash.text.TextFormat");
+if(TextFormat == null)
+	TextFormat		= Type.resolveClass ("openfl._v2.text.TextFormat");
+var SimpleButton	= Type.resolveClass ("flash.display.SimpleButton");
+if(SimpleButton == null)
+	SimpleButton	= Type.resolveClass ("openfl._v2.display.SimpleButton");
+//end include
+
+//GFX_EVENT_30_4
+var DF_EVENT = {};
+DF_EVENT.FRAME_BACKGROUND			= 0;
+DF_EVENT.FRAME_STAR_EDGE			= 1;
+DF_EVENT.FRAME_PINK_GIFT			= 2;
+DF_EVENT.FRAME_BLUE_GIFT			= 3;
+DF_EVENT.FRAME_RED_GIFT				= 4;
+DF_EVENT.FRAME_GREEN_GIFT			= 5;
+DF_EVENT.FRAME_YELLOW_GIFT			= 6;
+DF_EVENT.FRAME_GRAY_GIFT			= 7;
+DF_EVENT.FRAME_PINK_GOT				= 8;
+DF_EVENT.FRAME_BLUE_GOT				= 9;
+DF_EVENT.FRAME_RED_GOT				= 10;
+DF_EVENT.FRAME_GREEN_GOT			= 11;
+DF_EVENT.FRAME_YELLOW_GOT			= 12;
+DF_EVENT.FRAME_COMBO				= 13;
+DF_EVENT.FRAME_COMBO_GOT			= 14;
+DF_EVENT.FRAME_GRAY_COMBO			= 15;
+DF_EVENT.FRAME_SHOP_ICON			= 16;
+DF_EVENT.FRAME_CHANGE_ICON			= 17;
+DF_EVENT.FRAME_INFO_ICON			= 18;
+DF_EVENT.FRAME_PINK_SLOT			= 19;
+DF_EVENT.FRAME_BLUE_SLOT			= 20;
+DF_EVENT.FRAME_RED_SLOT				= 21;
+DF_EVENT.FRAME_GREEN_SLOT			= 22;
+DF_EVENT.FRAME_YELLOW_SLOT			= 23;
+DF_EVENT.FRAME_PINK_PIECE			= 24;
+DF_EVENT.FRAME_BLUE_PIECE			= 25;
+DF_EVENT.FRAME_RED_PIECE			= 26;
+DF_EVENT.FRAME_GREEN_PIECE			= 27;
+DF_EVENT.FRAME_YELLOW_PIECE			= 28;
+DF_EVENT.FRAME_PINK_GEM				= 29;
+DF_EVENT.FRAME_BLUE_GEM				= 30;
+DF_EVENT.FRAME_RED_GEM				= 31;
+DF_EVENT.FRAME_GREEN_GEM			= 32;
+DF_EVENT.FRAME_YELLOW_GEM			= 33;
+DF_EVENT.FRAME_GEM					= 34;
+DF_EVENT.FRAME_PIECE				= 49;
+DF_EVENT.FRAME_LINE					= 69;
+DF_EVENT.FRAME_COIN					= 72;
+DF_EVENT.FRAME_TITLE				= 73;
+DF_EVENT.FRAME_PINK_ARMOR			= 74;
+DF_EVENT.FRAME_BLUE_ARMOR			= 75;
+DF_EVENT.FRAME_RED_ARMOR			= 76;
+DF_EVENT.FRAME_GREEN_ARMOR			= 77;
+DF_EVENT.FRAME_YELLOW_ARMOR			= 78;
+DF_EVENT.FRAME_PINK_ARMOR_GRAY		= 79;
+DF_EVENT.FRAME_BLUE_ARMOR_GRAY		= 80;
+DF_EVENT.FRAME_RED_ARMOR_GRAY		= 81;
+DF_EVENT.FRAME_GREEN_ARMOR_GRAY		= 82;
+DF_EVENT.FRAME_YELLOW_ARMOR_GRAY	= 83;
+DF_EVENT.FRAME_PINK_ARMOR_GOT		= 84;
+DF_EVENT.FRAME_BLUE_ARMOR_GOT		= 85;
+DF_EVENT.FRAME_RED_ARMOR_GOT		= 86;
+DF_EVENT.FRAME_GREEN_ARMOR_GOT		= 87;
+DF_EVENT.FRAME_YELLOW_ARMOR_GOT		= 88;
+DF_EVENT.ANIM_GEM					= 0;
+DF_EVENT.ANIM_PIECE					= 1;
+DF_EVENT.ANIM_LINE					= 2;
+
+var EVENT_ID = 8;
+	
+var GEM_PINK = 40;
+var GEM_BLUE = 41;
+var GEM_RED = 42;
+var GEM_GREEN = 43;
+var GEM_YELLOW = 44;
+var GEMS = [GEM_PINK, GEM_BLUE, GEM_RED, GEM_GREEN, GEM_YELLOW];
+
+var PIECE_PINK =  65;
+var PIECE_BLUE =  66;
+var PIECE_RED =   67;
+var PIECE_GREEN = 68;
+var PIECE_YELLOW =69;
+var PIECES = [PIECE_PINK, PIECE_BLUE, PIECE_RED, PIECE_GREEN, PIECE_YELLOW];
+
+var TAB_INFO = 1;
+var TAB_SHOP = 2;
+var TAB_CHANGE = 3;
+
+var EVENT_CHANGE_ID = "CHANGE_ID";
+
+var GIFT_BOX_LB_X = 15;
+var GIFT_BOX_LB_Y = 25;
+
+var gem_red_font =  new TextFormat (Fonts.DETAIL_FONT, 15, 0xFF0000);
+var gem_green_font =  new TextFormat (Fonts.DETAIL_FONT, 15, 0x00FF00);
+var gift_red_font =  new TextFormat (Fonts.DETAIL_FONT, 12, 0xFF0000);
+var gift_green_font =  new TextFormat (Fonts.DETAIL_FONT, 12, 0x00FF00);
+
+var centerX = 360;
+var centerY = 250;
+var radiusPieceAnim = 210;
+var radiusPiece = 200;
+var radiusGem = 75;
+var MATH_PI = 3.141592653589793;
+
+var functionList = new FunctionList ();
+var eventSprite = null;
+var mapObj = null;
+var mapData = null;
+var constant = null;
+var trade = null;
+
+functionList.set ("init", function ()
+{
+	trace ("call init");
+	trace("initttttttttt: 9" );
+	//this.callFunction ("callHotfix");
+	
+	eventSprite = Resource.getSprite ("GFX_EVENT_30_4", true);
+	mapObj = new StringMap ();
+	mapData = new StringMap ();
+	trace("initttttttttt: 8" );
+	constant = this.callFunction ("init_constant");
+	
+	if (PixmaGame.notification != null)
+	{
+		PixmaGame.notification.flyControl.x = 50;
+		PixmaGame.notification.flyControl.y = 310;
+	}
+	
+	var mainLayer = new Layer ();
+	var mainHeight = 960;
+	var starHeight = 460 + 70 - 17;
+	
+	var background = new ColorRect (0x053446, 1, 0, starHeight, 640, mainHeight - starHeight + 5);
+	mainLayer.add (background);
+	trace("initttttttttt: 7" );
+	var star = this.callFunction ("initStar");
+	star.y = 70 - 17;
+	star.name = "star";
+	mainLayer.add (star);
+	
+	var titleBg = new ColorRect (0x053446, 1, 0, 0, 640, 70 - 17);
+	mainLayer.add (titleBg);
+	
+	var title = eventSprite.GetFrame (DF_EVENT.FRAME_TITLE);
+	mainLayer.add (title);
+	trace("initttttttttt: 6" );
+	var closeBtn = this.callFunction ("getCloseButton", [615, 30]);
+	closeBtn.name = "closeBtn";
+	closeBtn.addEventListener (MouseEvent.CLICK, function (e) { this.releaseFromParent (); });
+	mainLayer.add (closeBtn);
+	trace("initttttttttt: 5" );
+	var tabs = this.callFunction ("initTabs");
+	tabs.name = "tabs";
+	mainLayer.add (tabs);
+	
+	var resetBtn = new Button (SoftDefines.gfx_main_ui, DF_UI.anim_popup_button, DF_UI.anim_popup_button + 1, DF_UI.anim_popup_button);
+	resetBtn.x = 100 - 30 + 15 + 15;
+	resetBtn.y = 300 + 65 + 100;
+	resetBtn.name = "resetBtn";
+	resetBtn.visible = false;
+	resetBtn.set_label (Label.create ("Chơi Lại", Fonts.DETAIL_WHITE_20, 0, 0, Anchor.center_center));
+	trace("initttttttttt: 4" );
+	resetBtn.addEventListener (MouseEvent.CLICK, function (e)
+	{
+		this.callFunction ("callResetPopup");
+	});
+	mapObj.set ("resetBtn", resetBtn);
+	mainLayer.add (resetBtn);
+	trace("initttttttttt: 3" );
+	var gift = this.callFunction ("initGift", [mainHeight - starHeight]);
+	gift.y = starHeight + 50;
+	gift.name = "gift";
+	mainLayer.add (gift);
+	
+	mainLayer.x = -320;
+	mainLayer.y = -100;
+	
+	mapObj.set ("mainLayer", mainLayer);
+	this.add (mainLayer);
+	trace("initttttttttt: 2" );
+	this.callFunction ("initData");	
+	trace("initttttttttt: 1" );
+	this.callFunction ("request_info", [EVENT_ID]);
+	trace("initttttttttt: 0" );
+	PixmaGame._instance.fbClient.addEventListener("EVENT_SCRIPT_REQUEST_newevent", function (params)
+	{
+		this.callFunction ("response", [params]);
+	});
+	trace("initttttttttt: -1" );
+});
+
+functionList.set ("initData", function ()
+{
+	var request = [5, 5, 5, 5, 5];
+	mapData.set ("request", request);
+	
+	this.callFunction ("updateGems");
+	this.callFunction ("updatePiece");
+	this.callFunction ("updateColumn", [0]);
+	this.callFunction ("updateColumn", [1]);
+	this.callFunction ("updateColumn", [2]);
+	this.callFunction ("updateColumn", [3]);
+	this.callFunction ("updateColumn", [4]);
+	this.callFunction ("updateCombo");
+	this.callFunction ("updateReset");
+});
+
+functionList.set ("init_constant", function ()
+{
+	var temp = {
+		startTime: "2014-11-17 00:00:00",
+		closeTime: "2015-06-30 00:00:00",
+		expiryTime: "2015-07-30 00:00:00",
+		counter:[
+			{id:4500, itemId:65, num:5,  armor:false, rewards:[{type: 15, id: 10041, num: 1},{type: 4, id: 308, num: 1},{type: 2, id: -1, num: 10000},{type: 1, id: -1, num: 10}]},
+			{id:4501, itemId:65, num:10, armor:false, rewards:[{type: 15, id: 10041, num: 1},{type: 4, id: 308, num: 2},{type: 15, id: 2, num: 1},{type: 2, id: -1, num: 20000},{type: 1, id: -1, num: 20}]},
+			{id:4502, itemId:65, num:15, armor:false, rewards:[{type: 15, id: 10041, num: 1},{type: 4, id: 309, num: 1},{type: 15, id: 2, num: 2},{type: 2, id: -1, num: 30000},{type: 1, id: -1, num: 30}]},
+			{id:4503, itemId:65, num:20, armor:true, rewards:[{type: 4, id: 309, num: 1},{type: 6, id: 236, num: 1},{type: 2, id: -1, num: 50000},{type: 1, id: -1, num: 50}]},
+			{id:4504, itemId:65, num:28, armor:false,rewards:[{type: 15, id: 10061, num: 1},{type: 15, id: 10042, num: 1},{type: 4, id: 379, num: 1},{type: 4, id: 309, num: 1},{type: 2, id: -1, num: 100000},{type: 1, id: -1, num: 100}]},
+			{id:4505, itemId:65, num:38, armor:true, rewards:[{type: 15, id: 10062, num: 1},{type: 15, id: 10042, num: 1},{type: 6, id: 236, num: 1},{type: 4, id: 379, num: 2},{type: 4, id: 309, num: 2},{type: 2, id: -1, num: 200000},{type: 1, id: -1, num: 200}]},
+			{id:4506, itemId:65, num:50, armor:true, rewards:[{type: 15, id: 10063, num: 1},{type: 15, id: 10042, num: 2},{type: 6, id: 237, num: 1},{type: 15, id: 38, num: 1},{type: 2, id: -1, num: 300000},{type: 1, id: -1, num: 300}]},
+			{id:4507, itemId:65, num:65, armor:true, rewards:[{type: 15, id: 10064, num: 1},{type: 15, id: 10042, num: 2},{type: 6, id: 238, num: 1},{type: 15, id: 38, num: 2},{type: 2, id: -1, num: 500000},{type: 1, id: -1, num: 500}]},
+			{id:4508, itemId:65, num:85, armor:true, rewards:[{type: 15, id: 10060, num: 1},{type: 15, id: 10042, num: 2},{type: 6, id: 239, num: 1},{type: 15, id: 38, num: 4},{type: 2, id: -1, num: 1000000},{type: 1, id: -1, num: 1000}]},
+		
+			{id:4600, itemId:66,  num:5,  armor:false, rewards:[{type: 15, id: 10041, num: 1},{type: 4, id: 308, num: 1},{type: 2, id: -1, num: 10000},{type: 1, id: -1, num: 10}]},
+			{id:4601, itemId:66,  num:10, armor:false, rewards:[{type: 15, id: 10041, num: 1},{type: 4, id: 308, num: 2},{type: 15, id: 2, num: 1},{type: 2, id: -1, num: 20000},{type: 1, id: -1, num: 20}]},
+			{id:4602, itemId:66,  num:15, armor:false, rewards:[{type: 15, id: 10041, num: 1},{type: 4, id: 309, num: 1},{type: 15, id: 2, num: 2},{type: 2, id: -1, num: 30000},{type: 1, id: -1, num: 30}]},
+			{id:4603, itemId:66,  num:20, armor:true, rewards:[{type: 4, id: 309, num: 1},{type: 6, id: 221, num: 1},{type: 2, id: -1, num: 50000},{type: 1, id: -1, num: 50}]},
+			{id:4604, itemId:66,  num:28, armor:false,rewards:[{type: 15, id: 10061, num: 1},{type: 15, id: 10042, num: 1},{type: 4, id: 379, num: 1},{type: 4, id: 309, num: 1},{type: 2, id: -1, num: 100000},{type: 1, id: -1, num: 100}]},
+			{id:4605, itemId:66,  num:38, armor:true, rewards:[{type: 15, id: 10062, num: 1},{type: 15, id: 10042, num: 1},{type: 6, id: 221, num: 1},{type: 4, id: 379, num: 2},{type: 4, id: 309, num: 2},{type: 2, id: -1, num: 200000},{type: 1, id: -1, num: 200}]},
+			{id:4606, itemId:66,  num:50, armor:true, rewards:[{type: 15, id: 10063, num: 1},{type: 15, id: 10042, num: 2},{type: 6, id: 222, num: 1},{type: 15, id: 38, num: 1},{type: 2, id: -1, num: 300000},{type: 1, id: -1, num: 300}]},
+			{id:4607, itemId:66,  num:65, armor:true, rewards:[{type: 15, id: 10064, num: 1},{type: 15, id: 10042, num: 2},{type: 6, id: 223, num: 1},{type: 15, id: 38, num: 2},{type: 2, id: -1, num: 500000},{type: 1, id: -1, num: 500}]},
+			{id:4608, itemId:66,  num:85, armor:true, rewards:[{type: 15, id: 10060, num: 1},{type: 15, id: 10042, num: 2},{type: 6, id: 224, num: 1},{type: 15, id: 38, num: 4},{type: 2, id: -1, num: 1000000},{type: 1, id: -1, num: 1000}]},
+			
+			{id:4700, itemId:67,  num:5,  armor:false, rewards:[{type: 15, id: 10041, num: 1},{type: 4, id: 308, num: 1},{type: 2, id: -1, num: 10000},{type: 1, id: -1, num: 10}]},
+			{id:4701, itemId:67,  num:10, armor:false, rewards:[{type: 15, id: 10041, num: 1},{type: 4, id: 308, num: 2},{type: 15, id: 2, num: 1},{type: 2, id: -1, num: 20000},{type: 1, id: -1, num: 20}]},
+			{id:4702, itemId:67,  num:15, armor:false, rewards:[{type: 15, id: 10041, num: 1},{type: 4, id: 309, num: 1},{type: 15, id: 2, num: 2},{type: 2, id: -1, num: 30000},{type: 1, id: -1, num: 30}]},
+			{id:4703, itemId:67,  num:20, armor:true, rewards:[{type: 4, id: 309, num: 1},{type: 6, id: 216, num: 1},{type: 2, id: -1, num: 50000},{type: 1, id: -1, num: 50}]},
+			{id:4704, itemId:67,  num:28, armor:false,rewards:[{type: 15, id: 10061, num: 1},{type: 15, id: 10042, num: 1},{type: 4, id: 379, num: 1},{type: 4, id: 309, num: 1},{type: 2, id: -1, num: 100000},{type: 1, id: -1, num: 100}]},
+			{id:4705, itemId:67,  num:38, armor:true, rewards:[{type: 15, id: 10062, num: 1},{type: 15, id: 10042, num: 1},{type: 6, id: 216, num: 1},{type: 4, id: 379, num: 2},{type: 4, id: 309, num: 2},{type: 2, id: -1, num: 200000},{type: 1, id: -1, num: 200}]},
+			{id:4706, itemId:67,  num:50, armor:true, rewards:[{type: 15, id: 10063, num: 1},{type: 15, id: 10042, num: 2},{type: 6, id: 217, num: 1},{type: 15, id: 38, num: 1},{type: 2, id: -1, num: 300000},{type: 1, id: -1, num: 300}]},
+			{id:4707, itemId:67,  num:65, armor:true, rewards:[{type: 15, id: 10064, num: 1},{type: 15, id: 10042, num: 2},{type: 6, id: 218, num: 1},{type: 15, id: 38, num: 2},{type: 2, id: -1, num: 500000},{type: 1, id: -1, num: 500}]},
+			{id:4708, itemId:67,  num:85, armor:true, rewards:[{type: 15, id: 10060, num: 1},{type: 15, id: 10042, num: 2},{type: 6, id: 219, num: 1},{type: 15, id: 38, num: 4},{type: 2, id: -1, num: 1000000},{type: 1, id: -1, num: 1000}]},
+			
+			{id:4800, itemId:68,  num:5,  armor:false, rewards:[{type: 15, id: 10041, num: 1},{type: 4, id: 308, num: 1},{type: 2, id: -1, num: 10000},{type: 1, id: -1, num: 10}]},
+			{id:4801, itemId:68,  num:10, armor:false, rewards:[{type: 15, id: 10041, num: 1},{type: 4, id: 308, num: 2},{type: 15, id: 2, num: 1},{type: 2, id: -1, num: 20000},{type: 1, id: -1, num: 20}]},
+			{id:4802, itemId:68,  num:15, armor:false, rewards:[{type: 15, id: 10041, num: 1},{type: 4, id: 309, num: 1},{type: 15, id: 2, num: 2},{type: 2, id: -1, num: 30000},{type: 1, id: -1, num: 30}]},
+			{id:4803, itemId:68,  num:20, armor:true, rewards:[{type: 4, id: 309, num: 1},{type: 6, id: 231, num: 1},{type: 2, id: -1, num: 50000},{type: 1, id: -1, num: 50}]},
+			{id:4804, itemId:68,  num:28, armor:false,rewards:[{type: 15, id: 10061, num: 1},{type: 15, id: 10042, num: 1},{type: 4, id: 379, num: 1},{type: 4, id: 309, num: 1},{type: 2, id: -1, num: 100000},{type: 1, id: -1, num: 100}]},
+			{id:4805, itemId:68,  num:38, armor:true, rewards:[{type: 15, id: 10062, num: 1},{type: 15, id: 10042, num: 1},{type: 6, id: 231, num: 1},{type: 4, id: 379, num: 2},{type: 4, id: 309, num: 2},{type: 2, id: -1, num: 200000},{type: 1, id: -1, num: 200}]},
+			{id:4806, itemId:68,  num:50, armor:true, rewards:[{type: 15, id: 10063, num: 1},{type: 15, id: 10042, num: 2},{type: 6, id: 232, num: 1},{type: 15, id: 38, num: 1},{type: 2, id: -1, num: 300000},{type: 1, id: -1, num: 300}]},
+			{id:4807, itemId:68,  num:65, armor:true, rewards:[{type: 15, id: 10064, num: 1},{type: 15, id: 10042, num: 2},{type: 6, id: 233, num: 1},{type: 15, id: 38, num: 2},{type: 2, id: -1, num: 500000},{type: 1, id: -1, num: 500}]},
+			{id:4808, itemId:68,  num:85, armor:true, rewards:[{type: 15, id: 10060, num: 1},{type: 15, id: 10042, num: 2},{type: 6, id: 234, num: 1},{type: 15, id: 38, num: 4},{type: 2, id: -1, num: 1000000},{type: 1, id: -1, num: 1000}]},
+			
+			{id:4900, itemId:69,  num:5,  armor:false, rewards:[{type: 15, id: 10041, num: 1},{type: 4, id: 308, num: 1},{type: 2, id: -1, num: 10000},{type: 1, id: -1, num: 10}]},
+			{id:4901, itemId:69,  num:10, armor:false, rewards:[{type: 15, id: 10041, num: 1},{type: 4, id: 308, num: 2},{type: 15, id: 2, num: 1},{type: 2, id: -1, num: 20000},{type: 1, id: -1, num: 20}]},
+			{id:4902, itemId:69,  num:15, armor:false, rewards:[{type: 15, id: 10041, num: 1},{type: 4, id: 309, num: 1},{type: 15, id: 2, num: 2},{type: 2, id: -1, num: 30000},{type: 1, id: -1, num: 30}]},
+			{id:4903, itemId:69,  num:20, armor:true, rewards:[{type: 4, id: 309, num: 1},{type: 6, id: 226, num: 1},{type: 2, id: -1, num: 50000},{type: 1, id: -1, num: 50}]},
+			{id:4904, itemId:69,  num:28, armor:false,rewards:[{type: 15, id: 10061, num: 1},{type: 15, id: 10042, num: 1},{type: 4, id: 379, num: 1},{type: 4, id: 309, num: 1},{type: 2, id: -1, num: 100000},{type: 1, id: -1, num: 100}]},
+			{id:4905, itemId:69,  num:38, armor:true, rewards:[{type: 15, id: 10062, num: 1},{type: 15, id: 10042, num: 1},{type: 6, id: 226, num: 1},{type: 4, id: 379, num: 2},{type: 4, id: 309, num: 2},{type: 2, id: -1, num: 200000},{type: 1, id: -1, num: 200}]},
+			{id:4906, itemId:69,  num:50, armor:true, rewards:[{type: 15, id: 10063, num: 1},{type: 15, id: 10042, num: 2},{type: 6, id: 227, num: 1},{type: 15, id: 38, num: 1},{type: 2, id: -1, num: 300000},{type: 1, id: -1, num: 300}]},
+			{id:4907, itemId:69,  num:65, armor:true, rewards:[{type: 15, id: 10064, num: 1},{type: 15, id: 10042, num: 2},{type: 6, id: 228, num: 1},{type: 15, id: 38, num: 2},{type: 2, id: -1, num: 500000},{type: 1, id: -1, num: 500}]},
+			{id:4908, itemId:69,  num:85, armor:true, rewards:[{type: 15, id: 10060, num: 1},{type: 15, id: 10042, num: 2},{type: 6, id: 229, num: 1},{type: 15, id: 38, num: 4},{type: 2, id: -1, num: 1000000},{type: 1, id: -1, num: 1000}]}
+		],
+		comboCounter:[
+			{
+				id:0,
+				required:[4504,4604,4704,4804,4904],
+				rewards:[{type: 0, id: -1, num: 2000}]
+			},
+			{
+				id:1,
+				required:[4505,4605,4705,4805,4905],
+				rewards:[{type: 15, id: 3, num: 20}]
+			},
+			{
+				id:2,
+				required:[4506,4606,4706,4806,4906],
+				rewards:[{type: 4, id: 1379, num: 25}]
+			},
+			{
+				id:3,
+				required:[4507,4607,4707,4807,4907],
+				rewards:[{type: 0, id: -1, num: 4000}]
+			},
+			{
+				id:4,
+				required:[4508,4608,4708,4808,4908],
+				rewards:[{type: 15, id: 38, num: 10}]
+			}
+		],
+		resets:[
+			[{itemId:65, num:105}, {itemId:66, num:105}, {itemId:67,num:105}, {itemId:68, num:105}, {itemId:69, num:105}],
+			[{itemId:65, num:115}, {itemId:66, num:115}, {itemId:67,num:115}, {itemId:68, num:115}, {itemId:69, num:115}],
+			[{itemId:65, num:135}, {itemId:66, num:135}, {itemId:67,num:135}, {itemId:68, num:135}, {itemId:69, num:135}],
+			[{itemId:65, num:155}, {itemId:66, num:155}, {itemId:67,num:155}, {itemId:68, num:155}, {itemId:69, num:155}],
+			[{itemId:65, num:185}, {itemId:66, num:185}, {itemId:67,num:185}, {itemId:68, num:185}, {itemId:69, num:185}]
+		],
+		limitReset:0
+	};
+	
+	var constant = {};
+	constant.columns = [];
+	constant.combo = [];
+	
+	var index = 0;
+	while (index < PIECES.length)
+	{
+		constant.columns [index] = [];
+		index += 1;
+	}
+	
+	var gifts = temp.counter;
+	var numGifts = gifts.length;
+	for (obj in gifts)
+	{
+		var pieceId = obj.itemId - PIECE_PINK;
+		constant.columns [pieceId].push (obj);
+	}
+	
+	var index = 0;
+	while (index < PIECES.length)
+	{
+		constant.columns [index].sort (function (a, b)
+		{
+			if (a.id > b.id) return 1;
+			if (a.id < b.id) return -1;
+			return 0;
+		});
+		
+		index += 1;
+	}
+	
+	var comboList = temp.comboCounter;
+	for (comboObj in comboList)
+	{
+		var giftId = comboObj.required [0];
+		for (column in constant.columns)
+		{
+			var rowIndex = 0;
+			while (rowIndex < column.length)
+			{
+				if (giftId == column [rowIndex].id)
+				{
+					constant.combo [rowIndex] = comboObj;
+					numGifts += 1;
+					break;
+				}
+				rowIndex += 1;
+			}
+		}
+	}
+	
+	var tradeTemp = [
+		{id:GEM_YELLOW, gold:[
+			{id:GEM_PINK, value:10000},
+			{id:GEM_GREEN, value:8000},
+			{id:GEM_BLUE, value:8500},
+			{id:GEM_RED, value:10000},
+		]},
+		{id:GEM_PINK, gold:[
+			{id:GEM_YELLOW, value:8000},
+			{id:GEM_BLUE, value:8000},
+			{id:GEM_RED, value:8000},
+			{id:GEM_GREEN, value:8000},
+		]},
+		{id:GEM_GREEN, gold:[
+			{id:GEM_YELLOW, value:8500},
+			{id:GEM_BLUE, value:9000},
+			{id:GEM_RED, value:10500},
+			{id:GEM_PINK, value:10500},
+		]},
+		{id:GEM_BLUE, gold:[
+			{id:GEM_YELLOW, value:8000},
+			{id:GEM_GREEN, value:8000},
+			{id:GEM_RED, value:9000},
+			{id:GEM_PINK, value:9000},
+		]},
+		{id:GEM_RED, gold:[
+			{id:GEM_YELLOW, value:8000},
+			{id:GEM_PINK, value:8000},
+			{id:GEM_GREEN, value:8000},
+			{id:GEM_BLUE, value:8000},
+		]},
+	];
+	
+	trade = new StringMap ();
+	for (group in tradeTemp)
+	{
+		var groupMap = new StringMap ();
+		var gold = group.gold;
+		for (price in gold) groupMap.set (price.id, price.value);
+		
+		trade.set (group.id, groupMap);
+	}
+	
+	constant.numGifts = numGifts;
+	
+	trace ("done");
+	return constant;
+});
+
+functionList.set ("initTabs", function ()
+{
+	var tabs = new Layer ();
+	tabs.x = 30;
+	tabs.y = 100;
+	
+	var infoBtn = new Button (SoftDefines.gfx_comboui, DF_COMBOUI.anim_tabv_normal, DF_COMBOUI.anim_tabv_selected);
+	infoBtn.y = 0;
+	infoBtn.set_label (eventSprite.GetFrame (DF_EVENT.FRAME_INFO_ICON));
+	infoBtn.addEventListener (MouseEvent.CLICK, function (e)
+	{
+		this.callFunction ("callInfo");
+	});
+	tabs.add (infoBtn);
+	
+	var shopBtn = new Button (SoftDefines.gfx_comboui, DF_COMBOUI.anim_tabv_normal, DF_COMBOUI.anim_tabv_selected);
+	shopBtn.y = 58;
+	shopBtn.set_label (eventSprite.GetFrame (DF_EVENT.FRAME_SHOP_ICON));
+	shopBtn.addEventListener (MouseEvent.CLICK, function (e)
+	{
+		this.callFunction ("callShop");
+	});
+	tabs.add (shopBtn);
+	
+	var tradeBtn = new Button (SoftDefines.gfx_comboui, DF_COMBOUI.anim_tabv_normal, DF_COMBOUI.anim_tabv_selected);
+	tradeBtn.y = 116;
+	tradeBtn.set_label (eventSprite.GetFrame (DF_EVENT.FRAME_CHANGE_ICON));
+	tradeBtn.addEventListener (MouseEvent.CLICK, function (e)
+	{
+		this.callFunction ("callTrade", [GEM_PINK, GEM_GREEN, 1]);
+	});
+	tabs.add (tradeBtn);
+	
+	return tabs;
+});
+
+functionList.set ("initStar", function ()
+{
+	trace ("initStar");
+	var star = new Layer ();
+	var gemLbOffset = [];
+	gemLbOffset [0] = {x:0, y:30, anchor:Anchor.center_top};
+	gemLbOffset [1] = {x:-30, y:0, anchor:Anchor.right_center};
+	gemLbOffset [2] = {x:-20, y:-20, anchor:Anchor.right_bottom};
+	gemLbOffset [3] = {x:20, y:-20, anchor:Anchor.left_bottom};
+	gemLbOffset [4] = {x:30, y:0, anchor:Anchor.left_center};
+	
+	var backgroundLayer = new Layer ();
+	star.add (backgroundLayer);
+	
+	var effectLayer = new Layer ();
+	star.add (effectLayer);
+	mapObj.set ("effectLayer", effectLayer);
+	
+	var itemLayer = new Layer ();
+	star.add (itemLayer);
+	
+	backgroundLayer.add (eventSprite.GetFrame (DF_EVENT.FRAME_BACKGROUND));
+	
+	var index = 0;
+	var angle90 = (MATH_PI / 2);
+	while (index < 5)
+	{
+		var angle = ((index * 2 * MATH_PI) / 5);
+		
+		var edge1 = eventSprite.GetFrame (DF_EVENT.FRAME_STAR_EDGE);
+		if (PixmaGame.isFlash)
+			edge1.rotation = (index * 72) + 90 - 54;
+		else
+			edge1.set_rotation ((index * 72) + 90 - 54);
+		edge1.x = centerX + Math.cos (angle + angle90) * radiusGem;
+		edge1.y = centerY + Math.sin (angle + angle90) * radiusGem;
+		backgroundLayer.add (edge1);
+		
+		var edge2 = eventSprite.GetFrame (DF_EVENT.FRAME_STAR_EDGE);
+		if (PixmaGame.isFlash)
+			edge2.rotation = (index * 72) + 90 + 54;
+		else
+			edge2.set_rotation ((index * 72) + 90 + 54);
+		edge2.x = edge1.x;
+		edge2.y = edge1.y;
+		backgroundLayer.add (edge2);
+	
+		var piece = eventSprite.GetFrame (DF_EVENT.FRAME_PINK_PIECE + index);
+		piece.x = centerX + Math.cos (angle - angle90) * radiusPiece;
+		piece.y = centerY + Math.sin (angle - angle90) * radiusPiece;
+		piece.m_id = index;
+		piece.addEventListener (MouseEvent.CLICK, function (e)
+		{
+			this.callFunction ("piece_onClick", [piece.m_id]);
+		});
+		itemLayer.add (piece);
+	
+		var gemId = (index + 3) % 5;
+		var gem = eventSprite.GetFrame (DF_EVENT.FRAME_PINK_GEM + gemId);
+		gem.x = edge1.x;
+		gem.y = edge1.y;
+		gem.m_id = GEMS [gemId];
+		
+		var gemLb = Label.create (" ", Fonts.CHAT_WHITE_20, gemLbOffset[index].x, gemLbOffset[index].y, gemLbOffset[index].anchor);
+		gemLb.name = "gemLb";
+		gem.addChild (gemLb);
+		
+		gem.addEventListener (MouseEvent.CLICK, function (e)
+		{
+			this.callFunction ("callBuyGems", [gem.m_id, 1, function ()
+			{
+				var lb = gem.getChildByName ("gemLb");
+				if (lb != null) lb.set_text (this.callFunction ("item_count", [gem.m_id]));
+			}]);
+		});
+		
+		itemLayer.add (gem);
+		
+		trace ("mapObj: " + (mapObj == null));
+		
+		mapObj.set ("star_gem_" + gemId + "_lb", gemLb);
+		mapObj.set ("star_gem_" + gemId, gem);
+		
+		index += 1;
+	}
+	
+	trace ("done");
+	return star;
+});
+
+functionList.set ("initGift", function (height)
+{
+	trace ("initGift");
+	var gift = new Layer ();
+	var slotLayer = new Layer ();
+	
+	var giftProcessLayer = new Layer ();
+	var scrollHeight = height - 100 + 10;
+	var scrollView = new PageScrollable (giftProcessLayer, 640, scrollHeight, 2);
+	scrollView._inertialScrolling = true;
+	scrollView.y = 100 / 2 - 5;
+	
+	var columnId = 0;
+	var giftboxLocation = new StringMap ();
+	var maxLength = 0;
+	while (columnId < constant.columns.length)
+	{
+		var mainSlot = eventSprite.GetFrame (DF_EVENT.FRAME_PINK_SLOT + columnId);
+		mainSlot.x = 50 + columnId * 108;
+		mainSlot.y = 0;
+		
+		var pieceInfo = SpecialItemInfo.get (PIECES [columnId]);
+		if (pieceInfo != null)
+		{
+			var pieceGameItem = new GameItem (GameItemType.Special_Item, PIECES [columnId], 0);
+			PixmaGame.notification.addHint (mainSlot, function (e)
+			{
+				return this.callFunction ("callItemHint", [e, pieceGameItem, 320, 320 + 180]);
+			});
+			
+			mainSlot.addEventListener (Event.REMOVED_FROM_STAGE, function (e)
+			{
+				PixmaGame.notification.removeHint (mainSlot);
+			});
+		}
+		
+		var mainSlotLb = Label.create (" ", Fonts.DETAIL_YELLOW_20, 0, 50, Anchor.center_bottom);
+		mapObj.set ("star_piece_" + columnId + "_lb", mainSlotLb);
+		mainSlot.addChild (mainSlotLb);
+		
+		slotLayer.add (mainSlot);
+		
+		var rowId = 0;
+		var columnData = constant.columns [columnId];
+		maxLength = Math.max (maxLength, columnData.length);
+		while (rowId < columnData.length)
+		{
+			var giftObj = columnData [rowId];
+			var giftbox = eventSprite.GetFrame (DF_EVENT.FRAME_GRAY_GIFT);
+			giftbox.x = 50 + columnId * 108;
+			giftbox.y = 70 + rowId * 100;
+			giftbox.name = "giftbox_" + columnId + "_" + rowId;
+			giftbox.addEventListener (MouseEvent.CLICK, function (e)
+			{
+				this.callFunction ("giftbox_onClick", [e]);
+			});
+			
+			var giftboxStatus = Label.create (" ", gift_red_font, GIFT_BOX_LB_X, GIFT_BOX_LB_Y, Anchor.left_top);
+			mapObj.set ("giftbox_status_" + columnId + "_" + rowId, giftboxStatus);
+			giftbox.addChild (giftboxStatus);
+			
+			giftProcessLayer.add (giftbox, 0);
+			mapObj.set (giftbox.name, giftbox);
+			giftboxLocation.set (giftObj.id, {row:rowId, column:columnId});
+			
+			rowId += 1;
+		}
+		columnId += 1;
+	}
+	
+	mapData.set ("giftboxLocation", giftboxLocation);
+	
+	var rowId = 0;
+	var comboData = constant.combo;
+	while (rowId < comboData.length)
+	{
+		var comboGift = comboData [rowId];
+		if (comboGift == null)
+		{
+			rowId += 1;
+			continue;
+		}
+		
+		var combo = eventSprite.GetFrame (DF_EVENT.FRAME_GRAY_COMBO);
+		combo.x = 50 + 5 * 108;
+		combo.y = 70 + rowId * 100;
+		combo.name = "combo_" + rowId;
+		combo.addEventListener (MouseEvent.CLICK, function (e)
+		{
+			this.callFunction ("combo_onClick", [e]);
+		});
+		
+		var tempLb = Label.create ("=", Fonts.DETAIL_WHITE_30, -70 + 15, 0, Anchor.center_center);
+		tempLb.mouseEnabled = false;
+		combo.addChild (tempLb);
+		
+		var addSign = 0;
+		while (4 > addSign ++)
+		{
+			tempLb = Label.create ("+", Fonts.DETAIL_WHITE_30, -68 + 15 - addSign * 108, 0, Anchor.center_center);
+			tempLb.mouseEnabled = false;
+			combo.addChild (tempLb);
+		}
+		
+		giftProcessLayer.add (combo, 0);
+		mapObj.set (combo.name, combo);
+		
+		rowId += 1;
+	}
+	
+	var floor = new DisplayObject (0,50 + maxLength * 100);
+	floor.getGraphics ().beginFill (0x000000, 0);
+	floor.getGraphics ().drawRect (0, 0, 640, 10);
+	floor.getGraphics ().endFill ();
+	giftProcessLayer.add (floor);
+	
+	var colors = [0x053446, 0x053446];
+	var alphas = [1, 0];
+	var ratios = [0, 255];
+	var matrix = new Matrix();
+	matrix.createGradientBox (640, 40, 0.5 * MATH_PI, 0, 0);
+	
+	var	top = new DisplayObject ();
+	top.y = 100 / 2 - 5;
+	top.mouseEnabled = false;
+	if (GradientType != null)
+	{
+		top.getGraphics ().beginGradientFill (GradientType.LINEAR, colors, alphas, ratios, matrix);
+		top.getGraphics ().drawRect (0, 0, 640, 40);
+		top.getGraphics ().endFill ();
+	}
+	matrix = new Matrix();
+	matrix.createGradientBox (640, 40, -0.5 * MATH_PI, 0, 0);
+	
+	var	bottom = new DisplayObject ();
+	bottom.y = scrollView.y + scrollHeight - 40;
+	bottom.mouseEnabled = false;
+	if (GradientType != null)
+	{
+		bottom.getGraphics ().beginGradientFill (GradientType.LINEAR, colors, alphas, ratios, matrix);
+		bottom.getGraphics ().drawRect (0, 0, 640, 40);
+		bottom.getGraphics ().endFill ();
+	}
+	
+	gift.add (scrollView);
+	gift.add (top);
+	gift.add (slotLayer);
+	gift.add (bottom);
+	return gift;
+});
+
+functionList.set ("initInfo", function ()
+{
+});
+
+functionList.set ("initShop", function ()
+{
+	
+});
+
+functionList.set ("initAnim", function (index)
+{
+	trace ("initAnim");
+	var indexLeft = this.callFunction ("piece_leftGem", [index]);
+	var indexRight = this.callFunction ("piece_rightGem", [index]);
+	
+	var gemLeft = mapObj.get ("star_gem_" + indexLeft);
+	var gemRight = mapObj.get ("star_gem_" + indexRight);
+	
+	var animLayer = new Layer ();
+	trace ("animLayer: " + animLayer);
+	
+	var center = eventSprite.GetAnim (DF_EVENT.ANIM_PIECE, 0, 0, false);
+	var angle = (index * 0.4 - 0.5) * MATH_PI;
+	center.x = centerX + Math.cos (angle) * radiusPieceAnim;
+	center.y = centerY + Math.sin (angle) * radiusPieceAnim;
+	trace ("center: " + center);
+	if (PixmaGame.isFlash)
+		center.rotation = index * 72;
+	else
+		center.set_rotation (index * 72);
+
+	trace ("center: " + center);
+	center.addEventListener ("ANIM_STOP", function (e)
+	{
+		animLayer.remove (center);
+		animLayer.dispatchEvent (new Event ("STOP"));
+	});
+	
+	var left = eventSprite.GetAnim (DF_EVENT.ANIM_GEM, 0, 0, false);
+	left.x = gemLeft.x;
+	left.y = gemLeft.y;
+	animLayer.add (left);
+
+	trace ("left: " + left);
+	
+	var right = eventSprite.GetAnim (DF_EVENT.ANIM_GEM, 0, 0, false);
+	right.x = gemRight.x;
+	right.y = gemRight.y;
+	animLayer.add (right);
+
+	trace ("right: " + right);
+	
+	var stop2 = function (e)
+	{
+		animLayer.remove (left);
+		animLayer.remove (right);
+		animLayer.add (center);
+	};
+
+	trace ("stop2: " + stop2);
+	
+	var stop1 = null;
+	var maxTime = 3;
+	var time = 0;
+	stop1 = function (e)
+	{
+		if (time == 0)
+		{
+			right.removeEventListener ("ANIM_STOP", stop1);
+		
+			left.set_animData (eventSprite.GetAnimData (DF_EVENT.ANIM_LINE));
+			if (PixmaGame.isFlash)
+				left.rotation = (indexLeft * 72) - 90 + 108;
+			else
+				left.set_rotation ((indexLeft * 72) - 90 + 108);
+			
+			right.set_animData (eventSprite.GetAnimData (DF_EVENT.ANIM_LINE));
+			if (PixmaGame.isFlash)
+				right.rotation = (indexRight * 72) - 90;
+			else
+				right.set_rotation ((indexRight * 72) - 90);
+		}
+		
+		left.x = gemLeft.x;
+		left.y = gemLeft.y;
+		left.set_scale (1.5);
+		left.Play (true, true);
+		Actuate.tween (left, 0.3 * (maxTime - time) / maxTime, {x:center.x, y:center.y, scaleX:1, scaleY:1});
+		
+		right.x = gemRight.x;
+		right.y = gemRight.y;
+		right.set_scale (1.5);
+		right.Play (true, true);
+		Actuate.tween (right, 0.3 * (maxTime - time) / maxTime, {x:center.x, y:center.y, scaleX:1, scaleY:1}).onComplete (time < maxTime ? stop1 : stop2, [e]);
+		
+		time ++;
+	};
+	
+	trace ("stop1: " + stop1);
+	
+	right.addEventListener ("ANIM_STOP", stop1);
+	
+	trace ("Anim done");
+	return animLayer;
+});
+
+functionList.set ("updateGems", function ()
+{
+	trace ("updateGems");
+	var request = mapData.get ("request");
+	
+	var gemId = 0;
+	while (gemId < GEMS.length)
+	{
+		var label = mapObj.get ("star_gem_" + gemId + "_lb");
+		
+		if (label != null)
+		{
+			var gem = this.callFunction ("gem_get_number", [gemId]);
+			label.set_text (gem + "/" + request [gemId]);
+			
+			if (request [gemId] > gem)
+				label.set_textFormat (gem_red_font);
+			else
+				label.set_textFormat (gem_green_font);
+				
+			label.Update ();
+		}
+		
+		gemId ++;
+	}
+});
+
+functionList.set ("updatePiece", function ()
+{
+	trace ("updatePiece");
+	
+	var pieceId = 0;
+	while (pieceId < PIECES.length)
+	{
+		var label = mapObj.get ("star_piece_" + pieceId + "_lb");
+		
+		if (label != null)
+		{
+			var piece = this.callFunction ("piece_get_number", [pieceId]);
+			label.set_text (piece);
+			label.Update ();
+		}
+		
+		pieceId ++;
+	}
+});
+
+functionList.set ("updateColumn", function (pieceId)
+{
+	trace ("updateColumn");
+	var giftId = 0;
+	var giftLength = 10;
+	var numberPiece = this.callFunction ("piece_get_number", [pieceId]);
+	var columnData = constant.columns [pieceId];
+	var status = [];
+
+	var comboMark = mapData.get ("comboMark");
+	if (comboMark == null)
+	{
+		comboMark = [];
+		mapData.set ("comboMark", comboMark);
+	}
+	
+	if (comboMark [pieceId] == null)
+		comboMark [pieceId] = [];
+	
+	while (giftId < columnData.length)
+	{
+		var giftbox = mapObj.get ("giftbox_" + pieceId + "_" + giftId);
+		var giftboxStatus = mapObj.get ("giftbox_status_" + pieceId + "_" + giftId);
+		
+		if (giftbox == null) break;
+		var giftObj = null;
+		if (constant.columns [pieceId] != null)	
+			giftObj = constant.columns [pieceId][giftId];
+		
+		var requestPiece = columnData [giftId].num;
+		var isComplete = numberPiece >= requestPiece;
+		var isGot = false;
+		var max = -1;
+		var isArmor = false;
+		
+		if (giftObj != null)
+		{
+			isArmor = giftObj.armor;
+			isGot = this.callFunction ("giftbox_isGot", [giftObj.id]);
+		}
+		
+		giftboxStatus.set_text (requestPiece);
+		giftboxStatus.set_textFormat (isComplete ? gift_green_font : gift_red_font);
+		giftboxStatus.Update ();
+		
+		comboMark [pieceId][giftId] = isComplete;
+		if (isArmor)
+		{
+			if (isComplete)
+			{
+				if (isGot)
+					giftbox.set_data (eventSprite.GetFrameData (DF_EVENT.FRAME_PINK_ARMOR_GOT + pieceId));
+				else
+					giftbox.set_data (eventSprite.GetFrameData (DF_EVENT.FRAME_PINK_ARMOR + pieceId));
+				
+				max = pieceId;
+			}
+			else
+			{
+				if (giftId - 1 == max)
+					giftbox.set_data (eventSprite.GetFrameData (DF_EVENT.FRAME_PINK_ARMOR + pieceId));
+				else
+					giftbox.set_data (eventSprite.GetFrameData (DF_EVENT.FRAME_PINK_ARMOR_GRAY + pieceId));
+			}
+		}
+		else
+		{
+			if (isComplete)
+			{
+				if (isGot)
+					giftbox.set_data (eventSprite.GetFrameData (DF_EVENT.FRAME_PINK_GOT + pieceId));
+				else
+					giftbox.set_data (eventSprite.GetFrameData (DF_EVENT.FRAME_PINK_GIFT + pieceId));
+				
+				max = pieceId;
+			}
+			else
+			{
+				if (giftId - 1 == max)
+					giftbox.set_data (eventSprite.GetFrameData (DF_EVENT.FRAME_PINK_GIFT + pieceId));
+				else
+					giftbox.set_data (eventSprite.GetFrameData (DF_EVENT.FRAME_GRAY_GIFT));
+			}
+		}
+		giftId += 1;
+	}
+});
+
+functionList.set ("updateCombo", function ()
+{
+	trace ("updateCombo");
+	var comboMark = mapData.get ("comboMark");
+	if (comboMark == null) return;
+	if (constant.combo == null) return;
+	
+	var comboId = 0;
+	var comboLength = constant.combo.length;
+	
+	while (comboId < comboLength)
+	{
+		var comboObj = constant.combo [comboId];
+		// trace ("combo [" + comboId + "]: " + comboObj);
+		if (comboObj == null)
+		{
+			comboId += 1;
+			continue;
+		}
+		
+		var isComplete = true;
+		for (giftId in comboObj.required)
+		{
+			var gift_isGot = this.callFunction ("giftbox_isGot", [giftId]);
+			isComplete = isComplete && gift_isGot;
+		}
+		
+		var isGot = this.callFunction ("combo_isGot", [comboObj.id]);
+		
+		var combo = mapObj.get ("combo_" + comboId);
+		if (combo != null)
+		{
+			if (isGot)
+				combo.set_data (eventSprite.GetFrameData (DF_EVENT.FRAME_COMBO_GOT));
+			else if (isComplete)
+				combo.set_data (eventSprite.GetFrameData (DF_EVENT.FRAME_COMBO));
+			else
+				combo.set_data (eventSprite.GetFrameData (DF_EVENT.FRAME_GRAY_COMBO));
+		}
+		
+		comboId += 1;
+	}
+});
+
+functionList.set ("updateReset", function ()
+{
+	var canShowReset = this.callFunction ("canShowReset");
+	var resetBtn = mapObj.get ("resetBtn");
+	if (resetBtn != null)
+		resetBtn.visible = canShowReset == true;
+});
+
+functionList.set ("gem_get_number", function (gemId)
+{
+	return this.callFunction ("item_count", [GEMS [gemId]]);
+});
+
+functionList.set ("gem_canBuy", function (gemId)
+{
+	var gemInfo = SpecialItemInfo.get (gemId);
+	if (gemInfo == null) return;
+	
+	var shopItemData = gemInfo.getShopItem ();
+	return shopItemData != null;
+});
+
+functionList.set ("piece_leftGem", function (index)
+{
+	return index % 5;
+});
+
+functionList.set ("piece_rightGem", function (index)
+{
+	return (index + 1) % 5;
+});
+
+functionList.set ("piece_check", function (index)
+{
+	trace ("piece_check: " + index);
+	var indexLeft = this.callFunction ("piece_leftGem", [index]);
+	
+	var indexRight = this.callFunction ("piece_rightGem", [index]);
+	
+	var request = mapData.get ("request");
+	
+	var gemLeft = this.callFunction ("gem_get_number", [indexLeft]);
+	if (request [indexLeft] > gemLeft)
+		return GEMS [indexLeft];
+		
+	var gemRight = this.callFunction ("gem_get_number", [indexRight]);
+	if (request [indexRight] > gemRight)
+		return GEMS [indexRight];
+	
+	return -1;
+});
+
+functionList.set ("piece_onClick", function (index)
+{
+	trace ("piece_onClick: [" + index + "]: " + PIECES [index]);
+	
+	var check = this.callFunction ("piece_check", [index]);
+	if (check == -1)
+	{
+		this.callFunction ("request_evolve", [EVENT_ID, PIECES [index], 1]);
+		return;
+	}
+	
+	var gemInfo = SpecialItemInfo.get (check);
+	if (gemInfo != null)
+	{
+		var errorMsg = "Bạn thiếu " + gemInfo.name;
+		PixmaGame.notification.addFlyingText (360, 300, errorMsg);
+	}
+});
+
+functionList.set ("piece_combine_effect", function (index, flyingObj)
+{
+	trace ("piece_combine_effect");
+	var effectLayer = mapObj.get ("effectLayer");
+	
+	var animLayer = this.callFunction ("initAnim", [index]);
+	animLayer.addEventListener ("STOP", function (e)
+	{
+		effectLayer.remove (animLayer);
+		
+		this.callFunction ("updateGems");
+		this.callFunction ("updatePiece");
+		this.callFunction ("updateColumn", [index]);
+		this.callFunction ("updateCombo");
+		
+		trace ("flyingObj: " + flyingObj);
+		if (flyingObj != null) PixmaGame.notification.add (flyingObj);
+	});
+	
+	trace ("effectLayer: " + effectLayer);
+	effectLayer.add (animLayer);
+	trace ("animLayer: " + animLayer);
+});
+
+functionList.set ("piece_get_number", function (pieceId)
+{
+	return this.callFunction ("item_count", [PIECES [pieceId]]);
+});
+
+functionList.set ("giftbox_get_require", function (pieceId, giftId)
+{
+	var requests = [5, 10, 15, 25, 40, 65, 105, 170, 275, 445];
+	return requests [giftId];
+});
+
+functionList.set ("giftbox_location", function (giftId)
+{
+	var giftboxLocation = mapData.get ("giftboxLocation");
+	if (giftboxLocation == null)
+	return false;
+	return giftboxLocation.get (giftId);
+});
+
+functionList.set ("giftbox_isComplete", function (giftId)
+{
+	trace ("giftbox_isComplete");
+	var location = this.callFunction ("giftbox_location", [giftId]);
+	if (location == null || constant.column == null) return false;
+	
+	var giftObj = constant.column [location.column][location.row];
+	if (giftObj == null) return false;
+	var numberPiece = this.callFunction ("item_count", PIECES [location.column]);
+	return giftObj.num < current;
+});
+
+functionList.set ("giftbox_isGot", function (giftId)
+{
+	var giftReceived = mapData.get ("giftReceived");
+	if (giftReceived == null)
+	return false;
+	return giftReceived.indexOf (giftId) != -1;
+});
+
+functionList.set ("giftbox_onClick", function (e)
+{
+	trace ("giftbox_onClick");
+	if (e == null) return;
+	if (e.currentTarget == null) return;
+	
+	var giftbox = e.currentTarget;
+	var param = giftbox.name.split ("_");
+	var pieceId = Std.parseInt (param [1]);
+	var giftId = Std.parseInt (param [2]);
+	
+	var giftObj = null;
+	if (constant.columns [pieceId] != null)	
+		giftObj = constant.columns [pieceId][giftId];
+	
+	if (giftObj == null) return;
+	
+	var current = this.callFunction ("item_count", [giftObj.itemId]);
+	var target = giftObj.num;
+	var isGot = this.callFunction ("giftbox_isGot", [giftObj.id]);
+	
+	var pieceInfo = SpecialItemInfo.get (giftObj.itemId);
+	var namePiece = pieceInfo == null ? ("mảnh sao " + pieceId) : pieceInfo.name;
+	
+	if (target > current)
+	{
+		var title = "Tích lũy " + target + " " + namePiece + " để nhận";
+		this.callFunction ("callGiftPopup", [title, giftObj.rewards, "mainLayer"]);
+	}
+	else if (isGot)
+	{
+		var title = "Bạn đã nhận gói quà này!";
+		this.callFunction ("callGiftPopup", [title, giftObj.rewards, "mainLayer"]);
+	}
+	else
+	{
+		this.callFunction ("request_receice", [EVENT_ID, giftObj.id]);
+	}
+});
+
+functionList.set ("combo_onClick", function (e)
+{
+	trace ("combo_onClick");
+	if (e == null) return;
+	if (e.currentTarget == null) return;
+	if (constant.combo == null) return;
+	
+	var combo = e.currentTarget;
+	var param = combo.name.split ("_");
+	var comboId = Std.parseInt (param [1]);
+	var comboObj = constant.combo [comboId];
+	
+	if (comboObj == null) return;
+	var isComplete = true;
+	for (giftId in comboObj.required)
+	{
+		var gift_isGot = this.callFunction ("giftbox_isGot", [giftId]);
+		isComplete = isComplete && gift_isGot;
+	}
+	
+	var isGot = this.callFunction ("combo_isGot", [comboObj.id]);
+	
+	if (!isComplete)
+	{
+		var title = "Nhận 5 gói tích lũy để nhận quà";
+		this.callFunction ("callGiftPopup", [title, comboObj.rewards, "mainLayer"]);
+	}
+	else if (isGot)
+	{
+		var title = "Bạn đã nhận gói quà này!";
+		this.callFunction ("callGiftPopup", [title, comboObj.rewards, "mainLayer"]);
+	}
+	else
+	{
+		this.callFunction ("request_receiceCombo", [EVENT_ID, comboObj.id]);
+	}
+});
+
+functionList.set ("combo_isComplete", function (comboId)
+{
+	return false;
+});
+
+functionList.set ("combo_isGot", function (comboId)
+{
+	var comboReceived = mapData.get ("comboReceived");
+	if (comboReceived == null)
+	return false;
+	return comboReceived.indexOf (comboId) != -1;
+});
+
+functionList.set ("canReset", function ()
+{
+	trace ("canReset: ");
+	if (constant == null) return;
+	
+	var numGifts = constant.numGifts;
+	if (numGifts == null || numGifts < 0) return;
+	
+	var numReceived = 0;
+	
+	var giftReceived = mapData.get ("giftReceived");
+	if (giftReceived != null && giftReceived.length != null)
+		numReceived += giftReceived.length;
+	
+	var comboReceived = mapData.get ("comboReceived");
+	if (comboReceived != null && comboReceived.length != null)
+		numReceived += comboReceived.length;
+		
+	trace ("numGifts: " + numGifts);
+	trace ("numReceived: " + numReceived);
+		
+	return numReceived >= numGifts;
+});
+
+functionList.set ("canShowReset", function ()
+{
+	trace ("canShowReset: ");
+	if (constant == null) return;
+	if (constant.columns == null) return;
+	
+	var countPieces = new StringMap ();
+	for (pieceId in PIECES)
+		countPieces.set (pieceId, this.callFunction ("item_count", [pieceId]));
+	
+	trace ("countPieces: " + countPieces);
+	
+	var countGift = 0;
+	var countCompleteGift = 0;
+	for (column in constant.columns)
+	{
+		if (column == null) continue;
+		for (gift in column)
+		{
+			//trace ("gift " + gift);
+			if (gift == null) continue;
+			
+			countGift += 1;
+			
+			var current = countPieces.get (gift.itemId);
+			var complete = gift.num <= current;
+			if (complete == true)
+				countCompleteGift += 1;
+			
+			//trace ("gift [" + gift.itemId + ", " + gift.id + "]: " + current + "/" + gift.num + " >> " + complete);
+		}
+	}
+	
+	trace ("countGift: " + countGift);
+	trace ("countCompleteGift: " + countCompleteGift);
+	return countCompleteGift == countGift;
+});
+
+functionList.set ("getCloseButton", function (x, y)
+{
+	trace ("getCloseButton");
+	var closeBtn = new DisplayObject (x, y);
+	var graphic = closeBtn.getGraphics();
+	graphic.clear ();
+	graphic.lineStyle (1.5, 0xFFFFFF, 1.0);
+	graphic.beginFill (0x000000, 0.5);
+	graphic.drawCircle (0, 0, 24);
+	graphic.endFill ();
+	
+	graphic.lineStyle (3, 0xFFFFFF, 1.0);
+	graphic.moveTo (-10, -10);
+	graphic.lineTo (10, 10);
+	graphic.moveTo (10, -10);
+	graphic.lineTo (-10, 10);
+	
+	return closeBtn;
+});
+
+functionList.set ("callPopup", function (content, parent)
+{
+	var w = 550;
+	var h = 300;
+	
+	var popup = new Layer();
+	popup.x = 320;
+	popup.y = 480;
+	
+	var parentObj = null;
+	if (Std.is (parent, DisplayObject))
+		parentObj = parent;
+	else if (Std.is (parent, String))
+	{
+		var unknow = mapObj.get (parent);
+		if (Std.is (unknow, DisplayObject))
+			parentObj = unknow;
+	}
+	
+	var background = new ColorRect(0x000000, 0.5, -320, -480, 640, 960);
+	background.name = "background";
+	background.addEventListener (MouseEvent.CLICK, function (e) { parentObj.remove (popup); });
+	popup.addChild (background);
+	
+	var closeBtn = this.callFunction ("getCloseButton", [245, -120]);
+	closeBtn.addEventListener (MouseEvent.CLICK, function (e) { popup.dispatchEvent (new Event (Event.CLOSE)); });
+	popup.addChild (closeBtn);
+
+	popup.addEventListener (Event.CLOSE, function (e) { parentObj.remove (popup); });
+	
+	var addHeight = 0;
+	if (content != null)
+	{
+		if (Std.is (content, String))
+		{
+			var label = Label.create (content, Fonts.DETAIL_BLACK_20, 0, 0, Anchor.center_center);
+			popup.add (label);
+		}
+		else if (Std.is (content, DisplayObject))
+		{
+			popup.add (content);
+			var bound = content.getBounds (popup);
+			if (bound.bottom > h / 2) addHeight = bound.bottom - h * 0.5 + 20;
+		}
+	}
+	
+	popup.addChildAt (Border.roundRect (0, 0, -w * 0.5, -h * 0.5, w, h + addHeight, 30, 2, 0x555555, 1, 0xFFFFFF), 1);
+	
+	parentObj.add (popup);
+	return popup;
+});
+
+functionList.set ("callGiftPopup", function (title, rewards, parent)
+{
+	var titleLb = Label.create (title, Fonts.DETAIL_BLACK_20, 0, -80, Anchor.center_center);
+	
+	var rewardObjs = [];
+	for (reward in rewards)
+	{
+		var gameItem = new ShopItem (reward.type, reward.id);
+		var iconObj = this.callFunction ("gameItem_to_obj", [gameItem, reward.num, Fonts.DETAIL_BLACK_20]);
+		
+		var icon = iconObj.getChildByName ("icon");
+		if (icon != null) icon.set_scale (0.8);
+		
+		var number = iconObj.getChildByName ("number");
+		if (number != null) number.y = 35;
+		
+		rewardObjs.push (iconObj);
+	}
+	var giftLayer = this.callFunction ("arrange_gift", [rewardObjs]);
+	
+	var layer = new Layer ();
+	layer.add (titleLb);
+	layer.add (giftLayer);
+	
+	this.callFunction ("callPopup", [layer, parent]);
+});
+
+functionList.set ("callResetPopup", function ()
+{
+	trace ("callResetPopup");
+	var temp = mapData.get ("resetPrice");
+	if (temp == null) return;
+	
+	var resetPrice = [];
+	var index = 0;
+	while (index < temp.length)
+	{
+		var obj = {itemId:temp [index], num:temp [index + 1]};
+		index += 2;
+		resetPrice.push (obj);
+	}
+	trace ("resetPrice: " + resetPrice);
+	
+	var titleLb = Label.create ("Xác Nhận", Fonts.DETAIL_BLACK_30, 0, -125, Anchor.center_center);
+	var descLb = Label.create ("Bạn có muốn dùng mảnh sao để reset sự kiện không?", Fonts.CHAT_BLACK_20, 0, -95, Anchor.center_top, 520);
+	
+	var priceObjs = [];
+	var canReset = this.callFunction ("canReset");
+	var missRequire = false;
+	for (price in resetPrice)
+	{
+		var gameItem = new GameItem (GameItemType.Special_Item, price.itemId);
+		var count = this.callFunction ("item_count", [price.itemId]);
+		
+		var iconBg = Border.roundRect (0, 0, -45, -45 + 10, 90, 90, 10, 3, 0xEEEEEE, 1, 0x222222, 1);
+		var iconPrice = this.callFunction ("gameItem_to_obj", [gameItem, count + "/" + price.num, Fonts.DETAIL_BLACK_20]);
+		
+		var icon = iconPrice.getChildByName ("icon");
+		if (icon != null) icon.set_scale (0.8);
+		
+		var number = iconPrice.getChildByName ("number");
+		if (number != null)
+		{
+			if (count < price.num)
+			{
+				number.set_textFormat (gem_red_font);
+				missRequire = true;
+			}
+			else
+				number.set_textFormat (gem_green_font);
+			
+			number.y = 30;
+		}
+		
+		var iconLayer = new Layer ();
+		iconLayer.add (iconBg);
+		iconLayer.add (iconPrice);
+		
+		priceObjs.push (iconLayer);
+	}
+	var priceLayer = this.callFunction ("arrange_gift", [priceObjs]);
+	
+	var confirmBtn = new Button (SoftDefines.gfx_main_ui, DF_UI.anim_popup_button, DF_UI.anim_popup_button + 1, DF_UI.anim_popup_button);
+	confirmBtn.x = 0;
+	confirmBtn.y = 100;
+	confirmBtn.set_label (Label.create ("Reset", Fonts.DETAIL_WHITE_20, 0, 0, Anchor.center_center));
+	
+	var layer = new Layer ();
+	layer.add (titleLb);
+	layer.add (descLb);
+	layer.add (priceLayer);
+	layer.add (confirmBtn);
+	
+	var popup = this.callFunction ("callPopup", [layer, "mainLayer"]);
+	
+	confirmBtn.addEventListener (MouseEvent.CLICK, function (e)
+	{
+		if (!canReset)
+		{
+			this.callFunction ("callError", ["\n\nBạn chưa nhận hết quà!", "mainLayer"]);
+			return;
+		}
+		
+		if (missRequire)
+		{
+			this.callFunction ("callError", ["\n\nBạn không đủ tài nguyên\nđể thực hiện thao tác này!", "mainLayer"]);
+			return;
+		}
+		
+		popup.dispatchEvent (new Event (Event.CLOSE));
+		this.callFunction ("request_reset", [EVENT_ID]);
+	});
+	
+});
+
+functionList.set ("callHotfix", function ()
+{
+	trace ("callHotfix: " + SoftDefines);
+	trace ("callHotfix: " + SoftDefines.BUILD_VERSION);
+	// if (SoftDefines.BUILD_VERSION == "2.0.7")
+	// {
+		trace ("init event EVENT_SCRIPT_REQUEST");
+		PixmaGame._instance.fbClient.addEventListener("EVENT_SCRIPT_REQUEST", 
+			function (params)
+			{
+			trace ("EVENT_SCRIPT_REQUEST: " + params);
+				var data = params.get("data");
+				var cmd = data.get("scriptCMD");
+				trace ("EVENT_SCRIPT_REQUEST: " + cmd);
+				trace ("data: " + data.toString ());
+				PixmaGame._instance.fbClient.dispatchEvent (new FBEvent ("EVENT_SCRIPT_REQUEST_" + cmd, params));
+			}
+		);
+	// }
+});
+
+functionList.set ("callInfo", function ()
+{
+	trace ("callInfo: ");
+	var desc = 
+	  "Thời gian: từ 25/04/2015 đến 25/05/2015.\n\n"
+	+ "Thu thập ngọc ngũ sắc trong bản đồ sự kiện Săn Ngọc Châu, đổi ra mảnh sao tương ứng để nhận quà.\n\n"
+	+ "Trong lúc đổi ngọc ra mảnh sao có cơ hội nhận quà ngẫu nhiên.\n\n"
+	+ "Thu thập đủ các loại mảnh sao từ mốc 28 trở đi sẽ nhận thêm quà đặc biệt."
+	;
+	
+	var titleLb = Label.create ("Thông Tin", Fonts.DETAIL_BLACK_30, 0, -125, Anchor.center_center);
+	var descLb = Label.create (desc, Fonts.CHAT_BLACK_20, 0, -90, Anchor.center_top, 520);
+	
+	var layer = new Layer ();
+	layer.add (titleLb);
+	layer.add (descLb);
+	
+	this.callFunction ("callPopup", [layer, "mainLayer"]);
+});
+
+functionList.set ("callShop", function ()
+{
+	trace ("callShop ");
+	var eventSprite = Resource.getSprite ("GFX_EVENT_30_4", true);
+	
+	var layer = new Layer ();
+	
+	var titleLb = Label.create ("Kho Ngọc", Fonts.DETAIL_BLACK_30, 0, -125, Anchor.center_center);
+	layer.add (titleLb);
+	
+	var index = 0;
+	var numLbs = new StringMap ();
+	for (gemId in GEMS)
+	{
+		var gemLayer = new Layer ();
+		gemLayer.x = (index - 2) * 107;
+		
+		var bg = Border.roundRect (0, 0, -50, -65, 100, 145, 20, 2, 0x000000, 1, 0xFFFFFF, 1);
+		gemLayer.add (bg);
+		
+		var icon = eventSprite.GetFrame (DF_EVENT.FRAME_PINK_GEM - GEM_PINK + gemId);
+		icon.y = -30;
+		gemLayer.add (icon);
+		
+		var num = this.callFunction ("item_count", [gemId]);
+		var numLb = Label.create (num, Fonts.CHAT_BLACK_20, 0, 0, Anchor.center_top);
+		gemLayer.add (numLb);
+		numLbs.set (gemId, numLb);
+		
+		var buyBtn = new Button (SoftDefines.gfx_list_item, DF_LISTITEM.anim_confirm_normal, DF_LISTITEM.anim_confirm_touch, DF_LISTITEM.anim_confirm_disable);
+		buyBtn.y = 55;
+		buyBtn.m_id = gemId;
+		buyBtn.set_label (Label.create ("Mua", Fonts.DETAIL_BLACK_20, 0, 0, Anchor.center_center));
+		buyBtn.addEventListener (MouseEvent.CLICK, function (e)
+		{
+			this.callFunction ("callBuyGems", [buyBtn.m_id, 1, function ()
+			{
+				var lb = numLbs.get (buyBtn.m_id);
+				if (lb != null) lb.set_text (this.callFunction ("item_count", [buyBtn.m_id]));
+			}]);
+		});
+		gemLayer.add (buyBtn);
+		
+		layer.add (gemLayer);
+		index += 1;
+	}
+	
+	this.callFunction ("callPopup", [layer, "mainLayer"]);
+});
+
+functionList.set ("callBuyGems", function (gemId, number, callback)
+{
+	var gemInfo = SpecialItemInfo.get (gemId);
+	if (gemInfo == null) return;
+	
+	var shopItemData = gemInfo.getShopItem ();
+	if (shopItemData == null) return;
+	
+	ShopUtilities.callBuyPopup (shopItemData, number, function (params)
+	{
+		if (callback != null) callback ();
+		this.callFunction ("updateGems");
+	});
+});
+
+functionList.set ("callTrade", function (srcId, targetId, number)
+{
+	trace ("callTrade: " + srcId + ", " + targetId + ", " + number);
+	var eventSprite = Resource.getSprite ("GFX_EVENT_30_4", true);
+	
+	var titleLb = Label.create ("Chuyển Đổi", Fonts.DETAIL_BLACK_30, 0, -125, Anchor.center_center);
+	var hintLb = Label.create ("Nhấn vào ngọc để chọn màu", Fonts.CHAT_BLACK_20, 0, -100, Anchor.center_center);
+	
+	var srcLayer = new Layer (-210, -20);
+	
+	var srcBg = new DisplayObject ();
+	var srcGraphics = srcBg.getGraphics ();
+	srcGraphics.clear ();
+	srcGraphics.lineStyle (2, 0x000000, 1);
+	srcGraphics.beginFill (0x000000, 1);
+	srcGraphics.drawRoundRect (-30, -40, 60, 20, 10);
+	srcGraphics.beginFill (0xFFFFFF, 1);
+	srcGraphics.drawRoundRect (-30, -30, 60, 60, 10);
+	srcGraphics.lineStyle (0, 0x000000, 0);
+	srcGraphics.moveTo (0, -38);
+	srcGraphics.lineTo (-7, -32);
+	srcGraphics.lineTo (7, -32);
+	srcGraphics.endFill ();
+	
+	var srcIcon = eventSprite.GetFrame (DF_EVENT.FRAME_PINK_GEM - GEM_PINK + srcId);
+	srcIcon.set_scale (0.9);
+	
+	var srcNumber = Label.create (" ", Fonts.DETAIL_BLACK_20, 0, 30, Anchor.center_top);
+	
+	var plusSign = Label.create ("+", Fonts.DETAIL_BLACK_30, -140, -20, Anchor.center_center);
+	plusSign.set_scale (1.25);
+	
+	var goldIcon = eventSprite.GetFrame (DF_EVENT.FRAME_COIN, -70, -20);
+	goldIcon.set_scale (0.75);
+	var goldNumber = Label.create (" ", Fonts.DETAIL_BLACK_20, goldIcon.x, goldIcon.y + 30, Anchor.center_top);
+
+	var eqSign = Label.create ("=", Fonts.DETAIL_BLACK_30, 0, -20, Anchor.center_center);
+	eqSign.set_scale (1.25);
+	
+	var targetLayer = new Layer (140, -20);
+	
+	var targetBg = new DisplayObject ();
+	var targetGraphics = targetBg.getGraphics ();
+	targetGraphics.clear ();
+	targetGraphics.lineStyle (2, 0x000000, 1);
+	targetGraphics.beginFill (0x000000, 1);
+	targetGraphics.drawRoundRect (-30, -40, 60, 20, 10);
+	targetGraphics.beginFill (0xFFFFFF, 1);
+	targetGraphics.drawRoundRect (-30, -30, 60, 60, 10);
+	targetGraphics.lineStyle (0, 0x000000, 0);
+	targetGraphics.moveTo (0, -38);
+	targetGraphics.lineTo (-7, -32);
+	targetGraphics.lineTo (7, -32);
+	targetGraphics.endFill ();
+	
+	var targetIcon = eventSprite.GetFrame (DF_EVENT.FRAME_PINK_GEM - GEM_PINK + targetId);
+	targetIcon.set_scale (0.9);
+	
+	var targetNumber = Label.create (" ", Fonts.DETAIL_BLACK_20, 0, 30, Anchor.center_top);
+	
+	var increaseBtn = new Button (SoftDefines.gfx_list_item, DF_LISTITEM.anim_right_n, DF_LISTITEM.anim_right_s, DF_LISTITEM.anim_right_n);
+	increaseBtn.x = targetLayer.x + 50;
+	increaseBtn.y = targetLayer.y;
+	
+	var decreaseBtn = new Button (SoftDefines.gfx_list_item, DF_LISTITEM.anim_left_n, DF_LISTITEM.anim_left_s, DF_LISTITEM.anim_left_n);
+	decreaseBtn.x = targetLayer.x - 50;
+	decreaseBtn.y = targetLayer.y;
+	
+	var closeBtn = this.callFunction ("getCloseButton", [615, 30]);
+
+	var confirmBtn = new Button (SoftDefines.gfx_main_ui, DF_UI.anim_popup_button, DF_UI.anim_popup_button + 1, DF_UI.anim_popup_button);
+	confirmBtn.x = 0;
+	confirmBtn.y = 100;
+	confirmBtn.set_label (Label.create ("Đổi", Fonts.DETAIL_WHITE_20, 0, 0, Anchor.center_center));
+	
+	var chooseSrcLayer = null;
+	var chooseTargetLayer = null;
+	
+	var layer = new Layer ();
+	layer.add (titleLb);
+	layer.add (hintLb);
+	layer.add (srcLayer);
+	srcLayer.add (srcBg);
+	srcLayer.add (srcIcon);
+	srcLayer.add (srcNumber);
+	layer.add (plusSign);
+	layer.add (goldIcon);
+	layer.add (goldNumber);
+	layer.add (eqSign);
+	layer.add (targetLayer);
+	targetLayer.add (targetBg);
+	targetLayer.add (targetIcon);
+	targetLayer.add (targetNumber);
+	layer.add (increaseBtn);
+	layer.add (decreaseBtn);
+	layer.add (closeBtn);
+	layer.add (confirmBtn);
+
+	var popup = this.callFunction ("callPopup", [layer, "mainLayer"]);
+	var popupBackground = popup.getChildByName ("background");
+	if (popupBackground != null)
+	{
+		popupBackground.y -= 190;
+		popup.y += 190;
+	}
+	
+	var basePrice = 0;
+	var price = 0;
+	var onChange = false;
+	
+	var func_basePrice = function (src, target)
+	{
+		if (trade.get (src) != null)
+			basePrice = trade.get (src).get (target);
+		if (basePrice == null)
+			basePrice = 0;
+	};
+	
+	var func_setNum = function (newNumber)
+	{
+		number = Math.max (1, newNumber);
+		price = basePrice * number;
+		
+		srcNumber.set_text (number);
+		if (this.callFunction ("item_count", [srcId]) < number)
+			srcNumber.set_textFormat (Fonts.DETAIL_RED_20);
+		else
+			srcNumber.set_textFormat (Fonts.DETAIL_BLACK_20);
+		
+		goldNumber.set_text (price);
+		if (UserInfo.coin < price)
+			goldNumber.set_textFormat (Fonts.DETAIL_RED_20);
+		else
+			goldNumber.set_textFormat (Fonts.DETAIL_BLACK_20);
+		
+		targetNumber.set_text (number);
+	};
+	
+	var func_changeTarget = function (newTarget)
+	{
+		if (targetId == newTarget) return;
+		
+		targetId = newTarget;
+		targetIcon.set_data (eventSprite.GetFrameData (DF_EVENT.FRAME_PINK_GEM - GEM_PINK + targetId));
+		
+		func_basePrice (srcId, targetId);
+		func_setNum (1);
+	};
+	
+	var func_changeSrc = function (nextSrc)
+	{
+		if (srcId == nextSrc) return;
+		
+		srcId = nextSrc;
+		srcIcon.set_data (eventSprite.GetFrameData (DF_EVENT.FRAME_PINK_GEM - GEM_PINK + srcId));
+		
+		if (srcId == targetId)
+		{
+			var targetIndex = GEMS.indexOf (targetId) + 1;
+			if (targetIndex >= GEMS.length) targetIndex = 0;
+			var newTarget = GEMS [targetIndex];
+		
+			func_changeTarget (newTarget);
+		}
+		else
+		{
+			func_basePrice (srcId, targetId);
+			func_setNum (1);
+		}
+	};
+	
+	var func_callChangeSrcLayer = function ()
+	{
+		onChange = true;
+		popup.remove (chooseTargetLayer);
+		chooseSrcLayer = this.callFunction ("callMenu", [srcLayer.x - 60, -30, "Chọn Ngọc", srcId, GEMS, function (gemId)
+		{
+			onChange = false;
+			func_changeSrc (gemId);
+			popup.remove (chooseSrcLayer);
+		}]);
+		
+		popup.add (chooseSrcLayer);
+	};
+	
+	var func_callChangeTargetLayer = function ()
+	{
+		var listId = [];
+		for (gemId in GEMS)
+		{
+			if (gemId == srcId) continue;
+			listId.push (gemId);
+		}
+		
+		onChange = true;
+		popup.remove (chooseSrcLayer);
+		chooseTargetLayer = this.callFunction ("callMenu", [targetLayer.x - 60, -30, "Chọn Ngọc", targetId, listId, function (gemId)
+		{
+			onChange = false;
+			func_changeTarget (gemId);
+			popup.remove (chooseTargetLayer);
+		}]);
+		
+		popup.add (chooseTargetLayer);
+	};
+	
+	var func_hideChange = function ()
+	{
+		if (onChange)
+		{
+			popup.remove (chooseSrcLayer);
+			popup.remove (chooseTargetLayer);
+			onChange = false;
+			return true;
+		}
+		return false;
+	};
+	
+	var func_callTrade = function ()
+	{	
+		var errorMsg = null;
+		var errorBtn = null;
+		
+		var gemNum = this.callFunction ("item_count", [srcId]);
+		if (gemNum < number)
+		{
+			var gemInfo = SpecialItemInfo.get (srcId);
+			if (gemInfo == null)
+				errorMsg = "Không đủ ngọc để đổi.";
+			else
+				errorMsg = "Bạn cần thêm " + (number - gemNum) + " " + gemInfo.name + " để đổi.";
+
+			if (this.callFunction ("gem_canBuy", [srcId]))
+			{
+				errorBtn = new Button (SoftDefines.gfx_main_ui, DF_UI.anim_popup_button, DF_UI.anim_popup_button + 1, DF_UI.anim_popup_button);
+				errorBtn.x = 0;
+				errorBtn.y = 100;
+				errorBtn.set_label (Label.create ("Mua Thêm", Fonts.DETAIL_WHITE_20, 0, 0, Anchor.center_center));
+				errorBtn.addEventListener (MouseEvent.CLICK, function (e)
+				{
+					this.callFunction ("callBuyGems", [srcId, number - gemNum, function ()
+					{
+						func_setNum (number);
+					}]);
+				});
+			}
+		}
+		else if (UserInfo.coin < price)
+		{
+			errorMsg = "Bạn cần " + price + " tiền vàng để đổi.";
+			
+			errorBtn = new Button (SoftDefines.gfx_main_ui, DF_UI.anim_popup_button, DF_UI.anim_popup_button + 1, DF_UI.anim_popup_button);
+			errorBtn.x = 0;
+			errorBtn.y = 100;
+			errorBtn.set_label (Label.create ("Mua Thêm", Fonts.DETAIL_WHITE_20, 0, 0, Anchor.center_center));
+			errorBtn.addEventListener (MouseEvent.CLICK, function (e)
+			{
+				var pack = (price - UserInfo.coin) / 30000;
+				ShopUtilities.buy (1, 4, Math.max (1, Math.ceil (pack / 30000)), function (params)
+				{
+					func_setNum (number);
+				});
+			});
+		}
+		
+		if (errorMsg == null)
+		{
+			// popup.dispatchEvent (new Event (Event.CLOSE));
+			this.callFunction ("request_change", [EVENT_ID, srcId, targetId, number]);
+		}
+		else
+		{
+			var errorPopup = this.callFunction ("callError", [errorMsg, "mainLayer"]);
+			if (errorBtn != null)
+			{
+				errorBtn.addEventListener (MouseEvent.CLICK, function (e)
+				{
+					errorPopup.dispatchEvent (new Event (Event.CLOSE));
+				});
+				errorPopup.add (errorBtn);
+			}
+		}
+	};
+	
+	srcLayer.addEventListener (MouseEvent.CLICK, function (e) { func_callChangeSrcLayer (); });
+	targetLayer.addEventListener (MouseEvent.CLICK, function (e) { func_callChangeTargetLayer (); });
+	increaseBtn.addEventListener (MouseEvent.CLICK, function (e) { if (func_hideChange ()) return; func_setNum (number + 1); });
+	decreaseBtn.addEventListener (MouseEvent.CLICK, function (e) { if (func_hideChange ()) return; func_setNum (number - 1); });
+	confirmBtn.addEventListener (MouseEvent.CLICK, function (e) { if (func_hideChange ()) return; func_callTrade (); });
+	
+	func_basePrice (srcId, targetId);
+	func_setNum (number);
+});
+
+functionList.set ("callError", function (errorMsg, parent)
+{
+	var title = Label.create ("Cảnh Báo", Fonts.DETAIL_BLACK_30, 0, -80, Anchor.center_center);
+	var msg = Label.create ("<p align=\"center\">" + errorMsg + "</p>", Fonts.DETAIL_BLACK_20, 0, -40, Anchor.center_center, 500);
+	
+	var popup = new Layer ();
+	popup.add (title);
+	popup.add (msg);
+	
+	this.callFunction ("callPopup", [popup, parent]);
+});
+
+functionList.set ("callMenu", function (x, y, title, currentId, listGemsId, callback)
+{
+	var layer = new Layer (x, y);
+	
+	var titleBg = Border.roundRect (0, -30, 0, 0, 120, 27 + listGemsId.length * 60, 10, 2, 0x000000, 1, 0x000000, 1);
+	layer.add (titleBg);
+	
+	var title = Label.create (title, Fonts.DETAIL_WHITE_20, 60, -17, Anchor.center_center);
+	layer.add (title);
+	
+	var index = 0;
+	for (gemId in listGemsId)
+	{
+		var gemLayer = new Layer ();
+		gemLayer.x = 3;
+		gemLayer.y = 27 + index * 60;
+		gemLayer.m_id = gemId;
+		
+		var gemBg = Border.roundRect (0, 0, 0, -27, 114, 54, 10, 1, 0xFFFFFF, 1, 0xFFFFFF, 1);
+		gemBg.m_id = gemId;
+		gemBg.alpha = (gemBg.m_id == currentId) ? 0.95 : 0.8;
+		gemLayer.add (gemBg);
+		
+		var gemIcon = eventSprite.GetFrame (DF_EVENT.FRAME_PINK_GEM - GEM_PINK + gemId);
+		gemIcon.x = 25;
+		gemIcon.set_scale (0.8);
+		gemLayer.add (gemIcon);
+		
+		var num = this.callFunction ("item_count", [gemId]);
+		var gemNum = Label.create (num, Fonts.DETAIL_BLACK_20, 113, 0, Anchor.right_center);
+		gemLayer.add (gemNum);
+		
+		gemLayer.addEventListener (MouseEvent.MOUSE_OVER, function (e) { gemBg.alpha = 1; });
+		gemLayer.addEventListener (MouseEvent.MOUSE_OUT, function (e) { gemBg.alpha = (gemBg.m_id == currentId) ? 0.95 : 0.8; });
+		gemLayer.addEventListener (MouseEvent.CLICK, function (e) { callback (gemLayer.m_id); });
+		
+		layer.add (gemLayer);
+		index ++;
+	}
+	
+	return layer;
+});
+
+functionList.set ("callItemHint", function (e, gameItem, x, y)
+{
+	trace ("callItemHint");
+	if (gameItem == null) return;
+	
+	var name = gameItem.toString ();
+	var desc = [];
+	
+	if (gameItem.type == GameItemType.Equipment)
+	{
+		var equipInfo = EquipInfo.GetEquip (gameItem.index);
+		if (equipInfo != null)
+		{
+			for (pro in equipInfo.get_list_properties (0))
+			{
+				equipPDesc = "";
+				desc.push (pro.desc);
+			}
+		}
+	}
+	else if (gameItem.type == GameItemType.Special_Item)
+	{
+		var item = SpecialItemInfo.get (gameItem.index);
+		name = item.name;
+		
+		if (item.desc != null && item.desc != "")
+			desc.push (item.desc);
+	}
+	
+	var text = name;
+	for (d in desc) text += "\n" + d;
+	
+	var hint = new Hint (x, y, text, Anchor.center_bottom, 520);
+	return hint;
+});
+
+functionList.set ("item_count", function (itemId)
+{
+	return StockManager.countSpecialItem (itemId);
+});
+
+functionList.set ("request_script", function (requestObj)
+{
+	var request = RequestGennarator.scriptRequest("newevent", requestObj);
+	PixmaGame._instance.fbClient.send (request);
+});
+
+functionList.set ("response", function (params)
+{
+	trace ("response: " + params);
+	var data = params.get("data");
+	
+	var cmd = data.get("cmd");
+	trace ("response: " + cmd);
+	if (cmd == "info")
+		this.callFunction ("response_info", [data]);
+	else if (cmd == "evolSI")
+		this.callFunction ("response_evolve", [data]);
+	else if (cmd == "receive")
+		this.callFunction ("response_receice", [data]);
+	else if (cmd == "receiveCombo")
+		this.callFunction ("response_receiceCombo", [data]);
+	else if (cmd == "changeSI")
+		this.callFunction ("response_change", [data]);
+	 else if (cmd == "reset")
+		 this.callFunction ("response_reset", [data]);
+});
+
+functionList.set ("request_info", function (eventId)
+{
+	trace ("request_info: " + eventId);
+	var requestObj = new FBObjectOutput();
+	requestObj.putString("cmd", "info");
+	requestObj.putInt("id", eventId);
+	this.callFunction ("request_script", [requestObj]);
+	
+});
+
+functionList.set ("response_info", function (responseObj)
+{
+	trace ("response_info");
+	var eventId = responseObj.get("id");
+	var isEnable = responseObj.get("onl");
+	if(responseObj.has("totals")){
+	
+	}
+	
+	if(responseObj.has("received")){
+		var giftReceived = responseObj.get("received").getSet();
+		mapData.set ("giftReceived", giftReceived);
+	}
+	else 
+		mapData.set ("giftReceived", []);
+	
+	if(responseObj.has("comboReceived")){
+		var comboReceived = responseObj.get("comboReceived").getSet();
+		mapData.set ("comboReceived", comboReceived);
+	}else 
+		mapData.set ("comboReceived", []);
+	
+	if(responseObj.has("reset")){
+		var arrayResets = responseObj.get("reset").getSet();
+		mapData.set ("resetPrice", arrayResets);
+	}else{
+		mapData.set ("reset", null);
+	}
+	
+	this.callFunction ("updateColumn", [0]);
+	this.callFunction ("updateColumn", [1]);
+	this.callFunction ("updateColumn", [2]);
+	this.callFunction ("updateColumn", [3]);
+	this.callFunction ("updateColumn", [4]);
+	this.callFunction ("updateCombo");
+	this.callFunction ("updateReset");
+});
+
+functionList.set ("request_change", function (eventId, sourchId, destId, number)
+{
+	var requestObj = new FBObjectOutput();
+	requestObj.putString("cmd", "changeSI");
+	requestObj.putInt("evd", eventId);
+	requestObj.putInt("from", sourchId);
+	requestObj.putInt("to", destId);
+	requestObj.putInt("num", number);
+	this.callFunction ("request_script", [requestObj]);
+});
+
+functionList.set ("response_change", function (responseObj)
+{
+	trace ("response_change: " + responseObj.toString ());
+	
+	if (responseObj.has("emess")){
+		var errorMsg = responseObj.get("emess");
+		this.callFunction ("callError", [errorMsg, "mainLayer"]);
+		return;
+	}
+	
+	var destId = responseObj.get("to");
+	var sourchId = responseObj.get("from");
+	var number = responseObj.get("num");
+	var eventId = responseObj.get("evd");
+	var resource = null;
+	if (responseObj.has("cost")){
+		var reward = responseObj.get("cost");
+		UserInfo.handleSubResourch (reward);
+		
+		this.callFunction ("updateGems");
+	}
+});
+
+functionList.set ("request_evolve", function (eventId, itemId, number)
+{
+	trace ("request_evolve");
+	var requestObj = new FBObjectOutput();
+	requestObj.putString("cmd", "evolSI");
+	requestObj.putInt("evd", eventId);
+	requestObj.putInt("id", itemId);
+	requestObj.putInt("num", number);
+	this.callFunction ("request_script", [requestObj]);
+});
+
+functionList.set ("response_evolve", function (responseObj)
+{
+	trace ("response_evolve: " + responseObj.toString ());
+	
+	if (responseObj.has("emess")){
+		var errorMsg = responseObj.get("emess");
+		this.callFunction ("callError", [errorMsg, "mainLayer"]);
+		return;
+	}
+	
+	var itemId = responseObj.get("id");
+	var eventId = responseObj.get("evd");
+	var index = PIECES.indexOf (itemId);
+	
+	var flyingObj = null;
+	if (responseObj.has("brw"))
+	{
+		var reward = responseObj.get("brw");
+		var resource = this.callFunction ("resource_parser", [reward]);
+		var listObj = this.callFunction ("resource_to_obj", [reward, resource]);
+		
+		UserInfo.handleAddResourch (resource);
+		
+		for (itemObj in listObj)
+		{
+			if (itemObj == null) continue;
+			var icon = itemObj.getChildByName ("icon");
+			if (icon != null) icon.set_scale (0.5);
+			
+			var number = itemObj.getChildByName ("number");
+			if (number != null) number.y = 25;
+			
+			flyingObj = new FlyingObject (360, 240, -3, 5, 15);
+			flyingObj.add (itemObj);
+		}
+	}
+	
+	if (index != -1) this.callFunction ("piece_combine_effect", [index, flyingObj]);
+});
+
+functionList.set ("request_reset", function (eventId)
+{
+	var requestObj = new FBObjectOutput();
+	requestObj.putString("cmd", "reset");
+	requestObj.putInt("id", eventId);
+	this.callFunction ("request_script", [requestObj]);
+});
+
+functionList.set ("response_reset", function (responseObj)
+{
+	if(responseObj.has("emess")){
+		var errorMsg = responseObj.get("emess");
+		this.callFunction ("callError", [errorMsg, "mainLayer"]);
+		return;
+	}
+	var eventId = responseObj.get("id");
+	if(responseObj.has("received")){
+		var giftReceived = responseObj.get("received").getSet();
+		mapData.set ("giftReceived", giftReceived);
+	}
+	else 
+		mapData.set ("giftReceived", []);
+	
+	if(responseObj.has("comboReceived")){
+		var comboReceived = responseObj.get("comboReceived").getSet();
+		mapData.set ("comboReceived", comboReceived);
+	}
+	else 
+		mapData.set ("comboReceived", []);
+	
+	if(responseObj.has("reset")){
+		var arrayResets = responseObj.get("reset").getSet();
+		mapData.set ("resetPrice", arrayResets);
+	}else{
+		mapData.set ("reset", null);
+	}
+	
+	this.callFunction ("updateGems");
+	this.callFunction ("updatePiece");
+	this.callFunction ("updateColumn", [0]);
+	this.callFunction ("updateColumn", [1]);
+	this.callFunction ("updateColumn", [2]);
+	this.callFunction ("updateColumn", [3]);
+	this.callFunction ("updateColumn", [4]);
+	this.callFunction ("updateCombo");
+	this.callFunction ("updateReset");
+});
+
+functionList.set ("request_receice", function (eventId, rewardId)
+{
+	var requestObj = new FBObjectOutput();
+	requestObj.putString("cmd", "receive");
+	requestObj.putInt("id", eventId);
+	requestObj.putInt("count", rewardId);
+	this.callFunction ("request_script", [requestObj]);
+});
+
+functionList.set ("response_receice", function (responseObj)
+{
+	trace ("response_receice: " + responseObj);
+	if(responseObj.has("emess")){
+		var errorMsg = responseObj.get("emess");
+		this.callFunction ("callError", [errorMsg, "mainLayer"]);
+		return;
+	}
+	var eventId = responseObj.get("id");
+	var rewardId = responseObj.get("count");
+	var reward = responseObj.get("brw");
+	
+	var resource = this.callFunction ("resource_parser", [reward]);
+	
+	var listObj = this.callFunction ("resource_to_obj", [reward, resource]);
+	var gachaPanel = PixmaGame.notification.showMultiGachaPanel (listObj);
+	gachaPanel.add (Label.create ("<p align=\"center\">Xin Chúc mừng\nBạn đã nhận quà thành công</p>", Fonts.DETAIL_YELLOW_30, 0, -400, Anchor.center_center));
+	
+	var giftReceived = mapData.get ("giftReceived");
+	if (giftReceived != null) giftReceived.push (rewardId);
+	
+	var giftLocation = this.callFunction ("giftbox_location", [rewardId]);
+	if (giftLocation != null) this.callFunction ("updateColumn", [giftLocation.column]);
+	
+	this.callFunction ("updateCombo");
+	this.callFunction ("updateReset");
+	
+	UserInfo.handleAddResourch (resource);
+});
+
+functionList.set ("request_receiceCombo", function (eventId, rewardId)
+{
+	var requestObj = new FBObjectOutput();
+	requestObj.putString("cmd", "receiveCombo");
+	requestObj.putInt("id", eventId);
+	requestObj.putInt("count", rewardId);
+	this.callFunction ("request_script", [requestObj]);
+});
+
+functionList.set ("response_receiceCombo", function (responseObj)
+{
+	if(responseObj.has("emess")){
+		var errorMsg = responseObj.get("emess");
+		this.callFunction ("callError", [errorMsg, "mainLayer"]);
+		return;
+	}
+	var eventId = responseObj.get("id");
+	var rewardId = responseObj.get("count");
+	var reward = responseObj.get("brw");
+	var resource = this.callFunction ("resource_parser", [reward]);
+	
+	var listObj = this.callFunction ("resource_to_obj", [reward, resource]);
+	var gachaPanel = PixmaGame.notification.showMultiGachaPanel (listObj);
+	gachaPanel.add (Label.create ("<p align=\"center\">Xin Chúc mừng\nBạn đã nhận quà thành công</p>", Fonts.DETAIL_YELLOW_30, 0, -400, Anchor.center_center));
+	
+	var comboReceived = mapData.get ("comboReceived");
+	if (comboReceived != null) comboReceived.push (rewardId);
+	this.callFunction ("updateCombo");
+	this.callFunction ("updateReset");
+	
+	UserInfo.handleAddResourch (resource);
+});
+
+functionList.set ("resource_parser", function (reward)
+{
+	trace ("resource_parser: " + reward);
+	var resource = ParseObject.toResourchInstance (reward);
+	return resource;
+});
+
+functionList.set ("resource_to_obj", function (reward, resource)
+{
+	trace ("resource_to_obj");
+	var resourceDesc = new ResourceDesc ();
+	
+	resourceDesc.rune = resource.rune;
+	resourceDesc.tradableRune = resource.tradableRune;
+	
+	resourceDesc.gold = resource.gold;
+	resourceDesc.fp = resource.fp;
+	
+	resourceDesc.ap = resource.ap;
+	resourceDesc.redAp = resource.redAp;
+	
+	resourceDesc.exp = resource.exp;
+	resourceDesc.armorsets = resource.armor;
+
+	// resourceDesc.bonusCardSlots = resource.bonusCardSlots;
+	
+	var gameItems = resourceDesc.toGameItem ();
+	if (gameItems == null) gameItems = [];
+	
+	if (resource.equi != null)
+	{
+		var equipments = new StringMap ();
+		for (equipItemInfo in resource.equi)
+		{
+			if (equipItemInfo != null)
+			{
+				var numObj = equipments.get (equipItemInfo.prototypeId);
+				if (numObj == null) numObj = {id:equipItemInfo.prototypeId, num:0};
+				numObj.num += 1;
+				equipments.set (equipItemInfo.prototypeId, numObj);
+			}	
+		}
+		
+		for (equipObj in equipments)
+		{
+			if (equipObj == null) continue;
+			var id = equipObj.id;
+			var num = equipObj.num;
+			var equipItem = new GameItem (GameItemType.Equipment, id, num);
+			gameItems.push (equipItem);
+		}
+	}
+	
+	if (resource.specialitem != null)
+	{
+		var listSItem = new StringMap ();
+		for (specialItem in resource.specialitem)
+		{
+			var info = specialItem.info;
+			if (info == null) continue;
+			
+			var oldNumber = this.callFunction ("item_count", [info.index]);
+			var newNumber = specialItem.number;
+			var num = newNumber - oldNumber;
+			
+			listSItem.set (info.index, {id:info.index, num:num});
+		}
+		
+		for (specialObj in listSItem)
+		{
+			var specialItem = new GameItem (GameItemType.Special_Item, specialObj.id, specialObj.num);
+			gameItems.push (specialItem);
+		}
+	}
+	
+	if (reward != null && reward.has("ar"))
+	{
+		var armor = new StringMap ();
+		var fbArray = reward.get("ar");
+		var iter = fbArray.getInteratorSet();
+		while (iter.hasNext()) 
+		{
+			var armorId = iter.next();
+			
+			var numObj = armor.get (armorId);
+			if (numObj == null) numObj = {id:armorId, num:0};
+			numObj.num += 1;
+			
+			armor.set (armorId, numObj);
+		}
+		
+		for (armorObj in armor)
+		{
+			var armorItem = new GameItem (GameItemType.Armor_Set, armorObj.id, armorObj.num);
+			gameItems.push (armorItem);
+		}
+	}
+	
+	var itemObj = [];
+	
+	for (item in gameItems)
+	{
+		if (item == null) continue;
+		var icon = this.callFunction ("gameItem_to_obj", [item, item.number, Fonts.DETAIL_WHITE_20]);
+		itemObj.push (icon);
+	}
+	
+	if (resource.card != null)
+	{
+		var resourceCard = new StringMap ();
+		var normalCard = [];
+		for (cardInfo in resource.card)
+		{
+			if (cardInfo == null) continue;
+			if (cardInfo.isHero ())
+				normalCard.push (cardInfo);
+			else
+			{
+				var prototypeId = cardInfo.GetPrototypeId ();
+				var array = resourceCard.get (prototypeId);
+				if (array == null)
+				{
+					array = [];
+					resourceCard.set (prototypeId, array);
+				}
+				
+				array.push (cardInfo);
+			}
+		}
+		
+		for (cardInfo in normalCard)
+		{
+			var icon = this.callFunction ("cardInfo_to_obj", [cardInfo]);
+			itemObj.push (icon);
+		}
+		
+		for (cardGroup in resourceCard)
+		{
+			if (cardGroup.length == 0) continue;
+			
+			var icon = this.callFunction ("cardInfo_to_obj", [cardGroup [0]]);
+			var number = Label.create (cardGroup.length, Fonts.DETAIL_WHITE_20, 0, 50, Anchor.center_top);
+			number.name = "number";
+			icon.add (number);
+			itemObj.push (icon);
+		}
+	}
+	
+	return itemObj;
+});
+
+functionList.set ("gameItem_to_obj", function (gameItem, num, numFont)
+{
+	trace ("gameItem_to_obj: " + gameItem + ", " + num);
+	var iconGroup = new Layer ();
+	
+	var icon = gameItem.getIcon ();
+	icon.name = "icon";
+	iconGroup.add (icon);
+	
+	if (num != null && num != "")
+	{
+		if (numFont == null) numFont = Fonts.DETAIL_WHITE_20;
+		var number = Label.create (num, numFont, 0, 50, Anchor.center_top);
+		number.name = "number";
+		iconGroup.add (number);
+	}
+	
+	PixmaGame.notification.addHint (iconGroup, function (e)
+	{
+		return this.callFunction ("callItemHint", [e, gameItem, 320, 320]);
+	});
+	
+	iconGroup.addEventListener (Event.REMOVED_FROM_STAGE, function (e)
+	{
+		PixmaGame.notification.removeHint (iconGroup);
+	});
+	
+	return iconGroup;
+});
+
+functionList.set ("cardInfo_to_obj", function (cardInfo)
+{
+	var iconGroup = new Layer ();
+	
+	var icon = new SmallIcon (cardInfo, 0, 0, {type:0, levelMode:0});
+	icon.name = "icon";
+	iconGroup.add (icon);
+	
+	return iconGroup;
+});
+
+functionList.set ("arrange_gift", function (listObj)
+{
+	var row = Math.ceil (listObj.length / 5);
+	var column = Math.min (5, listObj.length);
+	var index = 0;
+	var rowId = 0;
+	var layer = new Layer ();
+	
+	while (rowId < row)
+	{
+		if (listObj.length - rowId * column < column)
+			column = listObj.length - rowId * column;
+		
+		var columnId = 0;
+		var offsetLength = (column - 1) * 0.5;
+		while (columnId < column)
+		{
+			var icon = listObj [index];
+			index ++;
+			
+			icon.x = (columnId - offsetLength) * 100;
+			icon.y = rowId * 120;
+			layer.add (icon);
+			
+			columnId ++;
+		}
+		rowId ++;
+	}
+	
+	return layer;
+});
+
+return functionList;

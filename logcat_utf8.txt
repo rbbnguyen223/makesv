@@ -1,0 +1,178 @@
+--------- beginning of main
+09-23 19:19:03.127   147  3224 I resolv  : doQuery: rcode=0, ancount=2, return value=88
+09-23 19:19:03.141   147  3225 I resolv  : res_nsend: used send_dg 76 terrno: 0
+09-23 19:19:03.141   147  3225 I resolv  : doQuery: rcode=0, ancount=2, return value=76
+09-23 19:19:03.142  3143  3181 D TrafficStats: tagSocket(115) with statsTag=0xffffffff, statsUid=-1
+09-23 19:19:03.258  3143  3152 W System  : A resource failed to call close. 
+09-23 19:19:04.438  3226  3226 I adbd    : type=1400 audit(0.0:5060): avc:  denied  { execute } for  name="sh" dev="sda2" ino=1647 scontext=u:r:su:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+09-23 19:19:04.438  3226  3226 I adbd    : type=1400 audit(0.0:5061): avc:  denied  { read open } for  path="/system/bin/sh" dev="sda2" ino=1647 scontext=u:r:su:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+09-23 19:19:04.438  3226  3226 I adbd    : type=1400 audit(0.0:5062): avc:  denied  { execute_no_trans } for  path="/system/bin/sh" dev="sda2" ino=1647 scontext=u:r:su:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+09-23 19:19:04.438  3226  3226 I sh      : type=1400 audit(0.0:5063): avc:  denied  { map } for  path="/system/bin/sh" dev="sda2" ino=1647 scontext=u:r:su:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+09-23 19:19:04.438  3226  3226 I sh      : type=1400 audit(0.0:5064): avc:  denied  { getattr } for  path="/system/bin/sh" dev="sda2" ino=1647 scontext=u:r:su:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+09-23 19:19:04.438  3226  3226 I sh      : type=1400 audit(0.0:5065): avc:  denied  { dac_override } for  capability=1  scontext=u:r:su:s0 tcontext=u:r:su:s0 tclass=capability permissive=1
+09-23 19:19:04.438  3226  3226 I sh      : type=1400 audit(0.0:5066): avc:  denied  { write } for  name="tmp" dev="sdb2" ino=131076 scontext=u:r:su:s0 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=1
+09-23 19:19:04.492  3226  3226 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+09-23 19:19:04.493  3226  3226 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+09-23 19:19:04.508    86    86 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+09-23 19:19:04.508  3226  3228 I Gralloc4: mapper 4.x is not supported
+09-23 19:19:04.508    86    86 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@3.0::IMapper/default in either framework or device VINTF manifest.
+09-23 19:19:04.508  3226  3228 W Gralloc3: mapper 3.x is not supported
+09-23 19:19:04.514  3226  3228 I screencap: fastpipe: Connect success
+09-23 19:19:04.517  3226  3228 I screencap: fastpipe: Connect success
+09-23 19:19:04.518  3226  3228 D HostConnection: HostRPC::connect sucess: app=screencap, pid=3226, tid=3228, this=0x7db70d2426c0
+09-23 19:19:04.518  3226  3228 D HostConnection: queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:screencap
+09-23 19:19:04.522  3226  3226 I screencap: fastpipe: Connect success
+09-23 19:19:04.522  3226  3226 D HostConnection: HostRPC::connect sucess: app=screencap, pid=3226, tid=3226, this=0x7db7b915d040
+09-23 19:19:04.523  3226  3226 D HostConnection: queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:screencap
+09-23 19:19:04.849   325  1614 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+--------- beginning of system
+09-23 19:19:04.850   325  1614 I ActivityManager: Enqueued broadcast Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }: 0
+09-23 19:19:04.852   325   342 I ActivityManager: Broadcast completed: result=0
+09-23 19:19:04.853  1061  1425 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+09-23 19:19:04.858  1061  1181 E StorageManager: Failed to set extended attributes for /storage/emulated/0/screen.png to set project id.: Operation not supported on transport endpoint
+09-23 19:19:04.858  1061  1181 W MediaProvider: Failed to update quota type for /storage/emulated/0/screen.png
+09-23 19:19:04.858  1061  1181 W MediaProvider: java.io.IOException: Failed to update quota type for /storage/emulated/0/screen.png
+09-23 19:19:04.858  1061  1181 W MediaProvider: 	at android.os.storage.StorageManager.updateExternalStorageFileQuotaType(StorageManager.java:2560)
+09-23 19:19:04.858  1061  1181 W MediaProvider: 	at com.android.providers.media.MediaProvider.updateQuotaTypeForFileInternal(MediaProvider.java:888)
+09-23 19:19:04.858  1061  1181 W MediaProvider: 	at com.android.providers.media.MediaProvider.updateQuotaTypeForUri(MediaProvider.java:857)
+09-23 19:19:04.858  1061  1181 W MediaProvider: 	at com.android.providers.media.MediaProvider.-$$Nest$mupdateQuotaTypeForUri(MediaProvider.java:0)
+09-23 19:19:04.858  1061  1181 W MediaProvider: 	at com.android.providers.media.MediaProvider$5.lambda$onUpdate$1(MediaProvider.java:966)
+09-23 19:19:04.858  1061  1181 W MediaProvider: 	at com.android.providers.media.MediaProvider$5.$r8$lambda$d1oamlpYRGmLAqSobOWu_Cv09p8(MediaProvider.java:0)
+09-23 19:19:04.858  1061  1181 W MediaProvider: 	at com.android.providers.media.MediaProvider$5$$ExternalSyntheticLambda2.run(R8$$SyntheticClass:0)
+09-23 19:19:04.858  1061  1181 W MediaProvider: 	at android.os.Handler.handleCallback(Handler.java:958)
+09-23 19:19:04.858  1061  1181 W MediaProvider: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+09-23 19:19:04.858  1061  1181 W MediaProvider: 	at android.os.Looper.loopOnce(Looper.java:205)
+09-23 19:19:04.858  1061  1181 W MediaProvider: 	at android.os.Looper.loop(Looper.java:294)
+09-23 19:19:04.858  1061  1181 W MediaProvider: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+09-23 19:19:04.859  1061  1425 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+09-23 19:19:04.860  3226  3226 I screencap: fastpipe: close connect
+09-23 19:19:04.860  3226  3226 I screencap: fastpipe: close connect
+09-23 19:19:07.882   201   201 I ldinit  : type=1400 audit(0.0:5099): avc:  denied  { search } for  name="data" dev="sdb2" ino=17 scontext=u:r:ldinit:s0 tcontext=u:object_r:system_data_file:s0:c512,c768 tclass=dir permissive=1
+09-23 19:19:10.332   239   239 I rootcanal: type=1400 audit(0.0:5100): avc:  denied  { read } for  path="socket:[8784]" dev="sockfs" ino=8784 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=tcp_socket permissive=1
+09-23 19:19:19.745   533   578 D ControlsListingControllerImpl: Subscribing callback, service count: 0
+09-23 19:19:19.746   533   578 D ControlsListingControllerImpl: Unsubscribing callback
+09-23 19:19:20.265   184   184 I binder:184_2: type=1400 audit(0.0:5101): avc:  denied  { read } for  scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+09-23 19:19:20.323   325   438 D FakeSupplicantStaIface: setBtCoexistenceMode
+09-23 19:19:20.323   325   438 D FakeSupplicantStaIface: setSuspendModeEnabled
+09-23 19:19:20.323   325   438 D FakeSupplicantStaIface: setPowerSave
+09-23 19:19:20.324   652   834 D DhcpClient: Unicasting DHCPREQUEST ciaddr=172.16.1.4 request=0.0.0.0 serverid=null to /172.16.1.3:67
+09-23 19:19:20.327   652   834 D DhcpClient: Received packet: 00:db:92:44:2a:8d ACK: your new IP /172.16.1.4, netmask /255.255.255.0, gateways [/172.16.1.1] DNS servers: /192.168.1.1 , lease time 600
+09-23 19:19:20.328   652   834 D DhcpClient: Renewed lease: com.android.networkstack.android.net.DhcpResults@694fa492 DHCP server /172.16.1.3 Vendor info null lease 600 seconds Servername 
+09-23 19:19:20.330   652   834 D DhcpClient: Scheduling renewal in 299s
+09-23 19:19:20.330   652   834 D DhcpClient: Scheduling rebind in 524s
+09-23 19:19:20.330   652   834 D DhcpClient: Scheduling expiry in 599s
+09-23 19:19:20.331   325   438 D FakeSupplicantStaIface: setPowerSave
+09-23 19:19:20.331   325   438 D FakeSupplicantStaIface: setBtCoexistenceMode
+09-23 19:19:20.331   325   438 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendStickyBroadcast:1626 com.android.server.wifi.ClientModeImpl.sendNetworkChangeBroadcast:3011 com.android.server.wifi.ClientModeImpl.lambda$sendNetworkChangeBroadcastWithCurrentState$14:2988 com.android.server.wifi.ClientModeImpl.$r8$lambda$q-j88Pjw4gROgoJFr8wBlBVbuJI:0 com.android.server.wifi.ClientModeImpl$$ExternalSyntheticLambda5.send:0 
+09-23 19:19:20.331   325   454 E ConnectivityService: [100 WIFI]: ignoring attempt to change owner from 1000 to -1
+09-23 19:19:20.332   325   454 D ConnectivityService: Setting DNS servers for network 100 to [/192.168.1.1, /8.8.8.8, /8.8.4.4]
+09-23 19:19:20.332   325   454 D DnsManager: sendDnsConfigurationForNetwork(100, [192.168.1.1, 8.8.8.8, 8.8.4.4], [], 1800, 25, 8, 64, 0, 0, , [])
+09-23 19:19:20.332   147   175 I netd    : DnsResolverService::setResolverConfiguration(100, [192.168.1.1, 8.8.8.8, 8.8.4.4], [], 1800, 25, 8, 64, 0, 0, "", []) -> (0) (0.04ms)
+09-23 19:19:20.332   147   175 I netd    : setResolverConfiguration(ResolverParamsParcel{netId: 100, sampleValiditySeconds: 1800, successThreshold: 25, minSamples: 8, maxSamples: 64, baseTimeoutMsec: 0, retryCount: 0, servers: [192.168.1.1, 8.8.8.8, 8.8.4.4], domains: [], tlsName: , tlsServers: [], tlsFingerprints: [], caCertificate: , tlsConnectTimeoutMs: 0, resolverOptions: (null), transportTypes: [1]}) <0.07ms>
+09-23 19:19:20.332   325   353 W IPCThreadState: Sending oneway calls to frozen process.
+09-23 19:19:20.332   325   353 W IPCThreadState: Sending oneway calls to frozen process.
+09-23 19:19:20.332   325   353 W IPCThreadState: Sending oneway calls to frozen process.
+09-23 19:19:20.332   325   353 W IPCThreadState: Sending oneway calls to frozen process.
+09-23 19:19:20.332   325   353 W IPCThreadState: Sending oneway calls to frozen process.
+09-23 19:19:20.332   325   353 W IPCThreadState: Sending oneway calls to frozen process.
+09-23 19:19:20.332   325   353 W IPCThreadState: Sending oneway calls to frozen process.
+09-23 19:19:20.332   325   353 W IPCThreadState: Sending oneway calls to frozen process.
+09-23 19:19:20.342   183   183 I HwBinder:183_2: type=1400 audit(0.0:5102): avc:  denied  { ioctl } for  path="/dev/fastpipe" dev="tmpfs" ino=523 ioctlcmd=0x6867 scontext=u:r:hal_graphics_composer_default:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+09-23 19:19:27.882   201   201 I ldinit  : type=1400 audit(0.0:5103): avc:  denied  { read } for  name="partitions" dev="proc" ino=4026532068 scontext=u:r:ldinit:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+09-23 19:19:27.882   201   201 I ldinit  : type=1400 audit(0.0:5104): avc:  denied  { open } for  path="/proc/partitions" dev="proc" ino=4026532068 scontext=u:r:ldinit:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+09-23 19:19:27.882   201   201 I ldinit  : type=1400 audit(0.0:5105): avc:  denied  { getattr } for  path="/proc/partitions" dev="proc" ino=4026532068 scontext=u:r:ldinit:s0 tcontext=u:object_r:proc:s0 tclass=file permissive=1
+09-23 19:19:48.031   147  3234 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10111 0}
+09-23 19:19:48.031   147  3236 I resolv  : res_nmkquery: (QUERY, IN, A)
+09-23 19:19:48.031   147  3235 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+09-23 19:19:48.028   147   147 I Dns_100_10111: type=1400 audit(0.0:5106): avc:  denied  { read } for  name="hosts_new" dev="sdb2" ino=131600 scontext=u:r:netd:s0 tcontext=u:object_r:shell_data_file:s0 tclass=file permissive=1
+09-23 19:19:48.028   147   147 I Dns_100_10111: type=1400 audit(0.0:5107): avc:  denied  { open } for  path="/system/etc/hosts" dev="sdb2" ino=131600 scontext=u:r:netd:s0 tcontext=u:object_r:shell_data_file:s0 tclass=file permissive=1
+09-23 19:19:48.028   147   147 I Dns_100_10111: type=1400 audit(0.0:5108): avc:  denied  { getattr } for  path="/system/etc/hosts" dev="sdb2" ino=131600 scontext=u:r:netd:s0 tcontext=u:object_r:shell_data_file:s0 tclass=file permissive=1
+09-23 19:19:48.100   147  3235 I resolv  : res_nsend: used send_dg 103 terrno: 0
+09-23 19:19:48.100   147  3235 I resolv  : doQuery: rcode=0, ancount=0, return value=103
+09-23 19:19:48.170   147  3236 I resolv  : res_nsend: used send_dg 89 terrno: 0
+09-23 19:19:48.170   147  3236 I resolv  : doQuery: rcode=0, ancount=3, return value=89
+09-23 19:19:48.171  3143  3174 D TrafficStats: tagSocket(99) with statsTag=0xffffffff, statsUid=-1
+09-23 19:19:48.168  1719  1719 I adbd    : type=1400 audit(0.0:5109): avc:  denied  { connectto } for  path="/dev/socket/fwmarkd" scontext=u:r:su:s0 tcontext=u:r:netd:s0 tclass=unix_stream_socket permissive=1
+09-23 19:19:54.175  1719  1719 W adbd    : timeout expired while flushing socket, closing
+09-23 19:19:54.175   219   219 I RenderEngine: type=1400 audit(0.0:5110): avc:  denied  { ioctl } for  path="/dev/fastpipe" dev="tmpfs" ino=523 ioctlcmd=0x6867 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+09-23 19:20:00.016   183   209 D EmuHWC2 : sent 6 syncs in 60s
+09-23 19:20:07.882   201   201 I ldinit  : type=1400 audit(0.0:5111): avc:  denied  { search } for  name="data" dev="sdb2" ino=17 scontext=u:r:ldinit:s0 tcontext=u:object_r:system_data_file:s0:c512,c768 tclass=dir permissive=1
+09-23 19:20:09.612   280   280 I storaged: type=1400 audit(0.0:5112): avc:  denied  { read } for  name="stat" dev="sysfs" ino=8875 scontext=u:r:storaged:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+09-23 19:20:09.612   280   280 I storaged: type=1400 audit(0.0:5113): avc:  denied  { open } for  path="/sys/devices/pci0000:00/0000:00:0f.0/virtio1/host0/target0:0:0/0:0:0:0/block/sda/stat" dev="sysfs" ino=8875 scontext=u:r:storaged:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+09-23 19:20:09.612   280   280 I storaged: type=1400 audit(0.0:5114): avc:  denied  { getattr } for  path="/sys/devices/pci0000:00/0000:00:0f.0/virtio1/host0/target0:0:0/0:0:0:0/block/sda/stat" dev="sysfs" ino=8875 scontext=u:r:storaged:s0 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+09-23 19:20:22.427   325   438 E WifiStaIfaceAidlImpl: installApfPacketFilter failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+09-23 19:21:00.016   183   209 D EmuHWC2 : sent 6 syncs in 60s
+09-23 19:21:18.532   325   325 I PowerStatsServi: type=1400 audit(0.0:5115): avc:  denied  { call } for  scontext=u:r:system_server:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+09-23 19:21:18.701   325   438 I WifiConnectivityManager: SetInitialScanState to : 2
+09-23 19:21:18.701   325   450 D InstantWifi: Drop, size: 1
+09-23 19:21:18.701   282   282 W wificond: Scan already started
+09-23 19:21:18.702   282   282 I wificond: Scan
+09-23 19:21:19.702   325  2313 D WifiNl80211Manager: Scan result ready event
+09-23 19:21:19.702   325  2313 D WifiNative: Scan result ready event
+09-23 19:21:19.703   325   438 E WifiScoringParams: Invalid frequency(4920), using 5G as default rssi array
+09-23 19:22:00.016   183   209 D EmuHWC2 : sent 6 syncs in 60s
+09-23 19:22:13.108  3239  3239 I adbd    : type=1400 audit(0.0:5116): avc:  denied  { read write } for  name="1" dev="devpts" ino=4 scontext=u:r:su:s0 tcontext=u:object_r:devpts:s0 tclass=chr_file permissive=1
+09-23 19:22:13.112  3239  3239 I adbd    : type=1400 audit(0.0:5117): avc:  denied  { open } for  path="/dev/pts/1" dev="devpts" ino=4 scontext=u:r:su:s0 tcontext=u:object_r:devpts:s0 tclass=chr_file permissive=1
+09-23 19:22:13.112  3239  3239 I adbd    : type=1400 audit(0.0:5118): avc:  denied  { ioctl } for  path="/dev/pts/1" dev="devpts" ino=4 ioctlcmd=0x5401 scontext=u:r:su:s0 tcontext=u:object_r:devpts:s0 tclass=chr_file permissive=1
+09-23 19:22:13.173  3241  3241 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+09-23 19:22:13.173  3241  3241 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+09-23 19:22:13.172  3241  3241 I screencap: type=1400 audit(0.0:5119): avc:  denied  { call } for  scontext=u:r:su:s0 tcontext=u:r:servicemanager:s0 tclass=binder permissive=1
+09-23 19:22:13.178   181   181 I HwBinder:181_1: type=1400 audit(0.0:5120): avc:  denied  { read write } for  path="/dev/fastpipe" dev="tmpfs" ino=523 scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+09-23 19:22:13.185   219   219 I binder:219_3: type=1400 audit(0.0:5121): avc:  denied  { read write } for  path="/dev/fastpipe" dev="tmpfs" ino=523 scontext=u:r:su:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1
+09-23 19:22:13.196    86    86 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+09-23 19:22:13.196  3241  3242 I Gralloc4: mapper 4.x is not supported
+09-23 19:22:13.196    86    86 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@3.0::IMapper/default in either framework or device VINTF manifest.
+09-23 19:22:13.196  3241  3242 W Gralloc3: mapper 3.x is not supported
+09-23 19:22:13.192  3241  3241 I binder:3241_1: type=1400 audit(0.0:5122): avc:  denied  { read } for  name="u:object_r:hwservicemanager_prop:s0" dev="tmpfs" ino=169 scontext=u:r:su:s0 tcontext=u:object_r:hwservicemanager_prop:s0 tclass=file permissive=1
+09-23 19:22:13.192  3241  3241 I binder:3241_1: type=1400 audit(0.0:5123): avc:  denied  { open } for  path="/dev/__properties__/u:object_r:hwservicemanager_prop:s0" dev="tmpfs" ino=169 scontext=u:r:su:s0 tcontext=u:object_r:hwservicemanager_prop:s0 tclass=file permissive=1
+09-23 19:22:13.214  3241  3242 I screencap: fastpipe: Connect success
+09-23 19:22:13.218  3241  3242 I screencap: fastpipe: Connect success
+09-23 19:22:13.219  3241  3242 D HostConnection: HostRPC::connect sucess: app=screencap, pid=3241, tid=3242, this=0x770a72a42900
+09-23 19:22:13.219  3241  3242 D HostConnection: queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:screencap
+09-23 19:22:13.224  3241  3241 I screencap: fastpipe: Connect success
+09-23 19:22:13.224  3241  3241 D HostConnection: HostRPC::connect sucess: app=screencap, pid=3241, tid=3241, this=0x770b1a6cf280
+09-23 19:22:13.225  3241  3241 D HostConnection: queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:screencap
+09-23 19:22:13.381  3241  3241 I screencap: fastpipe: close connect
+09-23 19:22:13.382  3241  3241 I screencap: fastpipe: close connect
+09-23 19:22:22.768  3246  3246 I sh      : type=1400 audit(0.0:5137): avc:  denied  { getattr } for  path="/system/bin/screencap" dev="sda2" ino=1630 scontext=u:r:su:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+09-23 19:22:22.772  3246  3246 I sh      : type=1400 audit(0.0:5138): avc:  denied  { execute } for  name="screencap" dev="sda2" ino=1630 scontext=u:r:su:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+09-23 19:22:22.772  3246  3246 I sh      : type=1400 audit(0.0:5139): avc:  denied  { read open } for  path="/system/bin/screencap" dev="sda2" ino=1630 scontext=u:r:su:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+09-23 19:22:22.772  3246  3246 I sh      : type=1400 audit(0.0:5140): avc:  denied  { execute_no_trans } for  path="/system/bin/screencap" dev="sda2" ino=1630 scontext=u:r:su:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+09-23 19:22:22.772  3246  3246 I screencap: type=1400 audit(0.0:5141): avc:  denied  { map } for  path="/system/bin/screencap" dev="sda2" ino=1630 scontext=u:r:su:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+09-23 19:22:22.835  3246  3246 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+09-23 19:22:22.838  3246  3246 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+09-23 19:22:22.851    86    86 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+09-23 19:22:22.851  3246  3248 I Gralloc4: mapper 4.x is not supported
+09-23 19:22:22.851    86    86 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@3.0::IMapper/default in either framework or device VINTF manifest.
+09-23 19:22:22.851  3246  3248 W Gralloc3: mapper 3.x is not supported
+09-23 19:22:22.860  3246  3248 I screencap: fastpipe: Connect success
+09-23 19:22:22.864  3246  3248 I screencap: fastpipe: Connect success
+09-23 19:22:22.865  3246  3248 D HostConnection: HostRPC::connect sucess: app=screencap, pid=3246, tid=3248, this=0x70cd0d4422c0
+09-23 19:22:22.866  3246  3248 D HostConnection: queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:screencap
+09-23 19:22:22.871  3246  3246 I screencap: fastpipe: Connect success
+09-23 19:22:22.871  3246  3246 D HostConnection: HostRPC::connect sucess: app=screencap, pid=3246, tid=3246, this=0x70cdc2da7c40
+09-23 19:22:22.872  3246  3246 D HostConnection: queryAndSetGLESMaxVersion select gles-version: 3.1 hostGLVersion:46 process:screencap
+09-23 19:22:23.216   325  2313 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+09-23 19:22:23.217   325  2313 I ActivityManager: Enqueued broadcast Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }: 0
+09-23 19:22:23.219   325   342 I ActivityManager: Broadcast completed: result=0
+09-23 19:22:23.222  1061  1425 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+09-23 19:22:23.227  3246  3246 I screencap: fastpipe: close connect
+09-23 19:22:23.227  3246  3246 I screencap: fastpipe: close connect
+09-23 19:22:23.233  1061  1425 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.android.providers.media.module/com.android.providers.media.MediaService }
+09-23 19:22:23.235  1061  1181 E StorageManager: Failed to set extended attributes for /storage/emulated/0/screen.png to set project id.: Operation not supported on transport endpoint
+09-23 19:22:23.237  1061  1181 W MediaProvider: Failed to update quota type for /storage/emulated/0/screen.png
+09-23 19:22:23.237  1061  1181 W MediaProvider: java.io.IOException: Failed to update quota type for /storage/emulated/0/screen.png
+09-23 19:22:23.237  1061  1181 W MediaProvider: 	at android.os.storage.StorageManager.updateExternalStorageFileQuotaType(StorageManager.java:2560)
+09-23 19:22:23.237  1061  1181 W MediaProvider: 	at com.android.providers.media.MediaProvider.updateQuotaTypeForFileInternal(MediaProvider.java:888)
+09-23 19:22:23.237  1061  1181 W MediaProvider: 	at com.android.providers.media.MediaProvider.updateQuotaTypeForUri(MediaProvider.java:857)
+09-23 19:22:23.237  1061  1181 W MediaProvider: 	at com.android.providers.media.MediaProvider.-$$Nest$mupdateQuotaTypeForUri(MediaProvider.java:0)
+09-23 19:22:23.237  1061  1181 W MediaProvider: 	at com.android.providers.media.MediaProvider$5.lambda$onUpdate$1(MediaProvider.java:966)
+09-23 19:22:23.237  1061  1181 W MediaProvider: 	at com.android.providers.media.MediaProvider$5.$r8$lambda$d1oamlpYRGmLAqSobOWu_Cv09p8(MediaProvider.java:0)
+09-23 19:22:23.237  1061  1181 W MediaProvider: 	at com.android.providers.media.MediaProvider$5$$ExternalSyntheticLambda2.run(R8$$SyntheticClass:0)
+09-23 19:22:23.237  1061  1181 W MediaProvider: 	at android.os.Handler.handleCallback(Handler.java:958)
+09-23 19:22:23.237  1061  1181 W MediaProvider: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+09-23 19:22:23.237  1061  1181 W MediaProvider: 	at android.os.Looper.loopOnce(Looper.java:205)
+09-23 19:22:23.237  1061  1181 W MediaProvider: 	at android.os.Looper.loop(Looper.java:294)
+09-23 19:22:23.237  1061  1181 W MediaProvider: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+09-23 19:22:23.238  1061  1120 W FuseDaemon: Reducing the number of considered missed Gc histogram windows from 196 to 100
+09-23 19:22:45.948  3254  3254 I sh      : type=1400 audit(0.0:5145): avc:  denied  { getattr } for  path="/system/bin/logcat" dev="sda2" ino=1532 scontext=u:r:su:s0 tcontext=u:object_r:logcat_exec:s0 tclass=file permissive=1

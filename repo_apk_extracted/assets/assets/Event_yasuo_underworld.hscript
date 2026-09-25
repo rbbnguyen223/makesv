@@ -1,0 +1,25 @@
+var MouseEvent		= Type.resolveClass ("flash.events.MouseEvent");
+if (MouseEvent == null)
+	MouseEvent		= Type.resolveClass ("openfl._v2.events.MouseEvent");
+	
+var Resource		= Type.resolveClass ("Resource");
+var Layer			= Type.resolveClass ("Layer");
+
+var functionList = new FunctionList ();
+
+functionList.set ("init", function ()
+{
+	Resource.loadSprite ("GFX_EVENT_YASUO_UNDERWORLD");
+	var eventSprite = Resource.getSprite ("GFX_EVENT_YASUO_UNDERWORLD");
+	
+	var mainLayer = new Layer ();
+	mainLayer.x = -320;
+	mainLayer.y = -100;
+	this.add (mainLayer);
+	
+	var background = eventSprite.GetFrame (0, 0, 0);
+	background.addEventListener (MouseEvent.CLICK, function (e) { this.releaseFromParent (); });
+	mainLayer.add (background);
+});
+
+return functionList;

@@ -1,0 +1,56 @@
+Ket qua thu nghiem CDN v3 - 09/21/2026 Mon  8:34:43.51 
+ 
+=== quyen adb (uid=0 la root, can de xoa cache game) === 
+uid=0(root) gid=0(root) groups=0(root),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:su:s0
+=== hosts (phai la 192.168.1.13; neu la 127.0.0.1 thi chay set_hosts.bat truoc) === 
+127.0.0.1 localhost
+192.168.1.13 lienminh.g6-mobile.zing.vn lienminh.static.g6.zing.vn me.zing.vn
+ 
+=== LDPlayer ping duoc may chay server? === 
+PING 192.168.1.13 (192.168.1.13) 56(84) bytes of data.
+64 bytes from 192.168.1.13: icmp_seq=1 ttl=63 time=0.744 ms
+
+--- 192.168.1.13 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.744/0.744/0.744/0.000 ms
+ 
+--- 404 
+Starting: Intent { cmp=lmah.vn/.MainActivity }
+  cua so dang hien thi: 
+  mCurrentFocus=Window{6312550 u0 com.android.launcher3/com.android.launcher3.Launcher}
+  pid game: 
+  so file png game da tai ve: 
+0
+  CRASH: 
+09-21 08:35:19.753  2614  2636 F libc    : Fatal signal 11 (SIGSEGV), code 2 (SEGV_ACCERR), fault addr 0xdead1007 in tid 2636 (GLThread 27), pid 2614 (lmah.vn)
+09-21 08:35:19.897  2709  2709 F DEBUG   : Process uptime: 34s
+--- blank512 
+Starting: Intent { cmp=lmah.vn/.MainActivity }
+  cua so dang hien thi: 
+  mCurrentFocus=Window{6312550 u0 com.android.launcher3/com.android.launcher3.Launcher}
+  pid game: 
+  so file png game da tai ve: 
+18
+  CRASH: 
+09-21 08:35:56.040  2755  2777 F libc    : Fatal signal 11 (SIGSEGV), code 2 (SEGV_ACCERR), fault addr 0xdead1007 in tid 2777 (GLThread 27), pid 2755 (lmah.vn)
+09-21 08:35:56.180  2838  2838 F DEBUG   : Process uptime: 23s
+--- blank1024 
+Starting: Intent { cmp=lmah.vn/.MainActivity }
+  cua so dang hien thi: 
+  mCurrentFocus=Window{6312550 u0 com.android.launcher3/com.android.launcher3.Launcher}
+  pid game: 
+  so file png game da tai ve: 
+18
+  CRASH: 
+09-21 08:36:43.775  2886  2910 F libc    : Fatal signal 11 (SIGSEGV), code 2 (SEGV_ACCERR), fault addr 0xdead1007 in tid 2910 (GLThread 28), pid 2886 (lmah.vn)
+09-21 08:36:43.908  2970  2970 F DEBUG   : Process uptime: 23s
+--- blank2048 
+Starting: Intent { cmp=lmah.vn/.MainActivity }
+  cua so dang hien thi: 
+  mCurrentFocus=Window{6312550 u0 com.android.launcher3/com.android.launcher3.Launcher}
+  pid game: 
+  so file png game da tai ve: 
+18
+  CRASH: 
+09-21 08:37:34.727  3016  3038 F libc    : Fatal signal 11 (SIGSEGV), code 2 (SEGV_ACCERR), fault addr 0xdead1007 in tid 3038 (GLThread 27), pid 3016 (lmah.vn)
+09-21 08:37:34.853  3097  3097 F DEBUG   : Process uptime: 27s

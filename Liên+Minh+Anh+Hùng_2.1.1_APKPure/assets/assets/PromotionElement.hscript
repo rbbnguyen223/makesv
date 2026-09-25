@@ -1,0 +1,264 @@
+//start include
+var Date			= Type.resolveClass ("Date");
+var Map				= Type.resolveClass ("Map");
+
+var MouseEvent		= Type.resolveClass ("flash.events.MouseEvent");
+if(MouseEvent == null)
+	MouseEvent		= Type.resolveClass ("openfl._v2.events.MouseEvent");
+
+var Event		= Type.resolveClass ("flash.events.Event");
+if(Event == null)
+	Event		= Type.resolveClass ("openfl._v2.events.Event");
+
+var SoftDefines		= Type.resolveClass ("SoftDefines");
+var DF_UI			= Type.resolveClass ("DF_UI");
+var DF_INFO_PANEL	= Type.resolveClass ("DF_INFO_PANEL");
+var DF_TREASURE		= Type.resolveClass ("DF_TREASURE");
+var Fonts			= Type.resolveClass ("Fonts");
+var Anchor			= Type.resolveClass ("Anchor");
+var FBEvent			= Type.resolveClass ("FBEvent");
+var Request			= Type.resolveClass ("Request");
+var FBObjectOutput	= Type.resolveClass ("FBObjectOutput");
+var Commands		= Type.resolveClass ("Commands");
+var Keys			= Type.resolveClass ("Keys");
+
+var Resource		= Type.resolveClass ("Resource");
+var TextWrapper		= Type.resolveClass ("TextWrapper");
+var ArmorSet		= Type.resolveClass ("ArmorSet");
+var PageScrollable	= Type.resolveClass ("PageScrollable");
+var GameItem		= Type.resolveClass ("GameItem");
+var GameItemType	= Type.resolveEnum("GameItemType");
+
+var PixmaGame		= Type.resolveClass ("PixmaGame");
+var StockManager	= Type.resolveClass ("StockManager");
+var UserInfo		= Type.resolveClass ("UserInfo");
+var RewardItemInfo	= Type.resolveClass ("RewardItemInfo");
+var RequestGennarator	= Type.resolveClass ("RequestGennarator");
+var HomeState		= Type.resolveClass ("HomeState");
+
+var EquipInfo		= Type.resolveClass ("EquipInfo");
+var ParseObject		= Type.resolveClass ("ParseObject");
+var SmallIcon		= Type.resolveClass ("SmallIcon");
+var Button			= Type.resolveClass ("Button");
+var Layer			= Type.resolveClass ("Layer");
+var DisplayObject	= Type.resolveClass ("DisplayObject");
+var Label			= Type.resolveClass ("Label");
+var Popup			= Type.resolveClass ("Popup");
+var Border			= Type.resolveClass ("Border");
+var ColorRect		= Type.resolveClass ("ColorRect");
+var NewEventConst	= Type.resolveClass ("NewEventConst");
+var PageScrollable	= Type.resolveClass ("PageScrollable");
+var TextFormat		= Type.resolveClass ("flash.text.TextFormat");
+if(TextFormat == null)
+	TextFormat		= Type.resolveClass ("openfl._v2.text.TextFormat");
+var SimpleButton	= Type.resolveClass ("flash.display.SimpleButton");
+if(SimpleButton == null)
+	SimpleButton	= Type.resolveClass ("openfl._v2.display.SimpleButton");
+	
+var Loader	= Type.resolveClass ("flash.display.Loader");
+if(Loader == null)
+	Loader	= Type.resolveClass ("openfl._v2.display.Loader");
+	
+var URLRequest	= Type.resolveClass ("flash.net.URLRequest");
+if(URLRequest == null)
+	URLRequest	= Type.resolveClass ("openfl._v2.net.URLRequest");
+//end include
+var functionList = new FunctionList ();
+
+functionList.set ("initUI", function ()
+{
+	this.add (new ColorRect (0x000000, 0.9, 0, -195, 640, 960));
+		
+	this.close = new Button (SoftDefines.gfx_main_ui, DF_UI.anim_basic_normal, DF_UI.anim_basic_touch, DF_UI.anim_basic_disable);
+	this.close.x = 320;
+	this.close.y = 705;
+	this.close.set_label(Label.create (TextWrapper.getString("TEXT_CLOSE"), Fonts.DETAIL_WHITE_30, 0, 0, Anchor.center_center));
+	this.add (this.close);
+	this.count = 0;
+	
+	var orders = [];
+
+	var curTime = PixmaGame._instance.GetDateTime();
+	var curDate = Date.fromTime(curTime);
+	var k = NewEventConst.allNewEvent.keys();
+	trace("curDate: " + curDate);
+	while (k.hasNext()) 
+	{
+		var key = k.next();
+		trace("key: " + key);
+		var event = NewEventConst.get(key);
+		if (event != null) {
+			if (event.expiryTime != null)
+			{
+				var expiryDate = Date.fromString(event.expiryTime);
+				if (expiryDate == null || expiryDate.getTime() > curTime) {
+					orders.push(event);
+				}
+			}
+				
+				
+		}
+			
+	}
+
+	var freeRunEvent = {
+		id:9998,
+		name:"removerunes",
+		savename:"removerunes",
+		image:"http://lienminh.static.g6.zing.vn/cdn/removerunes.png",
+		url:"",
+		tdesc:"",
+		bdesc:"",
+		progress:[],
+		maxcount:-1,
+		family:0,
+		startDate: "2011-02-07 00:00:00",
+		closeTime: "2017-02-07 00:00:00",
+		expiryTime: "2017-10-07 00:00:00",
+		day:1
+	};
+	var date = Date.now();
+	var tomorow = Date.fromTime(date.getTime() + 86400000);
+	if(date.getDate() == freeRunEvent.day || tomorow.getDate() == freeRunEvent.day){
+		var k = new NewEventConst(freeRunEvent);
+		//NewEventConst.allNewEvent.set(k.id, k);
+		orders.push(k);
+	}
+	
+	var eventResetEvent = {
+		id:9999,
+		name:"reset event",
+		savename:"banner_reset",
+		image:"http://lienminh.static.g6.zing.vn/cdn/banner_reset.png",
+		url:"",
+		tdesc:"",
+		bdesc:"",
+		progress:[],
+		maxcount:-1,
+		family:0,
+		startDate: "2011-02-07 00:00:00",
+		closeTime: "2017-02-07 00:00:00",
+		expiryTime: "2017-10-07 00:00:00",
+		day:14
+	};
+	var date = Date.now();
+	var tomorow = Date.fromTime(date.getTime() + 86400000);
+	if(date.getDate() == eventResetEvent.day || tomorow.getDate() == eventResetEvent.day){
+		var k = new NewEventConst(eventResetEvent);
+	//	NewEventConst.allNewEvent.set(k.id, k);
+		orders.push(k);
+	}
+	
+	orders.sort (function (a, b)
+	{
+		var ida = a.get_maxcount();
+		var idb = b.get_maxcount();
+		if (ida > idb) return 1;
+		if (ida < idb) return -1;
+		return 0;
+	});
+
+
+	
+	var panelObj = new Layer();
+	panelObj.name = "panel";
+	var scrollView = new PageScrollable (panelObj, 640, 800, PageScrollable.Ver);
+	scrollView.name = "scroll";
+	scrollView.x = 0;
+	scrollView.y = -150;
+	scrollView.removeEventListener (MouseEvent.MOUSE_OUT, scrollView.onRelease);
+	scrollView.addEventListener (MouseEvent.MOUSE_OUT, function(e)
+	{
+		if(e.relatedObject == null)
+		{
+			if (scrollView.move) scrollView.waitRelease = true;
+			
+			scrollView.canMove = false;
+			scrollView.move = false;
+			scrollView.horizontal = false;
+			scrollView.vertical = false;
+		}
+	});
+	this.add(scrollView);
+
+	for(n in orders)
+	{
+		var event = n;
+		if(event != null){
+			this.callFunction ("createItem", [event]);
+			this.count ++;
+		}
+		
+	}
+});
+
+functionList.set ("createItem", function (event)
+{
+	var count = this.count;
+	var imageUrl = event.image;
+	var linkUrl = event.url;
+	var savename = event.savename;
+	var cacheBitmap = this.callFunction ("loadFromeDevice", [savename]);
+	var image_loader = new Loader();
+	image_loader.name = linkUrl;
+	
+	if (linkUrl != null)
+	{
+		image_loader.addEventListener (MouseEvent.CLICK, this.item_onClick);
+	}
+	
+	if (cacheBitmap != null)
+	{
+		// if(PixmaGame.isFlash != null && PixmaGame.isFlash == true)
+		// {
+			var bitmap = new DisplayObject ();
+			bitmap.name = linkUrl;
+			bitmap.getGraphics().beginBitmapFill (cacheBitmap);
+			bitmap.getGraphics().drawRect (0, 0, cacheBitmap.width, cacheBitmap.height);
+			bitmap.getGraphics().endFill ();
+			bitmap.x = 32;
+			bitmap.y = count * 150;	
+			bitmap.addEventListener (MouseEvent.CLICK, item_onClick);
+			// this.addChild(bitmap);
+			this.getChildByName("scroll").viewport.getChildByName("panel").addChild(bitmap);
+			/*
+		}else
+		{
+			var bitmap = new Bitmap(cacheBitmap);
+			image_loader.addChild(bitmap);
+			image_loader.x = 32;
+			image_loader.y = count * 150;
+			
+			// this.addChild(image_loader);
+			this.getChildByName("scroll").viewport.getChildByName("panel").addChild(image_loader);
+		}*/
+	}
+	else
+	{
+		image_loader.contentLoaderInfo.addEventListener(Event.COMPLETE, function(e)
+		{
+			var bmp = image_loader.content;
+			image_loader.x = 32;
+			// PixmaGame.notification.hideWaiting ();
+			this.callFunction ("saveToDevice", [bmp.bitmapData,savename]);
+			trace("Loaded image " + bmp.bitmapData.width + "x" + bmp.bitmapData.height);
+		});
+		
+		// var popup = PixmaGame.notification.showWaiting ("",
+			// function ()
+			// {
+				// return this.loadfinished;
+			// }
+		// );
+
+		var request = new URLRequest(imageUrl);
+		image_loader.load(request);
+		
+		image_loader.y = count * 150;
+		// this.addChild(image_loader);
+		this.getChildByName("scroll").viewport.getChildByName("panel").addChild(image_loader);
+		trace (" Adventure tutttttttttttttttttttttttttttttttttttttttttttttttt" + (count * 150));
+	}
+});
+
+return functionList;

@@ -1,0 +1,99 @@
+== DISASM backtrace crash null ptr (ban 1-patch) - skipdata=on ==
+
+===== crash #00 - diem null ptr deref: ldr r3,[r4,#0x20] : 0x7AF92C =====
+  0x07AF82C: ldr      r1, [sp, #0x68]
+  0x07AF830: add      r8, r8, #8
+  0x07AF834: add      r6, r6, #4
+  0x07AF838: ldr      sl, [r7]
+  0x07AF83C: movt     lr, #0xffff
+  0x07AF840: str      r6, [sp, #0x1c]
+  0x07AF844: movw     ip, #0xfcc8
+  0x07AF848: vldr     d7, [pc, #0x340]
+  0x07AF84C: movt     ip, #0xffff
+  0x07AF850: str      sl, [sp, #0x3ac]
+  0x07AF854: vmov     sl, fp, d7
+  0x07AF858: vldr     d7, [pc, #0x338]
+  0x07AF85C: strd     sl, fp, [r8, lr]
+  0x07AF860: vmov     sl, fp, d7
+  0x07AF864: vmov.f64 d7, #5.000000e-01
+  0x07AF868: ldr      r2, [sb, r1]
+  0x07AF86C: vldr     s12, [r2]
+  0x07AF870: strd     sl, fp, [r8, ip]
+  0x07AF874: add      r3, sp, #0x128
+  0x07AF878: add      r0, sp, #0x3b0
+  0x07AF87C: add      r1, sp, #0x2e8
+  0x07AF880: add      r2, sp, #0x3ac
+  0x07AF884: add      ip, sp, #0x118
+  0x07AF888: mov      lr, #0x24
+  0x07AF88C: str      ip, [sp]
+  0x07AF890: str      lr, [sp, #0x2e4]
+  0x07AF894: add      ip, sp, #0x2e0
+  0x07AF898: mov      lr, r8
+  0x07AF89C: str      ip, [sp, #4]
+  0x07AF8A0: add      ip, sp, #0x108
+  0x07AF8A4: str      ip, [sp, #8]
+  0x07AF8A8: add      ip, sp, #0xf8
+  0x07AF8AC: str      ip, [sp, #0xc]
+  0x07AF8B0: vcvt.f64.s32 d6, s12
+  0x07AF8B4: ldr      ip, [sp, #0x20]
+  0x07AF8B8: str      r6, [sp, #0x2ec]
+  0x07AF8BC: mov      r6, #0
+  0x07AF8C0: strb     r5, [sp, #0xf8]
+  0x07AF8C4: add      sl, sp, #0x280
+  0x07AF8C8: str      r6, [sp, #0x2e8]
+  0x07AF8CC: add      fp, sp, #0x278
+  0x07AF8D0: strb     r6, [sp, #0x128]
+  0x07AF8D4: strb     r6, [sp, #0x118]
+  0x07AF8D8: strb     r6, [sp, #0x2e0]
+  0x07AF8DC: vmul.f64 d7, d6, d7
+  0x07AF8E0: strb     r6, [sp, #0x108]
+  0x07AF8E4: vldr     d8, [pc, #0x2b4]
+  0x07AF8E8: vmov     r8, sb, d7
+  0x07AF8EC: strd     r8, sb, [lr, ip]
+  0x07AF8F0: bl       #0xaff974
+  0x07AF8F4: ldr      ip, [sp, #0x3b0]
+  0x07AF8F8: ldr      r3, [r4, #0x40]
+  0x07AF8FC: add      r2, sp, #0x2d8
+  0x07AF900: add      r1, sp, #0x3a8
+  0x07AF904: str      ip, [r4, #0x48]
+  0x07AF908: mov      r0, r3
+  0x07AF90C: ldr      r3, [r3]
+  0x07AF910: ldr      r3, [r3, #0x2fc]
+  0x07AF914: str      ip, [sp, #0x3a8]
+  0x07AF918: strb     r5, [sp, #0x2d8]
+  0x07AF91C: blx      r3
+  0x07AF920: ldr      r3, [r4, #0x20]
+  0x07AF924: mov      r0, r3
+  0x07AF928: ldr      r3, [r3]
+  0x07AF92C: mov      lr, pc  <<<<< CRASH HERE
+  0x07AF930: ldr      pc, [r3, #0xf0]
+  0x07AF934: ldr      r3, [r4, #0x20]
+  0x07AF938: mov      r1, r0
+  0x07AF93C: mov      r0, r3
+  0x07AF940: ldr      r3, [r3]
+  0x07AF944: mov      lr, pc
+  0x07AF948: ldr      pc, [r3, #0x120]
+  0x07AF94C: ldr      r2, [sp, #0x1c]
+  0x07AF950: add      r1, sp, #0x3a4
+  0x07AF954: str      r6, [sp, #0x2c8]
+  0x07AF958: str      r2, [sp, #0x2cc]
+  0x07AF95C: str      r0, [sp, #0x3a4]
+  0x07AF960: mov      r0, sl
+  0x07AF964: bl       #0xca806c
+  0x07AF968: mov      r2, sl
+  0x07AF96C: add      r0, sp, #0x2d0
+  0x07AF970: add      r1, sp, #0x2c8
+  0x07AF974: bl       #0xca6f20
+  0x07AF978: ldr      r8, [sp, #0x2d0]
+  0x07AF97C: add      sl, sp, #0x440
+  0x07AF980: movw     lr, #0xfca8
+  0x07AF984: add      sl, sl, #8
+  0x07AF988: movt     lr, #0xffff
+  0x07AF98C: str      r8, [sp, #0x2c0]
+  0x07AF990: movw     ip, #0xfc98
+  0x07AF994: ldr      r8, [sp, #0x2d4]
+  0x07AF998: add      r3, sp, #0xe8
+  0x07AF99C: vldr     d7, [pc, #0x204]
+  0x07AF9A0: add      r0, sp, #0x3a0
+  0x07AF9A4: add      r1, sp, #0x2c0
+  0x07AF9A8: add      r2, sp, #0x39c

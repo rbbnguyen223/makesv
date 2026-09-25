@@ -1,0 +1,44 @@
+//start include
+var Date			= Type.resolveClass ("Date");
+var MouseEvent		= Type.resolveClass ("flash.events.MouseEvent");
+
+var SoftDefines		= Type.resolveClass ("SoftDefines");
+var DF_UI			= Type.resolveClass ("DF_UI");
+var DF_INFO_PANEL	= Type.resolveClass ("DF_INFO_PANEL");
+var DF_TREASURE		= Type.resolveClass ("DF_TREASURE");
+var Fonts			= Type.resolveClass ("Fonts");
+var Anchor			= Type.resolveClass ("Anchor");
+var FBEvent			= Type.resolveClass ("FBEvent");
+
+var Resource		= Type.resolveClass ("Resource");
+var TextWrapper		= Type.resolveClass ("TextWrapper");
+var ArmorSet		= Type.resolveClass ("ArmorSet");
+
+var PixmaGame		= Type.resolveClass ("PixmaGame");
+var StockManager	= Type.resolveClass ("StockManager");
+var UserInfo		= Type.resolveClass ("UserInfo");
+
+var Button			= Type.resolveClass ("Button");
+var Layer			= Type.resolveClass ("Layer");
+var DisplayObject	= Type.resolveClass ("DisplayObject");
+var Label			= Type.resolveClass ("Label");
+var Popup			= Type.resolveClass ("Popup");
+var Border			= Type.resolveClass ("Border");
+var TextFormat		= Type.resolveClass ("flash.text.TextFormat");
+var SimpleButton		= Type.resolveClass ("flash.display.SimpleButton");
+//end include
+
+//static params
+var footerOffsetX = CongratulateElement.footerOffsetX;
+var footerOffsetY = CongratulateElement.footerOffsetY;
+var footerSizeX = CongratulateElement.footerSizeX;
+var footerSizeY = CongratulateElement.footerSizeY;
+var size = CongratulateElement.size;
+
+var functionList = new FunctionList ();
+
+// functionList.load("Event_NewServer", this.referenceParam ());
+
+this.loadScript ("Event_QuestBingo");
+
+return functionList;

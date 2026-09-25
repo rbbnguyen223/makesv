@@ -1,0 +1,28 @@
+===== cho crash #1 (r4+0x20 = null): 0x7AF920 =====
+  dau ham (uoc luong): 0x7AB2E4   (cach diem quan tam 0x463c byte)
+  chuoi tham chieu (theo thu tu trong ham):
+    0x07AB424  "TEXT_CONFIRM"
+    0x07AB45C  "TEXT_TIME_OUT_JOIN"
+
+===== khung goi 0x7AC874: 0x7AC874 =====
+  dau ham (uoc luong): 0x7A78F0   (cach diem quan tam 0x4f84 byte)
+  chuoi tham chieu (theo thu tu trong ham):
+    0x07A7A6C  "bossInfo"
+    0x07A7A9C  "idSelected"
+    0x07A7ACC  "timeUpdateTopHit"
+    0x07A7B00  "topTable"
+    0x07A7B30  "waitingAsk"
+
+===== khung goi 0x7B0F80: 0x7B0F80 =====
+  (khong tim thay dau ham trong 0x5000 byte truoc do)
+
+===== ham vá tra ve 1: 0x4D9984 =====
+  dau ham (uoc luong): 0x4D93FC   (cach diem quan tam 0x588 byte)
+  chuoi tham chieu (theo thu tu trong ham):
+
+===== khung crash moi #01: 0xC76038 =====
+  dau ham (uoc luong): 0xC7168C   (cach diem quan tam 0x49ac byte)
+  chuoi tham chieu (theo thu tu trong ham):
+    0x0C7170C  "ption"
+    0x0C71714  "GetLocalAllocMT - requesting memory from unregistered thread!"
+    0x0C717EC  "Anon"

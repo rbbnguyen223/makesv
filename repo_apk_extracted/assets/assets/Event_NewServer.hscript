@@ -1,0 +1,815 @@
+//start include
+var Date			= Type.resolveClass ("Date");
+var Map				= Type.resolveClass ("Map");
+var MouseEvent		= Type.resolveClass ("flash.events.MouseEvent");
+if(MouseEvent == null)
+	MouseEvent		= Type.resolveClass ("openfl._v2.events.MouseEvent");
+
+var SoftDefines		= Type.resolveClass ("SoftDefines");
+var DF_UI			= Type.resolveClass ("DF_UI");
+var DF_INFO_PANEL	= Type.resolveClass ("DF_INFO_PANEL");
+var DF_TREASURE		= Type.resolveClass ("DF_TREASURE");
+var Fonts			= Type.resolveClass ("Fonts");
+var Anchor			= Type.resolveClass ("Anchor");
+var FBEvent			= Type.resolveClass ("FBEvent");
+var Request			= Type.resolveClass ("Request");
+var FBObjectOutput	= Type.resolveClass ("FBObjectOutput");
+var Commands		= Type.resolveClass ("Commands");
+var Keys			= Type.resolveClass ("Keys");
+
+var Resource		= Type.resolveClass ("Resource");
+var TextWrapper		= Type.resolveClass ("TextWrapper");
+var ArmorSet		= Type.resolveClass ("ArmorSet");
+
+var PixmaGame		= Type.resolveClass ("PixmaGame");
+var StockManager	= Type.resolveClass ("StockManager");
+var UserInfo		= Type.resolveClass ("UserInfo");
+var RewardItemInfo	= Type.resolveClass ("RewardItemInfo");
+var RequestGennarator	= Type.resolveClass ("RequestGennarator");
+
+var EquipInfo		= Type.resolveClass ("EquipInfo");
+var ParseObject		= Type.resolveClass ("ParseObject");
+var SmallIcon		= Type.resolveClass ("SmallIcon");
+var Button			= Type.resolveClass ("Button");
+var Layer			= Type.resolveClass ("Layer");
+var DisplayObject	= Type.resolveClass ("DisplayObject");
+var Label			= Type.resolveClass ("Label");
+var Popup			= Type.resolveClass ("Popup");
+var Border			= Type.resolveClass ("Border");
+var TextFormat		= Type.resolveClass ("flash.text.TextFormat");
+if(TextFormat == null)
+	TextFormat		= Type.resolveClass ("openfl._v2.text.TextFormat");
+var SimpleButton	= Type.resolveClass ("flash.display.SimpleButton");
+if(SimpleButton == null)
+	SimpleButton	= Type.resolveClass ("openfl._v2.display.SimpleButton");
+//end include
+
+var TYPE_AP = 0;
+var TYPE_COIN = 1;
+var TYPE_XP2 = 2;
+var TYPE_FP = 3;
+var TYPE_RUNE = 4;
+var TYPE_RANDOM_CARD = 5;
+var TYPE_ARMORSET = 6;
+var TYPE_RANDOM_EQUIP = 7;
+
+var EVENT_NEWCOMER = 0;
+var EVENT_MISSION7DAYS = 1;
+
+var BTN_NORMAL = 0;
+var BTN_DISABLE = 1;
+                                     //   	 In Time        Got		 	completed
+var STATUS_EXPIRED 		= 0;		 //      no	(early)		no			n/a
+var STATUS_CLAIMED 		= 1;		//		 n/a			yes			n/a
+var STATUS_COMPLETED 	= 2;		//		 yes			no			yes
+var STATUS_WAITGET		= 3;		//		 yes			n/a			no
+var STATUS_NOTNOW	   	= 4;		//		 no	(late)		n/a			n/a
+
+var currentDay = 1;
+
+var functionList = new FunctionList ();
+
+functionList.set ("getCurrentDateEvent", function ()
+{
+	var curTime = PixmaGame._instance.GetDateTime();
+	var curDate = Date.fromTime(curTime);
+	var d = curDate.getDate();
+	var m = curDate.getMonth();
+	var y = curDate.getFullYear();
+	
+	return new Date(y, m, d, 0, 0, 0);
+});
+
+functionList.set ("getConstGiftEvent", function (event)
+{
+	var curTime = PixmaGame._instance.GetDateTime();
+	var curDate = Date.fromTime(curTime);
+	var d = curDate.getDate();
+	var m = curDate.getMonth();
+	var y = curDate.getFullYear();
+	var startDate = new Date(y, m, d, 0, 0, 0);
+	var endDate = new Date(y, m, d+1, 0, 0, 0);
+
+	trace("d " + d + " m " + m + " y " + y);
+	
+	var data = [];
+	trace("getConstGiftEvent 11111111");
+	if(event == EVENT_NEWCOMER)
+		data = [
+			{
+				id:8071,
+				type:TYPE_AP,
+				num:120,
+				status:STATUS_NOTNOW
+			},
+			{
+				id:8072,
+				type:TYPE_FP,
+				num:50,
+				status:STATUS_NOTNOW
+			},
+			{
+				id:8073,
+				type:TYPE_COIN,
+				num:50000,
+				status:STATUS_NOTNOW
+			}
+			,
+			{
+				id:8074,
+				type:TYPE_XP2,
+				num:1,
+				status:STATUS_NOTNOW
+			}
+		];
+	else if(event == EVENT_MISSION7DAYS)	
+		data = [
+			{
+				id:8076,
+				day:new Date(2015, 1, 11, 0, 0, 0),
+				type:TYPE_AP,
+				num:100,
+				status:STATUS_EXPIRED,
+				quest:"Đạt Level 15"
+			},
+			{
+				id:8077,
+				day:new Date(2015, 1, 12, 0, 0, 0),
+				type:TYPE_COIN,
+				num:1999999,
+				status:STATUS_CLAIMED,
+				quest:"Tham gia 10 Trận PvP"
+			},
+			{
+				id:8078,
+				day:new Date(2015, 1, 13, 0, 0, 0),
+				type:TYPE_RUNE,
+				num:2000,
+				status:STATUS_WAITGET,
+				quest:"Tham gia Sự Kiện Bí Ma"
+			},
+			{
+				id:8079,
+				day:new Date(2015, 1, 14, 0, 0, 0),
+				type:TYPE_ARMORSET,
+				num:10,
+				status:STATUS_NOTNOW,
+				quest:"Tạo Bang/Tham Gia Bang Hội"
+			},
+			{
+				id:8080,
+				day:new Date(2015, 1, 15, 0, 0, 0),
+				type:TYPE_AP,
+				num:250,
+				status:STATUS_NOTNOW,
+				quest:"Đạt 300 Cúp PvP"
+			},
+			{
+				id:8081,
+				day:new Date(2015, 1, 16, 0, 0, 0),
+				type:TYPE_RANDOM_EQUIP,
+				num:1,
+				status:STATUS_NOTNOW,
+				quest:"Vượt qua Map Săn 6"
+			},
+			{
+				id:8082,
+				day:new Date(2015, 1, 17, 0, 0, 0),
+				type:TYPE_RANDOM_CARD,
+				num:1,
+				status:STATUS_NOTNOW,
+				quest:"Đạt Level 30"
+			}
+		];
+	
+	var itemStatusArr = RewardItemInfo.GetDinamicListRewards();
+	var idRewardReceivedArr = RewardItemInfo.finish_recieve_rewards;
+	trace("itemStatusArr " + itemStatusArr);
+	trace("idRewardReceivedArr " + idRewardReceivedArr);
+	for(info in data)
+	{
+		trace("id " + info.id);
+		if(info.day != null)
+		{
+			trace("info.day.getTime() " + info.day.getTime());
+			trace("startDate.getTime() " + startDate.getTime());
+			trace("endDate.getTime() " + endDate.getTime());
+			trace("info.day " + info.day);
+			trace("startDate " + startDate);
+			trace("endDate " + endDate);
+			var deltaBefore = (startDate.getTime() - info.day.getTime());
+			var deltaAfter = (info.day.getTime() - endDate.getTime());
+			trace("deltaBefore " + deltaBefore);
+			trace("deltaAfter " + deltaAfter);
+			if(deltaBefore > 0)
+				info.status = STATUS_EXPIRED;
+			else if(deltaAfter >= 0)
+				info.status = STATUS_NOTNOW;
+			// else
+				// info.status = STATUS_WAITGET;
+		}
+			
+		for(item in itemStatusArr)
+		{
+			if(item.itemId == info.id)
+			{
+				if(item.isFinish)
+				{
+					trace("item id finised " + item.itemId);
+					info.status = STATUS_COMPLETED;
+					info.reward = item;
+				}
+				else{
+					trace("item id not finish " + item.itemId);
+					info.status = STATUS_WAITGET;
+				}
+			}
+		}
+		
+		for(id in idRewardReceivedArr)
+		{
+			if(id == info.id)
+			{
+				trace("claimed id " + id);
+				info.status = STATUS_CLAIMED;
+			}
+		}
+	}
+	
+	return data;
+});
+
+functionList.set ("getItemReward", function (type, value)
+{
+	trace("type " + type + " value " + value);
+	var str = "x" + value;
+	var evtSpr = Resource.getSprite ("GFX_EVENT_NEWSERVER");
+	var specialSpr = Resource.getSprite ("GFX_SPECIAL_ICON");
+	var item = new Layer();
+	if(type == RewardItemInfo.TYPE_RED_AP)
+		item.addChild(evtSpr.GetFrame(3, 0, 0));
+	else if(type == RewardItemInfo.TYPE_GOLD)	
+		item.addChild(evtSpr.GetFrame(4, 0, 0));	
+	else if(type == 26) // else if(type == TYPE_XP2)
+	{	
+		item.addChild(evtSpr.GetFrame(5, 0, 0));
+		str = "x" + (value/(3600*24)) + " Ngày";
+	}
+	else if(type == RewardItemInfo.TYPE_FP)	
+		item.addChild(evtSpr.GetFrame(6, 0, 0));
+	else if(type == RewardItemInfo.TYPE_RUNE)	
+		item.addChild(evtSpr.GetFrame(7, 0, 0));
+	else if(type == RewardItemInfo.TYPE_CARD)	
+	{
+		var iter = value.getInteratorSet();
+		while (iter.hasNext()) {
+			var obj = iter.next();
+			var cardInfo = ParseObject.toCardInfo(obj);
+			var card = new SmallIcon (cardInfo, 0, -35, {type:0, levelMode:0});
+			card.Scale(0.8, 0.8);
+			item.addChild(card);	
+		}
+		str = "x" + 1;		
+	}else if(type == RewardItemInfo.TYPE_ARMOR)	
+	{
+		var iter = value.getInteratorSet();
+		var arr = [];
+		while (iter.hasNext()) {
+			var armorId = iter.next();
+			var i = 0;
+			while(i<arr.length)
+			{
+				trace("check arr[i] " + arr[i] + " armorId " + armorId);
+				if(arr[i] == armorId)
+				{
+					arr[i+1] = arr[i+1] + 1;
+					trace("arr[i] " + arr[i] + " arr[i+1] " + arr[i+1]);
+					break;
+				}
+				i+=2;
+			}
+			if(i == arr.length)
+			{
+				arr.push(armorId);
+				arr.push(1);
+			}
+			// ArmorSet.AddNumOfItem(armorId, 1);
+		}
+		trace("arr " + arr);
+		var i = 0;
+		var w = 100;
+		var length = arr.length/2;
+		var startX = -(w*(length-1))/2;
+		while(i<arr.length)
+		{
+			var icon_spr = Resource.getSprite(SoftDefines.gfx_evolution_item);
+			var itemArmor  = ArmorSet.GetItem(arr[i]);
+			var max_size = ArmorSet.GetNumOfConst();
+			var _item_frame = icon_spr.GetFrame ( itemArmor.GetId() % max_size, startX + (i/2) * w, -35);
+			
+			_item_frame.Scale(0.8, 0.8);
+			item.addChild(_item_frame);	
+			item.addChild(Label.create (arr[i+1], Fonts.TITLE_BLACK_20, _item_frame.x, 5, Anchor.center_top));
+			i+=2;
+		}
+		
+		value = null;
+	}
+	else if(type == RewardItemInfo.TYPE_EQUIP)	
+	{
+		Resource.loadSprite (SoftDefines.gfx_equip_icon);
+		var equiSpr = Resource.getSprite (SoftDefines.gfx_equip_icon);
+		var iter = value.getInteratorSet();
+		while (iter.hasNext())
+		{
+			var id = iter.next();
+			var dura = iter.next();
+			var dura_type = iter.next();
+			var uid = iter.next();
+			iter.next();
+			// StockManager.addEquiment(id,dura,dura_type,uid,iter.next());
+			var equipPro = EquipInfo.GetEquip(id);
+			var equiFrame = equiSpr.GetFrame (equipPro.sprite_id, 0, -35);
+			trace("id " + id + " equipPro.sprite_id " + equipPro.sprite_id);
+			equiFrame.Scale(0.8, 0.8);
+			item.addChild(equiFrame);
+		}
+		// item.addChild(specialSpr.GetFrame(41, 0, 0));
+		str = "x" + 1;	
+	}
+	if(value != null)	
+		item.addChild(Label.create (str, Fonts.TITLE_BLACK_20, 0, 5, Anchor.center_top));
+	return item;
+});
+
+functionList.set ("getButtonGift", function (str, mode)
+{
+	var upState 	 = Border.roundRect (0, 0, -70, -20, 140 , 40, 10, 1, 0x2FBF3B, 1, 0x2FBF3B);
+	upState.Render();
+	var hitTestState = Border.roundRect (0, 0, -70, -20, 140 , 40, 10, 1, 0xDAA520, 1, 0xDAA520);
+	hitTestState.Render();
+	upState.addChild(label = Label.create(str, Fonts.TITLE_WHITE_20, 0, 0, Anchor.center_center));
+	label.Update();
+	label.Render();
+	hitTestState.addChild(label = Label.create(str, Fonts.TITLE_WHITE_20, 0, 0, Anchor.center_center));
+	label.Update();
+	label.Render();
+	var btn = null;
+	if(mode == BTN_NORMAL)
+		btn = new SimpleButton(upState, hitTestState, hitTestState, hitTestState);
+	else if(mode == BTN_DISABLE){
+		var grayState = Border.roundRect (0, 0, -70, -20, 140 , 40, 10, 1, 0xA9A9A9, 1, 0xA9A9A9);
+		grayState.Render();
+		grayState.addChild(label = Label.create(str, Fonts.TITLE_WHITE_20, 0, 0, Anchor.center_center));
+		label.Update();
+		label.Render();
+		btn = new SimpleButton(grayState, grayState, grayState, grayState);
+		btn.enabled = false;
+	}
+	
+	return btn;
+});
+
+functionList.set ("SetStatusMission", function(mission, status)
+{
+	trace("SetStatusMission 11111");
+	var evtSpr = Resource.getSprite ("GFX_EVENT_NEWSERVER");
+	var frame = mission.box.getChildByName("status");
+	if(frame != null)
+		mission.box.removeChild(frame);
+	var giftBtn = mission.box.getChildByName("giftbtn");
+	giftBtn.visible = false;
+		
+	if(status == STATUS_EXPIRED)
+	{			
+		frame = evtSpr.GetFrame(1, 0, 0);
+		frame.name = "status";
+		mission.box.addChild(frame);
+	}
+	else if(status == STATUS_CLAIMED)
+	{			
+		frame = evtSpr.GetFrame(2, 0, 0);
+		frame.name = "status";
+		mission.box.addChild(frame);
+	}
+	else if(status == STATUS_WAITGET || status == STATUS_COMPLETED)
+	{			
+		giftBtn.visible = true;
+	}
+	else if(status == STATUS_NOTNOW)
+	{			
+		giftBtn.visible = false;
+	}
+	return giftBtn;
+});
+
+functionList.set ("getCloseButton", function ()
+{
+	var closeBtn = new DisplayObject();
+	var graphic = closeBtn.getGraphics();
+	graphic.clear ();
+	graphic.lineStyle (1.5, 0xFFFFFF, 1.0);
+	graphic.beginFill (0x000000, 0.5);
+	graphic.drawCircle (0, 0, 24);
+	graphic.endFill ();
+	
+	graphic.lineStyle (3, 0xFFFFFF, 1.0);
+	graphic.moveTo (-10, -10);
+	graphic.lineTo (10, 10);
+	graphic.moveTo (10, -10);
+	graphic.lineTo (-10, 10);
+	
+	return closeBtn;
+});
+
+functionList.set ("callPopup", function (msg, parent)
+{
+	var w = 550;
+	var h = 300;
+	var popup = new Layer();
+	popup.x = 320;
+	popup.y = 480;
+	var hide = new ColorRect(0x000000, 0.0, -320, -480, 640, 960);
+	hide.x = 0;
+	hide.y = 0;
+	popup.addChild(hide);
+	var bg = new ColorRect(0x000000, 0.7, -320, -200, 640, 400);
+	bg.x = 0;
+	bg.y = 0;
+	popup.addChild(bg);
+	popup.addChild(Border.roundRect (0, 0, -w/2, -h/2, w , h, 30, 0, 0x000000, 1, 0xFFFFFF));
+	
+	var closeBtn = this.callFunction ("getCloseButton", []);
+	closeBtn.x = 240;
+	closeBtn.y = -120;
+	popup.addChild(closeBtn);
+	popup.addChild(Label.create(msg, Fonts.TITLE_BLACK_20, 0, -50, Anchor.center_center));
+	parent.add(popup);
+	
+	popup.addEventListener (MouseEvent.CLICK, function(e){
+		parent.remove(popup);
+	});
+	
+	return popup;
+});
+
+functionList.set ("getButtonMission", function (info, w, h, h2)
+{
+	var mission = {};
+
+	var box = Border.roundRect (0, 0, -w/2, -h/2, w, h, 20, 1, 0x14A5DA, 1, 0x14A5DA);
+	box.addChild(Border.roundRect (0, 0, -w/2, -h/2, w, h2, 20, 1, 0x045CA3, 1, 0x045CA3));
+	
+	box.addChild(Label.create("Ngày " + info.day.getDate() + "-" + (info.day.getMonth()+1), Fonts.TITLE_WHITE_20, 0, -55, Anchor.center_center));
+	var obj = this.callFunction ("getGiftItem", [info]);
+	obj.y = 40;
+	box.addChild(obj);
+	
+	var btn = this.callFunction ("getButtonGift", ["Nhận Quà", BTN_NORMAL]);
+	btn.name = "giftbtn";
+	btn.y = 95;
+	box.addChild(btn);
+	
+	mission.box = box;
+	mission.info = info;
+	// mission.SetStatus = function(m, status)
+	// {
+		// trace("SetStatus 11111");
+		// var frame = m.box.getChildByName("status");
+		// if(frame != null)
+			// m.box.removeChild(frame);
+			
+		// if(status == STATUS_EXPIRED)
+		// {			
+			// frame = evtSpr.GetFrame(1, 0, 0)
+			// m.box.addChild(frame);
+		// }else if(status == STATUS_CLAIMED)
+		// {			
+			// frame = evtSpr.GetFrame(2, 0, 0)
+			// m.box.addChild(frame);
+		// }
+	// }
+	return mission;
+});
+
+functionList.set ("getGiftItem", function (info)
+{
+	var type = info.type;
+	var num = info.num;
+	 	 
+	var specialSpr = Resource.getSprite ("GFX_SPECIAL_ICON");
+	var evtSpr = Resource.getSprite ("GFX_EVENT_NEWSERVER");
+	var item = new DisplayObject();
+	var label = Label.create ("x" + num, Fonts.TITLE_WHITE_20, 0, 5, Anchor.center_top);
+	
+	if(type == TYPE_AP)
+		item.addChild(evtSpr.GetFrame(3, 0, 0));
+	else if(type == TYPE_COIN)	
+		item.addChild(evtSpr.GetFrame(4, 0, 0));
+	else if(type == TYPE_XP2)
+	{	
+		item.addChild(evtSpr.GetFrame(5, 0, 0));
+		label.text += " Ngày";
+	}else if(type == TYPE_FP)	
+		item.addChild(evtSpr.GetFrame(6, 0, 0));
+	else if(type == TYPE_RUNE)	
+		item.addChild(evtSpr.GetFrame(7, 0, 0));
+	else if(type == TYPE_RANDOM_CARD)
+	{	
+		var frame = specialSpr.GetFrame(32, 0, -35);
+		frame.Scale(0.8, 0.8);
+		item.addChild(frame);
+	}else if(type == TYPE_ARMORSET)	
+	{	
+		var frame = specialSpr.GetFrame(36, 0, -35);
+		frame.Scale(0.8, 0.8);
+		item.addChild(frame);
+	}else if(type == TYPE_RANDOM_EQUIP)	
+	{	
+		var frame = specialSpr.GetFrame(41, 0, -35);
+		frame.Scale(0.8, 0.8);
+		item.addChild(frame);
+	}
+	
+	label.Update();
+	label.Render();
+	item.addChild(label);
+	return item;
+});
+
+//Type: 0 reward bình thường, 1: daily
+functionList.set ("receiveDailyRewards", function (listreward, type){
+	var request = new Request(3);
+	var content = new FBObjectOutput();
+	content.putString("cmd", "rewards");
+	var arr = new FBArrayOutput();
+	trace("Wil receive reward:");
+	if (listreward != null)
+	{
+		for (item in listreward) {
+			if(item.rw_type != RewardItemInfo.TYPE_RESTORE_AP)
+			{
+				arr.putInt(item.itemId);
+				trace("id: " + item.itemId);
+			}
+		}
+	}
+	content.putArray("lit", arr);
+	content.putInt("ty", type);
+	request.setContent(content);
+	return request;
+});
+
+functionList.set ("init", function ()
+{
+	Resource.loadSprite ("GFX_EVENT_NEWSERVER");
+	var evtSpr = Resource.getSprite ("GFX_EVENT_NEWSERVER");
+
+	var rewardHolder = new Layer ();
+	rewardHolder.x = -320;
+	rewardHolder.y = -95;
+	this.add(rewardHolder);
+	
+	rewardHolder.add(new ColorRect (0xFF0000, 0.5, 0, 0, 640, 960));
+	
+	rewardHolder.add(Border.roundRect (0, 0, 0, 0, 640 , 960, 10, 1, 0xFFFFFF, 1, 0xFFFFFF));
+	
+	
+	//bg event 2
+	// rewardHolder.add(new ColorRect (0x022742, 1.0, 0, 0, 640, 960));	
+	rewardHolder.add(new ColorRect (0x045CA3, 1.0, 0, 0, 640, 960));	
+	
+	var line = new ColorRect (0x000000, 1.0, 0, 0, 640, 5);
+	line.y = 400;
+	rewardHolder.add(line);
+	
+	//bg event 1
+	// rewardHolder.add(new ColorRect (0x045CA3, 1.0, 0, 0, 640, 400));
+	
+	//header
+	rewardHolder.add(new ColorRect (0x63C0E2, 1.0, 0, 0, 640, 70));	
+	var label = Label.create ("Sự kiện máy chủ Huyền Thoại", Fonts.DETAIL_WHITE_30, 320, 10, Anchor.center_top);
+	label.Update();
+	label.Render();
+	rewardHolder.add(label);
+	
+	//panel reward new comer
+	rewardHolder.add(Border.roundRect (0, 0, 20, 180, 600 , 200, 10, 1, 0x0000000, 1, 0x022742));
+	rewardHolder.add(Border.roundRect (0, 0, 20, 180 + 200 - 85, 600 , 85, 10, 1, 0x0000000, 1, 0x054477));
+	
+		
+	//panel reward new comer 2
+	rewardHolder.add(Border.roundRect (0, 0, 5, 380 + 135, 630 , 420, 10, 1, 0x0000000, 1, 0x022742));
+	// rewardHolder.add(Border.roundRect (0, 0, 20, 180 + 200 - 85, 600 , 85, 10, 1, 0x0000000, 1, 0x054477));
+	
+	// ahri
+	rewardHolder.add(evtSpr.GetFrame(0, 105, 140));	
+	
+	//title event 1
+	rewardHolder.add(Label.create ("Quà Tân Thủ", Fonts.TITLE_WHITE_30, 380, 100, Anchor.center_center));
+	
+	var btnNewComer = this.callFunction ("getButtonGift", ["Nhận Quà", BTN_NORMAL]);
+	btnNewComer.x = 380;
+	btnNewComer.y = 150;
+	rewardHolder.addChild(btnNewComer);
+	
+	trace("before 111111111");
+	var data1 = this.callFunction ("getConstGiftEvent", [EVENT_NEWCOMER]);
+	
+	var total = data1.length; 
+	var padding = 130;
+	var startX = (640 - 600)/2 + (600-(total-1)*padding)/2;
+	var i = 0;
+	for(info in data1)
+	{
+		var obj = this.callFunction ("getGiftItem", [info]);
+		obj.x = startX + i*padding;
+		obj.y = 320;
+		rewardHolder.addChild(obj);
+		i++;
+	}
+	trace("data1 " + data1);
+	var itemStatusArr = RewardItemInfo.GetDinamicListRewards();
+	var filterRewardArr = itemStatusArr.filter(function(reward){
+		for(info in data1)
+			if(reward.itemId == info.id && info.status == STATUS_COMPLETED)
+				return true;
+		return false;
+	});
+	trace("filterRewardArr " + filterRewardArr);
+	
+	if(filterRewardArr.length == 0)
+	{
+		rewardHolder.removeChild(btnNewComer);
+		var btn = this.callFunction ("getButtonGift", ["Đã Nhận", BTN_DISABLE]);
+		btn.x = btnNewComer.x;
+		btn.y = btnNewComer.y;
+		rewardHolder.addChild(btn);
+	}else
+	{
+		btnNewComer.addEventListener (MouseEvent.CLICK, function(e)
+		{
+			var	objArr = [];
+			trace("get reward newcomer");
+			PixmaGame._instance.fbClient.send (this.callFunction ("receiveDailyRewards", [filterRewardArr, 0]));
+			PixmaGame._instance.fbClient.addEventListener(FBEvent.RECEIVE_REWARD, function (params)
+				{					
+					var obj = this.callFunction ("getItemReward", [params.get("type"), params.get("value")]);		objArr.push(obj);
+				});
+			PixmaGame._instance.fbClient.addEventListener(FBEvent.RECEIVE_MULTI_REWARD,function (params)
+				{
+					PixmaGame._instance.fbClient.removeEventListener (FBEvent.RECEIVE_REWARD);
+					PixmaGame._instance.fbClient.removeEventListener (FBEvent.RECEIVE_MULTI_REWARD);
+					for(reward in filterRewardArr)
+						RewardItemInfo.finish_recieve_rewards.push(reward.itemId);
+					var mes = params.get("mes");
+					trace("mes " + mes);
+					rewardHolder.removeChild(btnNewComer);
+					var btn = this.callFunction ("getButtonGift", ["Đã Nhận", BTN_DISABLE]);
+					btn.x = btnNewComer.x;
+					btn.y = btnNewComer.y;
+					rewardHolder.addChild(btn);
+					
+					var popup = this.callFunction ("callPopup", [mes, rewardHolder]);
+					var i = 0;
+					var w = 100;
+					var length = objArr.length;
+					var startX = -(w*(length-1))/2;
+					for(obj in objArr)
+					{
+						obj.x = startX + i * w;
+						obj.y = 80 ;
+						popup.addChild(obj);
+						i++;
+					}
+				});
+		});
+	}	
+		
+	//title event 2
+	rewardHolder.add(Label.create ("Nhiệm Vụ Tân Thủ", Fonts.TITLE_WHITE_30, 20, 435, Anchor.left_center));
+	
+	rewardHolder.add(Label.create ("* Mỗi ngày hoàn thành nhiệm vụ để nhận quà", Fonts.TITLE_WHITE_20, 20, 470, Anchor.left_center));
+	var questLabel = Label.create ("* Nhiệm vụ ngày hôm nay:", Fonts.TITLE_WHITE_20, 20, 500, Anchor.left_center);
+	//button 7 days	
+	var data2 = this.callFunction ("getConstGiftEvent", [EVENT_MISSION7DAYS]);
+	trace("data2 " + data2);
+	var curDate = this.callFunction ("getCurrentDateEvent", []);
+	for(q in data2)
+	{
+		if((q.day.getTime() - curDate.getTime()) >= 0)
+		{
+			questLabel = Label.create ("* Nhiệm vụ ngày hôm nay: " + q.quest, Fonts.TITLE_WHITE_20, 20, 500, Anchor.left_center);
+			break;
+		}
+	}
+	questLabel.Update();
+	questLabel.Render();
+	rewardHolder.add(questLabel);
+	
+	var table = [4,3];
+	var w = 140;
+	var h = 140;	
+	var h2 = 35;
+	var padding = 20;
+	
+	var j = 0;
+	var count = 0;
+	var missionArr = [];
+	var findMission = function(box)
+	{
+		trace("findMission box " + box);
+		for(m in missionArr)
+			if(m.box == box)
+				return m;
+		trace("nothing");
+		return null;
+	}
+	
+	for(row in table)
+	{
+		var total = row;
+		var startX = (640-total*w - (total-1)*padding)/2 + w/2;
+		var i = 0;
+		while(i < total)
+		{
+			var info = data2[count];
+			trace("1111111111");
+			var mission = this.callFunction ("getButtonMission", [info, w, h, h2]);
+			missionArr.push(mission);
+			mission.box.x = startX + (w+padding)*i;
+			mission.box.y = 600 + (h+60)*j;
+			trace("mission.box.y");
+			this.callFunction ("SetStatusMission", [mission, info.status]);
+			trace("his.callFunction ");
+			mission.box.addEventListener (MouseEvent.CLICK, function(e)
+				{
+					var mission = findMission(e.currentTarget);	
+					trace("findMission mission " +mission);					
+					if(mission != null)
+					{
+						if(mission.info.status == STATUS_COMPLETED)
+						{
+							// var type = mission.info.reward.type;
+							// var itemId = mission.info.reward.itemId;
+							// PixmaGame._instance.fbClient.send (RequestGennarator.receiveDailyReward (itemId, type));	
+							var	objArr = [];
+							PixmaGame._instance.fbClient.send (this.callFunction ("receiveDailyRewards", [[mission.info.reward], 0]));
+							PixmaGame._instance.fbClient.addEventListener(FBEvent.RECEIVE_REWARD, function (params)
+								{
+									this.callFunction ("SetStatusMission", [mission, STATUS_CLAIMED]);				
+									RewardItemInfo.finish_recieve_rewards.push(mission.info.reward.itemId);
+									var obj = this.callFunction ("getItemReward", [params.get("type"), params.get("value")]);									
+									objArr.push(obj);
+								});
+							// PixmaGame._instance.fbClient.addEventListener(FBEvent.RECEIVE_REWARD_ERROR, function (params)
+								// {
+									// var msg = params.get("msg");
+									// if(msg != null)
+										// this.callFunction ("callPopup", [msg, rewardHolder]);
+								// });
+							PixmaGame._instance.fbClient.addEventListener(FBEvent.RECEIVE_MULTI_REWARD,function (params)
+								{
+									PixmaGame._instance.fbClient.removeEventListener (FBEvent.RECEIVE_REWARD);
+									PixmaGame._instance.fbClient.removeEventListener (FBEvent.RECEIVE_MULTI_REWARD);
+									var mes = params.get("mes");
+									trace("mes " + mes);
+									this.callFunction ("SetStatusMission", [mission, STATUS_CLAIMED]);
+									
+									var popup = this.callFunction ("callPopup", [mes, rewardHolder]);
+									var i = 0;
+									var w = 100;
+									var length = objArr.length;
+									var startX = -(w*(length-1))/2;
+									for(obj in objArr)
+									{
+										obj.x = startX + i * w;
+										obj.y = 80 ;
+										popup.addChild(obj);
+										i++;
+									}
+								});
+						}else if(mission.info.status == STATUS_WAITGET)
+							this.callFunction ("callPopup", ["Bạn chưa hoàn thành nhiệm vụ này!", rewardHolder]);				
+					}		
+				});
+				
+			rewardHolder.add(mission.box);
+			trace(i+ " x " + mission.box.x + " y " + mission.box.y);
+			
+			i++;
+			count++;
+		}
+		j++;
+	}
+	
+	// this.close_btn = new Button (SoftDefines.gfx_main_ui, DF_UI.anim_tab_close_normal, DF_UI.anim_tab_close_touch);
+	var closeBtn = this.callFunction ("getCloseButton", []);
+	
+	closeBtn.x = 280;
+	closeBtn.y = -60;
+	closeBtn.addEventListener (MouseEvent.CLICK, this.onBackUp);
+	this.add (closeBtn);
+});
+
+return functionList;

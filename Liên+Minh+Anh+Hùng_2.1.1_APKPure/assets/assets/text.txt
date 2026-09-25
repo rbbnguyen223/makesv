@@ -1,0 +1,997 @@
+TEXT_CONFIRM = Xác Nhận
+TEXT_ERROR = Lỗi
+TEXT_ERROR_FACEBOOK_LINKED = Tài khoản Facebook này đã liên kết với một tài khoản khác!
+TEXT_REWARD_LINK_SOCIAL = Nhận ngay <font color="#FF0000"> 1000 đá quý</font> khi kết nối tài khoản
+TEXT_PASSWORD = Mật khẩu:
+TEXT_YOUR_ID = ID của bạn:
+TEXT_BACK = Trở Lại
+TEXT_ERROR_ZINGME_LINKED = Tài khoản ZingMe này đã liên kết với một tài khoản khác!
+TEXT_ZINGME = ZingMe: 
+TEXT_FACEBOOK = Facebook: 
+TEXT_AUTO_OFF = Auto: Tắt
+TEXT_CONTINUE = Tiếp Tục
+TEXT_EMPTY_AP_TITLE = Hết năng lượng
+TEXT_DUNGEON_AP_COST = Bạn cần [Ap] <ap_cost> để đi săn!
+TEXT_NOT_ENOUGH_RUNE_TITLE = Không Đủ Đá Quý
+TEXT_RUNE_COST_TURN = Bạn cần [Rune] <rune_cost> để đánh lượt này!
+TEXT_EMPTY_TURN_DAILY = Bạn đã đánh hết <turn> lượt của ngày hôm nay!
+TEXT_AUTO = Tự Động
+TEXT_AUTO_ON = Auto: Bật
+TEXT_ADV_HELP_1 = <font color="#00FF00">Bước 1:</font> Chọn <font color="#FFFF00">Anh Hùng</font> bạn muốn cùng đi <font color="#FFFF00">Ủy Thác</font>.\n\n
+TEXT_CLOSE = Đóng
+TEXT_ADV_REWARD = <font color="#FFFF00">Phần thưởng Ủy Thác</font>
+TEXT_GET_REWARD = Nhận quà
+TEXT_GOT_REWARD = Đã nhận
+TEXT_TIME_REMAIN = Thời gian còn lại
+TEXT_NOT_ENOUGH_COIN = Bạn không đủ vàng!
+TEXT_ADV_TITLE = Ủy Thác
+TEXT_NOT_ENOUGH_AP = Bạn không đủ năng lượng!
+TEXT_NOT_ENOUGH_RUNE = Bạn không đủ Đá!
+TEXT_CHANCE_GET = Bạn có cơ hội nhận được
+TEXT_FREE = Miễn phí
+TEXT_COST = Chi phí 
+TEXT_TIME = Thời gian 
+TEXT_START = Bắt đầu
+TEXT_ADV_HELP_3 = <font color="#00FF00">Bước 3:</font> Bấm vào <font color="#FFFF00">"Bắt Đầu"</font>.\n\n
+TEXT_ADV_HELP_4 = <font color="#00FF00">Lưu ý:</font> Sao càng cao càng có nhiều <font color="#FFFF00">Phần Thưởng</font>.
+TEXT_ADV_HELP_2 = <font color="#00FF00">Bước 2:</font> Kiểm tra <font color="#FF0000">thời gian</font> đi <font color="#FFFF00">Ủy Thác</font>.\n\n
+TEXT_NOT_JOIN_GUILD = Bạn chưa tham gia Bang Hội nào!
+TEXT_CANCEL_APPLIED_GUILD_TITLE = <font color="#FFFF00">Hủy Gia Nhập</font>
+TEXT_ASK_CANCEL_APPLIED_GUILD = Bạn muốn hủy gia nhập Bang Hội <font color="#00FF00"><guild_name></font>
+TEXT_JOIN = <font color="#FFFF00">Gia Nhập</font>
+TEXT_JOIN_GUILD_NAME = Bạn muốn gia nhập Bang Hội <font color="#00FF00"><guild_name></font>
+TEXT_REQUEST_SUCCESS = Gửi yêu cầu gia nhập thành công. Bạn vui lòng chờ được duyệt nhé!
+TEXT_CHANGE_FORMATION_GUILD = Thay Đổi Đội Hình Bang
+TEXT_RANDOM = Ngẫu Nhiên
+TEXT_BANG = Bang 
+TEXT_REVENGE = Trả Thù
+TEXT_LOSE_YELLOW = <font color="#FFFF00">Thua</font>
+TEXT_WIN_YELLOW = <font color="#00FF00">Thắng</font>
+TEXT_DETAIL_BATTLE = Chi Tiết Trận Đấu
+TEXT_NAME_YELLOW = <font color="#FFFF00">Tên:</font>
+TEXT_NUM_IN_DAY = <font color="#FFFF00">Số Trận Trong Ngày:</font>
+TEXT_GUILD_FORMATION = Đội Hình Bang
+TEXT_PVP_FORMATION = Đội Hình PVP
+TEXT_LEVEL_YELLOW = <font color="#FFFF00">Cấp Bậc:</font>
+TEXT_WIN_NUM = <font color="#FFFF00">Số Trận Thắng:</font>
+TEXT_SETUP_CHALLENGE_FORMATION = <font color="#FFFF00">Xếp Đội Hình Thách Đấu</font>
+TEXT_CHALLENGE_GVG = Thách Đấu (<gvg_ap_cost>AP)
+TEXT_DIARY = Nhật Ký
+TEXT_OTHER = Khác
+TEXT_CENTER_ACEEPT = <p align="center">Đồng Ý</p>
+TEXT_CENTER_CHANGE_MEMBER = <p align="center">Đổi Thành Viên</p>
+TEXT_RESEARCH = Tìm mới
+TEXT_AP_COST_SEARCH = Tốn [Ap] <ap_cost> để tìm đối thủ khác?
+TEXT_SEARCH_ENEMY = Tìm đối thủ
+TEXT_CLOSE_AFTER = Đóng sau: 
+TEXT_SELECT_EQUIP = CHỌN TRANG BỊ 
+TEXT_SORT = Sắp Xếp
+TEXT_EQUIP = Trang Bị
+TEXT_NOTICE = Thông Báo
+TEXT_NOT_TRASH_CARD = Không tìm thấy bài thừa!
+TEXT_CARD = Thẻ Bài
+TEXT_COIN = Vàng
+TEXT_WARNING_HIGH_LV_CARD = Có thẻ bài <font color="#FF0000"> XANH HOẶC TÍM </font>Bạn có chắc muốn bán những thẻ bài đã chọn
+TEXT_CONFIRM_SELL_CARD = Bạn có chắc muốn bán những thẻ bài đã chọn
+TEXT_WARNING_CARD_EQUIP = Có thẻ bài <font color="#FF0000"> CHỨA TRANG BỊ! </font>Bạn có chắc muốn bán những thẻ bài đã chọn
+TEXT_LEADERSHIP = Điểm [LeaderShip]
+TEXT_CREATE_GUILD = Tạo Bang Hội
+TEXT_CREATE_NEW = Tạo Mới
+TEXT_NAMING_GUILD_YELLOW = <font color="#FFFF00">Đặt tên bang hội</font>
+TEXT_MISSING_RESOURCE = Thiếu Tài Nguyên
+TEXT_NEED_RUNE = Bạn cần [Rune][0].
+TEXT_NEED_COIN = Bạn cần [Coin][0].
+TEXT_NEED_FP = Bạn cần [FriendPoint][0].
+TEXT_FULL_TURN_DAILY = Bạn đã đánh hết [0] lượt của ngày hôm nay!
+TEXT_REWARD = Phần Thưởng
+TEXT_MISSING_AP_HUNTER = Bạn cần [Ap][0] để đi săn!
+TEXT_EMPTY_AP = Hết năng lượng?
+TEXT_NH_TRANG_CAO = Có cơ hội nhận trang bị cao cấp
+TEXT_FINISH_DUNGEON = Chúc mừng bạn vừa hoàn thành thử thách
+TEXT_RUNE_REQUIRE = Bạn cần [Rune][0] để đánh lượt này!
+TEXT_EQUIP_LIBRARY = Thư Viện Trang Bị
+TEXT_UPGRADE = NÂNG CẤP
+TEXT_UPGRADE_FAILED = NÂNG CẤP THẤT BẠI
+TEXT_GUDLUCK = Chúc bạn may mắn lần sau.
+TEXT_UPGRADE_FAILED_DOWNGRADE_LEVEL = Nâng trang bị thất bại. Trang bị <font color="#FF0000"> RỚT 1 CẤP </font>
+TEXT_ASK_RESTORE_DURANCE = Bạn có muốn phục hồi trang bị. Giá:
+TEXT_NEED_MORE = Cần thêm [0] [1]
+TEXT_NEED_RESOURCE = Nguyên liệu cần:
+TEXT_WARNING_DOWNGRADE = Nếu thất bại sẽ có khả năng bị hạ cấp
+TEXT_BUY = MUA
+TEXT_MISSING_RES_UPGRADE_1 = Bạn thiếu:\n[Coin][0] và [FriendPoint][1]\nBạn có muốn sử dụng:\n <font color="#FF0000">[Rune][2]</font> để mua?
+TEXT_MISSING_RES_UPGRADE_3 = và trang bị<font color="#FF0000">  HẠ 1 CẤP</font>
+TEXT_MISSING_RES_UPGRADE_2 = \Nếu thất bại sẽ bị mất <font color="#FF0000">toàn bộ vàng và cỏ.</font>
+TEXT_CHANCE_UPGRADE = Bạn có <font color="#00FF00">[0]%</font> cơ hội nâng cấp thành công!
+TEXT_PLUS_LIFESTEAL = + [0]% Hút máu
+TEXT_PLUS_CRIT = + [0]% Chí mạng
+TEXT_PLUS_LIFESTEAL_GREEN = <font color="#00FF00">+ [0]% Hút máu</font>
+TEXT_PLUS_CRIT_GREEN = <font color="#00FF00">+ [0]% Chí mạng</font>
+TEXT_TOP_100 = TOP 100
+TEXT_PVP = PVP
+TEXT_TOP_LOCAL = TOP Khu Vực
+TEXT_TOP_GLOBAL = TOP Thế Giới
+TEXT_PAYMENT = Nạp Tiền
+TEXT_GUILD = Bang Hội
+TEXT_TOURNAMENT = Giải Đấu
+TEXT_AUTO_BATTLE = Tự Động Chiến Đấu
+TEXT_LOCK_INV = Khóa Túi Đồ
+TEXT_FEATURE = Tính năng
+TEXT_FEATURE_SPECIAL_INVENTORY = Túi Đồ Đặc Biệt
+TEXT_FEATURE_TREASURE = Rương Thần
+TEXT_FEATURE_SWITCH_TEAM = Đổi Đội Hình Nhanh
+TEXT_CHAT_GLOBAL = Chat Thế Giới
+TEXT_GUIDE_EVO_5 = <font color="#FF0000">Lưu ý : Khi thất bại sẽ mất nguyên liệu dùng cho tiến hóa. </font>
+TEXT_GUIDE_EVO_4 = <font color="#00FF00">Bước 3:</font> Nhấn nút <font color="#FFFF00">"Tiến Hóa"</font>.\n\n
+TEXT_GUIDE_EVO_2 = <font color="#00FF00">Bước 1:</font> Chọn một thẻ bài mà bạn muốn <font color="#FFFF00">"Tiến Hóa"</font>.\n\n
+TEXT_GUIDE_EVO_1 = <font color="#FFFF00">\n  3. Tỉ lệ thành công khi tiến hóa </font> \n\n
+TEXT_GUIDE_EVO_3 = <font color="#00FF00">Bước 2:</font> Kiểm tra điều kiện để tiến hóa:<font color="#FFFF00">\n  1. Thẻ bài đạt cấp độ tối đa.\n  2. Đủ nguyên liệu cần.</font> (Có thể tìm được khi <font color="#FFFF00">"Đi Săn"</font>)
+TEXT_BUY_ARMORSET = MUA NGỌC
+TEXT_COLOR_BLUE = \ <font color="#55fff7">xanh dương</font> 
+TEXT_ERROR_RESOURCE_EVO = Nguyên liệu <font color="#FF0000">[0]</font> bạn hãy chọn lại đội hình Đi Săn và PVP rồi thử lại!!
+TEXT_HAS_EQUIP = CÓ TRANG BỊ
+TEXT_EVO = TIẾN HÓA
+TEXT_GREETING_UPGRADE_MANY = Chúc mừng bạn đã tiến hóa VƯỢT CẤP cho thẻ bài
+TEXT_GREETING_EVO_SUCCESS = Chúc mừng bạn đã TIẾN HÓA thành công
+TEXT_EVO_SUCCESS = TIẾN HÓA THÀNH CÔNG
+TEXT_COLOR_PURPLE = \ <font color="#fa00ff">bài tím</font> 
+TEXT_COLOR_DEFAULT = \ <font color="#55fff7"> </font> 
+TEXT_COLOR_GREEN = \ <font color="#00FF00">xanh lá</font> 
+TEXT_COLOR_ORANGE = \ <font color="#E67E22">cam</font> 
+TEXT_COLOR_RED = \ <font color="#FF0000">đỏ</font> 
+TEXT_IN_FORMATION = ĐANG TRONG ĐỘI HÌNH
+TEXT_PROTECTED = ĐƯỢC BẢO VỆ
+TEXT_BILLING = Hóa Đơn
+TEXT_BUY_MISSING_ARMORSET = Bạn có muốn mua số ngọc còn thiếu?\n Giá: [[0]][1].
+TEXT_MISSING_LEADER_POINT_IF_EVO = <font color="#FF0000">\nBẠN SẼ THIẾU [0] ĐIỂM LÃNH ĐẠO NẾU TIẾN HÓA THÀNH CÔNG</font>
+TEXT_EVO_FAIL = TIẾN HÓA THẤT BẠI
+TEXT_CHANCE_EVO = Bạn có <font color="#00FF00">[0]%</font> cơ hội tiến hóa thẻ bài thành công!
+TEXT_REQUIRE_EVO = Điều kiện tiến hóa:\nCần thêm [0] thẻ [1][2][3] sao.
+TEXT_CONTIUE_EVO = Nguyên liệu <font color="#FF0000">[0]</font> bạn có muốn tiếp tục không!?
+TEXT_FEATURE_NEXT_VERSION = Tính năng sẽ ra mắt trong phiên bản tới!
+TEXT_NEED_LEVEL = Bạn cần đạt cấp độ <font color="#FF0000">[0]</font>!
+TEXT_UNLOCKED_FEATURE = Tính năng [0] vừa được mở.\nHãy vào khám phá nhé!
+TEXT_UPDATING = Đang cập nhật ...
+TEXT_COMMENT = Góp Ý
+TEXT_ACCOUNT = Tài Khoản
+TEXT_SETTING = Thiết Lập
+TEXT_SUPPORT = Hỗ Trợ
+TEXT_LACK_OF_FRAG = Chưa thu thập được mảnh ghép!
+TEXT_FULL_FRIEND = Danh sách bạn bè đã đủ 
+TEXT_TITLE_FRIEND = Bạn Bè
+TEXT_NOT_INVITE = Không có lời mời!
+TEXT_NOT_FRIEND_JUST_INVITE = Bạn chưa có chiến hữu nào!\nMời bạn bè vào chơi chung nhé!
+TEXT_NOT_NEW_MAIL = Chưa có thư!
+TEXT_HINT_HOMEBAR_1 = <font color\="#00FF00">[Trophy]   Điểm Cúp</font> chơi PVP để đứng TOP xếp hạng.
+TEXT_HINT_HOMEBAR_3 = \n\n[TeamPower]   <font color\="#00FF00">Điểm Sức Mạnh</font> là tổng sức mạnh của đội hình.
+TEXT_HINT_HOMEBAR_2 = \n\n[LeaderShip]   <font color\="#00FF00">Điểm Lãnh Đạo</font> dùng để gắn thẻ bài mạnh hơn.
+TEXT_WARNING_NOREWARD = Hiện không có quà!
+TEXT_GREETING = CHÚC MỪNG
+TEXT_GREETING_REWARD = Chúc mừng bạn đã nhận được quà!
+TEXT_DETAIL = Chi Tiết
+TEXT_GUILD_GUIDE_1 = <font color\="#00FF00">\n\nCác chức năng cơ bản</font>\n\n
+TEXT_GUILD_GUIDE_2 = - <font color\="#00FF00">"Tạo Bang"</font>\: Tạo 1 Bang Hội mới.\n\n
+TEXT_GUILD_GUIDE_3 = - <font color\="#00FF00">"Nhập Bang"</font>\:  Xin gia nhập 1 Bang Hội nào đó.\n\n
+TEXT_GUILD_GUIDE_4 = - <font color\="#00FF00">"Chờ Duyệt"</font>\: Xem lại những Bang Hội mà mình đã xin gia nhập.\n\n
+TEXT_GUILD_GUIDE_5 = - <font color\="#00FF00">"Lời Mời"</font>\: Xem những lời mời Nhập Bang từ các Bang Hội.
+TEXT_WARN_NEVER_JOIN_GUILD = Bạn chưa tham gia bang hội nào
+TEXT_CREATE_GUILD = Tạo Bang
+TEXT_JION_GUILD = Nhập Bang
+TEXT_WAIT_FOR_APPLY = Chờ Duyệt
+TEXT_INVITATION = Lời Mời
+TEXT_RECEIVE_REWARD_SUCCESS = Nhận quà thành công
+TEXT_NO_EVENT = Chưa có sự kiện
+TEXT_ASK_FEEDZM_INVITE_FRIEND = Bạn có muốn đăng tải mời bạn trên [0].\nMỗi lần đăng tải nhận được 100 cỏ.
+TEXT_FEEDZM_INVITE_FRIEND_SUCCESS = Chúc mừng bạn đã mời bạn thành công!
+TEXT_FIND_BYID = Tìm bằng ID
+TEXT_BEING_FRIEND = Người chơi này đang là Chiến Hữu của bạn.
+TEXT_INVALID_NAME_RECHECK = Tên không hợp lệ! Vui lòng kiểm tra lại.
+TEXT_INVALID_ID_RECHECK = ID không hợp lệ! Vui lòng kiểm tra lại.
+TEXT_FIND_BYNAME = Tìm bằng Tên
+TEXT_TOP_LV_LOCAL = Top Cấp Độ - Khu Vực 
+TEXT_TITLE_TOP_PVPBET_WEAK = <font color\="#FFFF00">Top 20 PVP Cá Cược Hạng Ruồi</font>
+TEXT_TITLE_TOP_PVPBET_MID = <font color\="#00FF00">Top 20 PVP Cá Cược Hạng Trung</font>
+TEXT_TITLE_TOP_PVPBET_STRONG = <font color\="#F05D5D">Top 20 PVP Cá Cược Hạng Nặng</font>
+TEXT_TOP20_TEAMPOWER = Top 20 Sức Mạnh
+TEXT_TOP_TEAMPOWER_LOCAL = Top Sức Mạnh - Khu Vực 
+TEXT_TOP20_EVENT = Top 20 Event
+TEXT_TOP_EVENT_LOCAL = Top Event - Khu Vực 
+TEXT_TOP20_PVP = Top 20 PVP
+TEXT_TOP_PVP_LOCAL = Top PVP - Khu Vực 
+TEXT_TOP20_LV = Top 20 Cấp Độ
+TEXT_HINT_PVPBAR_1 = <font color\="#00FF00">[Trophy]   Điểm Cúp</font> chơi PVP để đứng TOP xếp hạng.
+TEXT_HINT_PVPBAR_3 = \n\n[TeamPower]   <font color\="#00FF00">Điểm Sức Mạnh</font> là tổng sức mạnh của đội hình.
+TEXT_HINT_PVPBAR_2 = \n\n[LeaderShip]   <font color\="#00FF00">Điểm Lãnh Đạo</font> dùng để gắn thẻ bài mạnh hơn.
+TEXT_SEARCH_GUILD = Tìm kiếm bang hội\:  
+TEXT_HOTLINE = <p align="center">Hotline\:\nnhấn số 2(3000đồng/phút)</p>
+TEXT_EMAIL = Trang Chủ\:
+TEXT_EMAIL_ADDRESS = lmah.vn
+TEXT_FANPAGE = Fanpage\:
+TEXT_FACEBOOK_LINK = https\://www.facebook.com/hoigamethulienminh
+TEXT_ACCESS = Truy Cập
+TEXT_CS_TOOL = Hỗ Trợ
+TEXT_KHAOSAT = Khảo Sát
+TEXT_LINK_KHAOSAT = http\://khaosat.hotro.zing.vn/s3/250414
+TEXT_FACEBOOK_LINK_MOBILE = fb\://page/544967492257280
+TEXT_NO_APPLY = Không có đơn xin gia nhập!
+TEXT_ALIGN_CENTER_ITEM_LIST = <p align\="center">Danh Sách Vật Phẩm</p>
+TEXT_EFFECT = Tác dụng\: 
+TEXT_YELLOW_AP = Năng Lượng Vàng
+TEXT_RED_AP = Năng Lượng Đỏ
+TEXT_EXP = Kinh Nghiệm
+TEXT_COIN = Tiền Vàng
+TEXT_RED_RUNE = Ngọc Đỏ
+TEXT_FRIENDPOINT = Cỏ May Mắn
+TEXT_CUP_POINT = Cúp
+TEXT_INVENTORY_SLOT = Ô Chứa Đồ
+TEXT_AWARD_FRIENDPOINT = Thưởng [FriendPoint]
+TEXT_CURENT_FRIENDPOINT = Bạn đang có [FriendPoint]
+TEXT_ADD_FRIEND = Kết Bạn
+TEXT_RECRUITING = Chiêu Mộ
+TEXT_GUIDE_FUSION_1 = <font color\="#00FF00">Bước 1\:</font> Chọn một thẻ bài mà bạn muốn <font color\="#FFFF00">"Cường Hóa"</font>.\n\n
+TEXT_GUIDE_FUSION_2 = <font color\="#00FF00">Bước 2\:</font> Chọn các thẻ bài kiếm được khi <font color\="#FFFF00">"Đi Săn"</font> để làm nguyên liệu.\n\n
+TEXT_GUIDE_FUSION_3 = <font color\="#00FF00">Bước 3\:</font> Kiểm tra số tiền cần và nhấn nút <font color\="#FFFF00">"Cường Hóa"</font>.\n\n
+TEXT_GUIDE_FUSION_PS = <font color\="#00FF00">Lưu ý\:</font> Nếu bạn chọn thẻ bài nguyên liệu có cùng thuộc tính với thẻ bài cần cường hóa, <font color\="#FFFF00">sẽ có xác suất lên cấp kĩ năng</font>.
+TEXT_SUM_PRICE_0 = Giá\: 0
+TEXT_NEED_HOW_EXP = Exp cần\: [0]
+TEXT_SUM_EXP = Tổng Exp\: [0]
+TEXT_SUM_EXP_0 = Tổng Exp\: 0
+TEXT_SUM_PRICE = Giá\: [0]
+TEXT_CHANCE_UPGRADE_SKILL = [0]% lên cấp\n kỹ năng
+TEXT_ASK_ADD_FRIEND = Bạn có muốn kết bạn với
+TEXT_WARN_LIMIT_MAX_FRIEND = Danh sách bạn bè đã đủ [0] bạn. Bạn hãy xóa bớt để kết bạn mới.
+TEXT_NOTE = Lưu Ý
+TEXT_FIRE_GUILD_MEMBER = Bạn có muốn đuổi khỏi Bang Hội!
+TEXT_NOTE_EXIT_GUILD = Lưu Ý! Sau khi thoát khỏi Bang Hội, sau 24 giờ bạn mới được vào Bang Hội khác!
+TEXT_TEXIT_GUILD = Thoát Bang
+TEXT_LV_FRIEND = [0] LV\: [1]
+TEXT_WARN_NOT_INVITATION = Bạn chưa có lời mời nào!
+TEXT_INVITATION_YELLOW = <font color\="#FFFF00">Lời Mời Gia Nhập</font>
+TEXT_ASK_ACCEPT_JOIN_GUILD = Bạn đồng ý gia nhập Bang Hội này?
+TEXT_REFUSE = Từ Chối
+TEXT_TEMP_LOCK_FEATURE = Chức năng tạm thời bị khóa!
+TEXT_SOUND_CONTROL = Âm Thanh
+TEXT_MUSIC = Nhạc Nền
+TEXT_SOUND = Tiếng Động
+TEXT_LOCK_INV = Khóa Túi Đồ
+TEXT_LOCK_CHANGE = Đổi Khóa
+TEXT_LOCK_SETUP = Đặt Khóa
+TEXT_LOCK_OPEN = Mở Khóa
+TEXT_REMOVE = Xóa Bỏ
+TEXT_WARN_LOCK_NOTSET = Chưa đặt khóa túi đồ!
+TEXT_WARN_OPENING_INV = Túi đồ đang mở...
+TEXT_WARN_PROTECTED_INV = Túi đồ đang được bảo vệ.
+TEXT_EMPTY_AP = Hết Năng Lượng
+TEXT_WARN_REVENGE_ONETIME = Bạn chỉ được đánh trả một lần!
+TEXT_WARN_OVER_LEADERSHIP = Đội hình của bạn đã vượt quá [0] Điểm lãnh đạo ([LeaderShip])!
+TEXT_SO_STRONG = Quá Mạnh
+TEXT_REQUIRE_AP_JOIN_BATTLE = Bạn cần [Ap][0] để tham gia trận đấu!
+TEXT_LOSE = Thất Bại
+TEXT_WIN = Chiến Thắng
+TEXT_FRIEND_GIFTAP_BYDAY = [0] đã tặng bạn AP cách đây [1] ngày.\n
+TEXT_FRIEND_GIFTAP_BYHOUR = [0] đã tặng bạn AP cách đây [1] giờ.\n
+TEXT_FRIEND_GETAP_BYDAY = [0] đã nhận AP bạn tặng cách đây [1] ngày
+TEXT_FRIEND_GETAP_BYHOUR = [0] đã nhận AP bạn tặng cách đây [1] giờ
+TEXT_GUILD_NAME_GREEN = Bang hội\: <font color\="#00FF00">[0]</font>
+TEXT_INVITE_FRIEND_JOIN_GUILD = Bạn có muốn mời <font color\="#00FF00">[0]</font> gia nhập Bang Hội không!
+TEXT_ASK_DELETE_FRIEND = Bạn có muốn xóa người này khỏi danh sách không?
+TEXT_FULL_AP_NONEEDMORE = Năng lượng đã đầy không cần nhận thêm!
+TEXT_FULL_LIMIT_COMEBACK = Đã nhận quá giới hạn ngày hôm nay, trở lại sau nhé!
+TEXT_YELLOW_NAME_LABEL = <font color\="#FFFF00">Tên\: </font> 
+TEXT_YELLOW_ACTION_POINT_LABEL = <font color\="#FFFF00">Điểm Hoạt Động\: </font> 
+TEXT_YELLOW_GUILD_OWNER_LABEL = <font color\="#FFFF00">Chủ Bang\: </font> 
+TEXT_YELLOW_GUILD_SLOGAN_LABEL = <font color\="#FFFF00">Khẩu Quyết\: </font> 
+TEXT_YELLOW_NOTICE_TITLE = <font color\="#FFFF00">Thông Báo</font>
+TEXT_YELLOW_GUILD_SLOGAN_TITLE = <font color\="#FFFF00">Khẩu Quyết</font>
+TEXT_YELLOW_SELECT_SYMBOL_TITLE = <font color\="#FFFF00">Chọn Biểu Tượng</font>
+TEXT_ACTION_SHORT = H.Động
+TEXT_CHAT = Chat
+TEXT_BUFF = Bổ Trợ
+TEXT_TOP_BANG = TOP Bang Hội
+TEXT_CHALLENGE = Thách Đấu
+TEXT_SHOP = Cửa Hàng
+TEXT_WAR_GUILD = Bang Hội Chiến
+TEXT_MEMBER = Thành Viên
+TEXT_GO_HUNT = Đi Săn
+TEXT_UPDATED = [0] đã được cập nhật!
+TEXT_CANCEL = Hủy
+TEXT_FIRE_ON_HOLE = Chiến !
+TEXT_NEED_PAY_RUNE = Bạn cần [Rune][0] Đá Quý Nạp.
+TEXT_DETAIL_BET_LEVEL = Hạng\: [0]\nMức Cược\: [1]\nMức Phí\: [2]%
+TEXT_PVPBET = PVP Cá Cược
+TEXT_PAY_RUNE = [Rune] Đá Quý Nạp\: 
+TEXT_NOT_FOUND_OPPONENT = Không tìm thấy đối thủ!
+TEXT_ASK_JOIN_BATTLE = Bạn có muốn tham gia trận đấu ?
+TEXT_TIME_OUT_JOIN = Hết thời gian tham gia!
+TEXT_JOIN = Tham Gia
+TEXT_ALIGN_CENTER_WAIT_ACCEPT = <p align\='center'>Đang chờ đối thủ đồng ý\n\nVS</p>
+TEXT_CANCEL_CHALLENGE = Đối phương đã hủy đấu!
+TEXT_ASK_CANCEL_PVPBET = Bạn đang tìm đối thủ trong PVP Cá Cược, bạn có muốn hủy không?
+TEXT_FRIEND_CHALLENGE_IN_BATTLE = [0] muốn mời bạn thách đấu. Bạn không thể nhận lời thách đấu khi trong trận đấu.
+TEXT_FRIEND_CHALLENGE = [0] muốn mời bạn thách đấu
+TEXT_DAMAGE_RED = Sát thương\: <font color\="#FF0000">[0]</font>
+TEXT_PLUS_PK_FONT_GREEN = Điểm PK\: <font color\="#00FF00">+[0]</font>
+TEXT_LOST_PK_FONT_RED = Điểm PK\: <font color\="#FF0000">[0]</font>
+TEXT_ALIGN_RIGHT_SUMMARY_BATTLE = <p align\="right">Giết\:\nChết\:\nHỗ trợ\:</p>
+TEXT_SORTING_TYPE = Kiểu Sắp Xếp
+TEXT_DEFAULT = Mặc Định
+TEXT_WHITE = Trắng
+TEXT_GREEN = Xanh Lá
+TEXT_BLUE = Xanh Lam
+TEXT_HERO = Anh Hùng
+TEXT_PURPLE = Tím
+TEXT_ORANGE = Cam
+TEXT_RED = Đỏ
+TEXT_BUY_MORE = Mua Thêm
+TEXT_FILLING = Hồi Phục
+TEXT_FULL_STORE = Đầy Kho
+TEXT_EXPAND = Mở Rộng
+TEXT_FUSION = Cường Hóa
+TEXT_SELLING_CARDS = Bán Thẻ
+TEXT_ERROR_CONNECTION = Lỗi kết nối
+TEXT_TRY_AGAIN = Thử Lại
+TEXT_LEVELING_PK = THĂNG CẤP PK
+TEXT_REPAIR_EQUIP = PHỤC HỒI TRANG BỊ
+TEXT_REPAIR = Phục hồi
+TEXT_PRICE_LABEL = Giá\:\n
+TEXT_ALIGN_CENTER_FULL_STORE_CARD = <p align\="center">Thẻ bài trong kho đã đầy!\nBạn có thể\:</p>
+TEXT_UNABLE_CONNECT_SERVER = Không thể kết nối tới server!
+TEXT_HINT_SHIELD = <font color\="#00FF00">Giáp Phòng Thủ</font> giúp bạn không bị\nmất cúp khi bị tấn công.
+TEXT_WARNING = Cảnh Báo
+TEXT_REQUIRE_TEAMPOWER_PVP = Bạn cần [TeamPower][0] để tham gia!\nHãy chọn các Thẻ Bài mạnh hơn!
+TEXT_WARN_LOST_SHIELD = Giáp Phòng Hộ của bạn sẽ mất nếu bạn tấn công người chơi khác. Bạn có muốn tiếp tục hay không?
+TEXT_HINT_COMBO_PVP = <font color\="#00FF00">Streak</font> tăng khi bạn thắng liên tiếp.\Streak giúp bạn nhận nhiều cúp hơn.
+TEXT_HINT_SERVER_TIME = <font color\="#00FF00">       Thời Gian Server\: [0]</font>
+TEXT_HINT_USERBAR_LV = \n<font color\="#00FF00">       Cấp Độ Hiện Tại\: [0]</font>
+TEXT_HINT_REBIRTH = \n<font color\="#00FF00">       [0]</font>
+TEXT_HINT_USERBAR_FP = \n[FriendPoint]   <font color\="#00FF00">Cỏ may mắn\:</font> 
+TEXT_HINT_USERBAR_COIN = \n[Coin]   <font color\="#00FF00">Tiền vàng</font> dùng để cường hóa thẻ bài.
+TEXT_HINT_USERBAR_RUNE = \n[Rune]   <font color\="#00FF00">Đá quý</font> dùng để mua Năng lượng, Triệu hồi Vip.
+TEXT_HINT_USERBAR_REDAP_EFFECT_1 = \n          - Tăng exp, vàng và cỏ khi Đi săn.
+TEXT_HINT_USERBAR_REDAP_EFFECT_2 = \n          - Tăng sức mạnh của thẻ bài.
+TEXT_HINT_USERBAR_REDAP = \n[RedAp]   <font color\="#00FF00">Năng lượng Đỏ</font>
+TEXT_HINT_USERBAR_YELLOWAP = \n[Ap]   <font color\="#00FF00">Năng lượng Vàng</font> dùng trong mỗi trận chiến.
+TEXT_HINT_USERBAR_XP = \n[Exp]   <font color\="#00FF00">Điểm Kinh Nghiệm</font> cần để tăng cấp độ\: [0]
+TEXT_HINT_USERBAR_TOP_DAMAGE = \n          - Top [0] Sức mạnh.
+TEXT_HINT_USERBAR_TOP_PVP = \n          - Top [0] PVP.
+TEXT_HINT_USERBAR_TOP_LV = \n          - Top [0] Cấp Độ.
+TEXT_HINT_USERBAR_TITLE = \n       <font color\="#00FF00">Danh Hiệu</font>
+TEXT_AUTO_VIP = Auto VIP
+TEXT_DETAIL_RESULT_AUTO_VIP = <font color\="#00FF00">      Trận Thắng\: [0]</font>\n<font color\="#FFFF00">      Trận Thua\: [1]</font>
+TEXT_EXPIRED_TIME_AUTO_VIP = Bạn đã hết thời gian sử dụng chức năng <font color\="#00FF00">Auto VIP</font>
+TEXT_RESULT_AUTO_VIP = Kết quả Auto Vip
+TEXT_PLUS_PK = +[0] PK
+TEXT_DOUBLE_KILL = DOUBLE KILL
+TEXT_TRIPLE_KILL = TRIPLE KILL
+TEXT_QUADRA_KILL = QUADRA KILL
+TEXT_PENTA_KILL = PENTA KILL
+TEXT_ABLE_TO_CONTINUE = Đã có thể tiếp tục!
+TEXT_DESTROY_LOCK = Phá Bỏ Mã Khóa
+TEXT_DO_ACTION = Thực Hiện
+TEXT_PASSCODE = Đặt Mã Khóa
+TEXT_REVIEW = Xem Lại
+TEXT_SHOW_LV = Lv\: [0]/[1]
+TEXT_LEVEL_LABEL = Cấp Độ\: 
+TEXT_LEVEL_TITLE = Cấp Độ
+TEXT_ACCEPT = Đồng Ý
+TEXT_INFO = Thông Tin
+TEXT_STRANGER = Người lạ
+TEXT_FRIEND = Bạn
+TEXT_EXP_LABEL = Exp\: 
+TEXT_LV_LABEL = LV\:
+TEXT_NEXT_BUFF_EFFECT = <font color\="#00FF00">  Bổ Trợ hiện tại\:\n-Tăng [0]% sát thương\n-Tăng [1]% máu</font>\n
+TEXT_CURRENT_BUFF_EFFECT = <font color\="#FFFF00">  Bổ Trợ kế tiếp cần\: [0] Điểm Hoạt Động</font>\n<font color\="#FFFF00">-Tăng [1]% sát thương\n-Tăng [2]% máu</font>
+TEXT_COMPARE = So Sánh
+TEXT_ALIGN_CENTER_MORE_COMBO_MORE_CUP = <p align\="center">Streak càng nhiều thì cúp sẽ được càng cao![0]</p>
+TEXT_MAX_COMBO_SEVEN = \nTối đa là Streak 7.
+TEXT_ASK_NAME_HERO_1 = Anh Hùng ơi Anh Hùng, \nAnh Hùng tên gì vậy?
+TEXT_ASK_NAME_HERO_2 = , cái tên thật là hay!!
+TEXT_WARN_DESTROY_LOCK = Phá bỏ mã khóa túi sẽ tự động khóa túi đồ trong hai ngày!
+TEXT_TEMP_LOCK_ACTION = Thao Tác này tạm thời bị khóa!
+TEXT_CONNECT_POINT_CREATE_PASSCODE = Nối các điểm trắng để tạo Mã Khóa.
+TEXT_ALIGN_CENTER_OPEN_LOCK = <p align\="center">Hãy mở khóa để tiếp tục!</p>
+TEXT_TIME_SPEND_ADVENTURE = Thời gian <font color\="#FFFF00">[0]</font>
+TEXT_LACK_OF_ITEMS = Chưa đủ bộ
+TEXT_NUMBER_TURN_EVO = Đủ [0] lần tiến hóa
+TEXT_MATERIAL_EVO_SPECIAL_CARD = Nguyên liệu tiến hóa lên card đặc biệt
+TEXT_MATERIAL_EVO_3STAR = Nguyên liệu tiến hóa lên <font color\='#00FF00'>3 Sao</font>
+TEXT_MATERIAL_EVO_4STAR = Nguyên liệu tiến hóa lên <font color\='#00FF00'>4 Sao</font>
+TEXT_POINT_PK_LABEL = Điểm PK\: [0]
+TEXT_MATERIAL = Nguyên Liệu
+TEXT_HERO_GREEN = <font color\="#00FF00">Anh Hùng</font>
+TEXT_NAME_BUFF_YELLOW = <font color\="#FFFF00">[0]</font>
+TEXT_FIGHT = Đánh
+TEXT_LOSING_LOST = Thua mất\:
+TEXT_WIN_GET = Thắng nhận\:
+TEXT_HAS_GIFT = Có Quà
+TEXT_READY = Sẵn Sàng
+TEXT_LACKOF_LEVEL = Chưa đủ LV
+TEXT_READY_GREEN = <font color\="#00FF00">Sẵn Sàng</font>
+TEXT_RED_LEVEL = <font color\="#FF0000">Cấp Độ</font>
+TEXT_RED_MATERIAL = <font color\="#FF0000">Nguyên Liệu</font>
+TEXT_ASK_ADD_FRIEND = Bạn có muốn kết bạn với
+TEXT_CONTRIBUTED = Đã đóng góp\: 
+TEXT_JOIN_SUCCESS = Gia nhập thành công!
+TEXT_CONTRIBUTED_OLD = Từng đóng góp\: 
+TEXT_REFUSE_JOIN_SUCCESS = Từ chối gia nhập thành công!
+TEXT_UNITL_DATE = Hết ngày [0]-[1]-[2]
+TEXT_THANKS = Cảm Ơn
+TEXT_THANKS_BEST_REGARDS = Rất cảm ơn bạn đã góp ý
+TEXT_SEND = Gửi
+TEXT_NOTYET_JOIN_GUILD = Bạn chưa gia nhập Bang Hội
+TEXT_LOCK_CHAT_LOWLEVEL = Chat Thế Giới sẽ mở ở cấp độ [0]
+TEXT_LEVEL_OPEN_CHAT = Tính năng chat sẽ mở khi bạn đạt cấp [0]
+TEXT_ALIGN_CENTER_LOADING_DATA = <p align\="center">Đang tải dữ liệu!\nXin chờ giây lát!</p>
+TEXT_YOU_WIN_GREEN = <font color\='#00FF00'>Bạn thắng</font> 
+TEXT_YOU_LOSE_RED = <font color\='#FF0000'>Bạn thua</font> 
+TEXT_ENDURANCE_LABEL = Độ bền\: 
+TEXT_ASK_REPAIR_WITH_PRICE = Bạn có muốn phục hồi trang bị. Giá\:\n
+TEXT_REPAIR_EQUIP_TITLE = PHỤC HỒI TRANG BỊ
+TEXT_PERMANENT = Vĩnh viễn
+TEXT_GUILD_NAME_YELLOW_WEAK = <font color\="#FF8800">Bang\: [0]</font>
+TEXT_GUILD_OWNER_GREEN = <font color\="#00FF00">Chủ\: [0]</font>
+TEXT_MEMBER_TOTAL_YELLOW = <font color\="#FFFF00">Thành viên\: </font> [0]/[1]
+TEXT_REFUSE_JOIN_YELLOW = <font color\="#FFFF00">Từ Chối Gia Nhập</font>
+TEXT_REFUSE_JOIN_THIS_GUILD = Bạn muốn từ chối gia nhập Bang Hội này?
+TEXT_ASK_JOIN_THIS_GUILD = Bạn muốn gia nhập Bang Hội này?
+TEXT_LEVEL_UP_LEFT_SIDE = <p align\="right">Hồi năng lượng \nGiới hạn kho \nĐiểm lãnh đạo </p>
+TEXT_LEVEL_UP_CENTER = 
+TEXT_LEVEL_UP_RIGHT_SIDE = [Ap] [0]\n[CardSlot] [1]\n[LeaderShip] [2]
+TEXT_CONFIRM_SELLING_CARDS = Bạn có chắc muốn bán những thẻ bài đã chọn
+TEXT_CONFIRM_DECOMPOSE_CARDS = Bạn có chắc muốn phân rã những thẻ bài đã chọn
+TEXT_DUNGEON_REQUIRE_LEVEL = Khu vực này yêu cầu <font color\="#FF0000">Cấp độ [0]</font>!
+TEXT_DUNGEON_REQUIRE_REBIRTH = <p align\="center">Khu vực này yêu cầu\n<font color\="#FFFF00">[0]</font></p>
+TEXT_DUNGEON_REQUIRE_GUILD = <p align\="center">Khu vực này yêu cầu\n<font color\="#FFFF00">Bang Hội [0]</font></p>
+TEXT_EMPTY_TURN = Hết Lượt
+TEXT_LEVEL_JOIN_EVENT = Để tham gia sự kiện này, bạn cần đạt <font color\="#FF0000">Cấp độ [0]</font>!
+TEXT_HAVING_FRIENDPOINT = \nBạn đang có [FriendPoint][0].\n
+TEXT_BUY_MORE_FP_BY_RUNE = Mua thêm [FriendPoint][0] giá [Rune][1]?
+TEXT_BUY_MORE_RES_BY_RUNE = Mua thêm [0][1] giá [Rune][2]?
+TEXT_OPEN_MAP = Mở Bản Đồ
+TEXT_UNLOCK_LOCATION = Mở bản đồ bằng [0][1]? Bạn đang có [0][2].
+TEXT_ALIGN_CENTER_NOT_CLEAR_DUNGEON = <p align\="center">Bạn chưa hoàn thành khu vực\:\n<font color\="#FF0000">[0]</font></p>
+TEXT_COMPLETED = Hoàn Thành
+TEXT_REQUIED_LV_LABEL = Yêu cầu Lv\:
+TEXT_REQUIED_ELITE_STARS_LABEL = Yêu cầu [Star][0]/[1]
+TEXT_OPEN = Mở
+TEXT_TURN = \ Lượt
+TEXT_UNLIMIT = Không giới hạn
+TEXT_ALIGN_CENTER_TURN_RUNE = <p align\="center">Còn [0] Lượt\n([Rune][1]/Lượt)</p>
+TEXT_REMAINING_TURN = Còn [0] Lượt
+TEXT_EVENT_STILL_CLOSE = Sự kiện chưa mở, hãy quay lại sau nhé!
+TEXT_CODE = Mã Code
+TEXT_MESSAGE = Tin Nhắn
+TEXT_COPY = Sao Chép
+TEXT_REPLY = Trả Lời
+TEXT_DELETE = Xóa
+TEXT_READ = Đọc
+TEXT_INPUT_CODE_NAME = NHẬP TÊN CODE
+TEXT_PASSIVE_ONLY = Nội tại DUY NHẤT\:
+TEXT_PASSIVE = Nội tại \:
+TEXT_ABLE_UPGRADE = Có thể nâng cấp
+TEXT_INPUT_HERO_NAME = Nhập Tên Anh Hùng
+TEXT_ABLE_TO_EVOLVE = Có thể tiến hóa
+TEXT_NONE = Không có
+TEXT_SELL = Bán
+TEXT_RANK_LABEL = Hạng\: 
+TEXT_ADD_MORE = Thêm
+TEXT_LESS = Bớt
+TEXT_STILL_LABEL = Còn\:
+TEXT_TOP_RANK_VALUE = Hạng 
+TEXT_TOP_LEVEL_VALUE = Cấp độ
+TEXT_TOP_EVENT_VALUE = Điểm số
+TEXT_WIN_RUNE = Thắng [Rune]
+TEXT_WIN_FP = Thắng [FriendPoint]
+TEXT_WIN_COIN = Thắng [Coin]
+TEXT_RESULT_TITLE = Kết Quả
+TEXT_LV_CARD_REQUIRE_LABEL = Yêu cầu cấp độ thẻ bài\: 
+TEXT_SPECIAL_CARD_BASE_LV_CARD = Trang bị đặc biệt\:\nChỉ số ảnh hưởng theo cấp độ của Thẻ Bài 
+TEXT_LIMIT_NAME_CHAR = Tên nhân vật từ 4-12 ký tự!
+TEXT_BLACKLIST_NAME_CHAR = Tên nhân vật chứa ký tự đặc biệt!
+TEXT_SENSITY_NAME_CHAR = Tên nhân vật chứa ký tự nhạy cảm!
+TEXT_SELL_CARD_WITH_GOLD = Bán [0] thẻ bài được [1] vàng
+TEXT_FULL_YELLOW_AP_CANNOT_GET_REWARD = Năng lượng vàng của bạn đang đầy, bạn chưa thể nhận phần thưởng này!
+TEXT_CONFIRM_RESTORE_YELLOW_AP = Bạn có muốn phục hồi NĂNG LƯỢNG VÀNG???
+TEXT_YOU_LOSE_YELLOW = <font color\="#FFFF00">Bạn thua</font>
+TEXT_CONFIRM_SELL_ITEM = Bạn có muốn bán các vật phẩm đã chọn !?
+TEXT_CONFIRM_SELL_SELECTED_EQUIPS = Bạn có chắc muốn bán những trang bị đã chọn
+TEXT_WARN_LACKOF_LEADERSHIP = Bạn không đủ điểm lãnh đạo ([LeaderShip]) để sử dụng thẻ bài này. Thăng cấp để tăng điểm lãnh đạo.
+TEXT_WARN_SELECT_CARD_IN_FORMATION = Bạn không thế chọn thẻ bài lãnh đạo. Vui lòng chọn thẻ bài không bị khóa.
+TEXT_CHECKING_DATA = Đang kiểm tra dữ liệu!
+TEXT_LINK_ACCOUNT_BONUS_FP = Bạn hãy liên kết tài khoản với ZingMe hoặc Facebook để bảo vệ tài khoản và nhận thưởng 1000 Đá Quý
+TEXT_LINK_ACCOUNT_TAKE_PHOTO = Bạn hãy liên kết tài khoản với ZingMe hoặc Facebook để sử dụng tính năng Chụp Hình.
+TEXT_LOGIN_SOCIAL_TAKE_PHOTO = Bạn hãy đăng nhập ZingMe hoặc Facebook để sử dụng tính năng Chụp Hình.
+TEXT_SHARE_PHOTO_SUCCESS = Chia sẻ hình ảnh thành công!
+TEXT_SHARE_PHOTO_FAIL = Chia sẻ hình ảnh thất bại!
+TEXT_SHARE_PHOTO_GREETING = Hãy chia sẻ hình ảnh với bạn bè!
+TEXT_SHARE_PHOTO_FEED = Cùng chơi Liên Minh Anh Hùng với mình nào! Combat cực đã, PvP kịch tính.
+TEXT_SHARE_LINK_GAME = \n\nAndroid: http://sl.lmah.vn/LM_Android_FBLM\niOS: http://sl.lmah.vn/LM_iOS\nApk: http://apk-dl.com/store/apps/details?id=lmah.vn\nChơi game trên web:\nZingme: http://sl.lmah.vn/LM_Zingweb\nFaceook: https://apps.facebook.com/lienminhanhhung\nTrang chủ : http://lmah.vn/
+TEXT_CONFIRM_EXIT_APP = Bạn có muốn thoát ứng dụng?
+TEXT_TURN_DEFAULT = Lượt\: 0/[0]
+TEXT_WAVE_DEFAULT = Hiệp\: 0/3
+TEXT_CURRENT_WAVE = Hiệp\: [0]/3
+TEXT_CURRENT_TURN = Lượt\: [0]/[1]
+TEXT_LACKOF_COIN_RES_CARD = Bạn không đủ [Coin][0] hồi sinh tướng
+TEXT_CONFIRM_RES_CARD = Hồi Sinh tướng\: [Coin][0]\nHiện có\: [Coin][1]
+TEXT_AP_SEARCH_OPPONENT = Bạn cần [Ap][0] để tìm đối thủ
+TEXT_EMPTY_FREE_TURN = Bạn đã hết [0] lượt miễn phí trong ngày, sử dụng [Rune][1] để mua thêm 1 lượt
+TEXT_RUNE_REQUIRE_BUY_TURN = Bạn cần thêm [Rune][0] để mua 1 lượt
+TEXT_AP_REQUIRE_CONTINUE = Bạn cần [Ap][0] để tiếp tục?
+TEXT_WATING_OPPONENT = Đang chờ đối thủ
+TEXT_FIGHT_AP_NUM = Quất đê\n(1AP)
+TEXT_FEED_TITLE_LEVEL_UP = Lại thăng cấp!
+TEXT_FEED_MSG_LEVEL_UP = <b>[user_name]</b> vừa thăng cấp <b>[number_level]</b> trong <b>Liên Minh Anh Hùng</b>.\nCứ đà này là đứng TOP là cái chắc ^_^
+TEXT_FEED_IMG_LEVEL_UP = ThangCap_02.png
+TEXT_FEED_TITLE_INVITE_FRIEND = Anh Hùng Hội Ngộ
+TEXT_FEED_MSG_INVITE_FRIEND = <b>[user_name]</b> vừa tham gia trò chơi <b>Liên Minh Anh Hùng</b>.\nCó ai vào chơi với mình hông ^_^
+TEXT_FEED_IMG_INVITE_FRIEND = KetBan.png
+TEXT_FEED_TITLE_MYSTRONG = Đẳng cấp là đây!
+TEXT_FEED_MSG_EVO_SUCCESS = <b>[user_name]</b> vừa tiến hóa thành công <b>[hero_name]</b> lên <b>[next_star]</b> trong <b>Liên Minh Anh Hùng</b>.\nKiểu này thì còn ai dám đấu với mình nữa. Keke…
+TEXT_FEED_MSG_EVO_EX = <b>[user_name]</b> vừa tiến hóa vượt cấp <b>[hero_name]</b> lên <b>[next_hero]</b> trong <b>Liên Minh Anh Hùng</b>.\nĐúng là ăn ở tốt là ông trời sẽ thương \:3
+TEXT_FEED_TITLE_EVO_EX = Hay không bằng hên!
+TEXT_FEED_TITLE_PVP_WIN = Độc Cô Cầu Bại!
+TEXT_FEED_MSG_PVP_WIN = <b>[user_name]</b> vừa hạ gục <b>[enemy_name]</b> trong <b>Liên Minh Anh Hùng</b>.\n Ai đủ bản lĩnh thì nhào vô!!!
+TEXT_FEED_IMG_PVP_WIN = Winner.png
+TEXT_FEED_TITLE_TOP = Top Liên Minh Anh Hùng
+TEXT_FEED_MSG_TOP = <b>[user_name]</b> đạt <b>Hạng [rank] [top_name]</b> trong <b>Liên Minh Anh Hùng</b>.\nNhấn thích để chúc mừng nào ^_^
+TEXT_FEED_TITLE_PASS_DUNGEON = Chinh phục thử thách!
+TEXT_FEED_MSG_PASS_DUNGEON = <b>[user_name]</b> vừa vượt qua ải <b>[dungeons_name]</b> trong <b>Liên Minh Anh Hùng</b>.\nVượt ải và khám phá là nghề của mình mà \:D
+TEXT_FEED_IMG_PASS_DUNGEON = VuotAi.png
+TEXT_LINK_SHARE = http\://lmah.vn/intro/teaser/index.html
+TEXT_SHARE = Chia Sẻ
+TEXT_GREETING_FEED_ZM = Chúc mừng bạn đã đăng tải [0] thành công!
+TEXT_NOTIFY_FULL_AP = Thưa thủ lĩnh, Năng lượng đã phục hồi, chúng ta tiếp tục chiến đấu nào!!!
+TEXT_NOTIFY_ADV_REWARD = Thủ lĩnh ơi, Em vừa kiếm được kho báu trong lúc Ủy Thác nè! Vào nhận ngay…
+TEXT_NOTIFY_EVENT_COIN_PIG = Thủ lĩnh ơi, Heo vàng nhà ai xổng chuồng nè! Săn bắt kiếm thêm tí vàng nào!
+TEXT_NOTIFY_EVENT_EXP = Thủ lĩnh ơi, Bí ma đang lộng hành trong rừng! Ngài ra tay thu thập chúng nhé!
+TEXT_NOTIFY_RAIDBOSS = Boss [0] đã xuất hiện, hãy vào kêu gọi toàn bang vào săn nhé!
+TEXT_NOTIFY_LEAVING_SOLONG = Thưa Thủ lĩnh, Ngài đã đi vắng quá lâu! Chúng tôi đang rất cần sự giúp đỡ của Ngài!
+TEXT_REBIRTH_CONDITION = Điều Kiện Trùng Sinh
+TEXT_REBIRTH_TITLE = Trùng Sinh
+TEXT_ASK_CONFIRM_REBIRTH = Bạn đồng ý <font color="#00FF00">[0]</font>
+TEXT_REBIRTH_LACKOF_CONDITION = Bạn chưa đủ điều kiện để <font color="#FFFF00">Trùng Sinh</font>
+TEXT_REBIRTH_CONGRATE = Chúc mừng bạn đã [0] thành công!
+TREASURE_BUY_KEY_BTN = Mua Thêm
+TREASURE_HEADER_OPEN_IN_DAY = Rương
+TREASURE_HEADER_REQUEST_KEYS = Cần
+TREASURE_FOOTER_LB = ANH HÙNG ĐÃ MỞ KHÓA ĐƯỢC CÁC VẬT PHẨM
+TREASURE_NEXT_POPUP_TITLE = Đổi Rương
+TREASURE_NEXT_POPUP_MSG = Nếu bạn muốn đổi rương khác? Nhấn Hủy Rương.
+TREASURE_NEXT_POPUP_OK = Hủy Rương
+TREASURE_LIMIT_DAY_POPUP_TITLE = Giới Hạn!!!
+TREASURE_LIMIT_DAY_POPUP_MSG = Mỗi ngày chỉ có thể mở [0] Rương.
+TREASURE_LIMIT_OPEN_POPUP_TITLE = Giới Hạn!!!
+TREASURE_LIMIT_OPEN_POPUP_MSG = Mỗi rương chỉ quay [0] lần.
+TREASURE_LIMIT_OPEN_POPUP_OK = Đổi Rương
+TREASURE_BUY_KEY_POPUP_TITLE = Thiếu Chìa Khóa
+TREASURE_BUY_KEY_POPUP_MSG = Bạn cần [0] [1] để mở [2]!
+TREASURE_BUY_KEY_POPUP_OK = Mua Thêm
+DECOMPOSE_BTN = Phân Giải
+DECOMPOSE_DESC = Mảnh
+DECOMPOSE_CHECK_DESC = Dùng
+GET_TEXT = NHẬN
+BACKUP_TEXT = PHỤC HỒI
+BACKUP_DESC = Bạn có muốn phục hồi lại [0] ngày bằng [1] đá quý?
+DAILYREWARD_TITLE = QUÀ TẶNG ĐĂNG NHẬP LIÊN TỤC
+TEXT_LACKOF_MEMORY = Thiết bị thiếu bộ nhớ! Một số hiển thị sẽ giảm bớt để ổn định hệ thống!
+BACKUP_OK_TEXT = Chúc mừng bạn đã phục hồi thành công.
+TEXT_RAIDBOSS_END = Boss đã bị tiêu diệt!
+TEXT_PVPRANK_DOWNGRADE_COLOR_TITLE = <font color="#FFFF00">Hạ Cấp</font>
+TEXT_PVPRANK_UPGRADE_COLOR_TITLE = <font color="#00FF00">Thăng Cấp</font>
+TEXT_PVPRANK_GREETING_UPGRADE = Chúc mừng bạn đã lên hạng!
+TEXT_PVPRANK_DOWNGRADE = Bạn đã bị mất điểm cup và xuống hạng!
+TEXT_PVPRANK_CONDTION_UPGRADE = Bạn cần [0] cúp để lên hạng.
+TEXT_PVPRANK_UPGRADE_TOP10 = Bạn cần nằm trong Top [0] để lên hạng.
+TEXT_PVPRANK_CURRANK = Hạng Hiện Tại
+TEXT_PVPRANK_NEXTRANK = Hạng Kế Tiếp
+TEXT_PVPRANK_RANK_TITLE_HINT = Huy Hiệu Xếp Hạng PvP
+TEXT_DAILY_COUNT = BẠN ĐÃ ĐĂNG NHẬP LIÊN TỤC [0]/30
+TEXT_DAILY_TITLE = QUÀ TẶNG NGÀY [0]
+TEXT_MISSING_ARMORSET = Bạn thiếu <font color="#FFFF00">[0]</font> <font color="#00FF00">[1]</font>
+TEXT_ARMORSET_NAME_1 = <font color="#FFFF00">Bộ Lục Bảo</font>
+TEXT_ARMORSET_NAME_2 = <font color="#00FFFF">Bộ Saphia</font>
+TEXT_ARMORSET_NAME_3 = <font color="#FF00FF">Bộ Thạch Anh</font>
+TEXT_SKIP_ADVENTURE_CONFIRM = Bạn có muốn dùng [0][Rune] để nhận quà tặng Ủy Thác ngay và luôn không
+TEXT_NUM_WIN = Số trận thắng: 
+TEXT_NUM_LOSE = Số trận thua: 
+TEXT_NUM_COMBOWIN = Liên thắng: 
+TEXT_AUTO_PVP_TITLE = Auto PVP 
+TEXT_AUTO_PVP_RESULT_TITLE = <font color="#FFFF00">Kết quả Auto PVP</font>
+TEXT_AUTO_PVP_ASK_USE = Bạn có muốn sử dụng auto không?
+TEXT_EVENT_EVO = Đổi Quà
+ULTIMATE_CHECK_PROTOTYPE_ERROR = <font color="[0]">Thẻ bài [1][2]</font> trở lên mới sử dụng được Tuyệt chiêu!
+COLOR_WHITE_CODE = #FFFFFF
+COLOR_GREEN_CODE = #99CC00
+COLOR_BLUE_CODE = #33B5E5
+COLOR_PURPLE_CODE = #AA66CC
+COLOR_ORANGE_CODE = #FF8800
+COLOR_RED_CODE = #FF4444
+COLOR_WHITE_NAME = Trắng
+COLOR_GREEN_NAME = Xanh lá
+COLOR_BLUE_NAME = Xanh dương
+COLOR_PURPLE_NAME = Tím
+COLOR_ORANGE_NAME = Cam
+COLOR_RED_NAME = Đỏ
+ULTIMATE_UPGRADE_FAIL = Học kỹ năng thất bại.
+NEW_EVENT_NOT_FOUND = Sự kiện đã kết thúc hoặc chưa được ra mắt.
+TEXT_AUTO_PVP = Auto VIP PVP
+TEXT_DRAFT_CARDS = Mảnh Ghép
+TEXT_ENTER_NAME = Nhập tên nhân vật
+BTN_BUY = Mua
+LTK_TRY_LOGIN_FACEBOOK = Kiểm tra kết nối Facebook
+LTK_TRY_LOGIN_ZINGME = Kiểm tra kết nối ZingMe
+LTK_LOAD_DATA = Khởi tạo giao diện
+LTK_GET_SERVER_LIST = Lấy danh sách server
+LTK_LIST_CONST = Kiểm tra dữ liệu gốc
+LTK_DOWNLOAD_CONST = Tải dữ liệu gốc
+LTK_CONST = Khởi tạo dữ liệu gốc
+LTK_ADD_TRIAL_BUTTON = Khởi tạo
+LTK_START_CONNECT = Khởi tạo kết nối...
+LTK_CONNECTTING = Đang kết nối...
+LTK_LOGIN = Đăng nhập...
+LTK_INIT_TEXTURE_MANAGER = Tải dữ liệu mới
+LTK_DOWNLOAD = Tải dữ liệu mới
+LTK_LOAD_TEXT = Khởi tạo nội dung
+LTK_LOAD_CARD_DATA = Khởi tạo các thẻ bài
+LTK_INIT = Khởi tạo dữ liệu
+LTK_FRIENDS = Cập nhật bạn bè
+LTK_AVATAR = Cập nhật avatar
+LTK_FINAL = Khởi tạo thành công
+LTK_LOAD_EFFECTS = Khởi tạo hiệu ứng
+LTK_GET_BATTLE_SCRIPT = Tải kịch bản trận đấu
+LTK_LOAD_CARD = Tải thẻ bài
+LTK_POPUP_LOGIN_FB = Bạn có muốn kết nối tài khoản [0] với Facebook không?
+LTK_POPUP_LOGIN_ZM = Bạn có muốn kết nối tài khoản [0] với Zingme không?
+LTK_POPUP_LOGIN_SNS = Bạn có muốn kết nối tài khoản [0] với tài khoản mạng xã hội?
+LTK_POPUP_OVERRIDE = Bạn có muốn ghi đè tài khoản vừa đăng nhập vào máy không? Lưu ý: Có thể mất tài khoản hiện có trên máy!!!
+CHOOSE_SERVER = Chọn Máy Chủ
+SERVER_STATUS_0 = Đầy
+SERVER_STATUS_1 = Gần Đầy
+SERVER_STATUS_2 = Gần Đầy
+SERVER_STATUS_3 = Bình thường
+SERVER_STATUS_4 = Tốt
+TEXT_NOT_REBITH = Chưa Trùng Sinh
+TEXT_DAILY_ACTION = Diễn ra hằng ngày
+POPUP_TITLE_ERROR = Lỗi
+POPUP_TITLE_COMFIRM = Xác nhận
+SHOP_ITEM_LOCK = Khóa
+SHOP_ITEM_SOLD_OUT = Hết Hàng
+SHOP_ITEM_BUY = Mua
+SHOP_POPUP_BUY_NUMBER = Số lượng
+SHOP_POPUP_BUY_PRICE = Giá
+SHOP_POPUP_BUY_HAVE_RESOURCE = Đang có
+SHOP_POPUP_BUY_BTN_DETAIL = Chi tiết
+SHOP_POPUP_BUY_BTN_BUY = Mua
+SHOP_POPUP_BUY_BTN_CLOSE = Đóng
+SHOP_POPUP_BUY_BTN_EXPAND = Mở Rộng
+SHOP_POPUP_OUTOFF_MONEY = Không đủ tiền.
+SHOP_POPUP_OUTOFF_SPACE = Túi đồ đã hết chỗ.
+SHOP_POPUP_ITEM_NOT_EXIST = Vật phẩm không tồn tại!
+SHOP_POPUP_ITEM_NOT_SELL = Vật phẩm hiện không bán!
+SHOP_POPUP_ITEM_SOLD_OUT = Hết lượt mua trong ngày!
+SHOP_POPUP_ITEM_ONLY_SELL = Vật phẩm chỉ bán
+SHOP_POPUP_ITEM_FROM =  từ 
+SHOP_POPUP_ITEM_TO =  đến 
+SHOP_CARD_DETAIL_HP = Máu: [0]\n
+SHOP_CARD_DETAIL_AP = Sức Mạnh Phép Thuật: [0]\n
+SHOP_CARD_DETAIL_AD = Tấn Công Vật Lý: [0]\n
+SHOP_CARD_DETAIL_INITSKILL = Kỹ Năng: <font color="#00FF00">[0]</font>
+SHOP_EQUI_DETAIL_CHANGE_BY_LV = <font color="#FF0000">Chỉ số ảnh hưởng theo cấp độ của Thẻ Bài</font>
+PAYMENT_TITLE_CHOOSE = Chọn Phương Thức Nạp Tiền
+PAYMENT_BTN_BACK = Trở lại
+PAYMENT_TITLE_PHONE_CARD = Thẻ Điện Thoại
+PAYMENT_TITLE_ZING_CARD = Thẻ Zing
+PAYMENT_TITLE_SMS = Tin Nhắn SMS
+PAYMENT_TITLE_ATM = Nạp ATM
+PAYMENT_TF_SERI = Mã Seri
+PAYMENT_TF_CODE = Mã Thẻ
+PAYMENT_BTN_SEND = Nạp Tiền
+PAYMENT_TB_MONEY = Mệnh Giá (VNĐ)
+PAYMENT_TB_RUNE = Quy Đổi
+PAYMENT_TB_PROMOTION = Khuyến mãi
+PAYMENT_ON_PROCESS = Đang tiến hành xử lý...
+PAYMENT_ON_SUCCESS = Nạp tiền thành công, hãy kiểm tra lại tài khoản
+PAYMENT_ERROR_MISS_INFO = Vui lòng điền đủ thông tin
+TEXT_ADVENTURE_MATERIAL_DESC = <font color="#FFFF00">Nguyên liệu nâng cấp thẻ bài</font>
+TEXT_ADD_FRIEND_SHORT = Kết Bạn
+TEXT_FC_SMART_SUPPORT = Hỗ Trợ Thông Minh
+TEXT_FC_TAKE_PHOTO = Chụp Hình
+TEXT_FC_CHAT = Chat
+TEXT_FC_INVITATION = Lời Mời Kết Bạn
+TEXT_FC_GIFT = Quà Tặng
+TOP_NAME_LEVEL = Top Cấp Độ
+TOP_NAME_PVP = Top PVP
+TOP_NAME_EVENT = Top Event
+TOP_NAME_TEAMPOWER = Top Sức Mạnh
+TEXT_POPUP_REQUIED_ELITE_STARS = Bạn cần [0]/[1] sao để mở bản đồ này!
+TEXT_REBIRTH_HP_DESC = +[0]% Máu\n
+TEXT_REBIRTH_ATK_DESC = +[0]% Sức Mạnh\n
+TEXT_REBIRTH_ARMOR_DESC = +[0]% Giáp\n
+TEXT_REBIRTH_UPEQUIP_DESC = +[0]% Nâng Cấp Trang Bị\n
+TEXT_REBIRTH_UPCARD_DESC = +[0]% Nâng Cấp Thẻ Bài\n
+TEXT_REBIRTH_MATERIAL_DESC = <font color="[0]">+Tên Nhân Vật đổi màu</font>\n
+GUILD_BUFF_DESC = Điểm hoạt động có được bằng số cup khi thắng PVP
+GUILD_INFO_COPPER = Đồng
+GUILD_INFO_SILVER = Bạc
+GUILD_INFO_GOLD = Vàng
+GUILD_INFO_PLATINUM = Bạch Kim
+GUILD_INFO_DIAMOND = Kim Cương
+GUILD_INFO_CHALLENGE = Thách Đấu
+TEAM_ID_1 = Đội Hình 1
+TEAM_ID_2 = Đội Hình 2
+TEAM_ID_3 = Đội Hình 3
+TEAM_SYN_TIME = Đội hình sẽ đồng bộ sau:
+TEAM_ERROR_TITLE = Lỗi Đội Hình
+TEAM_ERROR_MINIMUM_MEMBER = Đội hình cần có ít nhất một thành viên!
+POPUP_ON_PROCESS = Đang tiến hành xử lý...
+PAYMENT_POPUP_SUCCESS = Nạp tiền thành công, hãy kiểm tra lại tài khoản
+PAYMENT_POPUP_MISS_INFO = Vui lòng điền đủ thông tin!
+LOCATION_TIMER_REMAIN = Còn [0]
+LOCATION_TIMER_COMING = <p align="right">Sẽ mở sau\n[0]</p>
+PAYMENT_POPUP_OK = Nạp ngay
+PAYMENT_CONVERT_PRICE_PROMOTION = Thêm [0]%
+QC_TEAM_TITLE = Chọn Đội Hình
+QC_TEAM_STOCK = Túi đồ
+QC_TEAM_LEADER = Thủ Lĩnh
+QC_TEAM_MEMBER = Thành Viên
+QC_TEAM_DETAIL_TITLE = Chi Tiết
+QC_TEAM_DETAIL = Số Lượng: [0]/5\nĐiểm Lãnh Đạo: [1]/[2]\nSức Mạnh: [3][4]
+QC_EQUIP_STOCK = Túi đồ
+QC_EQUIP_OWNER = Thẻ Bài
+QC_EQUIP_DETAIL = Chi Tiết
+QC_EQUIP_AD = <font color="#00FF00">[0]</font> Sát thương vật lý
+QC_EQUIP_AP = <font color="#00FF00">[0]</font> Sát thương phép
+QC_EQUIP_HP = <font color="#00FF00">[0]</font> Máu
+QC_EQUIP_AR = <font color="#00FF00">[0]</font> Giáp
+QC_EQUIP_MR = <font color="#00FF00">[0]</font> Kháng phép
+QC_EQUIP_LS = <font color="#00FF00">[0]</font> Hút máu
+QC_EQUIP_CR = <font color="#00FF00">[0]</font> Chí mạng
+QC_EQUIP_EX = <font color="#00FF00">[0]</font> EXP
+LOGIN_ERROR_DEFAULT = Có lỗi xảy ra trong quá trình xử lý
+LOGIN_ERROR_S1 = Sai thông tin người chơi
+LOGIN_ERROR_S2 = Thông tin không hợp lệ
+LOGIN_ERROR_S6 = Có lỗi xảy ra trong hệ thống thanh toán
+LOGIN_ERROR_405 = Sai thông tin game
+LOGIN_ERROR_409 = Lỗi hệ thống của nhà cung cấp thẻ
+LOGIN_ERROR_5000 = Hệ thống đang bận
+LOGIN_ERROR_6000 = Xác thực đối tác thất bại
+LOGIN_ERROR_6100 = Tham số truyền vào không đúng định dạng
+LOGIN_ERROR_6200 = Vi phạm Business rule giữa Merchant & 123Pay
+LOGIN_ERROR_6206 = Giao dịch đã được xữ lý trước đó
+LOGIN_ERROR_7400 = Lỗi giao tiếp đối tác
+LOGIN_ERROR_7500 = Thông tin thẻ không hợp lệ
+LOGIN_ERROR_7501 = Thẻ bị khóa
+LOGIN_ERROR_7502 = Thẻ hết hạn sữ dụng
+LOGIN_ERROR_7503 = Thẻ đã sữ dụng hoặc không tồn tại
+LOGIN_ERROR_7504 = Serial không đúng
+LOGIN_ERROR_7505 = Mã thẻ và Serial không khớp
+LOGIN_ERROR_7506 = Serial hoặc mã thẻ không đúng
+SPECIAL_ITEM_UNKNOW = Không Xác Định
+TEXT_DAY = ngày
+TEXT_HOUR = giờ
+TEXT_MINUTE = phút
+TEXT_SECOND = giây
+EQUIP_INFO_TIME_OUT = Hết
+EQUIP_HOME_CANNOT_UPGRADE = Trang Bị không đủ nguyên liệu hoặc không thể tiến hóa tiếp
+GIFT_FRIEND_GIVE_AP = Tặng AP
+GIFT_FRIEND_GET_AP = Nhận AP
+GIFT_FRIEND_GIVE_ALL = Tặng Hết
+GIFT_FRIEND_GET_ALL = Nhận Hết
+PANEL_GIFT_CODE_DEFAULT = Nhập gift code
+PANEL_NAME_DEFAULT = Nhập tên nhân vật
+PANEL_SELL_DESC_DEFAULT = Bán 0 thẻ bài được 0 vàng
+POPUP_CHOOSE_TEAM_TITLE = Chọn Đội Hình
+POPUP_CHOOSE_TEAM_CHANGE = Đội khác
+POPUP_CHOOSE_TEAM_MEMBER = Thành viên
+POPUP_CHOOSE_TEAM_FORMATION = Vị trí
+POPUP_EDIT_TEAM_TITLE = Xếp Đội Hình
+POPUP_EDIT_TEAM_CHANGE = Đội khác
+POPUP_EDIT_TEAM_MEMBER = Thành viên
+POPUP_UP_ULTI_TITLE = Nâng Cấp Kỹ Năng
+POPUP_UP_ULTI_SKILL = <font color="#FFFF00">Tuyệt Chiêu</font> 
+POPUP_UP_ULTI_OK = Nâng Cấp
+PVP_LOG_TIME_MIN = [0] phút trước
+PVP_LOG_TIME_HOUR = [0] giờ trước
+PVP_LOG_TIME_DAY = hôm qua
+PVP_LOG_TIME_SOME_DAY = [0] ngày trước
+POPUP_PVP_LINK_TITLE = Trận Đấu
+POPUP_PVP_LINK_DESC = Link trận đấu đã được copy, bạn có thể paste vào trình duyệt để xem lại
+POPUP_MULTI_BUY_TITLE = Hóa Đơn
+POPUP_MULTI_BUY_SUBTITLE = Danh Sách Vật Phẩm
+POPUP_MULTI_BUY_OK_BTN = Mua
+POPUP_MULTI_BUY_NUMBER = Số Lượng
+POPUP_MULTI_BUY_PRICE = Giá Tiền
+GUILD_BOSS_LB_RANK = Hạng
+GUILD_BOSS_LB_NAME = Tên
+GUILD_BOSS_LB_DAME = Sát Thương
+GUILD_BOSS_LB_LASTHIT = <font color="#FFFF00">Giết Boss:</font> <font color="#00FF00\">[0]</font>
+EVO_HOME_BTN_BUY_ARMORSET = MUA NGỌC
+PANEL_CARD_TAB_COMBO_TITLE = Danh Sách Combo [0]
+PANEL_CARD_TAB_COMBO_TITLE_EMPTY = <p align="center">Danh Sách Combo\n(Không có)</p>
+CHOOSE_FUSION_MATERIAL_WARNING_BOTH = Có <font color="#FF0000">thẻ bài cấp cao</font> và thẻ bài <font color="#FF0000">mang trang bị</font>!!!\nBạn có muốn dùng hay không?
+CHOOSE_FUSION_MATERIAL_WARNING_ITEMS = Thẻ bài <font color="#FF0000">mang trang bị</font>!!!\nBạn có muốn dùng hay không?
+CHOOSE_FUSION_MATERIAL_WARNING_HIGH_STAR = Có <font color="#FF0000">thẻ bài cấp cao</font>!!!\nBạn có muốn dùng hay không?
+CHOOSE_FUSION_MATERIAL_WARNING_HIGH_STAR = Có <font color="#FF0000">thẻ bài cấp cao</font>!!!\nBạn có muốn dùng hay không?
+CHOOSE_FUSION_SUM_EXP = EXP
+CHOOSE_FUSION_SUM_COIN = GIÁ
+FUSION_HOME_SUM_EXP_DEFAULT = Tổng Exp: 0
+FRIEND_HELP_SOMEONE = Bạn vừa giúp [0] vượt thử thách, bạn nhận được [FriendPoint] [1].
+FRIEND_HAS_NEW_FRIEND = Bạn và [0] đã trở thành hảo hữu. Bạn nhận được [FriendPoint] [1]. \n *Có thể nhận thêm [2] lần ngày hôm nay.
+RAID_BOSS_REBORN = Hãy hồi sinh để tiếp tục đánh Boss!
+RAID_BOSS_REBORN_NEED_RUNE = <font color="#FFFF00">[0] Đá Quý</font>
+RAID_BOSS_REBORN_NEED_COIN = <font color="#FFFF00">[0] Vàng</font>
+RAID_BOSS_REBORN_NEED_FP = <font color="#FFFF00">[0] Cỏ</font>
+RAID_BOSS_REBORN_RUNE = <font color="#FFFF00">Đang có [0] Đá Quý</font>
+RAID_BOSS_REBORN_COIN = <font color="#FFFF00">Đang có [0] Vàng</font>
+RAID_BOSS_REBORN_FP = <font color="#FFFF00">Đang có [0] Cỏ</font>
+RAID_BOSS_REBORN_REMAIN = Còn: <font color="#00FF00">[0]</font> lần hồi sinh.
+ERROR_CANNOT_CONNECT_SERVER = Không thể kết nối tới server.\nKiểm tra lại kết nối mạng Wifi/3G trước khi thử lại!
+ERROR_DISCONNECT = Kết nối tới server đang bị gián đoạn.
+ERROR_RECHECK_WIFI = Kiểm tra lại kết nối mạng Wifi/3G trước khi thử lại!
+SNS_ACCESS_FAIL = Truy cập dữ liệu [0] thất bại
+CHAT_BAN_SPAM = Hệ thống tạm khóa chat [0] phút. Lý do: Spam chat
+TEXT_BTN_PASS = Bỏ qua
+TEXT_HAS_NEW_VERSION = Mời bạn nâng cấp phiên bản mới!
+TEXT_COIN_SHORT = Vàng
+BATTLE_LOG_SCRIPT_REMOVED = Script đã bị xóa phía server
+INBOX_ITEM_DAY_AGO = [0] ngày trước
+INBOX_ITEM_HOURS_AGO = [0] giờ trước
+INBOX_ITEM_MIN_AGO = [0] phút trước
+INBOX_ITEM_SEC_AGO = [0] giây trước
+QC_EQUIP_TITLE = Đổi Trang Bị
+TEXT_APP_NAME = Liên Minh Anh Hùng
+TEXT_PVP_SHARE_BATTLE = Trận đấu giữa [0] vs [1]
+GUILD_BOSS_TITLE = <font color="#00FF00">Top 3 Sát Thương và Anh Hùng giết boss có cơ hội nhận:</font>
+TEXT_LOGIN = Đăng Nhập
+TEXT_LOGIN_BY = Đăng Nhập bằng
+TEXT_LOGOUT = Đăng Xuất
+TEXT_LOADING = Đang tải về...
+PAYMENT_GROUP_PAYMENT_CARD = Thẻ Điện Thoại
+PAYMENT_GROUP_ZING_CARD = Thẻ Zing
+PAYMENT_GROUP_SMS = Nhắn Tin SMS
+PAYMENT_GROUP_ATM = Thẻ ATM
+PAYMENT_BRAND_VINAPHONE = Vinaphone
+PAYMENT_BRAND_MOBIFONE = Mobifone
+PAYMENT_BRAND_VIETTEL = Viettel
+PAYMENT_BRAND_ZINGCARD = Thẻ Zing
+PAYMENT_BRAND_SMS = Tin nhắn Sms
+PAYMENT_BRAND_ATM = Thẻ ATM
+GLOBAL_PAYMENT_POPUP_TITLE = Nạp Tiền
+GLOBAL_PAYMENT_POPUP_SUB_TITLE = Thông tin chi tiết
+GLOBAL_PAYMENT_POPUP_BONUS = Khuyến Mãi
+GLOBAL_PAYMENT_POPUP_DESC = <font color="#DDDDDD">Chi tiết:</font>\n[0] [1]\n[2]
+FUSION_DONT_EFFECT = Cường hóa không hiệu quả:\n<font color="#FF0000">[0]</font>Bạn có muốn tiếp tục không?
+FUSION_MAX_LEVEL = Thẻ bài đã max Cấp Độ.
+FUSION_MAX_SKILL = Thẻ bài đã max Kỹ Năng.
+FUSION_MAX_PK = Thẻ bài đã max Điểm PK.
+PORO_NOT_EXIST = Bạn chưa có thẻ bài này. Bạn vui lòng vào Nhiệm vụ -> Sự Kiện để nhận.
+COLLECTED = Đã có:
+TEXT_TRAILER_INTRO = Những con quái vật đang phá tan vùng đất anh hùng... Một Liên Minh được thành lập để giành lại hòa bình cho quê hương họ.
+TEXT_TRAILER_BARON_SCREAM = Grao!!!!
+TEXT_TRAILER_SUB_CHAR = Ta đến đây chỉ để nướng con sâu đó lên!!!
+TEXT_TRAILER_MEAL_BARON = Graooooooo!!!!!!!
+TEXT_TRAILER_BARON_ANGRY = Graoo !!!@#@#$!!!!$#
+TEXT_TRAILER_END = Bạn của ta... Ta sẽ báo thù! Aaaaaa...
+TEXT_HERO_LAUGH = Con quái vật sắp chết rồi! Kết liễu nó đi!
+TEXT_GAREN_1 = Go ahead! I can hear the screaming sound of monster...
+TEXT_GAREN_2 = Chiến đấu cho quê hương!!!
+TEXT_ASHE_1 = Một mũi tên xiên hết lũ quái
+TEXT_ASHE_2 = Không ai nghi ngờ khả năng của ta!
+TEXT_TEEMO_1 = Tôi sẽ đến trước do thám
+TEXT_TEEMO_2 = Điệp viên tí hon sẽ hạ con sâu khổng lồ này!
+EQUIP_TREEVIEW_TITLE = Ghép Trang Bị
+EQUIP_TREEVIEW_GROUP_BUILD = Hợp Thành
+EQUIP_TREEVIEW_GROUP_REQUIRE = Yêu Cầu
+EQUIP_TREEVIEW_GROUP_DETAIL = Thông Tin
+EQUIP_TREEVIEW_BTN_BUILD = Ghép
+EQUIP_TREEVIEW_BTN_BUY = Mua
+EQUIP_TREEVIEW_PRICE_RATIO = Tỉ Lệ Ghép: [0]
+EQUIP_TREEVIEW_POPUP_MISS_TITLE = Không Đủ Trang Bị
+EQUIP_TREEVIEW_POPUP_MISS_DESC = Bạn cần thêm <font color="#FF0000">[0]</font>
+EQUIP_TREEVIEW_POPUP_BUILD_1 = Chúc mừng! Bạn ghép thành công <font color="#00FFFF">[0]</font>.
+EQUIP_TREEVIEW_POPUP_BUILD_2 = Rất tiếc! Bạn ghép trang bị thất bại.
+EQUIP_TREEVIEW_POPUP_BUILD_3 = Rất tiếc! Trang bị của bạn bị rớt cấp thành <font color="#FF0000">[0]</font>.
+EQUIP_TREEVIEW_EQUIP_IN_CARD = Trang bị <font color="#FF0000">[0]</font> đang được trang bị cho thẻ bài!
+TEXT_JOIN_GAME = Tham Gia
+TEXT_MC_SKIP = Bỏ Qua
+FILTER_CARD_GROUP_NAME = Tên
+FILTER_CARD_GROUP_COLOR = Cấp Bậc
+FILTER_CARD_GROUP_CLASS = Chủng Loại
+FILTER_CARD_POPUP_TITLE = Tìm Kiếm
+FILTER_CARD_POPUP_DESC = Chọn Điều Kiện Của Thẻ Bài
+FILTER_CARD_POPUP_OK_BTN = Tìm Kiếm
+FILTER_CARD_POPUP_NO_RESULT = Không tìm thấy thẻ bài phù hợp yêu cầu!
+NEWS_DEFAULT_TITLE = Bản Tin
+TXT_MAX_REBORN = Bạn đã đạt giới hạn Trùng Sinh.
+PVP2_STATUS_COMING_SOON = Chưa Mở
+PVP2_STATUS_CLOSE = Hết Hạn
+PVP2_USE_AP_TO_BATTLE = Sử dụng năng lượng để thi đấu.
+PVP2_ATTACK_AFTER_CLOSE = Khi giải đấu kết thúc, bạn có thể thi đấu nhưng Cúp sẽ không đổi.
+PVP2_ATK_ERR_1 = Giải Đấu chưa mở.
+PVP2_ATK_ERR_2 = Giải Đấu đã kết thúc.
+PVP2_ATK_ERR_3 = Số lượt đánh đã hết. Mời bạn quay lại vào ngày mai.
+PVP2_ATK_ERR_4 = Bạn chưa đăng ký đội hình.
+PVP2_ATK_ERR_5 = Đội hình chưa có Đội trưởng.
+PVP2_ATK_ERR_6 = Đội hình chỉ dùng các thẻ bài từ [0] đến [1].
+PVP2_ATK_ERR_7 = Bạn cần [0] Phiếu Thi Đấu.
+PVP2_ATK_ERR_7_1 = Hồi phục Phiếu Thi Đấu bằng [0].
+PVP2_ATK_ERR_7_2 = Hết lượt hồi phục, xin quay lại vào ngày mai.
+PVP2_ATK_ERR_8 = Bạn cần [Ap][0] để thi đấu.
+PVP2_DONT_HAVE_CARDS = Bạn không có thẻ bài\ntừ [0] đến [1]
+PVP2_HINT_TIMER_COMING_SOON = <p align="center">Giải đấu sẽ bắt đầu sau:\n[0]</p>
+PVP2_HINT_TIMER_REMAIN = <p align="center">Giải đấu sẽ kết thúc sau:\n[0]</p>
+PVP2_HINT_TIMER_CLOSE = Giải đấu đã kết thúc!
+PVP2_HINT_ATTACK_AFTER_CLOSE = Bạn vẫn có thể thi đấu nhưng cúp sẽ không đổi.
+PVP2_TICKET_NAME = Phiếu Thi Đấu
+PVP2_ITEM_LB_CARD_REQUIRE = Yêu cầu Tướng
+PVP2_ITEM_LB_REWARDS = <font color=\"#FFFF00\">Giải Thưởng</font>
+PVP2_ITEM_LB_STATUS = Trạng Thái
+PVP2_ITEM_BTN_ENTER = Tham Gia
+PVP2_ITEM_BTN_TOP_REWARDS = Phần Thưởng
+TEXT_ARMORSET_NAME_4 = <font color="#FF0000">Bộ Ruby</font>
+TEXT_REBIRTH_ICON_DESC = <font color="[0]">+Thêm Biểu Tượng trùng sinh</font>
+VIP_BUFF_EXTRA_DUNGEON = Mỗi ngày tăng <font color="#00FF00">[0] lượt</font> <font color="#FFFF00">[1]</font>.
+VIP_BUFF_PK = Cộng <font color="#00FF00">[0]</font> <font color="#FFFF00">điểm PK</font> khi hạ gục đối phương.
+VIP_BUFF_TROPHY = Cộng <font color="#00FF00">[0]%</font> <font color="#FFFF00">điểm cúp</font> sau mỗi trận PVP.
+VIP_BUFF_EVO = Tăng tỉ lệ thành công <font color="#00FF00">[0]%</font> khi <font color="#FFFF00">tiến hóa thẻ bài</font>.
+VIP_BUFF_UPGRADE = Tăng tỉ lệ thành công <font color="#00FF00">[0]%</font> khi <font color="#FFFF00">nâng cấp trang bị</font>.
+VIP_BUFF_ADVENTURE = Được tham gia Ủy thác <font color="#FFFF00">[0]</font>.
+VIP_BUFF_ADVENTURE_REQUIRE = Ủy thác chỉ dành cho <font color="#FFFF00">[0]</font> trở lên!
+VIP_BUFF_SHOP = Vip Shop
+VIP_BUFF_NEXT_REQUIRE = Nạp thêm <font color="#00FF00">[Rune][0]</font> để đạt <font color="#FFFF00">[1]</font>
+VIP_BUFF_EFFECT = Hiệu quả <font color="#FFFF00">[0]</font>
+VIP_BUFF_PURCHASE_BTN = Nạp
+CHAT_POPUP_BAN_BTN = Chặn Chat
+CHAT_POPUP_UNBAN_BTN = Bỏ Chặn Chat
+CHAT_POPUP_ADD_FRIEND_BTN = Kết Bạn
+CHAT_POPUP_SEND_MSG_BTN = Gửi Tin
+CHAT_POPUP_FIGHT_BTN = Thách Đấu
+CHAT_POPUP_FIGHT_ERROR_NOT_HOME_STATE = Bạn không thể thách đấu khi đang trong Trận đấu!
+CHAT_POPUP_BAN_TITLE = Chặn Chat
+CHAT_POPUP_BAN_MSG = Bạn có muốn chặn chat
+CHAT_POPUP_UNBAN_MSG = Bạn có muốn bỏ chặn chat
+CHAT_POPUP_ERROR_ON_BATTLE = Thao tác không hoạt động trong Trận đấu!
+TEXT_NOTIFY_PVP2_READY = Phiếu thi đấu [0] đã đầy. Tham gia ngay!
+CARDS_ELEMENT_MENU_LIST = Danh Sách
+CARDS_ELEMENT_MENU_GIRD = Ô Lưới
+CARDS_ELEMENT_MENU_SORT = Sắp Xếp
+CARDS_ELEMENT_MENU_SEARCH = Tìm Kiếm
+CARDS_ELEMENT_MENU_Option = Tùy Chọn
+TEXT_LIMIT_GUILD_NAME_CHAR = Tên Bang hội từ 4-12 ký tự!
+TEXT_BLACKLIST_GUILD_NAME_CHAR = Tên Bang Hội chứa ký tự đặc biệt!
+TEXT_SENSITY_GUILD_NAME_CHAR = Tên Bang Hội chứa ký tự nhạy cảm!
+CARDS_ELEMENT_TITLE = Danh Sách Thẻ Bài
+CHOOSE_TEAM_ELEMENT_LEADER = <font color="#00FF00">Đội Trưởng</font>
+CHOOSE_TEAM_ELEMENT_MEMBER = <font color="#777777">Đội Viên</font>
+CHOOSE_EVOLUTION_ELEMENT_MISS_LEVEL = Level
+CHOOSE_EVOLUTION_ELEMENT_MISS_MATERIAL = N. Liệu
+SERVER_CONTROL_SERVER_NAME = Máy Chủ
+SERVER_CONTROL_USER = Nhân Vật
+SERVER_CONTROL_STATUS = Trạng Thái
+FILTER_UI_NAME = Tên
+FILTER_UI_COLOR = Màu sắc
+FILTER_UI_TYPE = Chủng Loại
+FILTER_UI_CARD_TYPE_TANK = Đỡ Đòn
+FILTER_UI_CARD_TYPE_AD = Đấu Sĩ
+FILTER_UI_CARD_TYPE_ADS = Xạ Thủ
+FILTER_UI_CARD_TYPE_AP = Pháp Sư
+FILTER_UI_CARD_TYPE_SUPPORT = Hỗ Trợ
+TEXT_UPGRADE = Hỗ Trợ
+DUNGEON_DROP_TITLE = Thông Tin Rớt
+DUNGEON_DROP_CARD = Thẻ Bài
+DUNGEON_DROP_ARMOR_SET = Ngọc (Tiến Hóa)
+DUNGEON_DROP_ITEM = Vật Phẩm
+DUNGEON_DROP_PIECE = Mảnh Ghép
+DUNGEON_DROP_POWER_STONE = Ngọc Bổ Trợ
+POWER_STONE_SELL_ALL = Bán Hết
+POWER_STONE_OVERRIDE_STONE_WARNING = Lắp Ngọc vào vị trí số [0] sẽ xóa Ngọc đang có.
+POWER_STONE_REMOVE_STONE_FROM_CARD_BY = Tháo Ngọc cần [0] Vàng
+POWER_STONE_UPGRADE_TITLE = Nâng Cấp Ngọc
+POWER_STONE_UPGRADE_BTN = Nâng Cấp
+POWER_STONE_UPGRADE_SUCCESS = Nâng Cấp Thành Công
+POWER_STONE_UPGRADE_PRICE = Giá: <font color="#[0]">[1]</font> Vàng
+POWER_STONE_SELL_STONES = Bán Ngọc nhận [0] Vàng
+POWER_STONE_SELL_WARNING = Bạn đang bán Ngọc lớn hơn 5 sao hoặc cao hơn 9 cấp. Bạn có muốn tiếp tục không?
+POWER_STONE_MAYBE_ADD_PROPERTY = Cơ Hội Tăng Thuộc Tính
+POWER_GEM_UPGRADE_DESC = Ngọc Hắc Ám x[0]
+SI_GACHA_MESSAGE = Bạn có muốn mở gói triệu hồi?

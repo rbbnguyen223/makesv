@@ -1,0 +1,200 @@
+//start include
+var Date			= Type.resolveClass ("Date");
+var MouseEvent		= Type.resolveClass ("flash.events.MouseEvent");
+
+var SoftDefines		= Type.resolveClass ("SoftDefines");
+var DF_UI			= Type.resolveClass ("DF_UI");
+var DF_INFO_PANEL	= Type.resolveClass ("DF_INFO_PANEL");
+var DF_TREASURE		= Type.resolveClass ("DF_TREASURE");
+var Fonts			= Type.resolveClass ("Fonts");
+var Anchor			= Type.resolveClass ("Anchor");
+var FBEvent			= Type.resolveClass ("FBEvent");
+
+var Resource		= Type.resolveClass ("Resource");
+var TextWrapper		= Type.resolveClass ("TextWrapper");
+var ArmorSet		= Type.resolveClass ("ArmorSet");
+
+var PixmaGame		= Type.resolveClass ("PixmaGame");
+var StockManager	= Type.resolveClass ("StockManager");
+var UserInfo		= Type.resolveClass ("UserInfo");
+
+var Button			= Type.resolveClass ("Button");
+var DisplayObject	= Type.resolveClass ("DisplayObject");
+var Label			= Type.resolveClass ("Label");
+var Popup			= Type.resolveClass ("Popup");
+var Border			= Type.resolveClass ("Border");
+//end include
+
+//static params
+var footerOffsetX = CongratulateElement.footerOffsetX;
+var footerOffsetY = CongratulateElement.footerOffsetY;
+var footerSizeX = CongratulateElement.footerSizeX;
+var footerSizeY = CongratulateElement.footerSizeY;
+var size = CongratulateElement.size;
+
+var functionList = new FunctionList ();
+
+functionList.set ("init", function ()
+{
+	var tempId = 0;
+	for (item in this._info.progress) {
+		var cardds = StockManager.getCardByPrototypeId(item.num);
+		if (cardds.length > 0) {
+			this.currentId = tempId;
+			this.nextId= tempId;
+			break;
+		}
+		tempId ++;
+	}
+	var neweventInfo = UserInfo.getNewEventInfo(this._info.id);
+	if (neweventInfo != null) {
+		this.gotReward = true;
+	}
+	Resource.loadSprite (SoftDefines.gfx_treasure_ui);
+	var uis = Resource.getSprite (SoftDefines.gfx_treasure_ui);
+	this.close_btn = new Button (SoftDefines.gfx_main_ui, DF_UI.anim_tab_close_normal, DF_UI.anim_tab_close_touch);
+	this.close_btn.x = 320;
+	this.close_btn.y = 0;
+	this.close_btn.addEventListener (MouseEvent.CLICK, this.onBackUp);
+	this._views = [];
+	this.list_reward = [];
+
+	this.header = new Layer ();
+	this.header.x = 0;
+	this.header.y = 10;
+	this.header.add (uis.GetFrame (DF_TREASURE.frame_header_event));
+	this.desc_lb = Label.create (this._info.tdesc, Fonts.DETAIL_WHITE_20, -290, 85, Anchor.left_top | Label.color, 580, 200);
+	this.name_lb = Label.create (this._info.name, Fonts.DETAIL_WHITE_20, 0, 65, Anchor.center_center, 580, 200);
+	this.header.add (this.desc_lb);
+	this.header.add (this.name_lb);
+	
+	this.center = new Layer ();
+	this.center.x = 0;
+	this.center.y = 140;
+	this._leftBtn = new Button (SoftDefines.gfx_info_panel, DF_INFO_PANEL.anim_left_arrow_normal, DF_INFO_PANEL.anim_left_arrow_touch);
+	this._leftBtn.x = - 320 + 15;
+	this._leftBtn.y = 220;
+	this._leftBtn.addEventListener(MouseEvent.MOUSE_UP, this.goLeft);
+	this.center.add (this._leftBtn);
+
+	this._rightBtn = new Button (SoftDefines.gfx_info_panel, DF_INFO_PANEL.anim_right_arrow_normal, DF_INFO_PANEL.anim_right_arrow_touch);
+	this._rightBtn.x = 320 - 15;
+	this._rightBtn.y = 220;
+	this._rightBtn.addEventListener(MouseEvent.MOUSE_UP, this.goRight);
+	this.center.add  (this._rightBtn);
+	var armorsets = ArmorSet.GetListItem(this._info.counter_si);		
+	Resource.loadSprite(SoftDefines.gfx_evolution_item);
+	var icon_spr = Resource.getSprite (SoftDefines.gfx_evolution_item);
+
+	var armorHolder = new DisplayObject ();
+	armorHolder.getGraphics ().clear ();
+	armorHolder.getGraphics ().beginFill (0x000000, 0.25);
+	armorHolder.getGraphics ().lineStyle (1, 0x000000, 0.75);
+	var index = 0;
+	while (index < 5)
+	{
+		var x = CongratulateElement.footerOffsetX + index * CongratulateElement.footerSizeX;
+		var y = 390;
+		
+		armorHolder.getGraphics ().drawRoundRect (x - size * 0.5, y - size * 0.5, size, size, size * 0.1, size * 0.1);
+		index ++;
+	}
+	armorHolder.getGraphics ().endFill ();
+	this.center.add(armorHolder);
+	var index = 0;
+	for (item in armorsets)
+	{
+		var _x = CongratulateElement.footerOffsetX + index  * CongratulateElement.footerSizeX;
+		var _y = 390 ;
+		
+		var _item_frame = icon_spr.GetFrame (item.GetId(),_x, _y);
+		_item_frame.set_scale (0.8);
+		
+		var format = Fonts.DETAIL_WHITE_20;
+		//tam thoi an di
+		if (item.GetNum() <= 0)
+		{
+			format = Fonts.DETAIL_RED_20;
+		}
+		
+		var _count = Label.create (item.GetNum(), format, 0, 65, Anchor.center_center);
+		_item_frame.addChild (_count);
+		armorHolder.addChild (_item_frame);
+		
+		index++;
+	}
+	this.evo_btn = new Button (SoftDefines.gfx_main_ui, DF_UI.anim_popup_button, DF_UI.anim_popup_button + 1, DF_UI.anim_popup_button + 2);
+	this.evo_btn.set_label (Label.create (TextWrapper.getString ("TEXT_EVO"), Fonts.DETAIL_WHITE_20, 0, 0, Anchor.center_center));
+	if (this.currentId >= this._info.numProgressItem)
+	{
+		this.evo_btn.set_disable (true);
+	}
+	this.evo_btn.addEventListener (MouseEvent.CLICK, this.evolutionClick);
+	this.evo_btn.x = 225;
+	this.evo_btn.y = 390;
+	this.evo_btn.set_scale (0.8);
+	this.center.add(this.evo_btn);
+	this.footer = new Layer ();
+	this.footer.x = 0;
+	this.footer.y = 665;
+	this.footer.add (uis.GetFrame (DF_TREASURE.frame_footer_event, 0, -55));
+	var rewardHolder = new DisplayObject ();
+	rewardHolder.getGraphics ().clear ();
+	rewardHolder.getGraphics ().beginFill (0x000000, 0.25);
+	rewardHolder.getGraphics ().lineStyle (1, 0x000000, 0.75);
+	index = 0;
+	while (index < 7)
+	{
+		var x = CongratulateElement.footerOffsetX + index  * CongratulateElement.footerSizeX;
+		var y = footerOffsetY;
+		
+		rewardHolder.getGraphics ().drawRoundRect (x - size * 0.5, y - size * 0.5, size, size, size * 0.1, size * 0.1);
+		index ++;
+	}
+	rewardHolder.getGraphics ().endFill ();
+	this.footer.add(rewardHolder);
+	this.get_reward_btn = new Button (SoftDefines.gfx_main_ui, DF_UI.anim_popup_button, DF_UI.anim_popup_button + 1, DF_UI.anim_popup_button + 2);
+	if(this.gotReward)
+	{
+		this.get_reward_btn.set_label (Label.create (TextWrapper.getString ("TEXT_GOT_REWARD"), Fonts.DETAIL_WHITE_20, 0, 0, Anchor.center_center));
+		this.get_reward_btn.disable = true;
+	}
+	else
+		this.get_reward_btn.set_label (Label.create (TextWrapper.getString ("TEXT_GET_REWARD"), Fonts.DETAIL_WHITE_20, 0, 0, Anchor.center_center));
+	this.get_reward_btn.x = 0;
+	this.get_reward_btn.y = footerOffsetY + 95;
+	this.get_reward_btn.set_scale (0.8);
+	if (this._info.startTime != "") {
+		var eventDate = Date.fromString(this._info.startTime);
+		var deltaTime = eventDate.getTime() - Date.now().getTime();
+		
+		if (deltaTime > 0) {//chua den giờ
+			this.get_reward_btn.disable = true;
+		}else if (!this.gotReward) {
+			this.get_reward_btn.disable = false;
+		}
+		
+	}
+	this.get_reward_btn.addEventListener (MouseEvent.CLICK,	this.getEventCollection);
+	this.footer.add (this.get_reward_btn);
+
+	this.add (Border.stonePanel (0, 0, -320, 0, 640, 860));
+	this.add (this.header);
+	this.add (this.footer);
+	this.add (this.center);
+	this.add (this.close_btn);
+	this.updateCenterInfo (this.currentId);
+
+	this.addEventListener (MouseEvent.MOUSE_DOWN, this.onDown);
+	this.addEventListener (MouseEvent.MOUSE_MOVE, this.onMove);
+	this.addEventListener (MouseEvent.MOUSE_UP, this.onUp);
+	PixmaGame._instance.fbClient.addEventListener (FBEvent.GIFT_CODE,
+		function (params)
+		{
+			var rewards = params.get("rewards");
+			PixmaGame.notification.showRewards (TextWrapper.getString("TEXT_GREETING"), TextWrapper.getString("TEXT_GREETING_REWARD"), rewards, Popup.OK);
+		}
+	);
+});
+
+return functionList;

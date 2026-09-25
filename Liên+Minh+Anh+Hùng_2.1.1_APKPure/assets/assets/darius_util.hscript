@@ -1,0 +1,114 @@
+var OnFinishHideEffect = function (arr) 
+{
+	for(obj in arr)
+		sCurLayer.remove(obj);
+}
+
+var FocusCard = function (obj) 
+{
+	var focusBg = Resource.getSprite ("GFX_EFFECT_COVER", true).GetFrame (0);
+	focusBg.x = - GraphicsConfig.VIEW_WIDTH / 2;
+	focusBg.y = - GraphicsConfig.VIEW_HEIGHT / 2;
+	focusBg.scaleX = GraphicsConfig.VIEW_WIDTH / focusBg.data.bound.width;
+	focusBg.scaleY = GraphicsConfig.VIEW_HEIGHT / focusBg.data.bound.height;
+	focusBg.alpha = 0.0;
+	
+	sCurLayer.add (focusBg);
+	
+	var showFocus = new OpacityEffect(focusBg, 0.8, 200, null);
+	showFocus.Init();	
+	sCurState.AddScript(showFocus);
+	return focusBg;
+}
+var focusBg = FocusCard(attacker);
+attacker.isLocked = true;	
+attacker.GetDisplayCard().moveToTop();
+
+var endEff = [];
+var hideeff = new OpacityEffect(attacker.GetDisplayCard(), -1, 100, null);
+hideeff.Init();
+sCurState.AddScript(hideeff);
+
+var i = 0;
+var dependAnim = hideeff;
+for(card in defender)
+{
+	var atkX = 0;
+	var atkY = 0;
+	if(attacker.GetFormation().IsPlayer())
+	{
+		atkX = card.xOri;
+		atkY = card.yOri + (card.GetDisplayCard().height/2 + attacker.GetDisplayCard().height/2) - 10 + 50;
+	}
+	else
+	{
+		atkX = card.xOri;
+		atkY = card.yOri - (card.GetDisplayCard().height/2 + attacker.GetDisplayCard().height/2) - 50;
+	}
+	
+	var func = function(){
+		attacker.GetDisplayCard().moveToTop ();
+		attacker.GetDisplayCard().x = atkX;
+		attacker.GetDisplayCard().y = atkY;
+	}			
+
+
+	var atkAnim = Resource.getSprite(SoftDefines.gfx_effect_darius_util).GetAnim (attacker.GetFormation().IsPlayer()?3:2, Std_int(atkX), Std_int(atkY), false, renderMode);
+	
+	// if(attacker.GetFormation().IsPlayer() == false)
+		// atkAnim.SetRotate(180);
+	
+	var atkEff = new SimulateAnimEffect(attacker.GetDisplayCard(), atkAnim, 2000, dependAnim);
+	atkEff.AddEffectListener(function OnFinishHideEffect(arr)
+						{
+							sCurLayer.remove(atkAnim);
+							attacker.ResetPosition();
+						});
+	atkEff.Init();
+	
+	var hitAnim = Resource.getSprite(SoftDefines.gfx_effect_darius_util).GetAnim (0, Std_int(card.xOri), Std_int(card.yOri), false, renderMode);
+	if (GameStateCardBattle.rotateBattle)
+		hitAnim.rotation = -90;
+	if(card.isBoss)
+		hitAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);	
+	
+	var hitEff = new SimulateAnimEffect(card.GetDisplayCard(), hitAnim, 1000, dependAnim);
+	hitEff.AddEffectListener(function OnFinishHideEffect(arr)
+					{
+						trace("DianaSkill hitEff remove effect " + i);
+						sCurLayer.remove(hitAnim);
+						
+						if(i == defender.length - 1)
+							sCurState.nextStep = true;
+					});						
+	hitEff.Init();
+	endEff.push(hitEff);
+	
+	var cbUpdate = null;
+	cbUpdate = function(obj){
+		if(atkEff.TimeRemaining() < 300)
+		{
+			sCurLayer.remove(focusBg);
+			sCurLayer.add(hitAnim);
+			sCurState.AddScript(hitEff);
+			atkEff.RemoveCallbackPerUpdate(cbUpdate);
+			Sound.GetSound(Sound.SOUND_DARIUS_UTIL).Play();	
+		}
+	};
+	atkEff.AddCallbackPerUpdate(cbUpdate);
+	
+	dependAnim.AddEffectListener(function OnFinishHideEffect(arr)
+		{
+			func();
+			sCurLayer.add(atkAnim);						
+			sCurState.AddScript(atkEff);
+			attacker.GetDisplayCard().SetOpacity(1.0);
+		});
+	i++;
+	dependAnim = hitEff;
+}
+dependAnim.AddEffectListener(function OnFinishHideEffect(arr)
+{
+	attacker.isLocked = false;
+});
+endEff

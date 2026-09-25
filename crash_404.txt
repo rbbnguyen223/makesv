@@ -1,0 +1,18 @@
+--------- beginning of crash
+09-21 08:35:19.753  2614  2636 F libc    : Fatal signal 11 (SIGSEGV), code 2 (SEGV_ACCERR), fault addr 0xdead1007 in tid 2636 (GLThread 27), pid 2614 (lmah.vn)
+09-21 08:35:19.897  2709  2709 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+09-21 08:35:19.897  2709  2709 F DEBUG   : Build fingerprint: 'OnePlus/graceltexx/graceltexx:14/UQ1A.240205.05262019/lee.20260526.201942:user/release-keys'
+09-21 08:35:19.897  2709  2709 F DEBUG   : Revision: '0'
+09-21 08:35:19.897  2709  2709 F DEBUG   : ABI: 'x86'
+09-21 08:35:19.897  2709  2709 F DEBUG   : Timestamp: 2026-09-21 08:35:19.786476322+0700
+09-21 08:35:19.897  2709  2709 F DEBUG   : Process uptime: 34s
+09-21 08:35:19.897  2709  2709 F DEBUG   : Cmdline: lmah.vn
+09-21 08:35:19.897  2709  2709 F DEBUG   : pid: 2614, tid: 2636, name: GLThread 27  >>> lmah.vn <<<
+09-21 08:35:19.897  2709  2709 F DEBUG   : uid: 10111
+09-21 08:35:19.897  2709  2709 F DEBUG   : signal 11 (SIGSEGV), code 2 (SEGV_ACCERR), fault addr 0xdead1007
+09-21 08:35:19.897  2709  2709 F DEBUG   :     eax 00001007  ebx e0752ff4  ecx f0d6c910  edx bc1fcaa0
+09-21 08:35:19.897  2709  2709 F DEBUG   :     edi bf310040  esi 00000016
+09-21 08:35:19.897  2709  2709 F DEBUG   :     ebp bc1fcaf0  esp bc1fcad0  eip e02e72ba
+09-21 08:35:19.897  2709  2709 F DEBUG   : 1 total frames
+09-21 08:35:19.897  2709  2709 F DEBUG   : backtrace:
+09-21 08:35:19.897  2709  2709 F DEBUG   :       #00 pc 0027f2ba  /system/vendor/lib/libhoudini.so (BuildId: d0bea18b701e0f1e3912bbceb672c72573237453)

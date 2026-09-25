@@ -1,0 +1,141 @@
+var OnFinishHideEffect = function (arr) 
+{
+	for(obj in arr)
+		sCurLayer.remove(obj);
+}
+
+var FocusCard = function (obj) 
+{
+	var focusBg = Resource.getSprite ("GFX_EFFECT_COVER", true).GetFrame (0);
+	focusBg.x = - GraphicsConfig.VIEW_WIDTH / 2;
+	focusBg.y = - GraphicsConfig.VIEW_HEIGHT / 2;
+	focusBg.scaleX = GraphicsConfig.VIEW_WIDTH / focusBg.data.bound.width;
+	focusBg.scaleY = GraphicsConfig.VIEW_HEIGHT / focusBg.data.bound.height;
+	focusBg.alpha = 0.0;
+	
+	sCurLayer.add (focusBg);
+	
+	var showFocus = new OpacityEffect(focusBg, 0.8, 200, null);
+	showFocus.Init();	
+	sCurState.AddScript(showFocus);
+	return focusBg;
+}
+trace("11111111");
+var sprUtil = Resource.getSprite(SoftDefines.gfx_effect_twiterfate_util);
+var sprNormal = Resource.getSprite(SoftDefines.gfx_effect_twistedfate);
+
+var focusBg = FocusCard(attacker);
+attacker.isLocked = true;	
+attacker.GetDisplayCard().moveToTop();
+
+Sound.GetSound(Sound.SOUND_TF_UTIL).Play();
+var shootanim = sprUtil.GetAnim (1, Std_int(attacker.xOri), Std_int(attacker.yOri), false, renderMode);
+sCurLayer.add(shootanim);
+var shooteffect = new SimulateAnimEffect(attacker.GetDisplayCard(), shootanim, 1330);
+shooteffect.Init();
+shooteffect.SetEffectListener(function (arr)
+							{
+								sCurLayer.remove(shootanim);
+							});
+sCurState.AddScript(shooteffect);
+trace("2222222222222");
+
+var endEffect = [];
+var hitAnimArray = [];
+var setcb = true;
+var timePerArrow = 200;
+var maxArrow= 3;
+var initPosArr = [0, 0, 0, 0, 0, 0];
+trace("@@@@@@@@@@@@@tf");
+for(card in defender)
+{	
+	var lastMeff = null;
+	var i = 0;
+	while(i < maxArrow)
+	{
+		var arrow = sprNormal.GetAnim(1 + i,Std_int(attacker.xOri) + initPosArr[i*2], Std_int(attacker.yOri) + initPosArr[i*2 + 1], true, renderMode);	
+		arrow.SetRotate(AngleBetweenCards(attacker, card) + 90);
+		arrow.SetOpacity(0);
+		// arrow.useBlendMode = true;
+		sCurLayer.add(arrow);	
+		
+		var showeff = new OpacityEffect(arrow, 1, 50, null);
+		showeff.Init();
+		
+		var meff = new MovingEffect(arrow, card.xOri - arrow.x,card.yOri - arrow.y, 500, null);
+		meff.SetEffectListener(OnFinishHideEffect);
+		meff.Init();
+		var cbUpdate = null;
+		var timeLaunch = timePerArrow * (i) + 100;
+		trace("created arrow " + i);
+		cbUpdate = function(obj){
+			if(shooteffect.TimeRemaining() < timeLaunch)
+			{
+				trace("launch time " + (timeLaunch));
+				trace("shooteffect.TimeRemaining() " + (shooteffect.TimeRemaining()));
+				sCurState.AddScript(showeff);
+				sCurState.AddScript(meff);
+				shooteffect.RemoveCallbackPerUpdate(cbUpdate);
+				sCurLayer.remove(focusBg);
+			}
+		};
+		
+		shooteffect.AddCallbackPerUpdate(cbUpdate);
+		
+		var hitAnim = sprNormal.GetAnim (5 + i, Std_int(card.xOri), Std_int(card.yOri), false, renderMode);
+		
+		var hitEff = new AnimEffect(false, hitAnim, 660, meff, false);
+		hitEff.Init();				
+		hitEff.AddEffectListener(function(arr)
+		{
+			sCurLayer.remove(hitAnim);			
+		});
+		sCurState.AddScript(hitEff);
+		
+		meff.AddEffectListener(function OnFinishHideEffect(arr)
+					{
+						sCurLayer.add(hitAnim);
+						Sound.GetSound(sound).Play();
+					});
+				
+		lastMeff = meff;
+		i++;
+		// i=(i+1)%maxArrow;
+	}
+	
+	var hitAnim = sprUtil.GetAnim (0, Std_int(card.xOri), Std_int(card.yOri), false, renderMode);
+	if (GameStateCardBattle.rotateBattle)
+		hitAnim.rotation = -90;
+	if(card.isBoss)
+		hitAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);
+	
+	var anim = new SimulateAnimEffect(card.GetDisplayCard(), hitAnim, 1000, lastMeff);			
+	anim.AddEffectListener(function OnFinishHideEffect(arr)
+					{
+						sCurLayer.remove(hitAnim);
+					});
+	anim.Init();
+	
+	lastMeff.AddEffectListener(function OnFinishHideEffect(arr)
+					{					
+						attacker.isLocked = false;
+						sCurLayer.add(hitAnim);
+						// Sound.GetSound(sound).Play();
+					});
+	sCurState.AddScript(anim);
+	if(setcb == true)
+	{
+		var nextstep = true;
+		anim.AddCallbackPerUpdate(function (arr){
+						if(anim.TimeRemaining() < waitTime && nextstep)
+						{
+							sCurState.nextStep = true;
+							nextstep = false;
+						}
+					});
+		setcb = false;
+	}
+	
+	endEffect.push(anim);	
+}
+endEffect

@@ -1,0 +1,76 @@
+trace("script begin");
+var spr = Resource.getSprite(SoftDefines.gfx_spell_heal_01);
+var atkAnim = new Anim(spr.GetAnimData(0 + level * 2), Std_int(attacker.xOri), Std_int(attacker.yOri), false, renderMode);
+
+sCurLayer.add(atkAnim);	
+trace("script 1");
+trace("script attacker.GetDisplayCard() " + attacker.GetDisplayCard());
+var atkEff = new SimulateAnimEffect(attacker.GetDisplayCard(), atkAnim, 330);
+atkEff.AddEffectListener(function OnFinishHideEffect(arr)
+					{
+						sCurLayer.remove(atkAnim);
+					});
+
+atkEff.Init();
+sCurState.AddScript(atkEff);
+trace("script 2");
+		
+var endEff = [];
+var hitAnimArray = [];
+var damagedEff = null;
+var setcb = true;
+var sameDefAttacker = false;
+for(card in defender)
+{		
+	var hitAnim = new Anim(Resource.getSprite(SoftDefines.gfx_spell_heal_01).GetAnimData(1 + level * 2), Std_int(card.xOri), Std_int(card.yOri), false, renderMode);
+	if (GameStateCardBattle.rotateBattle)
+		hitAnim.rotation = -90;
+	if(card.isBoss)
+		hitAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);
+
+	hitAnimArray.push(hitAnim);
+	trace("card.GetDisplayCard() " + card.GetDisplayCard());
+	damagedEff = new SimulateAnimEffect(card.GetDisplayCard(), hitAnim, 660, atkEff);
+	damagedEff.AddEffectListener(function OnFinishHideEffect(arr)
+					{
+						sCurLayer.remove(hitAnim);
+					});
+	damagedEff.Init();
+	
+	if(setcb == true)
+	{
+		var nextstep = true;
+		damagedEff.AddCallbackPerUpdate(function (arr){
+						if(damagedEff.TimeRemaining() < 200 && nextstep)
+						{
+							sCurState.nextStep = true;
+							nextstep = false;
+						}
+					});
+		setcb = false;
+	}
+	
+	sCurState.AddScript(damagedEff);
+	
+	endEff.push(damagedEff);
+	
+	if(card == attacker)
+		sameDefAttacker = true;
+}
+trace("script 3");
+
+var casted = true;
+atkEff.AddCallbackPerUpdate(function (arr){
+				if(atkEff.TimeRemaining() <= (sameDefAttacker ? 0 : 300) && casted)
+				{							
+					casted = false;
+					for(eff in endEff)
+						eff.SetDependEffect(null);	
+					for(anim in hitAnimArray)
+						sCurLayer.add(anim);			
+					Sound.GetSound(soundName).Play();
+				}
+			});
+trace("script 4");
+			
+endEff

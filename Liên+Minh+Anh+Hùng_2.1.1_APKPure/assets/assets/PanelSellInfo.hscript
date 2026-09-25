@@ -1,0 +1,45 @@
+//to test replace:
+//PanelSellInfo extends DisplayObject
+//by
+//PanelSellInfo extends DynamicUI
+//and
+//sell_btn.addEventListener(MouseEvent.CLICK, onSell);
+//by
+//sell_btn.addEventListener(MouseEvent.CLICK, functionList.get ("onSell"));
+
+//start include
+var Event				= Type.resolveClass ("flash.events.Event");
+
+var CardPrototypeInfo	= Type.resolveClass ("CardPrototypeInfo");
+var Protector			= Type.resolveClass ("Protector");
+var PixmaGame			= Type.resolveClass ("PixmaGame");
+var RequestGennarator	= Type.resolveClass ("RequestGennarator");
+//end include
+
+var functionList = new FunctionList ();
+
+functionList.set ("onSell", function (e)
+{
+	trace ("try try try try try");
+	var hasProtectedCards = false;
+	for (proId in this.map_count.keys ())
+	{
+		var prototype = CardPrototypeInfo.GetItem (proId);
+		if (prototype.GetStars () >= Protector.CARDS_STARS)
+		{
+			hasProtectedCards = true;
+			break;
+		}
+	}
+	
+	if (hasProtectedCards)
+		Protector.check (Protector.CARDS,
+			function () {
+				PixmaGame._instance.fbClient.send (RequestGennarator.sellCard (this.arr_id));
+			}
+		);
+	else
+		PixmaGame._instance.fbClient.send (RequestGennarator.sellCard (this.arr_id));
+});
+
+return functionList;

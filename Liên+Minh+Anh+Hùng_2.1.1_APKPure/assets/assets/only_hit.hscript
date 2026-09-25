@@ -1,0 +1,23 @@
+var endEffect = [];
+for(card in defender)
+{	
+	var hitAnim = Resource.getSprite(spriteId).GetAnim (hitAnim, card.xOri, card.yOri, false, renderMode);
+	if (GameStateCardBattle.rotateBattle)
+		hitAnim.rotation = -90;
+	if(card.isBoss)
+		hitAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);
+
+	var anim = new SimulateAnimEffect(card.GetDisplayCard(), hitAnim, 666, null);			
+	anim.AddEffectListener(function (arr)
+					{
+						sCurLayer.remove(hitAnim);
+					});
+	anim.Init();
+	
+	sCurLayer.add(hitAnim);
+	sCurState.AddScript(anim);
+	Sound.GetSound(sound).Play();
+
+	endEffect.push(anim);
+}
+return endEffect;

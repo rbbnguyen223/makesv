@@ -1,0 +1,912 @@
+//start include
+var Date			= Type.resolveClass ("Date");
+var Map				= Type.resolveClass ("Map");
+var StringMap		= Type.resolveClass ("haxe.ds.StringMap");
+var Math			= Type.resolveClass ("Math");
+var String			= Type.resolveClass ("String");
+
+var Matrix			= Type.resolveClass ("flash.geom.Matrix");
+if (Matrix == null)
+	Matrix			= Type.resolveClass ("openfl._v2.geom.Matrix");
+
+var Point			= Type.resolveClass ("flash.geom.Point");
+if (Point == null)
+	Point			= Type.resolveClass ("openfl._v2.geom.Point");
+
+var GradientType	= Type.resolveEnum ("flash.display.GradientType");
+if (GradientType == null)
+	GradientType	= Type.resolveEnum ("openfl.display.GradientType");
+if (GradientType == null)
+	GradientType	= Type.resolveEnum ("openfl._v2.display.GradientType");
+
+var Actuate			= Type.resolveClass ("motion.Actuate");
+var Linear			= Type.resolveClass ("motion.easing.Linear;");
+
+var MouseEvent		= Type.resolveClass ("flash.events.MouseEvent");
+if (MouseEvent == null)
+	MouseEvent		= Type.resolveClass ("openfl._v2.events.MouseEvent");
+	
+var Event		= Type.resolveClass ("flash.events.Event");
+if (Event == null)
+	Event		= Type.resolveClass ("openfl._v2.events.Event");
+	
+TabsEvent			= Type.resolveClass ("TabsEvent");
+
+var SoftDefines		= Type.resolveClass ("SoftDefines");
+var DF_UI			= Type.resolveClass ("DF_UI");
+var DF_LISTITEM		= Type.resolveClass ("DF_LISTITEM");
+var DF_COMBOUI		= Type.resolveClass ("DF_COMBOUI");
+var Fonts			= Type.resolveClass ("Fonts");
+var Anchor			= Type.resolveClass ("Anchor");
+var FBEvent			= Type.resolveClass ("FBEvent");
+var Request			= Type.resolveClass ("Request");
+var FBObjectOutput	= Type.resolveClass ("FBObjectOutput");
+var Commands		= Type.resolveClass ("Commands");
+var Keys			= Type.resolveClass ("Keys");
+
+var Resource		= Type.resolveClass ("Resource");
+var TextWrapper		= Type.resolveClass ("TextWrapper");
+var ArmorSet		= Type.resolveClass ("ArmorSet");
+var PageScrollable	= Type.resolveClass ("PageScrollable");
+var GameItem		= Type.resolveClass ("GameItem");
+var ShopItem		= Type.resolveClass ("ShopItem");
+var SpecialItemInfo	= Type.resolveClass ("SpecialItemInfo");
+var ResourceDesc	= Type.resolveClass ("ResourceDesc");
+var GameItemType	= Type.resolveEnum("GameItemType");
+
+var ShopElement		= Type.resolveClass("ShopElement");
+var ShopUtilities	= Type.resolveClass("ShopUtilities");
+
+var PixmaGame		= Type.resolveClass ("PixmaGame");
+var StockManager	= Type.resolveClass ("StockManager");
+var UserInfo		= Type.resolveClass ("UserInfo");
+var RewardItemInfo	= Type.resolveClass ("RewardItemInfo");
+var RequestGennarator	= Type.resolveClass ("RequestGennarator");
+var HomeState		= Type.resolveClass ("HomeState");
+var Utilities		= Type.resolveClass ("Utilities");
+
+var EquipInfo		= Type.resolveClass ("EquipInfo");
+var ParseObject		= Type.resolveClass ("ParseObject");
+var SmallIcon		= Type.resolveClass ("SmallIcon");
+var Button			= Type.resolveClass ("Button");
+var VTabs			= Type.resolveClass ("VTabs");
+var Layer			= Type.resolveClass ("Layer");
+var DisplayObject	= Type.resolveClass ("DisplayObject");
+var Label			= Type.resolveClass ("Label");
+var Popup			= Type.resolveClass ("Popup");
+var Border			= Type.resolveClass ("Border");
+var ColorRect		= Type.resolveClass ("ColorRect");
+var FlyingObject	= Type.resolveClass ("FlyingObject");
+var Hint			= Type.resolveClass ("Hint");
+var TextFormat		= Type.resolveClass ("flash.text.TextFormat");
+if(TextFormat == null)
+	TextFormat		= Type.resolveClass ("openfl._v2.text.TextFormat");
+var SimpleButton	= Type.resolveClass ("flash.display.SimpleButton");
+if(SimpleButton == null)
+	SimpleButton	= Type.resolveClass ("openfl._v2.display.SimpleButton");
+//end include
+
+//GFX_EVENT_2_9
+var DF_EVENT = {};
+DF_EVENT.FRAME_BACKGROUND			= 0;
+DF_EVENT.FRAME_CLOSE				= 1;
+DF_EVENT.FRAME_PIECE_NORMAL			= 2;
+DF_EVENT.FRAME_PIECE_TOUCH			= 3;
+DF_EVENT.FRAME_PIECE_DISABLE		= 4;
+DF_EVENT.FRAME_COMPLETED_NORMAL		= 5;
+DF_EVENT.FRAME_COMPLETED_TOUCH		= 6;
+DF_EVENT.FRAME_COMPLETED_DISABLE	= 7;
+DF_EVENT.FRAME_PIECE_0				= 8;
+DF_EVENT.FRAME_PIECE_1				= 9;
+DF_EVENT.FRAME_PIECE_2				= 10;
+DF_EVENT.FRAME_PIECE_3				= 11;
+DF_EVENT.FRAME_PIECE_4				= 12;
+DF_EVENT.FRAME_PIECE_5				= 13;
+DF_EVENT.FRAME_PIECE_6				= 14;
+DF_EVENT.FRAME_PIECE_7				= 15;
+DF_EVENT.FRAME_PIECE_8				= 16;
+DF_EVENT.ANIM_CLOSE					= 0;
+DF_EVENT.ANIM_PIECE_NORMAL			= 1;
+DF_EVENT.ANIM_PIECE_TOUCH			= 2;
+DF_EVENT.ANIM_PIECE_DISABLE			= 3;
+DF_EVENT.ANIM_COMPLETED_NORMAL		= 4;
+DF_EVENT.ANIM_COMPLETED_TOUCH		= 5;
+DF_EVENT.ANIM_COMPLETED_DISABLE		= 6;
+
+var EVENT_ID = 11;
+
+var EVENT_CHANGE_ID = "CHANGE_ID";
+
+var MATH_PI = 3.141592653589793;
+
+var functionList = new FunctionList ();
+var eventSprite = null;
+var mapObj = null;
+var mapData = null;
+var constant = null;
+
+var black_15 = new TextFormat (Fonts.DETAIL_FONT, 15, 0x090909);
+var red_20 = new TextFormat (Fonts.DETAIL_FONT, 20, 0x900900);
+var green_20 = new TextFormat (Fonts.DETAIL_FONT, 20, 0x009009);
+
+var eventSprite = null;
+var STATUS_EXPIRED 		= 0;		 //      no	(early)		no			n/a
+var STATUS_CLAIMED 		= 1;		//		 n/a			yes			n/a
+var STATUS_COMPLETED 	= 2;		//		 yes			no			yes
+var STATUS_WAITGET		= 3;		//		 yes			n/a			no
+var STATUS_NOTNOW	   	= 4;		//		 no	(late)		n/a			n/a
+var mainLayer;
+functionList.set ("init", function ()
+{
+	Resource.loadSprite ("GFX_EVENT_2_9");
+	eventSprite = Resource.getSprite ("GFX_EVENT_2_9");
+
+	mapObj	= Utilities.createMap ();
+	mapData	= Utilities.createMap ();
+	this.callFunction ("init_constant");
+	
+	mainLayer = new Layer ();
+	mainLayer.x = -320;
+	mainLayer.y = -100;
+	this.add (mainLayer);
+	
+	var background = eventSprite.GetFrame (DF_EVENT.FRAME_BACKGROUND, 0, 0);
+	mainLayer.add (background);
+	
+	var close = new Button (eventSprite._sprite_id, DF_EVENT.ANIM_CLOSE, DF_EVENT.ANIM_CLOSE, DF_EVENT.ANIM_CLOSE);
+	close.x = 640 - 21;
+	close.y = 21;
+	close.addEventListener (MouseEvent.CLICK, function (e) { this.releaseFromParent (); });
+	mainLayer.add (close);
+	
+	var completedBtn = new Button (eventSprite._sprite_id, DF_EVENT.ANIM_COMPLETED_NORMAL, DF_EVENT.ANIM_COMPLETED_TOUCH, DF_EVENT.ANIM_COMPLETED_DISABLE);
+	completedBtn.m_id = 9;
+	completedBtn.x = 320;
+	completedBtn.y = 960 - 33;
+	completedBtn.set_disable (true);
+	completedBtn.addEventListener (MouseEvent.CLICK, function (e)
+	{
+		var itemStatusArr = RewardItemInfo.GetDinamicListRewards();
+		var idRewardReceivedArr = RewardItemInfo.finish_recieve_rewards;
+		var quest = constant.event2.main;
+		this.callFunction ("updateStatus", [quest, itemStatusArr, idRewardReceivedArr]);
+		
+		if (quest.status == STATUS_CLAIMED)
+		{
+			PixmaGame.notification.showPopup (TextWrapper.getString("TEXT_CONFIRM"), "<p align=\"center\">Bạn đã nhận phần quà này rồi</p>", 1);
+		}
+		else if (quest.status == STATUS_COMPLETED)
+		{
+			PixmaGame._instance.fbClient.send (RequestGennarator.receiveDailyReward(quest.id));
+			PixmaGame._instance.fbClient.addEventListener(FBEvent.RECEIVE_REWARD, function (params)
+			{
+				PixmaGame._instance.fbClient.removeEventListener (FBEvent.RECEIVE_REWARD);
+				this.callFunction ("update", []);
+				PixmaGame.notification.showPopup (TextWrapper.getString("TEXT_CONFIRM"), "<p align=\"center\">Xin Chúc mừng\nBạn đã nhận quà thành công</p>", 1);
+			});
+		}
+		else
+		{
+			var currentQuest = quest.currentValue;
+			currentQuest = 9 - currentQuest;
+			var currentRune = currentQuest*25000;
+			var popup = PixmaGame.notification.showPopup (TextWrapper.getString("TEXT_CONFIRM"), "<p align=\"center\">Bạn còn thiếu "+currentQuest+" nhiệm vụ\nCó muốn sữ dụng "+currentRune+" [Rune] để hoàn thành</p>", 3);
+			popup.okBtn.addEventListener (MouseEvent.CLICK,
+			function (e)
+			{
+				this.callFunction ("request_forceFinish", [quest.id]);
+				PixmaGame._instance.fbClient.addEventListener("EVENT_SCRIPT_REQUEST_forceFinish", function (params)
+				{
+					
+					var obj = params.get("data");
+					var run =  obj.get("run");
+					trace ("EVENT_SCRIPT_REQUEST_forceFinish: " + run);
+					trace ("UserInfo.rune: " + UserInfo.rune);
+					UserInfo.set_rune(UserInfo.rune- run);
+					trace ("UserInfo.rune: " + UserInfo.rune);
+					this.callFunction ("update", []);
+					PixmaGame._instance.fbClient.send (RequestGennarator.receiveDailyReward(quest.id));
+					PixmaGame._instance.fbClient.addEventListener(FBEvent.RECEIVE_REWARD, function (params)
+					{
+						PixmaGame._instance.fbClient.removeEventListener (FBEvent.RECEIVE_REWARD);
+						this.callFunction ("update", []);
+						PixmaGame.notification.showPopup (TextWrapper.getString("TEXT_CONFIRM"), "<p align=\"center\">Xin Chúc mừng\nBạn đã nhận quà thành công</p>", 1);
+					});
+				});
+			});
+		
+			
+		}
+		
+	});
+	
+	mapObj.set ("completedBtn", completedBtn);
+	mainLayer.add (completedBtn);
+	
+	var index = 0;
+	var requires = [];
+	while (index < 9)
+	{
+		var quest = constant.event2.quest [index];
+		var piece = new Layer ();
+		piece.x = 118 + (index % 3) * 206;
+		piece.y = 330 + Math.floor (index / 3) * 194;
+		mapObj.set ("piece" + index, piece);
+		
+		piece.add (eventSprite.GetFrame (DF_EVENT.FRAME_PIECE_0 + index));
+		
+		var title = Label.create ("<p align=\"center\">Nhiệm vụ " + (index + 1) +"\n" + quest.desc + "</p>", black_15, 0, -95, Anchor.center_top);
+		piece.add (title);
+		
+		var progress = Label.create ("(0/" + quest.require + ")", red_20, 0, -60, Anchor.center_top);
+		requires [index] = quest.require;
+		mapObj.set ("progress" + index, progress);
+		piece.add (progress);
+		
+		var item = new ShopItem (quest.reward.type, quest.reward.id);
+		var itemIcon = this.callFunction ("gameItem_to_obj", [item, "x" + quest.reward.num, black_15]);
+		itemIcon.y = 10;
+		piece.add (itemIcon);
+		
+		var getBtn = new Button (eventSprite._sprite_id, DF_EVENT.ANIM_PIECE_NORMAL, DF_EVENT.ANIM_PIECE_TOUCH, DF_EVENT.ANIM_PIECE_DISABLE);
+		getBtn.m_id = index;
+		getBtn.y = 70;
+		getBtn.set_disable (true);
+		getBtn.addEventListener (MouseEvent.CLICK, function (e)
+		{
+			PixmaGame._instance.fbClient.send (RequestGennarator.receiveDailyReward(quest.id));
+			PixmaGame._instance.fbClient.addEventListener(FBEvent.RECEIVE_REWARD, function (params)
+			{
+				PixmaGame._instance.fbClient.removeEventListener (FBEvent.RECEIVE_REWARD);
+				this.callFunction ("update", []);
+				PixmaGame.notification.showPopup (TextWrapper.getString("TEXT_CONFIRM"), "<p align=\"center\">Xin Chúc mừng\nBạn đã nhận quà thành công</p>", 1);
+			});
+		});
+		mapObj.set ("getBtn" + index, getBtn);
+		piece.add (getBtn);
+		
+		mainLayer.add (piece);
+		index ++;
+	}
+	mapData.set ("requires", requires);
+
+	this.callFunction ("update", []);
+	
+});
+functionList.set ("response", function (params)
+{
+	trace ("response: " + params);
+	var data = params.get("data");
+	
+	var cmd = data.get("cmd");
+	trace ("response: " + cmd);
+	if (cmd == "forceFinish")
+		this.callFunction ("response_forceFinish", [data]);
+});
+
+
+functionList.set ("response_forceFinish", function (responseObj)
+{
+	var run =  responseObj.get("run");
+	UserInfo.rune -= run;
+	PixmaGame._instance.fbClient.send (RequestGennarator.receiveDailyReward(quest.id));
+	PixmaGame._instance.fbClient.addEventListener(FBEvent.RECEIVE_REWARD, function (params)
+	{
+					PixmaGame._instance.fbClient.removeEventListener (FBEvent.RECEIVE_REWARD);
+					this.callFunction ("update", []);
+					PixmaGame.notification.showPopup (TextWrapper.getString("TEXT_CONFIRM"), "<p align=\"center\">Xin Chúc mừng\nBạn đã nhận quà thành công</p>", 1);
+	});
+});
+functionList.set ("request_forceFinish", function (rewardId)
+{
+	trace ("request_evolve");
+	var requestObj = new FBObjectOutput();
+	requestObj.putString("cmd", "forceFinish");
+	requestObj.putInt("id", rewardId);
+	this.callFunction ("request_script", [requestObj]);
+});
+
+functionList.set ("request_script", function (requestObj)
+{
+	var request = RequestGennarator.scriptRequest("forceFinish", requestObj);
+	PixmaGame._instance.fbClient.send (request);
+});
+functionList.set ("callPopup", function (msg)
+{
+	var w = 550;
+	var h = 300;
+	var popup = new Layer();
+	// popup.x = 320;
+	popup.y = 480;
+	var hide = new ColorRect(0x000000, 0.0, -320, -480, 640, 960);
+	hide.x = 0;
+	hide.y = 0;
+	popup.addChild(hide);
+	var bg = new ColorRect(0x000000, 0.7, -320, -200, 640, 400);
+	bg.x = 0;
+	bg.y = 0;
+	popup.addChild(bg);
+	popup.addChild(Border.roundRect (0, 0, -w/2, -h/2, w , h, 30, 0, 0x000000, 1, 0xFFFFFF));
+	
+	var closeBtn = this.callFunction ("getCloseButton", []);
+	closeBtn.x = 240;
+	closeBtn.y = -120;
+	popup.addChild(closeBtn);
+	popup.addChild(Label.create(msg, Fonts.TITLE_BLACK_20, 0, -50, Anchor.center_center));
+	this.add(popup);
+	
+	popup.addEventListener (MouseEvent.CLICK, function(e){
+		this.remove(popup);
+	});
+	
+	return popup;
+});
+
+functionList.set ("update", function ()
+{
+	var itemStatusArr = RewardItemInfo.GetDinamicListRewards();
+	var idRewardReceivedArr = RewardItemInfo.finish_recieve_rewards;
+	
+	var index = -1;
+	var completed = 0;
+	while (index < 8)
+	{
+		index ++;
+		var quest = constant.event2.quest [index];
+		trace("quest id: " + quest);
+		this.callFunction ("updateStatus", [quest, itemStatusArr, idRewardReceivedArr]);
+		if(quest.status == STATUS_CLAIMED)
+		{
+			var piece = mapObj.get ("piece" + index);
+			if (piece == null) continue;
+			
+			piece.visible = false;
+			completed ++;
+			continue;
+		}
+		
+		var progress = mapObj.get ("progress" + index);
+		if (progress == null) continue;
+		progress.set_text ("(" + quest.currentValue + "/" + quest.require+ ")");
+		
+		var getBtn = mapObj.get ("getBtn" + index);
+		if (getBtn == null) continue;
+		
+		if (quest.status == STATUS_COMPLETED)
+		{
+			getBtn.set_disable (false);
+			progress.set_textFormat (green_20);
+			
+		}
+		else
+		{
+			getBtn.set_disable (true);
+			progress.set_textFormat (red_20);
+		}
+		
+	}
+	var quest = constant.event2.main;
+	this.callFunction ("updateStatus", [quest, itemStatusArr, idRewardReceivedArr]);
+	var completedBtn = mapObj.get ("completedBtn");
+	if (quest.status == STATUS_CLAIMED)
+	{
+		completedBtn.visible = false;
+	}
+	// else if (quest.status == STATUS_COMPLETED)
+	// {
+		// completedBtn.set_disable (false);
+		// completedBtn.visible = true;
+	// }
+	else
+	{
+		completedBtn.set_disable (false);
+		completedBtn.visible = true;
+	}
+	
+});
+
+functionList.set ("updateStatus", function (info, itemStatusArr, idRewardReceivedArr)
+{
+	info.status = STATUS_NOTNOW;		
+	for(id in idRewardReceivedArr)
+	{
+		if(id == info.id)
+		{
+			info.status = STATUS_CLAIMED;
+			return;
+		}
+	}
+	for(item in itemStatusArr)
+	{
+		if(item.itemId == info.id)
+		{
+			info.currentValue = item.currentValue;
+			if(item.isFinish)
+			{
+				info.status = STATUS_COMPLETED;
+				
+				return;
+			}
+			else
+			{
+				info.status = STATUS_WAITGET;
+				return;
+			}
+		}
+	}
+});
+
+functionList.set ("init_constant", function ()
+{
+	constant = {
+		event1:{
+			name:"Gỡ Ngọc Bỗ Trợ Miễn Phí."//(1/9)
+		},
+		event2:
+		{
+			name:"Thử thách cùng Phi Công Quả Cảm.", //(1/9 - 13/9)
+			quest:[
+				{id:7026, desc:"Đăng Nhập 7 ngày",			currentValue:0, require:7,		status:	STATUS_NOTNOW,	reward:{type:15, id:10026, name:"Triệu Hồi Tím PK IV", num:1}},
+				{id:7027, desc:"PvP 200 trận",				currentValue:0, require:200,	status:STATUS_NOTNOW,	reward:{type:15, id:1379, name:"Sâu Độc Khổng Lồ Cam", num:5}},
+				{id:7028, desc:"Tiến Hóa 50 Lần Thẻ Bài",	currentValue:0, require:50,		status:	STATUS_NOTNOW,	reward:{type:15, id:10042, name:"Bộ Hồng Ngọc", num:25}},
+				{id:7029, desc:"Ủy Thác 30 lần",			currentValue:0, require:30,		status:	STATUS_NOTNOW,	reward:{type:15, id:10072, name:"Bộ Rune Hút Máu 6* Tím", num:6}},
+				{id:7030, desc:"Thử thách lòng tin 30 lần",	currentValue:0, require:30,		status:	STATUS_NOTNOW,	reward:{type:6, id:191, name:"Huyết Ma Kiếm Đỏ", num:1}},
+				{id:7031, desc:"Boss Bang hội 24 lần",		currentValue:0, require:24,		status:	STATUS_NOTNOW,	reward:{type:0, id:0, name:"Năng Lượng Đỏ", num:750}},
+				{id:7032, desc:"Tặng AP Bạn bè 300 lần",	currentValue:0, require:300,	status:STATUS_NOTNOW,	reward:{type:6, id:198, name:"Vô Cực Ma Kiếm Đỏ", num:1}},
+				{id:7033, desc:"Thách đấu Bang 70 lần",		currentValue:0, require:70,		status:	STATUS_NOTNOW,	reward:{type:2, id:0, name:"Vàng", num:1500000}},
+				{id:7034, desc:"Thách đấu Bạn Bè 50 lần",	currentValue:0, require:50,		status:	STATUS_NOTNOW,	reward:{type:15, id:38, name:"Chìa Khóa Tím", num:10}}
+			],
+			main:{id:7035, desc:"Hoàn thành 9 nhiệm vụ",	currentValue:0, require:9,		status:	STATUS_NOTNOW,	reward:{type:15, id:38, name:"Chìa Khóa Tím", num:10}}
+		},
+		event3:{
+			name:"Reset quà Đền Bí Ẩn"//(7/9)
+		},
+		event4:{
+			name:"Lái máy bay Rinh Iphone 6+"//(1/9 - 28/9)			
+		},
+	};
+	
+	return constant;
+});
+
+functionList.set ("getCloseButton", function (x, y)
+{
+	var closeBtn = new DisplayObject (x, y);
+	var graphic = closeBtn.getGraphics();
+	graphic.clear ();
+	graphic.lineStyle (1.5, 0xFFFFFF, 1.0);
+	graphic.beginFill (0x000000, 0.5);
+	graphic.drawCircle (0, 0, 24);
+	graphic.endFill ();
+	
+	graphic.lineStyle (3, 0xFFFFFF, 1.0);
+	graphic.moveTo (-10, -10);
+	graphic.lineTo (10, 10);
+	graphic.moveTo (10, -10);
+	graphic.lineTo (-10, 10);
+	
+	return closeBtn;
+});
+
+functionList.set ("callPopup", function (content, parent)
+{
+	var w = 550;
+	var h = 300;
+	
+	var popup = new Layer();
+	popup.x = 320;
+	popup.y = 480;
+	
+	var parentObj = null;
+	if (Std.is (parent, DisplayObject))
+		parentObj = parent;
+	else if (Std.is (parent, String))
+	{
+		var unknow = mapObj.get (parent);
+		if (Std.is (unknow, DisplayObject))
+			parentObj = unknow;
+	}
+	
+	var background = new ColorRect(0x000000, 0.5, -320, -480, 640, 960);
+	background.name = "background";
+	background.addEventListener (MouseEvent.CLICK, function (e) { parentObj.remove (popup); });
+	popup.addChild (background);
+	
+	var closeBtn = this.callFunction ("getCloseButton", [245, -120]);
+	closeBtn.addEventListener (MouseEvent.CLICK, function (e) { popup.dispatchEvent (new Event (Event.CLOSE)); });
+	popup.addChild (closeBtn);
+
+	popup.addEventListener (Event.CLOSE, function (e) { parentObj.remove (popup); });
+	
+	var addHeight = 0;
+	if (content != null)
+	{
+		if (Std.is (content, String))
+		{
+			var label = Label.create (content, Fonts.DETAIL_BLACK_20, 0, 0, Anchor.center_center);
+			popup.add (label);
+		}
+		else if (Std.is (content, DisplayObject))
+		{
+			popup.add (content);
+			var bound = content.getBounds (popup);
+			if (bound.bottom > h / 2) addHeight = bound.bottom - h * 0.5 + 20;
+		}
+	}
+	
+	popup.addChildAt (Border.roundRect (0, 0, -w * 0.5, -h * 0.5, w, h + addHeight, 30, 2, 0x555555, 1, 0xFFFFFF), 1);
+	
+	parentObj.add (popup);
+	return popup;
+});
+
+functionList.set ("callGiftPopup", function (title, rewards, parent)
+{
+	var titleLb = Label.create (title, Fonts.DETAIL_BLACK_20, 0, -80, Anchor.center_center);
+	
+	var rewardObjs = [];
+	for (reward in rewards)
+	{
+		var gameItem = new ShopItem (reward.type, reward.id);
+		var iconObj = this.callFunction ("gameItem_to_obj", [gameItem, reward.num, Fonts.DETAIL_BLACK_20]);
+		
+		var icon = iconObj.getChildByName ("icon");
+		if (icon != null) icon.set_scale (0.8);
+		
+		var number = iconObj.getChildByName ("number");
+		if (number != null) number.y = 35;
+		
+		rewardObjs.push (iconObj);
+	}
+	var giftLayer = this.callFunction ("arrange_gift", [rewardObjs]);
+	
+	var layer = new Layer ();
+	layer.add (titleLb);
+	layer.add (giftLayer);
+	
+	this.callFunction ("callPopup", [layer, parent]);
+});
+
+functionList.set ("callError", function (errorMsg, parent)
+{
+	var title = Label.create ("Cảnh Báo", Fonts.DETAIL_BLACK_30, 0, -80, Anchor.center_center);
+	var msg = Label.create ("<p align=\"center\">" + errorMsg + "</p>", Fonts.DETAIL_BLACK_20, 0, -40, Anchor.center_center, 500);
+	
+	var popup = new Layer ();
+	popup.add (title);
+	popup.add (msg);
+	
+	this.callFunction ("callPopup", [popup, parent]);
+});
+
+functionList.set ("callItemHint", function (e, gameItem, x, y)
+{
+	trace ("callItemHint");
+	if (gameItem == null) return;
+	
+	var name = gameItem.toString ();
+	var desc = [];
+	
+	if (gameItem.type == GameItemType.Equipment)
+	{
+		var equipInfo = EquipInfo.GetEquip (gameItem.index);
+		if (equipInfo != null)
+		{
+			for (pro in equipInfo.get_list_properties (0))
+			{
+				equipPDesc = "";
+				desc.push (pro.desc);
+			}
+		}
+	}
+	else if (gameItem.type == GameItemType.Special_Item)
+	{
+		var item = SpecialItemInfo.get (gameItem.index);
+		name = item.name;
+		
+		if (item.desc != null && item.desc != "")
+			desc.push (item.desc);
+	}
+	
+	var text = name;
+	for (d in desc) text += "\n" + d;
+	
+	var hint = new Hint (x, y, text, Anchor.center_bottom, 520);
+	return hint;
+});
+
+functionList.set ("item_count", function (itemId)
+{
+	return StockManager.countSpecialItem (itemId);
+});
+
+functionList.set ("request_info", function (eventId)
+{
+	trace ("request_info: " + eventId);
+	var requestObj = new FBObjectOutput();
+	requestObj.putString("cmd", "info");
+	requestObj.putInt("id", eventId);
+	this.callFunction ("request_script", [requestObj]);
+	
+});
+
+functionList.set ("response_info", function (responseObj)
+{
+	trace ("response_info");
+	var eventId = responseObj.get("id");
+	var isEnable = responseObj.get("onl");
+	
+	var counter = responseObj.get("counter");//[10, 0, 0, 0, 20, 0, 30, 40, 0];
+	mapData.set ("counter", counter);
+	
+	var receives = responseObj.get("receives");//[false, true, false, false, true, false, false, false, false, false];
+	mapData.set ("receives", receives);
+	
+	this.callFunction ("update");
+});
+
+functionList.set ("request_receice", function (eventId, rewardId)
+{
+	var requestObj = new FBObjectOutput();
+	requestObj.putString("cmd", "receive");
+	requestObj.putInt("id", eventId);
+	requestObj.putInt("count", rewardId);
+	this.callFunction ("request_script", [requestObj]);
+});
+
+functionList.set ("response_receice", function (responseObj)
+{
+	trace ("response_receice: " + responseObj);
+	if(responseObj.has("emess")){
+		var errorMsg = responseObj.get("emess");
+		this.callFunction ("callError", [errorMsg, "mainLayer"]);
+		return;
+	}
+	var eventId = responseObj.get("id");
+	var rewardId = responseObj.get("count");
+	var reward = responseObj.get("brw");
+	
+	var resource = this.callFunction ("resource_parser", [reward]);
+	
+	var listObj = this.callFunction ("resource_to_obj", [reward, resource]);
+	var gachaPanel = PixmaGame.notification.showMultiGachaPanel (listObj);
+	gachaPanel.add (Label.create ("<p align=\"center\">Xin Chúc mừng\nBạn đã nhận quà thành công</p>", Fonts.DETAIL_YELLOW_30, 0, -400, Anchor.center_center));
+	
+	var receives = responseObj.get("counter");
+	if (receives == null)
+	{
+		receives = [];
+		receives [rewardId] = true;
+		mapData.set ("receives", receives);
+	}
+	this.callFunction ("update");
+	
+	UserInfo.handleAddResourch (resource);
+});
+
+functionList.set ("resource_parser", function (reward)
+{
+	trace ("resource_parser: " + reward);
+	var resource = ParseObject.toResourchInstance (reward);
+	return resource;
+});
+
+functionList.set ("resource_to_obj", function (reward, resource)
+{
+	trace ("resource_to_obj");
+	var resourceDesc = new ResourceDesc ();
+	
+	resourceDesc.rune = resource.rune;
+	resourceDesc.tradableRune = resource.tradableRune;
+	
+	resourceDesc.gold = resource.gold;
+	resourceDesc.fp = resource.fp;
+	
+	resourceDesc.ap = resource.ap;
+	resourceDesc.redAp = resource.redAp;
+	
+	resourceDesc.exp = resource.exp;
+	resourceDesc.armorsets = resource.armor;
+
+	// resourceDesc.bonusCardSlots = resource.bonusCardSlots;
+	
+	var gameItems = resourceDesc.toGameItem ();
+	if (gameItems == null) gameItems = [];
+	
+	if (resource.equi != null)
+	{
+		var equipments = new StringMap ();
+		for (equipItemInfo in resource.equi)
+		{
+			if (equipItemInfo != null)
+			{
+				var numObj = equipments.get (equipItemInfo.prototypeId);
+				if (numObj == null) numObj = {id:equipItemInfo.prototypeId, num:0};
+				numObj.num += 1;
+				equipments.set (equipItemInfo.prototypeId, numObj);
+			}	
+		}
+		
+		for (equipObj in equipments)
+		{
+			if (equipObj == null) continue;
+			var id = equipObj.id;
+			var num = equipObj.num;
+			var equipItem = new GameItem (GameItemType.Equipment, id, num);
+			gameItems.push (equipItem);
+		}
+	}
+	
+	if (resource.specialitem != null)
+	{
+		var listSItem = new StringMap ();
+		for (specialItem in resource.specialitem)
+		{
+			var info = specialItem.info;
+			if (info == null) continue;
+			
+			var oldNumber = this.callFunction ("item_count", [info.index]);
+			var newNumber = specialItem.number;
+			var num = newNumber - oldNumber;
+			
+			listSItem.set (info.index, {id:info.index, num:num});
+		}
+		
+		for (specialObj in listSItem)
+		{
+			var specialItem = new GameItem (GameItemType.Special_Item, specialObj.id, specialObj.num);
+			gameItems.push (specialItem);
+		}
+	}
+	
+	if (reward != null && reward.has("ar"))
+	{
+		var armor = new StringMap ();
+		var fbArray = reward.get("ar");
+		var iter = fbArray.getInteratorSet();
+		while (iter.hasNext()) 
+		{
+			var armorId = iter.next();
+			
+			var numObj = armor.get (armorId);
+			if (numObj == null) numObj = {id:armorId, num:0};
+			numObj.num += 1;
+			
+			armor.set (armorId, numObj);
+		}
+		
+		for (armorObj in armor)
+		{
+			var armorItem = new GameItem (GameItemType.Armor_Set, armorObj.id, armorObj.num);
+			gameItems.push (armorItem);
+		}
+	}
+	
+	var itemObj = [];
+	
+	for (item in gameItems)
+	{
+		if (item == null) continue;
+		var icon = this.callFunction ("gameItem_to_obj", [item, item.number, Fonts.DETAIL_WHITE_20]);
+		itemObj.push (icon);
+	}
+	
+	if (resource.card != null)
+	{
+		var resourceCard = new StringMap ();
+		var normalCard = [];
+		for (cardInfo in resource.card)
+		{
+			if (cardInfo == null) continue;
+			if (cardInfo.isHero ())
+				normalCard.push (cardInfo);
+			else
+			{
+				var prototypeId = cardInfo.GetPrototypeId ();
+				var array = resourceCard.get (prototypeId);
+				if (array == null)
+				{
+					array = [];
+					resourceCard.set (prototypeId, array);
+				}
+				
+				array.push (cardInfo);
+			}
+		}
+		
+		for (cardInfo in normalCard)
+		{
+			var icon = this.callFunction ("cardInfo_to_obj", [cardInfo]);
+			itemObj.push (icon);
+		}
+		
+		for (cardGroup in resourceCard)
+		{
+			if (cardGroup.length == 0) continue;
+			
+			var icon = this.callFunction ("cardInfo_to_obj", [cardGroup [0]]);
+			var number = Label.create (cardGroup.length, Fonts.DETAIL_WHITE_20, 0, 50, Anchor.center_top);
+			number.name = "number";
+			icon.add (number);
+			itemObj.push (icon);
+		}
+	}
+	
+	return itemObj;
+});
+
+functionList.set ("gameItem_to_obj", function (gameItem, num, numFont)
+{
+	trace ("gameItem_to_obj: " + gameItem + ", " + num);
+	var iconGroup = new Layer ();
+	
+	var icon = gameItem.getIcon ();
+	icon.scaleX = icon.scaleY = 0.7;
+	icon.name = "icon";
+	iconGroup.add (icon);
+	
+	if (num != null && num != "")
+	{
+		if (numFont == null) numFont = Fonts.DETAIL_WHITE_20;
+		var number = Label.create (num, numFont, 40, 0, Anchor.left_center);
+		number.name = "number";
+		iconGroup.add (number);
+	}
+	
+	PixmaGame.notification.addHint (iconGroup, function (e)
+	{
+		return this.callFunction ("callItemHint", [e, gameItem, 320, e.stageY - 40]);
+	});
+	
+	iconGroup.addEventListener (Event.REMOVED_FROM_STAGE, function (e)
+	{
+		PixmaGame.notification.removeHint (iconGroup);
+	});
+	
+	return iconGroup;
+});
+
+functionList.set ("cardInfo_to_obj", function (cardInfo)
+{
+	var iconGroup = new Layer ();
+	
+	var icon = new SmallIcon (cardInfo, 0, 0, {type:0, levelMode:0});
+	icon.name = "icon";
+	iconGroup.add (icon);
+	
+	return iconGroup;
+});
+
+functionList.set ("arrange_gift", function (listObj)
+{
+	var row = Math.ceil (listObj.length / 5);
+	var column = Math.min (5, listObj.length);
+	var index = 0;
+	var rowId = 0;
+	var layer = new Layer ();
+	
+	while (rowId < row)
+	{
+		if (listObj.length - rowId * column < column)
+			column = listObj.length - rowId * column;
+		
+		var columnId = 0;
+		var offsetLength = (column - 1) * 0.5;
+		while (columnId < column)
+		{
+			var icon = listObj [index];
+			index ++;
+			
+			icon.x = (columnId - offsetLength) * 100;
+			icon.y = rowId * 120;
+			layer.add (icon);
+			
+			columnId ++;
+		}
+		rowId ++;
+	}
+	
+	return layer;
+});
+
+return functionList;

@@ -1,0 +1,124 @@
+//start include
+var Date			= Type.resolveClass ("Date");
+var Map				= Type.resolveClass ("Map");
+var StringMap		= Type.resolveClass ("haxe.ds.StringMap");
+var Math			= Type.resolveClass ("Math");
+var String			= Type.resolveClass ("String");
+var InboxInfo			= Type.resolveClass ("InboxInfo");
+
+var Matrix			= Type.resolveClass ("flash.geom.Matrix");
+if (Matrix == null)
+	Matrix			= Type.resolveClass ("openfl._v2.geom.Matrix");
+
+var Point			= Type.resolveClass ("flash.geom.Point");
+if (Point == null)
+	Point			= Type.resolveClass ("openfl._v2.geom.Point");
+
+var GradientType	= Type.resolveEnum ("flash.display.GradientType");
+if (GradientType == null)
+	GradientType	= Type.resolveEnum ("openfl.display.GradientType");
+if (GradientType == null)
+	GradientType	= Type.resolveEnum ("openfl._v2.display.GradientType");
+
+var Actuate			= Type.resolveClass ("motion.Actuate");
+var Linear			= Type.resolveClass ("motion.easing.Linear;");
+
+var MouseEvent		= Type.resolveClass ("flash.events.MouseEvent");
+if (MouseEvent == null)
+	MouseEvent		= Type.resolveClass ("openfl._v2.events.MouseEvent");
+	
+var Event		= Type.resolveClass ("flash.events.Event");
+if (Event == null)
+	Event		= Type.resolveClass ("openfl._v2.events.Event");
+	
+TabsEvent			= Type.resolveClass ("TabsEvent");
+
+var SoftDefines		= Type.resolveClass ("SoftDefines");
+var DF_UI			= Type.resolveClass ("DF_UI");
+var DF_LISTITEM		= Type.resolveClass ("DF_LISTITEM");
+var DF_COMBOUI		= Type.resolveClass ("DF_COMBOUI");
+var Fonts			= Type.resolveClass ("Fonts");
+var Anchor			= Type.resolveClass ("Anchor");
+var FBEvent			= Type.resolveClass ("FBEvent");
+var Request			= Type.resolveClass ("Request");
+var FBObjectOutput	= Type.resolveClass ("FBObjectOutput");
+var Commands		= Type.resolveClass ("Commands");
+var Keys			= Type.resolveClass ("Keys");
+
+var Resource		= Type.resolveClass ("Resource");
+var TextWrapper		= Type.resolveClass ("TextWrapper");
+var ArmorSet		= Type.resolveClass ("ArmorSet");
+var PageScrollable	= Type.resolveClass ("PageScrollable");
+var GameItem		= Type.resolveClass ("GameItem");
+var ShopItem		= Type.resolveClass ("ShopItem");
+var SpecialItemInfo	= Type.resolveClass ("SpecialItemInfo");
+var ResourceDesc	= Type.resolveClass ("ResourceDesc");
+var GameItemType	= Type.resolveEnum("GameItemType");
+
+var ShopElement		= Type.resolveClass("ShopElement");
+var ShopUtilities	= Type.resolveClass("ShopUtilities");
+
+var PixmaGame		= Type.resolveClass ("PixmaGame");
+var StockManager	= Type.resolveClass ("StockManager");
+var UserInfo		= Type.resolveClass ("UserInfo");
+var RewardItemInfo	= Type.resolveClass ("RewardItemInfo");
+var RequestGennarator	= Type.resolveClass ("RequestGennarator");
+var HomeState		= Type.resolveClass ("HomeState");
+var Utilities		= Type.resolveClass ("Utilities");
+
+var EquipInfo		= Type.resolveClass ("EquipInfo");
+var ParseObject		= Type.resolveClass ("ParseObject");
+var SmallIcon		= Type.resolveClass ("SmallIcon");
+var Button			= Type.resolveClass ("Button");
+var VTabs			= Type.resolveClass ("VTabs");
+var Layer			= Type.resolveClass ("Layer");
+var DisplayObject	= Type.resolveClass ("DisplayObject");
+var Label			= Type.resolveClass ("Label");
+var Popup			= Type.resolveClass ("Popup");
+var Border			= Type.resolveClass ("Border");
+var ColorRect		= Type.resolveClass ("ColorRect");
+var FlyingObject	= Type.resolveClass ("FlyingObject");
+var Hint			= Type.resolveClass ("Hint");
+var TextFormat		= Type.resolveClass ("flash.text.TextFormat");
+if(TextFormat == null)
+	TextFormat		= Type.resolveClass ("openfl._v2.text.TextFormat");
+var SimpleButton	= Type.resolveClass ("flash.display.SimpleButton");
+if(SimpleButton == null)
+	SimpleButton	= Type.resolveClass ("openfl._v2.display.SimpleButton");
+//end include
+
+var functionList = new FunctionList ();
+
+functionList.set ("init", function ()
+{
+	trace ("callGiftCode init");
+	var inbox_infos = InboxInfo.GetListReward();
+	if(inbox_infos.length > 0)
+	{
+		var giftcode = HomeState._instance.callGiftCode (inbox_infos[0]);
+		giftcode.addEventListener (
+						"ON_SEND",
+						function (e)
+						{			
+							trace ("ON_SEND init 1");
+							PixmaGame._instance.fbClient.addEventListener("GIFT_CODE", function (params)
+							{
+								if (params.get ("error") != null)
+								{
+									PixmaGame.notification.showPopup (TextWrapper.getString("TEXT_ERROR"), params.get("message"), 1);
+									return;
+								}
+								
+								var rewards = params.get ("rewards");
+								var popup = PixmaGame.notification.showRewards (TextWrapper.getString("TEXT_CONFIRM"), TextWrapper.getString("TEXT_RECEIVE_REWARD_SUCCESS"), rewards, 1);
+							});
+							PixmaGame._instance.fbClient.send (RequestGennarator.giftCode (giftcode.getContent () , giftcode.reward_info.inbox_id));
+						}
+		);
+	}
+	
+});
+
+
+
+return functionList;

@@ -1,0 +1,308 @@
+var PixmaGame			= Type.resolveClass ("PixmaGame");
+var SoftDefines			= Type.resolveClass ("SoftDefines");
+var Resource			= Type.resolveClass ("Resource");
+var FBEvent				= Type.resolveClass ("FBEvent");
+var CardPrototypeInfo	= Type.resolveClass ("CardPrototypeInfo");
+var ConstantManager		= Type.resolveClass ("ConstantManager");
+
+var functionList		= new FunctionList ();
+
+functionList.set ("fix", function ()
+{
+	//event
+	functionList.call ("fix_event_script", []);
+	
+	//lock piggy ios
+	functionList.call ("fix_piggy", []);
+	
+	//set id sprite card
+	functionList.call ("overrideSprite", ["GFX_CARD_ICON_CORKI_LV3", "GFX_CARD_ICON_DUM_01"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_BIG_CORKI_LV3", "GFX_CARD_BIG_DUM_01"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_FULL_CORKI_LV3", "GFX_CARD_FULL_DUM_01"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_ICON_CORKI_LV4", "GFX_CARD_ICON_DUM_02"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_BIG_CORKI_LV4", "GFX_CARD_BIG_DUM_02"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_FULL_CORKI_LV4", "GFX_CARD_FULL_DUM_02"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_ICON_CORKI_LV5", "GFX_CARD_ICON_DUM_03"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_BIG_CORKI_LV5", "GFX_CARD_BIG_DUM_03"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_FULL_CORKI_LV5", "GFX_CARD_FULL_DUM_03"]);
+	
+	//set id sprite card
+	functionList.call ("overrideSprite", ["GFX_CARD_ICON_YASUO_UNDERWORLD_LV4", "GFX_CARD_ICON_DUM_04"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_BIG_YASUO_UNDERWORLD_LV4", "GFX_CARD_BIG_DUM_04"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_FULL_YASUO_UNDERWORLD_LV4", "GFX_CARD_FULL_DUM_04"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_ICON_YASUO_UNDERWORLD_LV6", "GFX_CARD_ICON_DUM_05"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_BIG_YASUO_UNDERWORLD_LV6", "GFX_CARD_BIG_DUM_05"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_FULL_YASUO_UNDERWORLD_LV6", "GFX_CARD_FULL_DUM_05"]);
+	
+	//set id sprite card annie
+	functionList.call ("overrideSprite", ["GFX_CARD_ANNIE_ICON_S03", "GFX_CARD_ICON_DUM_06"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_ANNIE_BIG_S03", "GFX_CARD_BIG_DUM_06"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_ANNIE_FULL_S03", "GFX_CARD_FULL_DUM_06"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_ANNIE_ICON_S04", "GFX_CARD_ICON_DUM_07"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_ANNIE_BIG_S04", "GFX_CARD_BIG_DUM_07"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_ANNIE_FULL_S04", "GFX_CARD_FULL_DUM_07"]);
+	
+	//set id sprite card master yi
+	functionList.call ("overrideSprite", ["GFX_CARD_MASTER_YI_ICON_S03", "GFX_CARD_ICON_DUM_08"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_MASTER_YI_BIG_S03", "GFX_CARD_BIG_DUM_08"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_MASTER_YI_FULL_S03", "GFX_CARD_FULL_DUM_08"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_MASTER_YI_ICON_S04", "GFX_CARD_ICON_DUM_09"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_MASTER_YI_BIG_S04", "GFX_CARD_BIG_DUM_09"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_MASTER_YI_FULL_S04", "GFX_CARD_FULL_DUM_09"]);
+	
+	//set id sprite card yasuo blood moon
+	functionList.call ("overrideSprite", ["GFX_CARD_YASUO_ICON_S03", "GFX_CARD_ICON_DUM_10"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_YASUO_BIG_S03",  "GFX_CARD_BIG_DUM_10"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_YASUO_FULL_S03", "GFX_CARD_FULL_DUM_10"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_YASUO_ICON_S04", "GFX_CARD_ICON_DUM_11"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_YASUO_BIG_S04",  "GFX_CARD_BIG_DUM_11"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_YASUO_FULL_S04", "GFX_CARD_FULL_DUM_11"]);
+	
+	//set id sprite card jayce blood moon
+	functionList.call ("overrideSprite", ["GFX_CARD_JAYCE_ICON_S02", "GFX_CARD_ICON_DUM_12"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_JAYCE_BIG_S02",  "GFX_CARD_BIG_DUM_12"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_JAYCE_FULL_S02", "GFX_CARD_FULL_DUM_12"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_JAYCE_ICON_S03", "GFX_CARD_ICON_DUM_13"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_JAYCE_BIG_S03",  "GFX_CARD_BIG_DUM_13"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_JAYCE_FULL_S03", "GFX_CARD_FULL_DUM_13"]);
+	
+	//set id sprite card miss fortune
+	functionList.call ("overrideSprite", ["GFX_CARD_MISSFORTUNE_ICON_S03", "GFX_CARD_ICON_DUM_14"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_MISSFORTUNE_BIG_S03",  "GFX_CARD_BIG_DUM_14"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_MISSFORTUNE_FULL_S03", "GFX_CARD_FULL_DUM_14"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_MISSFORTUNE_ICON_S04", "GFX_CARD_ICON_DUM_15"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_MISSFORTUNE_BIG_S04",  "GFX_CARD_BIG_DUM_15"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_MISSFORTUNE_FULL_S04", "GFX_CARD_FULL_DUM_15"]);
+	
+	//set id sprite card tristana
+	functionList.call ("overrideSprite", ["GFX_CARD_TRISTANA_ICON_S03", "GFX_CARD_ICON_DUM_16"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_TRISTANA_BIG_S03",  "GFX_CARD_BIG_DUM_16"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_TRISTANA_FULL_S03", "GFX_CARD_FULL_DUM_16"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_TRISTANA_ICON_S04", "GFX_CARD_ICON_DUM_17"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_TRISTANA_BIG_S04",  "GFX_CARD_BIG_DUM_17"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_TRISTANA_FULL_S04", "GFX_CARD_FULL_DUM_17"]);
+	
+	//set id sprite card tristana
+	functionList.call ("overrideSprite", ["GFX_CARD_FIDDLESTICK_ICON_S03", "GFX_CARD_ICON_DUM_18"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_FIDDLESTICK_BIG_S03", "GFX_CARD_BIG_DUM_18"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_FIDDLESTICK_FULL_S03", "GFX_CARD_FULL_DUM_18"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_FIDDLESTICK_ICON_S04", "GFX_CARD_ICON_DUM_19"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_FIDDLESTICK_BIG_S04", "GFX_CARD_BIG_DUM_19"]);
+	functionList.call ("overrideSprite", ["GFX_CARD_FIDDLESTICK_FULL_S04", "GFX_CARD_FULL_DUM_19"]);
+	
+	//set cardId
+	functionList.call ("overrideSkin", [515, 0, "GFX_CARD_ICON_CORKI_LV3"]);
+	functionList.call ("overrideSkin", [516, 0, "GFX_CARD_ICON_CORKI_LV3"]);
+	functionList.call ("overrideSkin", [517, 0, "GFX_CARD_ICON_CORKI_LV4"]);
+	functionList.call ("overrideSkin", [7517, 0, "GFX_CARD_ICON_CORKI_LV5"]);
+	functionList.call ("overrideSkin", [1516, 0, "GFX_CARD_ICON_CORKI_LV3"]);
+	functionList.call ("overrideSkin", [1517, 0, "GFX_CARD_ICON_CORKI_LV4"]);
+	functionList.call ("overrideSkin", [4517, 0, "GFX_CARD_ICON_CORKI_LV5"]);
+	functionList.call ("overrideSkin", [2516, 0, "GFX_CARD_ICON_CORKI_LV4"]);
+	functionList.call ("overrideSkin", [2517, 0, "GFX_CARD_ICON_CORKI_LV5"]);
+	functionList.call ("overrideSkin", [5517, 0, "GFX_CARD_ICON_CORKI_LV5"]);
+	functionList.call ("overrideSkin", [3516, 0, "GFX_CARD_ICON_CORKI_LV3"]);
+	functionList.call ("overrideSkin", [3517, 0, "GFX_CARD_ICON_CORKI_LV5"]);
+	functionList.call ("overrideSkin", [6517, 0, "GFX_CARD_ICON_CORKI_LV5"]);
+	
+	//yasuo am ti 
+	functionList.call ("overrideSkin", [521, 0,  "GFX_CARD_ICON_YASUO_UNDERWORLD_LV4"]);
+	functionList.call ("overrideSkin", [7521, 0, "GFX_CARD_ICON_YASUO_UNDERWORLD_LV4"]);
+	functionList.call ("overrideSkin", [1521, 0, "GFX_CARD_ICON_YASUO_UNDERWORLD_LV4"]);
+	functionList.call ("overrideSkin", [4521, 0, "GFX_CARD_ICON_YASUO_UNDERWORLD_LV4"]);
+	functionList.call ("overrideSkin", [2521, 0, "GFX_CARD_ICON_YASUO_UNDERWORLD_LV4"]);
+	functionList.call ("overrideSkin", [5521, 0, "GFX_CARD_ICON_YASUO_UNDERWORLD_LV4"]);
+	functionList.call ("overrideSkin", [3521, 0, "GFX_CARD_ICON_YASUO_UNDERWORLD_LV4"]);
+	functionList.call ("overrideSkin", [6521, 0, "GFX_CARD_ICON_YASUO_UNDERWORLD_LV4"]);
+	functionList.call ("overrideSkin", [7522, 0, "GFX_CARD_ICON_YASUO_UNDERWORLD_LV6"]);
+	
+	//annie
+	functionList.call ("overrideSkin", [527, 0, "GFX_CARD_ANNIE_ICON_S03"]);
+	functionList.call ("overrideSkin", [1527, 0, "GFX_CARD_ANNIE_ICON_S03"]);
+	functionList.call ("overrideSkin", [2527, 0, "GFX_CARD_ANNIE_ICON_S03"]);
+	functionList.call ("overrideSkin", [3527, 0, "GFX_CARD_ANNIE_ICON_S03"]);
+	functionList.call ("overrideSkin", [4527, 0, "GFX_CARD_ANNIE_ICON_S03"]);
+	functionList.call ("overrideSkin", [5527, 0, "GFX_CARD_ANNIE_ICON_S03"]);
+	functionList.call ("overrideSkin", [6527, 0, "GFX_CARD_ANNIE_ICON_S03"]);
+	functionList.call ("overrideSkin", [7527, 0, "GFX_CARD_ANNIE_ICON_S03"]);
+	
+	functionList.call ("overrideSkin", [527, 1, "GFX_CARD_ANNIE_ICON_S04"]);
+	functionList.call ("overrideSkin", [1527, 1, "GFX_CARD_ANNIE_ICON_S04"]);
+	functionList.call ("overrideSkin", [2527, 1, "GFX_CARD_ANNIE_ICON_S04"]);
+	functionList.call ("overrideSkin", [3527, 1, "GFX_CARD_ANNIE_ICON_S04"]);
+	functionList.call ("overrideSkin", [4527, 1, "GFX_CARD_ANNIE_ICON_S04"]);
+	functionList.call ("overrideSkin", [5527, 1, "GFX_CARD_ANNIE_ICON_S04"]);
+	functionList.call ("overrideSkin", [6527, 1, "GFX_CARD_ANNIE_ICON_S04"]);
+	functionList.call ("overrideSkin", [7527, 1, "GFX_CARD_ANNIE_ICON_S04"]);
+	
+	//master yi
+	functionList.call ("overrideSkin", [524, 0, "GFX_CARD_MASTER_YI_ICON_S03"]);
+	functionList.call ("overrideSkin", [1524, 0, "GFX_CARD_MASTER_YI_ICON_S03"]);
+	functionList.call ("overrideSkin", [2524, 0, "GFX_CARD_MASTER_YI_ICON_S03"]);
+	functionList.call ("overrideSkin", [3524, 0, "GFX_CARD_MASTER_YI_ICON_S03"]);
+	functionList.call ("overrideSkin", [4524, 0, "GFX_CARD_MASTER_YI_ICON_S03"]);
+	functionList.call ("overrideSkin", [5524, 0, "GFX_CARD_MASTER_YI_ICON_S03"]);
+	functionList.call ("overrideSkin", [6524, 0, "GFX_CARD_MASTER_YI_ICON_S03"]);
+	functionList.call ("overrideSkin", [7524, 0, "GFX_CARD_MASTER_YI_ICON_S03"]);
+	
+	functionList.call ("overrideSkin", [524, 1, "GFX_CARD_MASTER_YI_ICON_S04"]);
+	functionList.call ("overrideSkin", [1524, 1, "GFX_CARD_MASTER_YI_ICON_S04"]);
+	functionList.call ("overrideSkin", [2524, 1, "GFX_CARD_MASTER_YI_ICON_S04"]);
+	functionList.call ("overrideSkin", [3524, 1, "GFX_CARD_MASTER_YI_ICON_S04"]);
+	functionList.call ("overrideSkin", [4524, 1, "GFX_CARD_MASTER_YI_ICON_S04"]);
+	functionList.call ("overrideSkin", [5524, 1, "GFX_CARD_MASTER_YI_ICON_S04"]);
+	functionList.call ("overrideSkin", [6524, 1, "GFX_CARD_MASTER_YI_ICON_S04"]);
+	functionList.call ("overrideSkin", [7524, 1, "GFX_CARD_MASTER_YI_ICON_S04"]);
+	
+	//yasuo blood moon
+	functionList.call ("overrideSkin", [530, 0, "GFX_CARD_YASUO_ICON_S03"]);
+	functionList.call ("overrideSkin", [1530, 0, "GFX_CARD_YASUO_ICON_S03"]);
+	functionList.call ("overrideSkin", [2530, 0, "GFX_CARD_YASUO_ICON_S03"]);
+	functionList.call ("overrideSkin", [3530, 0, "GFX_CARD_YASUO_ICON_S03"]);
+	functionList.call ("overrideSkin", [4530, 0, "GFX_CARD_YASUO_ICON_S03"]);
+	functionList.call ("overrideSkin", [5530, 0, "GFX_CARD_YASUO_ICON_S03"]);
+	functionList.call ("overrideSkin", [6530, 0, "GFX_CARD_YASUO_ICON_S03"]);
+	functionList.call ("overrideSkin", [7530, 0, "GFX_CARD_YASUO_ICON_S03"]);
+	
+	functionList.call ("overrideSkin", [530, 1, "GFX_CARD_YASUO_ICON_S04"]);
+	functionList.call ("overrideSkin", [1530, 1, "GFX_CARD_YASUO_ICON_S04"]);
+	functionList.call ("overrideSkin", [2530, 1, "GFX_CARD_YASUO_ICON_S04"]);
+	functionList.call ("overrideSkin", [3530, 1, "GFX_CARD_YASUO_ICON_S04"]);
+	functionList.call ("overrideSkin", [4530, 1, "GFX_CARD_YASUO_ICON_S04"]);
+	functionList.call ("overrideSkin", [5530, 1, "GFX_CARD_YASUO_ICON_S04"]);
+	functionList.call ("overrideSkin", [6530, 1, "GFX_CARD_YASUO_ICON_S04"]);
+	functionList.call ("overrideSkin", [7530, 1, "GFX_CARD_YASUO_ICON_S04"]);
+	
+		//jayce blood moon
+	functionList.call ("overrideSkin", [533, 0, "GFX_CARD_JAYCE_ICON_S02"]);
+	functionList.call ("overrideSkin", [7533, 0, "GFX_CARD_JAYCE_ICON_S02"]);
+	functionList.call ("overrideSkin", [1533, 0, "GFX_CARD_JAYCE_ICON_S02"]);
+	functionList.call ("overrideSkin", [4533, 0, "GFX_CARD_JAYCE_ICON_S02"]);
+	functionList.call ("overrideSkin", [2533, 0, "GFX_CARD_JAYCE_ICON_S02"]);
+	functionList.call ("overrideSkin", [5533, 0, "GFX_CARD_JAYCE_ICON_S02"]);
+	functionList.call ("overrideSkin", [3533, 0, "GFX_CARD_JAYCE_ICON_S02"]);
+	functionList.call ("overrideSkin", [6533, 0, "GFX_CARD_JAYCE_ICON_S02"]);
+	
+	functionList.call ("overrideSkin", [533, 1, "GFX_CARD_JAYCE_ICON_S03"]);
+	functionList.call ("overrideSkin", [7533, 1, "GFX_CARD_JAYCE_ICON_S03"]);
+	functionList.call ("overrideSkin", [1533, 1, "GFX_CARD_JAYCE_ICON_S03"]);
+	functionList.call ("overrideSkin", [4533, 1, "GFX_CARD_JAYCE_ICON_S03"]);
+	functionList.call ("overrideSkin", [2533, 1, "GFX_CARD_JAYCE_ICON_S03"]);
+	functionList.call ("overrideSkin", [5533, 1, "GFX_CARD_JAYCE_ICON_S03"]);
+	functionList.call ("overrideSkin", [3533, 1, "GFX_CARD_JAYCE_ICON_S03"]);
+	functionList.call ("overrideSkin", [6533, 1, "GFX_CARD_JAYCE_ICON_S03"]);
+	
+	//miss fortune pirates
+	functionList.call ("overrideSkin", [536, 0, "GFX_CARD_MISSFORTUNE_ICON_S03"]);
+	functionList.call ("overrideSkin", [7536, 0, "GFX_CARD_MISSFORTUNE_ICON_S03"]);
+	functionList.call ("overrideSkin", [1536, 0, "GFX_CARD_MISSFORTUNE_ICON_S03"]);
+	functionList.call ("overrideSkin", [4536, 0, "GFX_CARD_MISSFORTUNE_ICON_S03"]);
+	functionList.call ("overrideSkin", [2536, 0, "GFX_CARD_MISSFORTUNE_ICON_S03"]);
+	functionList.call ("overrideSkin", [5536, 0, "GFX_CARD_MISSFORTUNE_ICON_S03"]);
+	functionList.call ("overrideSkin", [3536, 0, "GFX_CARD_MISSFORTUNE_ICON_S03"]);
+	functionList.call ("overrideSkin", [6536, 0, "GFX_CARD_MISSFORTUNE_ICON_S03"]);
+	
+	functionList.call ("overrideSkin", [536, 1, "GFX_CARD_MISSFORTUNE_ICON_S04"]);
+	functionList.call ("overrideSkin", [7536, 1, "GFX_CARD_MISSFORTUNE_ICON_S04"]);
+	functionList.call ("overrideSkin", [1536, 1, "GFX_CARD_MISSFORTUNE_ICON_S04"]);
+	functionList.call ("overrideSkin", [4536, 1, "GFX_CARD_MISSFORTUNE_ICON_S04"]);
+	functionList.call ("overrideSkin", [2536, 1, "GFX_CARD_MISSFORTUNE_ICON_S04"]);
+	functionList.call ("overrideSkin", [5536, 1, "GFX_CARD_MISSFORTUNE_ICON_S04"]);
+	functionList.call ("overrideSkin", [3536, 1, "GFX_CARD_MISSFORTUNE_ICON_S04"]);
+	functionList.call ("overrideSkin", [6536, 1, "GFX_CARD_MISSFORTUNE_ICON_S04"]);
+	
+	//tristana pirates
+	functionList.call ("overrideSkin", [539,  1, "GFX_CARD_TRISTANA_ICON_S03"]);
+	functionList.call ("overrideSkin", [7539, 1, "GFX_CARD_TRISTANA_ICON_S03"]);
+	functionList.call ("overrideSkin", [1539, 1, "GFX_CARD_TRISTANA_ICON_S03"]);
+	functionList.call ("overrideSkin", [4539, 1, "GFX_CARD_TRISTANA_ICON_S03"]);
+	functionList.call ("overrideSkin", [2539, 1, "GFX_CARD_TRISTANA_ICON_S03"]);
+	functionList.call ("overrideSkin", [5539, 1, "GFX_CARD_TRISTANA_ICON_S03"]);
+	functionList.call ("overrideSkin", [3539, 1, "GFX_CARD_TRISTANA_ICON_S03"]);
+	functionList.call ("overrideSkin", [6539, 1, "GFX_CARD_TRISTANA_ICON_S03"]);
+	
+	functionList.call ("overrideSkin", [539,  0, "GFX_CARD_TRISTANA_ICON_S04"]);
+	functionList.call ("overrideSkin", [7539, 0, "GFX_CARD_TRISTANA_ICON_S04"]);
+	functionList.call ("overrideSkin", [1539, 0, "GFX_CARD_TRISTANA_ICON_S04"]);
+	functionList.call ("overrideSkin", [4539, 0, "GFX_CARD_TRISTANA_ICON_S04"]);
+	functionList.call ("overrideSkin", [2539, 0, "GFX_CARD_TRISTANA_ICON_S04"]);
+	functionList.call ("overrideSkin", [5539, 0, "GFX_CARD_TRISTANA_ICON_S04"]);
+	functionList.call ("overrideSkin", [3539, 0, "GFX_CARD_TRISTANA_ICON_S04"]);
+	functionList.call ("overrideSkin", [6539, 0, "GFX_CARD_TRISTANA_ICON_S04"]);
+	
+	//fiddlestick pirates
+	functionList.call ("overrideSkin", [9999, 0, "GFX_CARD_FIDDLESTICK_ICON_S03"]);
+	functionList.call ("overrideSkin", [9999, 0, "GFX_CARD_FIDDLESTICK_ICON_S03"]);
+	functionList.call ("overrideSkin", [9999, 0, "GFX_CARD_FIDDLESTICK_ICON_S03"]);
+	functionList.call ("overrideSkin", [9999, 0, "GFX_CARD_FIDDLESTICK_ICON_S03"]);
+	functionList.call ("overrideSkin", [9999, 0, "GFX_CARD_FIDDLESTICK_ICON_S03"]);
+	functionList.call ("overrideSkin", [9999, 0, "GFX_CARD_FIDDLESTICK_ICON_S03"]);
+	functionList.call ("overrideSkin", [9999, 0, "GFX_CARD_FIDDLESTICK_ICON_S03"]);
+	functionList.call ("overrideSkin", [9999, 0, "GFX_CARD_FIDDLESTICK_ICON_S03"]);
+	
+	functionList.call ("overrideSkin", [9999, 1, "GFX_CARD_FIDDLESTICK_ICON_S04"]);
+	functionList.call ("overrideSkin", [9999, 1, "GFX_CARD_FIDDLESTICK_ICON_S04"]);
+	functionList.call ("overrideSkin", [9999, 1, "GFX_CARD_FIDDLESTICK_ICON_S04"]);
+	functionList.call ("overrideSkin", [9999, 1, "GFX_CARD_FIDDLESTICK_ICON_S04"]);
+	functionList.call ("overrideSkin", [9999, 1, "GFX_CARD_FIDDLESTICK_ICON_S04"]);
+	functionList.call ("overrideSkin", [9999, 1, "GFX_CARD_FIDDLESTICK_ICON_S04"]);
+	functionList.call ("overrideSkin", [9999, 1, "GFX_CARD_FIDDLESTICK_ICON_S04"]);
+	functionList.call ("overrideSkin", [9999, 1, "GFX_CARD_FIDDLESTICK_ICON_S04"]);
+});
+
+functionList.set ("overrideSprite", function (src, target)
+{
+	var srcId = Resource.getSpriteId (src);
+	var srcContent = Resource.contents [srcId];
+	if (srcContent == null) return;
+	
+	var targetId = Resource.getSpriteId (target);
+	if (targetId < 0) return;
+	
+	srcContent.index = targetId;
+	Resource.contents [targetId] = srcContent;
+});
+
+functionList.set ("overrideSkin", function (protypeId, skinIndex, skinSprite)
+{
+	var prototype = CardPrototypeInfo.GetItem (protypeId);
+	if (prototype == null) return;
+	if (prototype.skins == null)
+		prototype.skins = [];
+		
+	var spriteId = Resource.getSpriteId (skinSprite);
+	if (spriteId < 0) return;
+	
+	prototype.skins [skinIndex] = spriteId;
+});
+
+functionList.set ("fix_event_script", function ()
+{
+	PixmaGame._instance.fbClient.addEventListener("EVENT_SCRIPT_REQUEST", 
+		function (params)
+		{
+			var data = params.get ("data");
+			if (data == null) return;
+			
+			var cmd = data.get("scriptCMD");
+			PixmaGame._instance.fbClient.dispatchEvent (new FBEvent ("EVENT_SCRIPT_REQUEST_" + cmd, params));
+		}
+	);
+});
+
+functionList.set ("fix_piggy", function ()
+{
+	var FeatureControl = Type.resolveClass ("FeatureControl");
+	if (SoftDefines.BUILD_VERSION != "2.1.0")
+	{
+		FeatureControl.set ("G6_PIG", true, 1);
+		return;
+	}
+	
+	if (PixmaGame.isIos)
+	{
+		FeatureControl.set ("G6_PIG", true, 1);
+	}
+});
+
+return functionList;

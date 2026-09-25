@@ -1,0 +1,100 @@
+var OnFinishHideEffect = function (arr) 
+{
+	for(obj in arr)
+		sCurLayer.remove(obj);
+}
+
+var FocusCard = function (obj) 
+{
+	var focusBg = Resource.getSprite ("GFX_EFFECT_COVER", true).GetFrame (0);
+	focusBg.x = - GraphicsConfig.VIEW_WIDTH / 2;
+	focusBg.y = - GraphicsConfig.VIEW_HEIGHT / 2;
+	focusBg.scaleX = GraphicsConfig.VIEW_WIDTH / focusBg.data.bound.width;
+	focusBg.scaleY = GraphicsConfig.VIEW_HEIGHT / focusBg.data.bound.height;
+	focusBg.alpha = 0.0;
+	
+	sCurLayer.add (focusBg);
+	
+	var showFocus = new OpacityEffect(focusBg, 0.8, 200, null);
+	showFocus.Init();	
+	sCurState.AddScript(showFocus);
+	return focusBg;
+}
+
+var focusBg = FocusCard(attacker);
+attacker.isLocked = true;	
+attacker.GetDisplayCard().moveToTop();
+
+var lightAnim = Resource.getSprite(SoftDefines.gfx_effect_ezreal_util).GetAnim (0, Std_int(attacker.xOri), Std_int(attacker.yOri), false, renderMode);
+if(attacker.GetFormation().IsPlayer() == false)
+	lightAnim.SetRotate(180);
+
+var shootanim = Resource.getSprite(SoftDefines.gfx_sona_util_action).GetAnim (1, Std_int(attacker.xOri), Std_int(attacker.yOri), false, renderMode);
+if(attacker.GetFormation().IsPlayer() == false)
+	shootanim.SetRotate(180);
+sCurLayer.add(shootanim);
+var shooteffect = new SimulateAnimEffect(attacker.GetDisplayCard(), shootanim, 1500);
+shooteffect.Init();
+sCurState.AddScript(shooteffect);
+
+shooteffect.AddEffectListener(function OnFinishHideEffect(arr)
+{
+	sCurLayer.remove(focusBg);
+	attacker.isLocked = false;
+	sCurLayer.remove(shootanim);
+});
+
+var lightEff = new AnimEffect(false, lightAnim, 1300, null, false);
+lightEff.Init();				
+lightEff.AddEffectListener(function OnFinishHideEffect(arr)
+{
+	sCurLayer.remove(lightAnim);			
+});
+
+var cbUpdate = null;
+cbUpdate = function(obj){
+	if(shooteffect.TimeRemaining() < 500)
+	{
+		shooteffect.RemoveCallbackPerUpdate(cbUpdate);
+		Sound.GetSound(Sound.SOUND_SONA_UTIL).Play();
+		sCurLayer.add(lightAnim);
+		sCurState.AddScript(lightEff);
+	}
+};
+shooteffect.AddCallbackPerUpdate(cbUpdate);
+
+var endEffect = [];
+var hitAnimArray = [];
+var setcb = true;
+for(card in defender)
+{				
+	var hitAnim = Resource.getSprite(SoftDefines.gfx_sona_util_action).GetAnim (0, Std_int(card.xOri), Std_int(card.yOri), false, renderMode);	
+	shooteffect.AddEffectListener(function (arr)
+	{
+		trace("add anim hit");
+		sCurLayer.add(hitAnim);
+	});
+	
+	var anim = new SimulateAnimEffect(card.GetDisplayCard(), hitAnim, 666, shooteffect);
+	anim.Init();
+	anim.AddEffectListener(function (arr)
+	{
+		sCurLayer.remove(hitAnim);
+	});
+	sCurState.AddScript(anim);
+	if(setcb == true)
+	{
+		var nextstep = true;
+		anim.AddCallbackPerUpdate(function (arr){
+						if(anim.TimeRemaining() < 200 && nextstep)
+						{
+							sCurState.nextStep = true;
+							nextstep = false;
+						}
+					});
+		setcb = false;
+	}
+	
+	endEffect.push(anim);
+}
+return endEffect;

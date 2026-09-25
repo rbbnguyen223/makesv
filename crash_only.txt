@@ -1,0 +1,18 @@
+--------- beginning of crash
+09-20 23:56:40.350  2435  2458 F libc    : Fatal signal 4 (SIGILL), code 0 (SI_USER) in tid 2458 (GLThread 27), pid 2435 (lmah.vn)
+09-20 23:56:40.472  2503  2503 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+09-20 23:56:40.472  2503  2503 F DEBUG   : Build fingerprint: 'OnePlus/graceltexx/graceltexx:14/UQ1A.240205.05262019/lee.20260526.201942:user/release-keys'
+09-20 23:56:40.472  2503  2503 F DEBUG   : Revision: '0'
+09-20 23:56:40.472  2503  2503 F DEBUG   : ABI: 'x86'
+09-20 23:56:40.472  2503  2503 F DEBUG   : Timestamp: 2026-09-20 23:56:40.380992296+0700
+09-20 23:56:40.472  2503  2503 F DEBUG   : Process uptime: 9s
+09-20 23:56:40.472  2503  2503 F DEBUG   : Cmdline: lmah.vn
+09-20 23:56:40.472  2503  2503 F DEBUG   : pid: 2435, tid: 2458, name: GLThread 27  >>> lmah.vn <<<
+09-20 23:56:40.472  2503  2503 F DEBUG   : uid: 10111
+09-20 23:56:40.472  2503  2503 F DEBUG   : signal 4 (SIGILL), code 0 (SI_USER), fault addr --------
+09-20 23:56:40.472  2503  2503 F DEBUG   :     eax 00000000  ebx 0000099a  ecx 00000004  edx 0000099a
+09-20 23:56:40.472  2503  2503 F DEBUG   :     edi b92ec040  esi 00000016
+09-20 23:56:40.472  2503  2503 F DEBUG   :     ebp b62f3b00  esp b62f3ab8  eip da475b1f
+09-20 23:56:40.472  2503  2503 F DEBUG   : 1 total frames
+09-20 23:56:40.472  2503  2503 F DEBUG   : backtrace:
+09-20 23:56:40.472  2503  2503 F DEBUG   :       #00 pc 00419b1f  /system/vendor/lib/libhoudini.so (BuildId: d0bea18b701e0f1e3912bbceb672c72573237453)

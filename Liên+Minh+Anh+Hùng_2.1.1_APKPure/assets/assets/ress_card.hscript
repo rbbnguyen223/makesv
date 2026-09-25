@@ -1,0 +1,23 @@
+
+var endEffect = [];
+Resource.loadSprite(spriteId);
+for(card in defender)
+{		
+	card.isLocked = true;	
+	var resAnim = Resource.getSprite(spriteId).GetAnim (resAnimId, card.xOri, card.yOri, false, renderMode);
+	if(card.isBoss)
+		resAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);
+	sCurLayer.add(resAnim);
+	
+	var anim = new SimulateAnimEffect(card.GetDisplayCard(), resAnim, timeRes, null);			
+	anim.AddEffectListener(function (arr)
+	{
+		card.isLocked = false;	
+		sCurLayer.remove(resAnim);
+		// Sound.GetSound(sound).Play();
+	});
+	anim.Init();
+	sCurState.AddScript(anim);	
+	endEffect.push(anim);
+}
+return endEffect;

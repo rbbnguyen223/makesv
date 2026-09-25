@@ -1,0 +1,44 @@
+var OnFinishHideEffect = function (arr) 
+{
+	for(obj in arr)
+		sCurLayer.remove(obj);
+}
+
+var FocusCard = function (obj) 
+{
+	var focusBg = Resource.getSprite ("GFX_EFFECT_COVER", true).GetFrame (0);
+	focusBg.x = - GraphicsConfig.VIEW_WIDTH / 2;
+	focusBg.y = - GraphicsConfig.VIEW_HEIGHT / 2;
+	focusBg.scaleX = GraphicsConfig.VIEW_WIDTH / focusBg.data.bound.width;
+	focusBg.scaleY = GraphicsConfig.VIEW_HEIGHT / focusBg.data.bound.height;
+	focusBg.alpha = 0.0;
+	
+	sCurLayer.add (focusBg);
+	
+	var showFocus = new OpacityEffect(focusBg, 0.8, 200, null);
+	showFocus.Init();	
+	sCurState.AddScript(showFocus);
+	return focusBg;
+}
+var focusBg = FocusCard(attacker);
+attacker.isLocked = true;	
+attacker.GetDisplayCard().moveToTop();
+
+var sprite = Resource.getSprite (spriteId);
+var cast = sprite.GetAnim (castAnim, Std_int(attacker.xOri), Std_int(attacker.yOri), false, renderMode);
+if(attacker.GetFormation().IsPlayer() == false)
+	cast.SetRotate(180);
+sCurLayer.add(cast);
+
+var shooteffect = new SimulateAnimEffect(attacker.GetDisplayCard(), cast, 1000);
+shooteffect.Init();
+shooteffect.SetEffectListener(function (arr) 
+{
+	sCurLayer.remove(cast);
+	sCurLayer.remove(focusBg);
+	attacker.isLocked = false;
+});
+sCurState.AddScript(shooteffect);
+
+var endEffect = [];
+endEffect;

@@ -1,0 +1,84 @@
+var shootanim = Resource.getSprite(spriteId).GetAnim (castAnim, attacker.xOri, attacker.yOri, false, renderMode);
+// shootanim.useBlendMode = true;
+sCurLayer.add(shootanim);
+var shooteffect = new SimulateAnimEffect(attacker.GetDisplayCard(), shootanim, timeShoot);
+shooteffect.Init();
+shooteffect.SetEffectListener(function (arr) 
+							{
+								sCurLayer.remove(shootanim);
+							});
+sCurState.AddScript(shooteffect);
+
+var endEffect = [];
+var hitAnimArray = [];
+var setcb = true;
+var meff = null;
+for(card in defender)
+{
+	if(meff == null)
+	{
+		var arrow = Resource.getSprite(spriteId).GetAnim(travAnim, attacker.xOri, attacker.yOri, true, renderMode);	
+		arrow.SetRotate(AngleBetweenCards(attacker, card) + 90);
+		arrow.SetOpacity(0);
+		// arrow.useBlendMode = true;
+		sCurLayer.add(arrow);	
+		
+		var showeff = new OpacityEffect(arrow, 1, 10, shooteffect);
+		showeff.Init();
+		sCurState.AddScript(showeff);
+		meff = new MovingEffect(arrow, card.xOri - attacker.xOri,card.yOri - attacker.yOri, timeMove, shooteffect);
+		meff.SetEffectListener(OnFinishHideEffect);
+		meff.Init();
+		sCurState.AddScript(meff);
+		
+		// var arrowAnim = new AnimEffect(false, arrow, 660, null, false);
+		// arrowAnim.Init();
+		// sCurState.AddScript(arrowAnim);	
+		var cbUpdate = null;
+		cbUpdate = function(obj){
+			if(shooteffect.TimeRemaining() < 100)
+			{
+				showeff.SetDependEffect(null);
+				meff.SetDependEffect(null);
+				shooteffect.RemoveCallbackPerUpdate(cbUpdate);
+			}
+		};
+		shooteffect.AddCallbackPerUpdate(cbUpdate);
+	}
+	
+	var hitAnim = Resource.getSprite(spriteId).GetAnim (hitAnim, card.xOri, card.yOri, false, renderMode);
+	if (GameStateCardBattle.rotateBattle)
+		hitAnim.rotation = -90;
+	if(card.isBoss)
+		hitAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);
+	
+	var anim = new SimulateAnimEffect(card.GetDisplayCard(), hitAnim, timeHit, meff);			
+	anim.AddEffectListener(function (arr)
+					{
+						sCurLayer.remove(hitAnim);
+					});
+	anim.Init();
+	
+	meff.AddEffectListener(function (arr)
+					{
+						// sCurState.RemoveScript(arrowAnim);	
+						sCurLayer.add(hitAnim);
+						Sound.GetSound(sound).Play();
+					});
+	sCurState.AddScript(anim);
+	if(setcb == true)
+	{
+		var nextstep = true;
+		anim.AddCallbackPerUpdate(function (arr){
+						if(anim.TimeRemaining() < waitTime && nextstep)
+						{
+							sCurState.nextStep = true;
+							nextstep = false;
+						}
+					});
+		setcb = false;
+	}
+	
+	endEffect.push(anim);
+}
+return endEffect;

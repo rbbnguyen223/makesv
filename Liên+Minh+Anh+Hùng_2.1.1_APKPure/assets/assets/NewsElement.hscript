@@ -1,0 +1,183 @@
+//start include
+//include base
+var Rectangle		= Type.resolveClass ("flash.geom.Rectangle");
+if (Rectangle == null)
+	Rectangle		= Type.resolveClass ("openfl.geom.Rectangle");
+if (Rectangle == null)
+	Rectangle		= Type.resolveClass ("openfl._v2.geom.Rectangle");
+
+var Lib				= Type.resolveClass ("flash.Lib");
+if(Lib == null)
+	Lib		= Type.resolveClass ("openfl._v2.Lib");
+	
+var URLRequest		= Type.resolveClass ("flash.net.URLRequest");
+if(URLRequest == null)
+	URLRequest		= Type.resolveClass ("openfl._v2.net.URLRequest");
+	
+var Event			= Type.resolveClass ("flash.events.Event");
+if(Event == null)
+	Event		= Type.resolveClass ("openfl._v2.events.Event");
+	
+var MouseEvent		= Type.resolveClass ("flash.events.MouseEvent");
+if(MouseEvent == null)
+	MouseEvent		= Type.resolveClass ("openfl._v2.events.MouseEvent");
+	
+var ByteArray		= Type.resolveClass ("flash.utils.ByteArray");
+if(ByteArray == null)
+	ByteArray		= Type.resolveClass ("openfl._v2.utils.ByteArray");
+	
+var SimpleButton	= Type.resolveClass ("flash.display.SimpleButton");
+if(SimpleButton == null)
+	SimpleButton		= Type.resolveClass ("openfl._v2.display.SimpleButton");
+	
+var String			= Type.resolveClass ("String");
+var Date			= Type.resolveClass ("Date");
+//include defines
+var Defines			= Type.resolveClass ("Defines");
+var SoftDefines		= Type.resolveClass ("SoftDefines");
+var Resource		= Type.resolveClass ("Resource");
+var Fonts			= Type.resolveClass ("Fonts");
+var Anchor			= Type.resolveClass ("Anchor");
+var GameItemType	= Type.resolveEnum ("GameItemType");
+var TextWrapper		= Type.resolveClass ("TextWrapper");
+var PixmaGame		= Type.resolveClass ("PixmaGame");
+var Constants		= Type.resolveClass ("Constants");
+var News			= Type.resolveClass ("News");
+var SmallIcon_BIG	= 3;
+var PageScrollable_Ver = 2;
+//include UI
+var Layer			= Type.resolveClass ("Layer");
+var Label			= Type.resolveClass ("Label");
+var Border			= Type.resolveClass ("Border");
+var ColorRect		= Type.resolveClass ("ColorRect");
+var PageScrollable	= Type.resolveClass ("PageScrollable");
+var Button			= Type.resolveClass ("Button");
+var SmallIcon		= Type.resolveClass ("SmallIcon");
+//include constant
+var GameItem			= Type.resolveClass ("GameItem");
+var CardPrototypeInfo	= Type.resolveClass ("CardPrototypeInfo");
+//end include
+
+var AccountManager	= Type.resolveClass ("AccountManager");
+var PvP2Constance	= Type.resolveClass ("PvP2Constance");
+var PvP2UserData	= Type.resolveClass ("PvP2UserData");
+var StockManager	= Type.resolveClass ("StockManager");
+var FBEvent			= Type.resolveClass ("FBEvent");
+var PVP2			= Type.resolveClass ("PVP2");
+var Popup			= Type.resolveClass ("Popup");
+var DynamicUI		= Type.resolveClass ("DynamicUI");
+
+var functionList = new FunctionList ();
+var closeBtn = null;
+
+functionList.set ("initLayout", function (width, height)
+{
+	this.initLayout (width, height);
+	this.viewWidth = 580 - 20;
+	this.viewHeight = 435 - 20;
+	
+	var onEnterFrame = null;
+	onEnterFrame = function (e)
+	{
+		var parent = null;
+		if (this.get_parent == null) parent = this.parent;
+		else parent = this.get_parent ();
+		this.removeEventListener (Event.ENTER_FRAME, onEnterFrame);
+		if (parent == null) return;
+		
+		this.y = -this.viewHeight * 0.5 + 10;
+		parent.y += 100;
+		parent.remove (parent.getChildAt (0));
+		parent.add (Border.popup (0, 0, -this.viewWidth * 0.5 - 10, -this.viewHeight * 0.5, this.viewWidth + 20, this.viewHeight + 20, 0x000000), 0);
+		closeBtn = parent.getChildAt (1);
+		closeBtn.y = this.viewHeight * 0.5 + 80;
+	};
+	
+	this.addEventListener (Event.ENTER_FRAME, onEnterFrame);
+	
+	if (PixmaGame.isFlash)
+	{
+		var loadState = PixmaGame._instance.GetCurrentState ();
+		if (loadState != null) loadState._stepDone = false;
+	}
+});
+
+functionList.set ("initData", function (news)
+{
+	this.initData (news);
+	// for (name in this.listNames) this.mapNews.remove (name);
+	// this.listNames = [];
+	
+	var temp = [
+		{type:"poster", name:"event 2/9", url:"http://lienminh.static.g6.zing.vn/poster/poster_event_2_9.png"},
+		{type:"poster", name:"event_dark", url:"http://lienminh.static.g6.zing.vn/poster/poster_masteryi.png"}
+	];
+	
+	for (news in temp)
+	{
+		this.listNames.push (news.name);
+		this.mapNews.set (news.name, news);
+	}
+});
+
+functionList.set ("initUI", function ()
+{
+	this.title = Label.create (TextWrapper.getString ("NEWS_DEFAULT_TITLE"), Fonts.DETAIL_WHITE_30, 0, this.titleHeight * 0.5, Anchor.center_center);
+	this.add (new ColorRect (0x3b5998, 1, -this.viewWidth * 0.5, 0, this.viewWidth, this.titleHeight));
+	this.add (this.title);
+	
+	this.background = new ColorRect(0x000000, 1, -this.viewWidth * 0.5, 0, this.viewWidth, this.viewHeight - this.titleHeight);
+	this.background.y = this.titleHeight;
+	this.add (this.background);
+	
+	this.backBtn = new Button (Resource.getSpriteId ("GFX_EVENT_UI"), 0, 1);
+	this.backBtn.x = -this.viewWidth * 0.5 + 20;
+	this.backBtn.y = this.titleHeight * 0.5;
+	this.backBtn.addEventListener (MouseEvent.CLICK, this.onBack);
+	this.backBtn.visible = false;
+	this.add (this.backBtn);
+	
+	this.view = new Layer ();
+	this.scrollView = new PageScrollable (this.view, this.viewWidth, this.viewHeight - this.viewPaddingHeight * 2 - this.titleHeight, PageScrollable_Ver);
+	this.scrollView.x = -this.viewWidth * 0.5;
+	this.scrollView.y = this.titleHeight + this.viewPaddingHeight;
+	this.add (this.scrollView);
+});
+
+var listPoster = [];
+functionList.set ("poster", function (data)
+{
+	var backPoster = null;
+	if (listPoster.length != 0) backPoster = listPoster [listPoster.length - 1];
+	
+	var zone = new Rectangle (0, 0, 580, 435);
+	var poster = new DynamicUI ();
+	poster.loadScript ("Poster");
+	poster.callFunction ("new", [data.url, zone]);
+	poster.addEventListener ("complete", function (e)
+	{
+		poster.add (Label.create ("Nhấn để đóng...", Fonts.DETAIL_WHITE_20, 290, 427, Anchor.center_bottom));
+	});
+	poster.addEventListener (MouseEvent.CLICK, function (e)
+	{
+		this.remove (poster);
+		listPoster.remove (poster);
+		if (backPoster != null) backPoster.alpha = 1;
+		// if (listPoster.length == 0) closeBtn.dispatchEvent (e);
+	});
+	
+	var onEnterFrame = null;
+	poster.addEventListener (Event.ENTER_FRAME, onEnterFrame = function (e)
+	{
+		poster.removeEventListener (Event.ENTER_FRAME, onEnterFrame);
+		poster.x = this.scrollView.x - 10;
+		poster.y = this.scrollView.y - 10 - this.titleHeight;
+		this.view.remove (poster);
+		this.add (poster);
+	});
+	listPoster.push (poster);
+	if (backPoster != null) backPoster.alpha = 0.0;
+	return {obj:poster, height:-this.itemPadding};
+});
+
+return functionList;

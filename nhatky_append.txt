@@ -1,0 +1,4 @@
+| 21/09/2026 | Tạo `make_clean1patch.py`: sinh `libApplicationMain_clean1patch.so` từ APK gốc + 1 vá duy nhất `0x4D9984` | `make_clean1patch.py` |
+| 21/09/2026 | Tạo `push_so.bat` lần 1: path cứng `/data/app/lmah.vn-1/` — THẤT BẠI, Android 12+ path random | `push_so.bat` |
+| 21/09/2026 | Sửa `push_so.bat` lần 2: dùng `find` trong batch — THẤT BẠI, ký tự đặc biệt `~~` `=` trong path làm batch hỏng | `push_so.bat` |
+| 21/09/2026 | Chuyển sang `push_so.py`: dùng Python + `pm path lmah.vn` để lấy path APK rồi suy ra path .so — chính xác hơn | `push_so.py`, `push_so.bat` |

@@ -1,0 +1,109 @@
+var focusBg = FocusCard(attacker);
+attacker.isLocked = true;	
+attacker.GetDisplayCard().moveToTop();
+
+var spriteId = SoftDefines.gfx_fizz_util;
+
+var shootanim = Resource.getSprite(spriteId).GetAnim (0, Std_int(attacker.xOri), Std_int(attacker.yOri), false, renderMode);
+sCurLayer.add(shootanim);
+var shooteffect = new SimulateAnimEffect(attacker.GetDisplayCard(), shootanim, 660);
+shooteffect.Init();
+shooteffect.SetEffectListener(function (arr)
+	{
+		sCurLayer.remove(shootanim);
+	});
+sCurState.AddScript(shooteffect);
+
+var endEffect = [];
+var hitAnimArray = [];
+var setcb = true;
+for(card in defender)
+{	
+	var arrow = Resource.getSprite(spriteId).GetAnim(4,Std_int(attacker.xOri), Std_int(attacker.yOri), true, renderMode);	
+	arrow.SetRotate(AngleBetweenCards(attacker, card) + 90);
+	arrow.SetOpacity(0);
+	// arrow.useBlendMode = true;
+	sCurLayer.add(arrow);	
+	
+	var showeff = new OpacityEffect(arrow, 1, 10, shooteffect);
+	showeff.Init();
+	
+	var meff = new MovingEffect(arrow, card.xOri - arrow.x,card.yOri - arrow.y, 500, shooteffect);
+	meff.SetEffectListener(function (arr)
+					{
+						sCurLayer.remove(arrow);
+					});
+	meff.Init();
+	sCurState.AddScript(showeff);
+	sCurState.AddScript(meff);
+	
+	// var cbUpdate = null;
+	// cbUpdate = function(obj){
+		// if(meff.TimeRemaining() < 100)
+		// {
+			// shooteffect.RemoveCallbackPerUpdate(cbUpdate);
+			// sCurLayer.remove(focusBg);
+			// attacker.isLocked = false;
+		// }
+	// };
+	
+	// shooteffect.AddCallbackPerUpdate(cbUpdate);
+	
+	var circleAnim = Resource.getSprite(spriteId).GetAnim (1, Std_int(card.xOri), Std_int(card.yOri), false, renderMode);
+	var scale = 0.6;
+	if(card.isBoss)
+		scale *= GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS;
+	circleAnim.Scale(scale, scale);
+	
+	var circleEffect = new AnimEffect(false, circleAnim, 1000, meff);			
+	circleEffect.AddEffectListener(function (arr)
+					{
+						sCurLayer.remove(circleAnim);
+					});
+	circleEffect.Init();
+	sCurState.AddScript(circleEffect);
+	
+	meff.AddEffectListener(function (arr)
+					{
+						sCurLayer.remove(focusBg);
+						attacker.isLocked = false;
+						sCurLayer.add(circleAnim);
+						card.GetDisplayCard().moveToTop();
+					});
+	
+	var hitAnim = Resource.getSprite(spriteId).GetAnim (3, Std_int(card.xOri), Std_int(card.yOri), false, renderMode);
+	if (GameStateCardBattle.rotateBattle)
+		hitAnim.rotation = -90;
+	if(card.isBoss)
+		hitAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);
+	
+	var anim = new SimulateAnimEffect(card.GetDisplayCard(), hitAnim, 2000, circleEffect);			
+	anim.AddEffectListener(function (arr)
+					{
+						sCurLayer.remove(hitAnim);
+					});
+	anim.Init();
+	
+	circleEffect.AddEffectListener(function OnFinishHideEffect(arr)
+				{
+					sCurLayer.add(hitAnim);
+					Sound.GetSound(sound).Play();
+				});
+	
+	sCurState.AddScript(anim);
+	if(setcb == true)
+	{
+		var nextstep = true;
+		anim.AddCallbackPerUpdate(function (arr){
+						if(anim.TimeRemaining() < waitTime && nextstep)
+						{
+							sCurState.nextStep = true;
+							nextstep = false;
+						}
+					});
+		setcb = false;
+	}
+	
+	endEffect.push(anim);	
+}
+endEffect

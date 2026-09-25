@@ -1,0 +1,6 @@
+| 21/09/2026 | Tạo `make_clean1patch.py`: sinh `libApplicationMain_clean1patch.so` từ APK gốc + 1 vá duy nhất `0x4D9984` | `make_clean1patch.py` |
+| 21/09/2026 | Tạo `push_so.bat`: tạo + push + cài `.so` 1-patch vào LDPlayer tự động | `push_so.bat` |
+| 21/09/2026 | Cập nhật `cycle.bat`: thêm bước kiểm tra `.so` đang cài, thêm log captures TCP, thêm `fault addr` vào tóm tắt crash | `cycle.bat` |
+| 21/09/2026 | Cập nhật toàn bộ `TONG_HOP.md` theo tình trạng mới | `TONG_HOP.md` |
+| 21/09/2026 | Chạy cycle: `push_so.bat` KHÔNG cài được — path `/data/app/lmah.vn-1/` sai, Android 12+ dùng path random `~~xxx/lmah.vn-yyy/`. Crash vẫn `0xdead1007` tại `0xC76038` → `.so` cũ 4-vá vẫn đang chạy | `cycle_report.txt` |
+| 21/09/2026 | Sửa `push_so.bat`: dùng `find /data/app -name libApplicationMain.so` để tự tìm path đúng | `push_so.bat` |

@@ -1,0 +1,176 @@
+var Map	= Type.resolveClass ("Map");
+
+var focusBg = FocusCard(attacker);
+attacker.isLocked = true;	
+attacker.GetDisplayCard().moveToTop();
+
+var readyanim = Resource.getSprite(spriteId).GetAnim (readyAnim, attacker.xOri, attacker.yOri, false, renderMode);
+sCurLayer.add(readyanim);
+var readyeffect = new SimulateAnimEffect(attacker.GetDisplayCard(), readyanim, 1000);
+readyeffect.Init();
+readyeffect.AddEffectListener(function (arr) 
+{
+	sCurLayer.remove(readyanim);
+});
+sCurState.AddScript(readyeffect);
+
+var shooteffect = new ScaleEffect();
+shooteffect.SetDependEffect(readyeffect);
+shooteffect.AddObject(attacker.GetDisplayCard());
+shooteffect.SetTimeDuration(50);		
+shooteffect.SetChange(-0.1);		
+shooteffect.Init();
+sCurState.AddScript(shooteffect);
+
+var isLeft = function(n){ return n == 0 || n == 3;};
+var isRight = function(n){ return n == 2 || n == 5;};
+var isCenter = function(n){ return n == 1 || n == 4;};
+
+var slots = [false, false, false];
+for(card in defender) 
+{
+	if(isLeft(card.mBattlePosition))
+		slots[0] = true;
+	else if(isCenter(card.mBattlePosition))
+		slots[1] = true;
+	else if(isRight(card.mBattlePosition))
+		slots[2] = true;
+}	
+
+var centerX = 0;
+if(slots[0] == true && slots[2] == false)
+	centerX = -85;
+else if(slots[0] == false && slots[2] == true)
+	centerX = 85;
+// if((slots[0] == false && slots[1] == true && slots[2] == false) || (slots[0] == true && slots[2] == true))
+// else
+	// centerX = 0;
+
+// var centerX = switch(slots)
+// {
+	// case [false, true, false] | [true, _, true]: 0;
+	// case [true, _, false]: -150;
+	// case [false, _, true]: 150;
+	// case _: 0;
+// };
+var centerY = attacker.GetFormation().IsPlayer() ? (-240) : (240);
+
+trace("init x " + attacker.GetDisplayCard().x + " y " + attacker.GetDisplayCard().y);
+var meff = new MovingEffect(attacker.GetDisplayCard(), centerX - attacker.xOri, centerY - attacker.yOri, 500, shooteffect);
+meff.Init();
+sCurState.AddScript(meff);
+
+var scaleBig = new ScaleEffect();
+scaleBig.SetDependEffect(shooteffect);
+scaleBig.AddObject(attacker.GetDisplayCard());
+scaleBig.SetTimeDuration(400);		
+scaleBig.SetChange(0.6);		
+scaleBig.Init();
+sCurState.AddScript(scaleBig);
+
+var scaleSmall = new ScaleEffect();
+scaleSmall.SetDependEffect(scaleBig);
+scaleSmall.AddObject(attacker.GetDisplayCard());
+scaleSmall.SetTimeDuration(100);		
+scaleSmall.SetChange(-0.5);		
+scaleSmall.Init();
+scaleSmall.AddEffectListener(function (arr) 
+{
+	sCurLayer.remove(focusBg);
+});
+sCurState.AddScript(scaleSmall);
+
+var crackanim = Resource.getSprite(spriteId).GetAnim (crackAnim, centerX, centerY, false, renderMode);
+scaleSmall.AddEffectListener(function (arr)
+{
+	sCurLayer.add(crackanim);
+});
+
+var crackeffect = new SimulateAnimEffect(attacker.GetDisplayCard(), crackanim, 800, scaleSmall, //DF_GNAR_SKILL.MODULE_AVATAR
+ 8);
+crackeffect.Init();
+crackeffect.AddEffectListener(function (arr)
+{
+	sCurLayer.remove(crackanim);
+});
+sCurState.AddScript(crackeffect);
+
+var scratchanim = Resource.getSprite(spriteId).GetAnim (scratchAnim, centerX, centerY, false, renderMode);
+crackeffect.AddEffectListener(function (arr)
+{
+	sCurLayer.add(scratchanim);
+});
+
+var scratcheffect = new SimulateAnimEffect(attacker.GetDisplayCard(), scratchanim, 500, crackeffect, //DF_GNAR_SKILL.MODULE_AVATAR
+ 8);
+scratcheffect.Init();
+scratcheffect.AddEffectListener(function (arr)
+{
+	sCurLayer.remove(scratchanim);
+	attacker.isLocked = false;
+	attacker.ResetPosition();
+});
+sCurState.AddScript(scratcheffect);
+
+var endEffect = [];
+var hitAnimArray = [];
+var map = EffectBattleFactory.CreateMap();
+
+for(card in defender)
+{	
+	var hAnim = Resource.getSprite(spriteId).GetAnim (hitAnim, card.xOri, card.yOri, false, renderMode);
+	if(card.isBoss)
+		hAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);
+
+	var lastEff = map.get(card.mCard.GetUniqueId());
+
+	var anim = null;
+	if(lastEff == null)
+	{
+		anim = new SimulateAnimEffect(card.GetDisplayCard(), hAnim, 500, crackeffect);	
+		map.set(card.mCard.GetUniqueId(), anim);	
+					
+		var cbUpdate = null;
+		cbUpdate = function(obj){
+			if(crackeffect.TimeRemaining() < 500)
+			{
+				trace("crackeffect finish");
+				crackeffect.RemoveCallbackPerUpdate(cbUpdate);				
+				anim.SetDependEffect(null);
+				sCurLayer.add (hAnim);
+				Sound.GetSound(sound).Play();
+			}
+		};
+		crackeffect.AddCallbackPerUpdate(cbUpdate);
+	}else
+	{
+		anim = new SimulateAnimEffect(card.GetDisplayCard(), hAnim, 500, scratcheffect);	
+		// anim = new AnimEffect(false, hAnim, 500, scratcheffect, false);	
+					
+		var cbUpdate = null;
+		cbUpdate = function(obj){
+			if(scratcheffect.TimeRemaining() < 400)
+			{
+				trace("scratcheffect finish");
+				scratcheffect.RemoveCallbackPerUpdate(cbUpdate);
+				lastEff.Finish();
+				anim.SetDependEffect(null);
+				sCurLayer.add (hAnim);
+			}
+		};
+		scratcheffect.AddCallbackPerUpdate(cbUpdate);		
+	}
+	
+	anim.AddEffectListener(function (arr)
+	{
+		sCurLayer.remove (hAnim);
+	});
+	anim.Init();
+	sCurState.AddScript(anim);
+	endEffect.push(anim);	
+}
+return endEffect;
+
+// return [for(card in defender) scratcheffect];
+// return [for(card in defender) meff];
+	

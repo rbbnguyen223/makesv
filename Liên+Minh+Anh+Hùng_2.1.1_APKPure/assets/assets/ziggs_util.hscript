@@ -1,0 +1,100 @@
+var focusBg = FocusCard(attacker);
+attacker.isLocked = true;	
+attacker.GetDisplayCard().moveToTop();
+
+var shootanim = Resource.getSprite(spriteId).GetAnim (castAnim, attacker.xOri, attacker.yOri, false, renderMode);
+// shootanim.useBlendMode = true;
+sCurLayer.add(shootanim);
+var shooteffect = new SimulateAnimEffect(attacker.GetDisplayCard(), shootanim, 1000);
+shooteffect.Init();
+shooteffect.SetEffectListener(function (arr) 
+		{
+			sCurLayer.remove(focusBg);
+			attacker.isLocked = false;
+			sCurLayer.remove(shootanim);
+		});
+sCurState.AddScript(shooteffect);
+
+var centerX = 0;
+var centerY = attacker.GetFormation().IsPlayer() ? (-210) : (210);
+
+var arrow = Resource.getSprite(spriteId).GetAnim(travAnim, attacker.xOri, attacker.yOri, true, renderMode);
+arrow.SetRotate(AngleBetweenPoints(new gPoint(attacker.xOri, attacker.yOri), new gPoint(centerX, centerY)) + 90);		
+arrow.SetOpacity(0);
+sCurLayer.add(arrow);	
+
+var showeff = new OpacityEffect(arrow, 1, 50, shooteffect);
+showeff.Init();
+sCurState.AddScript(showeff);
+
+var meff = new MovingEffect(arrow, centerX - attacker.xOri, centerY - attacker.yOri, 500, shooteffect);
+meff.SetEffectListener(OnFinishHideEffect);
+meff.Init();
+sCurState.AddScript(meff);
+
+var arrowAnim = new AnimEffect(false, arrow, 1400, shooteffect, false);
+// arrowAnim.SetEffectListener(OnFinishHideEffect);
+arrowAnim.Init();
+sCurState.AddScript(arrowAnim);	
+
+showeff.SetTimeDuration(10);
+meff.SetTimeDuration(1000);
+
+var cbUpdate = function(obj){
+	if(shooteffect.TimeRemaining() < 300)
+	{
+		showeff.SetDependEffect(null);
+		meff.SetDependEffect(null);
+		arrowAnim.SetDependEffect(null);
+		// shooteffect.RemoveCallbackPerUpdate(cbUpdate);
+	}
+};
+shooteffect.AddCallbackPerUpdate(cbUpdate);
+
+meff.AddEffectListener(function (arr)
+{
+	sCurState.RemoveScript(arrowAnim);	
+	
+	var hAnim = Resource.getSprite(spriteId).GetAnim (hitAnim, centerX, centerY, false, renderMode);
+	sCurLayer.add (hAnim);
+	hAnim.Scale(1.5, 1.5);
+
+	var aeff = new AnimEffect(false, hAnim, 666, null);
+	aeff.SetEffectListener(OnFinishHideEffect);
+	aeff.Init();
+	sCurState.AddScript(aeff);
+	
+	var setcb = true;
+	if(setcb == true)
+	{
+		var nextstep = true;
+		aeff.AddCallbackPerUpdate(function (arr){
+						if(aeff.TimeRemaining() < 200 && nextstep)
+						{
+							sCurState.nextStep = true;
+							nextstep = false;
+						}
+					});
+		setcb = false;
+	}
+});
+
+var endEffect = [];
+var hitAnimArray = [];
+for(card in defender)
+{			
+	var hAnim = Resource.getSprite(spriteId).GetAnim (hitAnim, card.xOri, card.yOri, false, renderMode);
+	if(card.isBoss)
+		hAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);
+	meff.AddEffectListener(function (arr)
+					{
+						Sound.GetSound(sound).Play();
+					});
+	
+	var anim = new SimulateAnimEffect(card.GetDisplayCard(), hAnim, 666, meff);			
+	anim.Init();
+	sCurState.AddScript(anim);
+			
+	endEffect.push(anim);
+}
+return endEffect;

@@ -1,0 +1,958 @@
+//start include
+var Date			= Type.resolveClass ("Date");
+var Map				= Type.resolveClass ("Map");
+var Math			= Type.resolveClass ("Math");
+
+var MouseEvent		= Type.resolveClass ("flash.events.MouseEvent");
+if(MouseEvent == null)
+	MouseEvent		= Type.resolveClass ("openfl._v2.events.MouseEvent");
+
+var Event		= Type.resolveClass ("flash.events.Event");
+if(Event == null)
+	Event		= Type.resolveClass ("openfl._v2.events.Event");
+
+var SoftDefines		= Type.resolveClass ("SoftDefines");
+var DF_UI			= Type.resolveClass ("DF_UI");
+var DF_INFO_PANEL	= Type.resolveClass ("DF_INFO_PANEL");
+var DF_TREASURE		= Type.resolveClass ("DF_TREASURE");
+var DF_LISTITEM		= Type.resolveClass ("DF_LISTITEM");
+var Fonts			= Type.resolveClass ("Fonts");
+var Anchor			= Type.resolveClass ("Anchor");
+var FBEvent			= Type.resolveClass ("FBEvent");
+var Request			= Type.resolveClass ("Request");
+var FBObjectOutput	= Type.resolveClass ("FBObjectOutput");
+var Commands		= Type.resolveClass ("Commands");
+var Keys			= Type.resolveClass ("Keys");
+
+var Resource		= Type.resolveClass ("Resource");
+var TextWrapper		= Type.resolveClass ("TextWrapper");
+var ArmorSet		= Type.resolveClass ("ArmorSet");
+var PageScrollable	= Type.resolveClass ("PageScrollable");
+var GameItem		= Type.resolveClass ("GameItem");
+var GameItemType	= Type.resolveEnum("GameItemType");
+var Calculator		= Type.resolveClass("Calculator");
+var PanelCardInfo	= Type.resolveClass("PanelCardInfo");
+
+var PixmaGame		= Type.resolveClass ("PixmaGame");
+var StockManager	= Type.resolveClass ("StockManager");
+var UserInfo		= Type.resolveClass ("UserInfo");
+var RewardItemInfo	= Type.resolveClass ("RewardItemInfo");
+var RequestGennarator	= Type.resolveClass ("RequestGennarator");
+var HomeState		= Type.resolveClass ("HomeState");
+
+var EquipInfo		= Type.resolveClass ("EquipInfo");
+var ParseObject		= Type.resolveClass ("ParseObject");
+var SmallIcon		= Type.resolveClass ("SmallIcon");
+var CardInfo		= Type.resolveClass ("CardInfo");
+var CardPrototypeInfo		= Type.resolveClass ("CardPrototypeInfo");
+var Button			= Type.resolveClass ("Button");
+var Layer			= Type.resolveClass ("Layer");
+var DisplayObject	= Type.resolveClass ("DisplayObject");
+var Label			= Type.resolveClass ("Label");
+var Popup			= Type.resolveClass ("Popup");
+var Border			= Type.resolveClass ("Border");
+var AnimEffect		= Type.resolveClass ("AnimEffect");
+var TextFormat		= Type.resolveClass ("flash.text.TextFormat");
+var Actuate			= Type.resolveClass ("motion.Actuate");
+var Linear			= Type.resolveClass ("motion.easing.Linear");
+if(TextFormat == null)
+	TextFormat		= Type.resolveClass ("openfl._v2.text.TextFormat");
+var SimpleButton	= Type.resolveClass ("flash.display.SimpleButton");
+if(SimpleButton == null)
+	SimpleButton	= Type.resolveClass ("openfl._v2.display.SimpleButton");
+//end include
+
+var TYPE_AP = 0;
+var TYPE_COIN = 1;
+var TYPE_XP2 = 2;
+var TYPE_FP = 3;
+var TYPE_RUNE = 4;
+var TYPE_RANDOM_CARD = 5;
+var TYPE_ARMORSET = 6;
+var TYPE_RANDOM_EQUIP = 7;
+var TYPE_GOLD_KEY = 8;
+var TYPE_EQUIP_ITEM = 9;
+var TYPE_CARD = 10;
+
+var EVENT_BINGO = 0;
+var EVENT_MISSIONS = 1;
+
+var BTN_NORMAL = 0;
+var BTN_DISABLE = 1;
+                      
+var VALIDATE = 0;
+var INVALID_HERO = 1;
+var INVALID_STAR = 2;
+var INVALID_LEVEL = 3;
+var INVALID_HAS_EQUIP = 4;
+var INVALID_HAS_RUNE = 5;
+var INVALID_INTEAM = 6;
+
+var currentDay = 1;
+
+var functionList = new FunctionList ();
+var machineController = null;
+
+functionList.set ("getConst", function ()
+{
+	var data = [	
+		{
+			materials:[
+				{family:348, star:70, level:1, num:1},
+				{family:218, star:60, level:99, num:1},
+			],
+			gold:10000000,
+			fp:0,
+			gem:0,
+			target:7522,
+		},
+		{
+			materials:[
+				{family:200, star:60, level:99, num:1},
+				{family:205, star:60, level:99, num:1},
+				{family:233, star:60, level:99, num:1},
+				{family:9, star:60, level:99, num:1}
+			],
+			gold:10000000,
+			fp:0,
+			gem:0,
+			target:3510,
+		},
+		{
+			materials:[
+				{family:12, star:60, level:99, num:1},
+				{family:3, star:60, level:99, num:1},
+				{family:233, star:60, level:99, num:1},
+				{family:10, star:60, level:99, num:1}
+			],
+			gold:10000000,
+			fp:0,
+			gem:0,
+			target:3481,
+		},	
+		{
+			materials:[
+				{family:341, star:60, level:99, num:1},
+				{family:230, star:60, level:99, num:1},
+				{family:9, star:60, level:99, num:1},
+				{family:0, star:60, level:99, num:1}
+			],
+			gold:10000000,
+			fp:0,
+			gem:0,
+			target:3507,
+		},	
+		{
+			materials:[
+				{family:340, star:60, level:99, num:1},
+				{family:218, star:60, level:99, num:1},
+				{family:236, star:60, level:99, num:1},
+				{family:11, star:60, level:99, num:1}
+				],
+			gold:10000000,
+			fp:0,
+			gem:0,
+			target:3504,
+		},	
+		{
+			materials:[
+				{family:1, star:60, level:99, num:1},
+				{family:236, star:60, level:99, num:1},
+				{family:230, star:60, level:99, num:1},
+				{family:15, star:60, level:99, num:1}
+			],
+			gold:3000000,
+			fp:0,
+			gem:0,
+			target:3501,
+		},
+		{
+			materials:[
+				{family:11, star:60, level:99, num:1},
+				{family:9, star:60, level:99, num:1},
+				{family:231, star:60, level:99, num:1},
+				{family:202, star:60, level:99, num:1}
+			],
+			gold:3000000,
+			fp:0,
+			gem:0,
+			target:3405,
+		},
+		{
+			materials:[
+				{family:79, star:50, level:85, num:1},{family:108, star:50, level:85, num:1},{family:20, star:50, level:85, num:1},{family:203, star:50, level:85, num:1}
+			],
+			gold:3000000,
+			fp:0,
+			gem:0,
+			target:451,
+		},	
+		{
+			materials:[
+				{family:88, star:50, level:85, num:1},{family:177, star:50, level:85, num:1},{family:210, star:50, level:85, num:1},{family:15, star:50, level:85, num:1}
+			],
+			gold:3000000,
+			fp:0,
+			gem:0,
+			target:364,
+		},	
+		{
+			materials:[
+				{family:4, star:50, level:85, num:1},{family:206, star:50, level:85, num:1},{family:183, star:50, level:85, num:1},{family:137, star:50, level:85, num:1}
+			],
+			gold:3000000,
+			fp:0,
+			gem:0,
+			target:437,
+		},	
+		{
+			materials:[
+				{family:208, star:50, level:85, num:1},{family:201, star:50, level:85, num:1},{family:148, star:50, level:85, num:1},{family:202, star:50, level:85, num:1}
+			],
+			gold:3000000,
+			fp:0,
+			gem:0,
+			target:347,	
+		}
+	];
+	
+	return data;
+});
+
+functionList.set ("callPopup", function (msg)
+{
+	var w = 550;
+	var h = 300;
+	var popup = new Layer();
+	// popup.x = 320;
+	popup.y = 480;
+	var hide = new ColorRect(0x000000, 0.0, -320, -480, 640, 960);
+	hide.x = 0;
+	hide.y = 0;
+	popup.addChild(hide);
+	var bg = new ColorRect(0x000000, 0.7, -320, -200, 640, 400);
+	bg.x = 0;
+	bg.y = 0;
+	popup.addChild(bg);
+	popup.addChild(Border.roundRect (0, 0, -w/2, -h/2, w , h, 30, 0, 0x000000, 1, 0xFFFFFF));
+	
+	var closeBtn = this.callFunction ("getCloseButton", []);
+	closeBtn.x = 240;
+	closeBtn.y = -120;
+	popup.addChild(closeBtn);
+	popup.addChild(Label.create(msg, Fonts.TITLE_BLACK_20, 0, -50, Anchor.center_center));
+	this.add(popup);
+	
+	popup.addEventListener (MouseEvent.CLICK, function(e){
+		this.remove(popup);
+	});
+	
+	return popup;
+});
+
+functionList.set ("getCloseButton", function ()
+{
+	var closeBtn = new DisplayObject();
+	var graphic = closeBtn.getGraphics();
+	graphic.clear ();
+	graphic.lineStyle (1.5, 0xFFFFFF, 1.0);
+	graphic.beginFill (0x000000, 0.5);
+	graphic.drawCircle (0, 0, 24);
+	graphic.endFill ();
+	
+	graphic.lineStyle (3, 0xFFFFFF, 1.0);
+	graphic.moveTo (-10, -10);
+	graphic.lineTo (10, 10);
+	graphic.moveTo (10, -10);
+	graphic.lineTo (-10, 10);
+	
+	return closeBtn;
+});
+
+functionList.set ("getMachineSlot", function (parentView, icon, require)
+{
+	var slot = {icon:icon, selectedCard:null, require:require, update:null};
+	slot.autoSelect = function(){
+		var cardStock = StockManager.getCardList (5); //5 = StockManager.SORT_CARD_INFO
+
+		for(card in cardStock)
+		{			
+			if(this.callFunction("checkCard", [card, require]) == VALIDATE)
+			{
+				slot.selectedCard = card;
+				break;
+			}
+		}
+	};
+	
+	slot.update = function()
+	{
+		if(slot.selectedCard != null)
+		{
+			var newicon = new SmallIcon (slot.selectedCard, 0, 0, {type:0, level:slot.selectedCard.GetCardLevel(), levelMode:0});
+			newicon.x = slot.icon.x;
+			newicon.y = slot.icon.y;
+			parentView.add(newicon);
+			parentView.remove(slot.icon);
+			slot.icon = newicon;
+			
+			newicon.addEventListener (MouseEvent.CLICK,function(e){
+				this.callFunction("showPopupListHero", [slot, slot.require]);
+			});
+		}else
+			slot.icon.alpha = 0.5;
+	};
+	
+	return slot;
+});
+
+functionList.set ("checkCard", function (card, require)
+{
+	if(require.family != card.GetFamilier())
+		return INVALID_HERO;
+	if(card.GetStarsValuePlus() < require.star)
+		return INVALID_STAR;
+	if(card.GetCardLevel() < require.level)
+		return INVALID_LEVEL;
+	if(card.CountEquip() > 0)
+		return INVALID_HAS_EQUIP;
+	if(card.allRunes != null && card.allRunes.length > 0)
+		return INVALID_HAS_RUNE;
+	if(card.get_hasTeam())
+		return INVALID_INTEAM;
+	return VALIDATE;
+});
+
+functionList.set ("showPopupListHero", function (slot, require)
+{
+	trace("getPopupListHero");
+	var panel = new Layer();
+	
+	var cover = new ColorRect(0x000000, 0.7, 0, 0, 640, 960);
+	cover.x -= 32;
+	cover.y -= 95;
+	panel.add(cover);
+	
+	panel.add(Border.roundRect (0, 0, 0, 0, 550, 650, 10, 2, 0xffffff, 1, 0x224561, 1.0));
+	panel.add(Label.create ("Chọn Nguyên Liệu", Fonts.DETAIL_WHITE_30, 550/2, 25, Anchor.center_center));
+	var cardStock = StockManager.getCardList (5); //5 = StockManager.SORT_CARD_INFO
+
+	var list = new Layer();
+	// list.x = 1;
+	// list.y = 50;
+	var i = 0;
+	
+	for(card in cardStock)
+	{
+		var value = this.callFunction("checkCard", [card, require]);
+		if(value != INVALID_HERO)
+		{
+			var item = new Layer();
+			item.add(new ColorRect (0x131b24, 1.0, 0, 0, 548, 120));
+			item.y = 130*i;
+			
+			var icon = new SmallIcon (card, 0, 0, {type:0, level:card.GetCardLevel(), levelMode:1});
+			icon.x = 60;
+			icon.y = 60;
+			icon.classIcon.x += 5;
+			icon.classIcon.y -= 15;
+			icon.classBg.x += 5;
+			icon.classBg.y -= 15;
+			// icon.Scale(1.1, 1.1);			
+			item.add(icon);
+			SmallIcon.AddSmallIconToBuffer (icon);
+			
+			item.add(Label.create(card.GetName(), new TextFormat(Fonts.DETAIL_FONT, 20, 0x87e7ff), 170, 20, Anchor.left_center));
+
+			// var _panel = new PanelCardInfo(0, 0, 0, 0, card);
+			// var stat = _panel.createInfo (card.GetLevel ());			
+			var ownerGuildTrophy = 0;
+			if (UserInfo.guildInfo != null) {
+				ownerGuildTrophy = UserInfo.guildInfo.mTrophy;
+			}
+		
+			var uis = Resource.getSprite (SoftDefines.gfx_main_ui);
+			var hp_icon = uis.GetFrame (DF_UI.frame_list_heath_icon, 150, 60);
+			// hp_icon.Scale(0.8, 0.8);
+			item.add (hp_icon);
+			item.add (Label.create(Calculator.call("cardInfo_total_hp", [card, card.GetCardLevel(), ownerGuildTrophy, UserInfo.rebirthLevel]), null, 170, 60, Anchor.left_center));
+			
+			var damage_icon = uis.GetFrame (DF_UI.frame_list_damage_icon, 340, 60);
+			// damage_icon.Scale(0.8, 0.8);
+			item.add (damage_icon);	
+			item.add (Label.create(Calculator.call("cardInfo_total_damage", [card, card.GetCardLevel(), ownerGuildTrophy, UserInfo.rebirthLevel]), null, 365, 60, Anchor.left_center));			
+						
+			// var magic_icon = uis.GetFrame (DF_UI.frame_emagic_text_icon, 150, 95);
+			// magic_icon.Scale(0.8, 0.8);
+			// item.add (magic_icon);	
+						
+			// var ys_icon = uis.GetFrame (DF_UI.frame_yelow_shield_text_icon, 150, 130);
+			// ys_icon.Scale(0.8, 0.8);
+			// item.add (ys_icon);
+						
+			// var bs_icon = uis.GetFrame (DF_UI.frame_blue_shield_text_icon, 340, 130);
+			// bs_icon.Scale(0.8, 0.8);
+			// item.add (bs_icon);
+			
+			var detail = "<font color=\"#00FF00\">Đủ Điều Kiện</font>";
+			if(value == INVALID_STAR)
+				detail = "<font color=\"#FFFF00\">Yêu Cầu " + Math.round (require.star/10) + " Sao" + ((require.star%10)>0?" +" + (require.star%10):" ") +  "</font>";
+			else if(value == INVALID_LEVEL)
+				detail = "<font color=\"#FFFF00\">Yêu Cầu Cấp Độ " + require.level + " </font>";
+			else if(value == INVALID_HAS_EQUIP)
+				detail = "<font color=\"#FFFF00\">Yêu Cầu Tháo Trang Bị</font>";
+			else if(value == INVALID_HAS_RUNE)
+				detail = "<font color=\"#FFFF00\">Yêu Cầu Tháo Ngọc Bổ Trợ</font>";
+			else if(value == INVALID_INTEAM)
+			{
+				var teams = card.teams;
+				var str = " ";
+				var count = 0;
+				for(team in teams)
+				{
+					if(team == "0_PVP2_")
+						str += "PVP Truyền Thống";
+					else if(team == "1_PVP2_")
+						str += "PVP Hoàng Kỳ";					
+					else if(team == "2_PVP2_")
+						str += "PVP Quỷ Dị";
+					else
+						str += team;
+					count++;
+					if(count == 2)
+					{
+						if(teams.length > count)
+							str+="...";
+						break;
+					}else if(count < teams.length)
+						str += ", ";
+				}
+				detail = "<font color=\"#FFFF00\">Yêu Cầu Không Nằm Trong Đội Hình</font>\n" + str;
+			}
+			item.add (Label.create(detail, null, 540, 100, Anchor.right_center));
+			
+			item.addEventListener (MouseEvent.CLICK, function(e)
+			{
+				if(this.callFunction("checkCard", [card, require]) == VALIDATE)
+				{
+					slot.selectedCard = card;
+					slot.update();
+					machineController.checkEffect();
+					panel.releaseFromParent();
+				}else
+				{
+					this.callFunction ("callPopup", ["Thẻ Bài chưa đạt đủ điều kiện!"]);
+				}
+			});
+			
+			list.add(item);
+			i++;
+		}
+	}
+	
+	if(i == 0)
+	{
+		list.add(Label.create ("Không Có Thẻ Bài", Fonts.DETAIL_YELLOW_20, 550/2, 100, Anchor.center_center));
+	}
+	
+	var listScroll = new PageScrollable (list, 548, 599, 2);
+	listScroll.displayScrollPerm = true;
+	// listScroll._inertialScrolling = true;
+	listScroll.horBar.x -= 2;
+	listScroll.x = 1;
+	listScroll.y = 50;
+	
+	panel.add(listScroll);
+	
+	var line = new ColorRect(0xffffff, 1.0, 0, 0, 550, 2);
+	line.x = 0;
+	line.y = 50;
+	panel.add(line);
+	
+	// var button = new Button (SoftDefines.gfx_main_ui, DF_UI.anim_home_btn_normal, DF_UI.anim_home_btn_normal + 1, DF_UI.anim_home_btn_normal + 2);
+	var button = this.callFunction ("getCloseButton", []);
+	button.Scale(0.8, 0.8);
+	button.x = 520;
+	button.y = 25;
+	// button.label = Std.is (buttonData.label, String)
+		// ?	Label.create (buttonData.label, Fonts.TITLE_WHITE_30, 0, 0, Anchor.CENTER_CENTER)
+		// :	textBitmap.GetFrame (buttonData.label);
+	// button.label = Label.create ("Đóng", Fonts.TITLE_WHITE_30, 0, 0, Anchor.CENTER_CENTER);
+	button.addEventListener (MouseEvent.CLICK, function(e)
+	{
+		panel.releaseFromParent();
+	});
+	panel.add(button);
+	
+	panel.x -= 550/2;
+	this.add(panel);
+});
+
+functionList.set ("getFusionMachine", function ()
+{	
+	machineController = {view:null, data:null, init:null, slots:null, mainicon:null, effectList:[]};
+	var spr = Resource.getSprite ("GFX_CHANGEHERO");
+	
+	var view = machineController.view = new Layer();
+	
+	var circleLine = spr.GetFrame(0, 0, 0);
+	view.add(circleLine);
+	
+	var circleShape = spr.GetFrame(1, 0, 0);
+	circleShape.name = "circleShape";
+	view.add(circleShape);
+	
+	var temple = spr.GetFrame(2, 0, 0);
+	view.add(temple);
+	
+	var cells = spr.GetFrame(11, 0, 0);
+	view.add(cells);
+	
+	var bigTarget = spr.GetFrame(10, 0, 0);
+	bigTarget.name = "bigTarget";
+	view.add(bigTarget);	
+	
+	var lackRune = 0;
+	var lackGold = 0;
+	var lackFP 	 = 0;
+	
+	var btnFusion = new Button (Resource.getSpriteId("GFX_CHANGEHERO"), 0, 1, 1);
+	btnFusion.y = 320;
+	btnFusion.addEventListener (MouseEvent.CLICK, function(e)
+	{
+		var resources = [];
+		for(slot in machineController.slots)
+		{
+			if(slot != null)
+			{
+				if(slot.selectedCard == null)
+				{
+					this.callFunction ("callPopup", ["Bạn chưa đủ Thẻ Bài để ghép tướng"]);
+					return;
+				}else
+					resources.push(slot.selectedCard.GetUniqueId ());
+			}
+		}	
+		
+		lackRune = machineController.data.gem - UserInfo.rune;
+		lackGold = machineController.data.gold - UserInfo.coin;
+		lackFP 	 = machineController.data.fp - UserInfo.friendPoint;
+		if(lackRune > 0)
+		{
+			// this.callFunction ("callPopup", ["Bạn không đủ Đá Quý"]);
+			PixmaGame.notification.buyRune (TextWrapper.getString("TEXT_MISSING_RESOURCE"), TextWrapper.replaceParam(TextWrapper.getString("TEXT_NEED_COIN"), [lackRune]));
+			return;
+		}	
+
+		if(lackGold > 0)
+		{
+			// this.callFunction ("callPopup", ["Bạn không đủ Vàng"]);
+			PixmaGame.notification.buyCoin (TextWrapper.getString("TEXT_MISSING_RESOURCE"), TextWrapper.replaceParam(TextWrapper.getString("TEXT_NEED_COIN"), [lackGold]));
+			return;
+		}	
+
+		if(lackFP > 0)
+		{
+			// this.callFunction ("callPopup", ["Bạn không đủ Cỏ"]);
+			PixmaGame.notification.buyFriendPoint (TextWrapper.getString("TEXT_MISSING_RESOURCE"), TextWrapper.replaceParam(TextWrapper.getString("TEXT_NEED_COIN"), [lackFP]));
+			return;
+		}	
+		
+		PixmaGame._instance.fbClient.send (this.callFunction ("fusionHex", [machineController.data.target, resources]));
+		PixmaGame._instance.fbClient.addEventListener ("EVENT_SCRIPT_REQUEST_FUSION_HEXA", function(msg)
+		{
+			PixmaGame._instance.fbClient.removeEventListener ("EVENT_SCRIPT_REQUEST_FUSION_HEXA");
+			var params = msg.get("data");
+			trace("EVENT_SCRIPT_REQUEST_FUSION_HEXA params " + params);
+			if (params.has("ec")) {
+				var error =  params.get("ec");
+				var msg = params.get("emess");
+				PixmaGame.notification.showPopup (TextWrapper.getString("TEXT_CONFIRM"),msg, 1); // 1 = Popup.OK
+			}else{
+			
+				var newCard = params.get("car");
+				var cardInfo = ParseObject.toCardInfo(newCard);
+				// callbackParams.set("card", card);
+				if (params.has("coi")) {
+					UserInfo.set_coin (params.get("coi"));
+				}
+				if (params.has("run")) {
+					UserInfo.set_rune (params.get("run"));
+				}
+				if (params.has("trun")) {
+					UserInfo.set_tradableRune(params.get("trun"));
+				}
+				if (params.has("frp")) {
+					UserInfo.set_friendPoint(params.get("frp"));
+				}
+				
+				var card_resource = params.get("scs");
+				var iterators = card_resource.getInteratorSet();
+				while (iterators.hasNext()) {
+					var cardId = iterators.next();
+					StockManager.removeCardById(cardId);
+				}
+				StockManager.addCard(cardInfo);
+				var successAnim = Resource.getSprite("GFX_CHANGEHERO_EFF").GetAnim (6, 0, 0, false);
+				machineController.view.add(successAnim);
+				machineController.effectList.push(successAnim);
+				
+				var successEff = new AnimEffect(false, successAnim, 500, null, false);
+				successEff.Init();
+				successEff.SetEffectListener(function(e)
+				{							
+					machineController.view.remove(successAnim);
+					machineController.effectList.remove(successAnim);
+
+					machineController.init(machineController.data);
+					
+					// var cardInfo = params.get("card");
+					// var cardInfo = new CardInfo(machineController.data.target);
+					var cardIcon = new SmallIcon (cardInfo, 0, 0, {type:3}); //SmallIcon.BIG is 3
+					var onDetail = function ()
+					{
+						var panel = new PanelCardInfo(0, 0, PixmaGame._instance._width, PixmaGame._instance._height, cardInfo);
+						PixmaGame.notification.add (panel);
+					}
+					
+					var gachaPanel = PixmaGame.notification.showGachaPanel(cardIcon, onDetail);
+					gachaPanel.addEventListener ("Effect Complete",function (event)
+					{
+						cardIcon.ClearMidSprite();
+					});
+				});		
+				PixmaGame._instance.GetCurrentState().AddScript(successEff);	
+			}
+		});
+	});
+	view.add(btnFusion);
+	
+	machineController.removeAllEffect = function()
+	{
+		for(eff in machineController.effectList)
+			machineController.view.remove(eff);
+		machineController.effectList = [];
+	}
+	
+	machineController.checkEffect = function()
+	{
+		trace("machineController.checkEffect");
+		machineController.removeAllEffect();
+		
+		var arrSlot = [];
+		var i = 0;
+		if(machineController.slots != null)
+		{
+			while(i < machineController.slots.length)
+			{
+				slot = machineController.slots[i];
+				if(slot != null && slot.selectedCard != null)
+					arrSlot.push(i);
+				i++;
+			}
+		}
+		trace("111 machineController.checkEffect arrSlot " + arrSlot);
+		for(slot in arrSlot)
+		{	
+			trace("111 machineController.checkEffect slot " + slot);
+			var animLight = Resource.getSprite("GFX_CHANGEHERO_EFF").GetAnim (2 + slot, 0, 0, true);
+			machineController.view.add(animLight);
+			machineController.view.setChildIndex(animLight, machineController.view.getChildIndex(temple) + 1);
+			machineController.effectList.push(animLight);
+		}
+		trace("2222 machineController.checkEffect");
+		if(arrSlot.length == 4)
+		{
+			var circleShape = machineController.view.getChildByName("circleShape");
+			
+			var animCircle = Resource.getSprite("GFX_CHANGEHERO_EFF").GetAnim (0, 0, 0, true);
+			Actuate.tween (animCircle, 5.0, {rotation:360}).ease(Linear.get_easeNone ()).repeat ();
+			machineController.view.add(animCircle);
+			machineController.view.setChildIndex(animCircle, machineController.view.getChildIndex(circleShape)+1);
+			// machineController.view.remove(circleShape);
+			
+			var bigTarget = machineController.view.getChildByName("bigTarget");
+
+			var animTarget = Resource.getSprite("GFX_CHANGEHERO_EFF").GetAnim (1, 0, 0, true);
+			machineController.view.add(animTarget);
+			machineController.view.setChildIndex(animTarget, machineController.view.getChildIndex(bigTarget)+1);
+			// machineController.view.remove(bigTarget);
+			
+			machineController.effectList.push(animCircle);
+			machineController.effectList.push(animTarget);
+		}
+		trace("end machineController.checkEffect");
+	}
+	
+	var listCostObject = [];
+	
+	machineController.init = function(const)
+	{
+		trace("machineController.init");
+		machineController.data = const;
+		var materials = const.materials;
+		var i = 0;
+		var postions = [178, -188, 178, 188, -178, 188, -178, -188];
+		if(machineController.slots != null)
+			for(slot in machineController.slots)
+			{
+				view.remove(slot.icon);
+			}
+		// machineController.removeAllEffect();
+			
+		if(machineController.mainicon != null)
+			view.remove(machineController.mainicon);			
+			
+		machineController.slots = [];
+		
+		for(obj in listCostObject)
+		{
+			view.remove(obj);
+		}
+		
+		listCostObject = [];
+		var ICON_FLAG = (1 << 6); //Label.ICONS
+		if(const.gold > 0)
+		{
+			listCostObject.push(Label.create ("[Coin]" + const.gold, Fonts.DETAIL_WHITE_20, 0, 0, Anchor.left_bottom|ICON_FLAG));
+		}
+		
+		if(const.fp > 0)
+		{
+			listCostObject.push(Label.create ("[FriendPoint]" + const.fp, Fonts.DETAIL_WHITE_20, 0, 0, Anchor.left_bottom|ICON_FLAG));
+		}
+		
+		if(const.gem > 0)
+		{
+			listCostObject.push(Label.create ("[Rune]" + const.gem, Fonts.DETAIL_WHITE_20, 0, 0, Anchor.left_bottom|ICON_FLAG));
+		}
+		
+		var count = 0;
+		for(obj in listCostObject)
+		{
+			obj.x = -50;
+			obj.y = 280 - count*30;
+			view.add(obj);
+			count++;
+		}
+		
+		machineController.mainicon = new SmallIcon (new CardInfo(const.target), 0, 0, {type:0, level:1, levelMode:0});
+		SmallIcon.AddSmallIconToBuffer (machineController.mainicon);
+		view.add(machineController.mainicon);
+
+		for(material in materials)
+		{
+			var cardsPrototypeInFamily = CardPrototypeInfo.getFamily(material.family).filter(function(card)
+			{
+				var star = material.star/10;
+				var plus = material.star%10;
+				return card.GetStars() >=star && card.plusStar >=plus;
+			});
+			
+			// trace("material.family " + material.family);
+			// trace("cardsPrototypeInFamily " + cardsPrototypeInFamily);
+			// trace("cardsPrototypeInFamily[0].GetId() " + cardsPrototypeInFamily[0].GetId());
+			var min = cardsPrototypeInFamily[0];
+			for(proto in cardsPrototypeInFamily)
+				if(proto.GetMaxLv() < min.GetMaxLv())
+					min = proto;
+			var card = new SmallIcon (min, 0, 0, {type:0, level:material.level, levelMode:0});
+			card.x = postions[i*2];
+			card.y = postions[i*2+1];
+			// card.Scale(0.9, 0.9);
+			// card.Render();
+			SmallIcon.AddSmallIconToBuffer (card);
+			view.add(card);
+			machineController.slots[i] = this.callFunction("getMachineSlot", [view, card, material]);
+			// machineController.slots[i].autoSelect();
+			machineController.slots[i].update();
+			var count = i;
+			card.addEventListener (MouseEvent.CLICK,function(e){
+				this.callFunction("showPopupListHero", [machineController.slots[count], material]);
+			});
+			
+			i++;
+		}
+		
+		machineController.checkEffect();
+	}
+	
+	return machineController;
+});
+
+functionList.set ("init", function ()
+{
+	Resource.loadSprite ("GFX_CHANGEHERO");
+	Resource.loadSprite ("GFX_CHANGEHERO_EFF");
+	var spr = Resource.getSprite ("GFX_CHANGEHERO");
+	var rewardHolder = new Layer ();
+	
+	var bg = new ColorRect (0x000000, 1.0, 0, 0, 640, 960);
+	bg.y = 0;
+	rewardHolder.add(bg);
+	rewardHolder.add(spr.GetFrame(3, 320, 425));
+	
+	var machine = this.callFunction("getFusionMachine", []);
+	machine.view.x = 320;
+	machine.view.y = 475;
+	rewardHolder.add(machine.view);
+	
+	var recipes = this.callFunction("getConst", []);
+	
+	// var recipes = [0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0];
+	var index = 0;
+	var iconList = new Layer();
+	
+	var frameSelectCard = null;
+	var focusCard = function(card)
+	{
+		if(frameSelectCard == null)
+		{
+			frameSelectCard = spr.GetFrame (9);
+			frameSelectCard.Scale(1.35,1.35);
+			iconList.add(frameSelectCard);
+			iconList.setChildIndex(frameSelectCard, 0);
+		}
+			
+		frameSelectCard.x = card.x;
+		frameSelectCard.y = card.y;
+	};
+	
+	var firstCard = null;
+	for (recipe in recipes)
+	{
+		var card = new SmallIcon (CardPrototypeInfo.GetItem (recipe.target), 0, 0, {type:0, level:1, levelMode:0});
+		card.x = 70 + index*100;
+		card.y = 70;
+		card.Scale(0.9, 0.9);
+		// card.Render();
+		SmallIcon.AddSmallIconToBuffer (card);
+		
+		card.addEventListener (MouseEvent.CLICK,function(e){
+			// trace("111111111111");			
+			machine.init(recipe);
+			focusCard(card);
+		});
+		
+		iconList.add(card);
+		index ++;	
+		
+		if(firstCard == null) firstCard = card;
+	}
+
+	machine.init(recipes[0]);
+	focusCard(firstCard);
+	
+	var scrollRecipes = new PageScrollable (iconList, 560, 140, 1);
+	scrollRecipes.displayScrollPerm = true;
+	scrollRecipes._inertialScrolling = true;
+	// scrollRecipes.horBar.y -= 5;
+	scrollRecipes.x = 40;
+	scrollRecipes.y = 475 + 345;
+	rewardHolder.add(scrollRecipes);
+		
+	// var label = Label.create ("Sự Kiện Hoàn Nguyên", Fonts.DETAIL_WHITE_30, 320, 10, Anchor.center_top);
+	// label.Update();
+	// label.Render();
+	// rewardHolder.add(label);
+	
+	rewardHolder.x = -320;
+	rewardHolder.y = -95;	
+	this.add(rewardHolder);
+	
+	var count = 0;
+	var onDec = function(e)
+	{
+		// trace("onDec count " + count);
+		scrollRecipes.scrollAccel(count > 10?300:100, 0);				
+		count++;
+	}
+	
+	var onInc = function(e)
+	{
+		// trace("onInc count " + count);
+		scrollRecipes.scrollAccel(count > 10?-300:-100, 0);		
+		count++;
+	}
+	
+	var onRelease = function(e)
+	{
+		count = 0;
+		this.removeEventListener(Event.ENTER_FRAME, onDec);			
+		this.removeEventListener(Event.ENTER_FRAME, onInc);			
+	}
+	
+	var decreaseBtn = new Button (SoftDefines.gfx_list_item, DF_LISTITEM.anim_left_n, DF_LISTITEM.anim_left_s, DF_LISTITEM.anim_left_n);
+	decreaseBtn.name = "dec";
+	decreaseBtn.Scale(0.6, 1.5);
+	decreaseBtn.x = 35;
+	decreaseBtn.y = scrollRecipes.y + 75;
+	decreaseBtn.addEventListener (MouseEvent.MOUSE_DOWN, function (e) {
+		this.addEventListener(Event.ENTER_FRAME, onDec);			
+	});
+	decreaseBtn.addEventListener (MouseEvent.MOUSE_MOVE, onRelease);
+	decreaseBtn.addEventListener (MouseEvent.MOUSE_OUT, onRelease);
+	decreaseBtn.addEventListener (MouseEvent.ROLL_OVER, onRelease);
+	decreaseBtn.addEventListener (MouseEvent.MOUSE_UP, onRelease);
+	rewardHolder.add (decreaseBtn);
+	
+	var increaseBtn = new Button (SoftDefines.gfx_list_item, DF_LISTITEM.anim_right_n, DF_LISTITEM.anim_right_s, DF_LISTITEM.anim_right_n);
+	decreaseBtn.name = "inc";
+	increaseBtn.Scale(0.6, 1.5);
+	increaseBtn.x = 640 - 35;
+	increaseBtn.y = scrollRecipes.y + 75;
+	increaseBtn.addEventListener (MouseEvent.MOUSE_DOWN, function (e) {
+		this.addEventListener(Event.ENTER_FRAME, onInc);						
+	});
+	increaseBtn.addEventListener (MouseEvent.MOUSE_OUT, onRelease);
+	increaseBtn.addEventListener (MouseEvent.MOUSE_MOVE, onRelease);
+	increaseBtn.addEventListener (MouseEvent.ROLL_OVER, onRelease);
+	increaseBtn.addEventListener (MouseEvent.MOUSE_UP, onRelease);
+	rewardHolder.add (increaseBtn);
+	
+	// var scrollView = new PageScrollable (rewardHolder, 640, 960, PageScrollable.Ver);
+	// scrollView.x = -320;
+	// scrollView.y = -95;
+	// scrollView.removeEventListener (MouseEvent.MOUSE_OUT, scrollView.onRelease);
+	// scrollView.addEventListener (MouseEvent.MOUSE_OUT, function(e)
+	// {
+		// if(e.relatedObject == null)
+		// {
+			// if (scrollView.move) scrollView.waitRelease = true;
+			
+			// scrollView.canMove = false;
+			// scrollView.move = false;
+			// scrollView.horizontal = false;
+			// scrollView.vertical = false;
+		// }
+	// });
+	// this.add(scrollView);
+		
+	var closeBtn = this.callFunction ("getCloseButton", []);
+	
+	closeBtn.x = 600 - 320 + 5;
+	closeBtn.y = 35 - 95;
+	closeBtn.addEventListener (MouseEvent.CLICK, function(e)
+	{
+		this.releaseFromParent();
+	});
+	this.add (closeBtn);
+});
+
+functionList.set ("fusionHex", function (targetId, resource)
+{
+	var request = new Request (3);
+	var content = new FBObjectOutput();
+	content.putString ("cmd", "fusionHex");
+	content.putInt ("target", targetId);
+	var arr = new FBArrayOutput();
+	for (s in resource){
+		arr.putString(s);
+	}
+	content.putArray ("lit", arr);
+	
+	request.setContent(content);
+	return request;
+});
+
+return functionList;

@@ -1,0 +1,17 @@
+if(nameFunc == "MagicSkill")
+	return EffectBattleFactory.MagicSkill(effectType, attacker, defender, spriteId, castAnim, travAnim, hitAnim, sound, waitTime, isGlobal);
+else if(nameFunc == "MagicSkillAOE")
+	return EffectBattleFactory.MagicSkillAOE(effectType, attacker, defender, spriteId, castAnim, travAnim, hitAnim, sound, isGlobal);
+else if(nameFunc == "JannaSkill")
+	return EffectBattleFactory.JannaSkill(attacker, defender, spriteId, castAnim, travAnim, hitAnim, sound);
+else if(nameFunc == "MeleeDamage_Yi")
+	return EffectBattleFactory.MeleeDamage_Yi (effectType, attacker, defender, spriteId);
+else if(nameFunc == "Bullet_MissFortune")
+	return EffectBattleFactory.Bullet_MissFortune (effectType, attacker, defender, spriteId, castAnim, travAnim, hitAnim, spriteId, castAnim, travAnim, hitAnim);
+else if(nameFunc == "BrandSkill")
+	return EffectBattleFactory.BrandSkill (effectType, attacker, defender, spriteId, castAnim, travAnim, hitAnim);
+else
+{
+	trace ("reuse_skill: unknow \"" + nameFunc + "\"");
+	return null;
+}

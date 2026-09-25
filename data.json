@@ -1,0 +1,28 @@
+{
+  "user": {
+    "uid": 10001,
+    "userId": 10001,
+    "accid": 10001,
+    "name": "Anh Hoàng Đẹp Trai",
+    "username": "Anh Hoàng Đẹp Trai",
+    "level": 1,
+    "userLv": 1,
+    "serverId": 1,
+    "gold": 9999999,
+    "coin": 9999999,
+    "gem": 999999,
+    "diamond": 999999,
+    "vip": 10,
+    "exp": 0,
+    "energy": 999,
+    "maxEnergy": 999,
+    "stage": 1,
+    "maxStage": 1,
+    "heroes": "2:1:0",
+    "items": ""
+  },
+  "session": {
+    "sid": "10001_offline_sid",
+    "sessionId": "mock_offline_session_12345"
+  }
+}

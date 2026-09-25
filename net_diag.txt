@@ -1,0 +1,71 @@
+Chan doan mang LDPlayer - 09/21/2026 Mon  8:21:01.57 
+  
+=== adb devices === 
+List of devices attached
+emulator-5554	device
+
+  
+=== adb shell id (root hay khong) === 
+uid=2000(shell) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:shell:s0
+  
+=== /system/etc/hosts === 
+127.0.0.1 localhost lienminh.g6-mobile.zing.vn lienminh.static.g6.zing.vn me.zing.vn
+  
+=== adb reverse --list === 
+
+  
+=== adb forward --list === 
+
+  
+=== http_proxy (settings) === 
+null
+  
+=== ip addr + route === 
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    inet 172.16.1.4/24 brd 172.16.1.255 scope global wlan0
+       valid_lft forever preferred_lft forever
+172.16.1.0/24 dev wlan0 proto kernel scope link src 172.16.1.4 
+  
+=== getprop dns/proxy === 
+[init.svc.mdnsd]: [running]
+[init.svc_debug_pid.mdnsd]: [1515]
+[ro.boottime.mdnsd]: [25481108080]
+  
+=== VPN / Drony trong connectivity === 
+  4: VpnNetworkProvider:0
+  NetworkAgentInfo{network{100}  handle{432902426637}  ni{WIFI CONNECTED extra: } created=2026-09-21T01:04:17.970Z Score(Policies : TRANSPORT_PRIMARY&EVER_EVALUATED&IS_UNMETERED&EVER_USER_SELECTED&EVER_VALIDATED&IS_VALIDATED ; KeepConnected : 0)  created 22761 firstValidated 22916 lastValidated 22916 explicitlySelected  lp{{InterfaceName: wlan0 LinkAddresses: [ fe80::e5ec:ea47:bb1d:1c92/64,172.16.1.4/24,fd17:625c:f037:1001:a7b5:9a4d:4c52:20b2/64,fd17:625c:f037:1001:3f41:c2d5:6155:dc50/64 ] DnsAddresses: [ /123.23.23.23,/123.26.26.26,/8.8.8.8 ] UsePrivateDns: true ValidatedPrivateDnsAddresses: [8.8.8.8] Domains: null MTU: 0 ServerAddress: /172.16.1.3 TcpBufferSizes: 524288,1048576,2097152,262144,524288,1048576 Routes: [ fe80::/64 -> :: wlan0 mtu 0,::/0 -> fe80::5054:ff:fe12:3500 wlan0 mtu 0,fd17:625c:f037:1001::/64 -> :: wlan0 mtu 0,172.16.1.0/24 -> 0.0.0.0 wlan0 mtu 0,0.0.0.0/0 -> 172.16.1.1 wlan0 mtu 0 ]}}  nc{[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED LinkUpBandwidth>=1048576Kbps LinkDnBandwidth>=1048576Kbps OwnerUid: 1000 UnderlyingNetworks: Null]}  factorySerialNumber=7}
+      NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+      NetworkRequest [ LISTEN id=9, [ Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&FOREGROUND&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+      NetworkRequest [ LISTEN id=10, [ Transports: WIFI Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&FOREGROUND&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+      NetworkRequest [ LISTEN id=11, [ Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+      NetworkRequest [ LISTEN id=14, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&VALIDATED&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]
+      NetworkRequest [ LISTEN id=19, [ Transports: WIFI Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 1073 RequestorUid: 1073 RequestorPkg: com.android.networkstack UnderlyingNetworks: Null] ]
+      NetworkRequest [ TRACK_SYSTEM_DEFAULT id=20, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1073 RequestorPkg: com.android.networkstack.tethering UnderlyingNetworks: Null] ]
+      NetworkRequest [ LISTEN id=21, [ Transports: CELLULAR|WIFI Capabilities: NOT_VPN RequestorUid: 10083 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+      NetworkRequest [ LISTEN id=31, [ Transports: WIFI Capabilities: INTERNET&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.phone UnderlyingNetworks: Null] ]
+      NetworkRequest [ LISTEN id=32, [ Transports: CELLULAR|WIFI Capabilities: NOT_VPN RequestorUid: 10083 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+      NetworkRequest [ LISTEN id=37, [ Transports: CELLULAR|WIFI Capabilities: NOT_VPN RequestorUid: 10083 RequestorPkg: com.android.systemui UnderlyingNetworks: Null] ]
+      NetworkRequest [ LISTEN id=41, [ Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_VCN_MANAGED Uid: 1001 RequestorUid: 1001 RequestorPkg: com.android.ons UnderlyingNetworks: Null] ]
+  uid/pid:1000/316 activeRequest: 1 callbackRequest: 1 [NetworkRequest [ REQUEST id=1, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]] callback flags: 1 order: 2147483647
+  uid/pid:1000/316 activeRequest: null callbackRequest: 2 [NetworkRequest [ BACKGROUND_REQUEST id=2, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]] callback flags: 1 order: 2147483647
+  uid/pid:1000/316 activeRequest: null callbackRequest: 9 [NetworkRequest [ LISTEN id=9, [ Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&FOREGROUND&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+  uid/pid:1000/316 activeRequest: null callbackRequest: 10 [NetworkRequest [ LISTEN id=10, [ Transports: WIFI Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&FOREGROUND&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+  uid/pid:1000/316 activeRequest: null callbackRequest: 11 [NetworkRequest [ LISTEN id=11, [ Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+  uid/pid:1000/316 activeRequest: null callbackRequest: 13 [NetworkRequest [ LISTEN id=13, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 1000 RequestorUid: 1000 RequestorPkg: android UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+  
+=== tien trinh drony/proxy/vpn === 
+  
+=== ping 192.168.1.13 === 
+PING 192.168.1.13 (192.168.1.13) 56(84) bytes of data.
+64 bytes from 192.168.1.13: icmp_seq=1 ttl=63 time=0.768 ms
+
+--- 192.168.1.13 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.768/0.768/0.768/0.000 ms
+  
+=== goi thang HTTP toi 192.168.1.13:80 (nc) === 
+  
+=== Xong === 

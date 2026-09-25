@@ -1,0 +1,112 @@
+var Math = Type.resolveClass ("Math");
+
+var sprite = Resource.getSprite(spriteId);
+var shootanim = sprite.GetAnim (castAnim, attacker.xOri, attacker.yOri, false, renderMode);
+if (!attacker.GetFormation().IsPlayer()) shootanim.rotation = -180;
+sCurLayer.add (shootanim);
+var shooteffect = new SimulateAnimEffect(attacker.GetDisplayCard(), shootanim, 330);
+shooteffect.Init();
+shooteffect.SetEffectListener(function (arr) 
+{
+	sCurLayer.remove(shootanim);
+});
+sCurState.AddScript(shooteffect);
+
+var endEffect = [];
+var hitAnimArray = [];
+var setcb = true;
+var map = EffectBattleFactory.CreateMap();
+var lastData = null;
+
+var minX = 9999;
+var minY = 9999;
+var maxX = 0;
+var maxY = 0;
+for (card in defender)
+{
+	if (card == null)		continue;
+	if (minX > card.xOri)	minX = card.xOri;
+	else					maxX = card.xOri;
+	if (minY > card.yOri)	minY = card.yOri;
+	else					maxY = card.yOri;
+}
+
+var centerX = (maxX + minX) / 2;
+var centerY = (maxY + minY) / 2;
+var deltaX = centerX - attacker.xOri;
+var deltaY = centerY - attacker.yOri;
+var angle = Math.atan2 (deltaY, deltaX) * 180 / Math.PI;
+
+var arrow = sprite.GetAnim (travAnim, attacker.xOri, attacker.yOri, true, renderMode);
+arrow.Scale (0.8, 0.8);
+arrow.SetRotate (angle + 90);
+arrow.SetOpacity (0);
+sCurLayer.add (arrow);
+
+var showeff = new OpacityEffect (arrow, 1, 10, null);
+showeff.Init();
+sCurState.AddScript(showeff);
+
+var forwardTime = 1000;
+var forwardPoint = new gPoint (centerX - attacker.xOri, centerY - attacker.yOri);
+forwardPoint.normalize (Math.sqrt (forwardPoint.x * forwardPoint.x + forwardPoint.y * forwardPoint.y) + 300);
+
+var forward = new MovingEffect (arrow, forwardPoint.x, forwardPoint.y, 500, null);
+forward.Init();
+forward.SetTimeDuration (forwardTime);
+sCurState.AddScript (forward);
+
+var backTime = 750;
+var backPoint = new gPoint (attacker.xOri - forwardPoint.x, attacker.yOri - forwardPoint.y);
+
+var back = new MovingEffect (arrow, backPoint.x, backPoint.y, 500, forward);
+back.SetEffectListener(OnFinishHideEffect);
+back.Init();
+back.SetTimeDuration (backTime);
+sCurState.AddScript (back);
+
+var hide = new OpacityEffect (arrow, -1, backTime * 0.9, forward);
+hide.Init();
+sCurState.AddScript (hide);
+
+var arrowAnim = new AnimEffect (false, arrow, forwardTime + backTime, null, false);
+arrowAnim.Init();
+sCurState.AddScript (arrowAnim);
+
+var hitFwAnims = [];
+var hitBaAnims = [];
+for (card in defender)
+{
+	var isFw = true;//Math.random () > 0.5;
+	var hitAnim = sprite.GetAnim (hitAnim, card.xOri, card.yOri, false, renderMode);
+	if (GameStateCardBattle.rotateBattle) hitAnim.rotation = -90;
+	if (card.isBoss) hitAnim.Scale (GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);
+	
+	var anim = new SimulateAnimEffect (card.GetDisplayCard(), hitAnim, 666, isFw ? forward : back);			
+	anim.AddEffectListener (function (arr)
+	{
+		sCurLayer.remove(hitAnim);
+	});
+	anim.Init();
+	sCurState.AddScript (anim);
+	
+	endEffect.push (anim);
+	
+	if (isFw)	hitFwAnims.push (hitAnim);
+	else		hitBaAnims.push (hitAnim);
+}
+
+forward.AddEffectListener(function (arr)
+{
+	Sound.GetSound(sound).Play();
+	for (hitAnim in hitFwAnims) sCurLayer.add (hitAnim);
+	arrow.SetRotate (angle - 90);
+});
+
+back.AddEffectListener(function (arr)
+{
+	for (hitAnim in hitBaAnims) sCurLayer.add (hitAnim);
+	sCurState.RemoveScript(arrowAnim);	
+});
+
+return endEffect;

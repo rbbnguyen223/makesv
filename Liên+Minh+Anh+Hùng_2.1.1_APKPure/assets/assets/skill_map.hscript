@@ -1,0 +1,203 @@
+if(id == 66)
+{
+	return {name:"darius_util"};
+}else if(id == 68)
+{
+	return {name:"garen_util"};
+}else if(id == 69)
+{
+	return {name:"ezreal_util"};
+}else if(id == 70)
+{
+	return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:SoftDefines.gfx_effect_annie_skill, castAnim:3, travAnim:5, hitAnim:0, sound:Sound.SOUND_BRAND_BASICATTACK_NAME, waitTime:200, isGlobal:false}};
+}else if(id == 71)
+{
+	return {name:"annie_util", params:{spriteId:SoftDefines.gfx_effect_annie_skill, element:"ice"}};
+}else if(id == 72)
+{
+	return {name:"annie_util", params:{spriteId:SoftDefines.gfx_effect_annie_skill, element:"fire"}};
+}else if(id == 73)
+{
+	return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:SoftDefines.gfx_effect_annie_skill, castAnim:11, travAnim:13, hitAnim:8, sound:Sound.SOUND_BRAND_BASICATTACK_NAME, waitTime:200, isGlobal:false}};
+}else if(id == 74)
+{
+	return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:SoftDefines.gfx_effect_ziggs_skill, castAnim:3, travAnim:6, hitAnim:0, sound:Sound.SOUND_BRAND_BASICATTACK_NAME, waitTime:200, isGlobal:false}};
+}else if(id == 75)
+{
+	return {name:"ziggs_skill", params:{spriteId:SoftDefines.gfx_effect_ziggs_skill, castAnim:3, travAnim:10, hitAnim:1, sound:Sound.SOUND_BRAND_BASICATTACK_NAME, waitTime:200}};
+}else if(id == 76)
+{
+	return {name:"ziggs_util", params:{spriteId:SoftDefines.gfx_effect_ziggs_skill, castAnim:4, travAnim:9, hitAnim:2, sound:Sound.SOUND_BRAND_BASICATTACK_NAME}};
+}else if(id == 77)
+{
+	return {name:"only_hit", params:{spriteId:SoftDefines.gfx_wukong_skill, hitAnim:4, sound:Sound.SOUND_BRAND_BASICATTACK_NAME}};
+}else if(id == 78)
+{
+	return {name:"fizz_util", params:{sound:Sound.SOUND_NAMI_BASICATTACK, waitTime:200}};
+}else if(id == 79)
+{
+	return {name:"ashe_util", params:{spriteId:SoftDefines.gfx_effect_attack_01_ashe, castAnim:0, travAnim:1, hitAnim:2, sound:"ashe_util.wav", waitTime:200}};
+}else if(id == 80)
+{
+	if(attacker.buff_status.vayneActiveSkill)
+		return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:SoftDefines.gfx_effect_vayne_skill, castAnim:11, travAnim:12, hitAnim:8, sound:Sound.SOUND_ASHE_BASICATTACK_NAME, waitTime:200, isGlobal:false}};
+	else
+		return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:SoftDefines.gfx_effect_vayne_skill, castAnim:1, travAnim:2, hitAnim:0, sound:Sound.SOUND_ASHE_BASICATTACK_NAME, waitTime:200, isGlobal:false}};
+}else if(id == 81)
+{
+	return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:SoftDefines.gfx_effect_vayne_skill, castAnim:6, travAnim:7, hitAnim:3, sound:Sound.SOUND_ASHE_BASICATTACK_NAME, waitTime:200, isGlobal:false}};
+}else if(id == 82)
+{
+	return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:SoftDefines.gfx_effect_vayne_skill, castAnim:11, travAnim:12, hitAnim:8, sound:Sound.SOUND_ASHE_BASICATTACK_NAME, waitTime:200, isGlobal:false}};
+}else if(id == 83)
+{
+	if(attacker.buff_status.vayneValentineActiveSkill)
+		return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:SoftDefines.gfx_effect_vayne_skill, castAnim:24, travAnim:25, hitAnim:21, sound:Sound.SOUND_ASHE_BASICATTACK_NAME, waitTime:200, isGlobal:false}};
+	else
+		return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:SoftDefines.gfx_effect_vayne_skill, castAnim:14, travAnim:15, hitAnim:13, sound:Sound.SOUND_ASHE_BASICATTACK_NAME, waitTime:200, isGlobal:false}};
+}else if(id == 84)
+{
+	return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:SoftDefines.gfx_effect_vayne_skill, castAnim:19, travAnim:20, hitAnim:16, sound:Sound.SOUND_ASHE_BASICATTACK_NAME, waitTime:200, isGlobal:false}};
+}else if(id == 85)
+{
+	return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:SoftDefines.gfx_effect_vayne_skill, castAnim:24, travAnim:25, hitAnim:21, sound:Sound.SOUND_ASHE_BASICATTACK_NAME, waitTime:200, isGlobal:false}};
+}else if(id == 86)
+{
+	// return {name:"ziggs_skill", params:{spriteId:SoftDefines.gfx_effect_gnar_skill, castAnim:1, travAnim:2, hitAnim:0, sound:Sound.SOUND_BRAND_BASICATTACK_NAME, waitTime:200}};
+	return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:SoftDefines.gfx_effect_gnar_skill, castAnim:1, travAnim:2, hitAnim:0, sound:Sound.SOUND_ASHE_BASICATTACK_NAME, waitTime:200, isGlobal:false}};
+}else if(id == 87)
+{
+	return {name:"gnar_skill", params:{spriteId:SoftDefines.gfx_effect_gnar_skill, castAnim:4, travAnim:5, hitAnim:3, sound:Sound.SOUND_BRAND_BASICATTACK_NAME, waitTime:200}};
+	// return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:SoftDefines.gfx_effect_gnar_skill, castAnim:4, travAnim:5, hitAnim:3, sound:Sound.SOUND_ASHE_BASICATTACK_NAME, waitTime:200, isGlobal:false}};
+}else if(id == 88)
+{
+	return {name:"gnar_util", params:{spriteId:SoftDefines.gfx_effect_gnar_skill, readyAnim:15, jumpAnim:16, crackAnim:13, scratchAnim:17, hitAnim:14, sound:Sound.SOUND_BRAND_BASICATTACK_NAME}};
+}else if(id == 89)
+{
+	return {name:"jayce_skill", params:{spriteId:SoftDefines.gfx_effect_jayce, castAnim:2, travAnim:3, hitAnim:1, sound:Sound.SOUND_BRAND_BASICATTACK_NAME, waitTime:200,  timeShoot:660, timeMove:500, timeHit:660}};
+}else if(id == 90)
+{
+	return {name:"jayce_skill", params:{spriteId:SoftDefines.gfx_effect_jayce, castAnim:6, travAnim:8, hitAnim:5, sound:Sound.SOUND_BRAND_BASICATTACK_NAME, waitTime:200, timeShoot:1000, timeMove:500, timeHit:1000}};
+}else if(id == 91)
+{
+	return {name:"jayce_util", params:{spriteId:SoftDefines.gfx_effect_jayce, atkUpAnim:13, atkDownAnim:12, hitAnim:10, sound:Sound.SOUND_BRAND_BASICATTACK_NAME, waitTime:200, timeAtk:2000, timeHit:1000}};
+}else if(id == 92)
+{
+	return {name:"MissFortune_util", params:{timeMove:500, waitTime:200,spriteId:SoftDefines.gfx_attack_06_mf,castAnim:0,travAnim:1,hitAnim:2,sound:Sound.SOUND_MISSFORTUNE_BASICATTACK}};
+}else if(id == 93)
+{
+	return {name:"ress_card", params:{spriteId:"GFX_EFFECT_HOISINH",resAnimId:0,timeRes:1000}};
+}else if(id == 94)
+{
+	return {name:"jarvan_skill", params:{spriteId:SoftDefines.gfx_effect_jarvan_01, jumpAnimId:0, jumpTime:350,  moveDownAnimId:1, moveUpAnimId:2, moveTime:660, hitAnimId:3, hitTime:660, waitTime:400,sound:Sound.SOUND_DARIUS_UTIL}};
+}else if(id == 95)
+{
+	return {name:"jarvan_util", params:{spriteId:SoftDefines.gfx_effect_jarvan_01, strongAnimId:4, strongTime:660, jumpAnimId:5, jumpTime:660, crackAnimId:6, crackTime:700, hitAnimId:7, hitTime:500, waitTime:400,sound:Sound.SOUND_DARIUS_UTIL}};
+}else if(id == 96)
+{
+	Resource.loadSprite("GFX_YASUO");
+	return {name:"reuse_skill", params:{nameFunc:"JannaSkill", spriteId:Resource.getSpriteId("GFX_YASUO"), castAnim:6, travAnim:10, hitAnim:9, sound:"Janna_eyeofthestorm.wav"}};
+}else if(id == 97)
+{
+	Resource.loadSprite("GFX_YASUO");
+	return {name:"stab_skill", params:{spriteId:"GFX_YASUO", atkUpAnim:12, atkDownAnim:11, hitUpAnim:13, hitDownAnim:13,sound:"Garen_BasicAttack.wav"}};
+}else if(id == 98)
+{
+	Resource.loadSprite("GFX_DIANA_ATTACK_02");
+	return {name:"diana_skill", params:{spriteId:"GFX_DIANA_ATTACK_02", atkUpAnim:0, atkDownAnim:1, hitAnim:2}};
+}else if(id == 99)
+{
+	Resource.loadSprite("GFX_SPELL_02_OFFEND_05_LIGHT_DIANA");
+	return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:Resource.getSpriteId("GFX_SPELL_02_OFFEND_05_LIGHT_DIANA"), castAnim:0, travAnim:1, hitAnim:2, sound:"Lux_BasicAttack.wav", waitTime:200, isGlobal:false}};
+}else if(id == 100)
+{
+	Resource.loadSprite("GFX_EFFECT_ATTACK_03_ASHE");
+	return {name:"reuse_skill", params:{nameFunc:"JannaSkill", spriteId:Resource.getSpriteId("GFX_EFFECT_ATTACK_03_ASHE"), castAnim:0, travAnim:1, hitAnim:2, sound:"Liassandra_BasicAttack.wav"}};
+}else if(id == 101)
+{
+	Resource.loadSprite("GFX_KNOCKOUT_LEE_SIN");
+	return {name:"knockout_leesin_multi", params:{spriteId:"GFX_KNOCKOUT_LEE_SIN", atkUpAnim:7, atkDownAnim:8, hitRightUpAnim:3, hitLeftUpAnim:4, hitRightDownAnim:5, hitLeftDownAnim:6, sound:"Garen_BasicAttack.wav"}};
+}else if(id == 102)
+{
+	Resource.loadSprite("GFX_KNOCKOUT_LEE_SIN");
+	return {name:"knockout_leesin_util", params:{spriteId:"GFX_KNOCKOUT_LEE_SIN", castAnim:1, sound:Sound.SOUND_DARIUS_UTIL, waitTime:200}};
+}else if(id == 103)
+{
+	Resource.loadSprite("GFX_ATTACK_EKKO");
+	return {name:"ekko_normal", params:{spriteId:"GFX_ATTACK_EKKO", atkUpAnim:1, atkDownAnim:2, hitUpAnim:3, hitDownAnim:3,sound:"Garen_BasicAttack.wav"}};
+}else if(id == 104)
+{
+	Resource.loadSprite("GFX_ATTACK_EKKO");
+	return {name:"ekko_skill", params:{spriteId:"GFX_ATTACK_EKKO", castAnim:5, travAnim:4, hitAnim:3, sound:Sound.SOUND_BRAND_BASICATTACK_NAME, waitTime:200}};
+}else if(id == 105)
+{
+	Resource.loadSprite ("GFX_ATTACK_EKKO");
+	return {name:"knockout_leesin_util", params:{spriteId:"GFX_ATTACK_EKKO", castAnim:0, sound:Sound.SOUND_DARIUS_UTIL, waitTime:200}};
+}else if(id == 106)
+{
+	Resource.loadSprite ("GFX_ATTACK_CORKI");
+	return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:Resource.getSpriteId("GFX_ATTACK_CORKI"), castAnim:1, travAnim:2, hitAnim:0, sound:Sound.SOUND_ASHE_BASICATTACK_NAME, waitTime:150, isGlobal:false}};
+}else if(id == 107)
+{
+	Resource.loadSprite ("GFX_ATTACK_CORKI");
+	return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:Resource.getSpriteId("GFX_ATTACK_CORKI"), castAnim:1, travAnim:2, hitAnim:3, sound:Sound.SOUND_ASHE_BASICATTACK_NAME, waitTime:150, isGlobal:false}};
+}else if(id == 108)
+{
+	Resource.loadSprite ("GFX_ATTACK_CORKI");
+	return {name:"corki_util", params:{spriteId:"GFX_ATTACK_CORKI", castAnimId:7, travAnim:5, travAnimBig:10, hitAnim:6, sound:"ashe_util.wav", waitTime:200}};
+}else if(id == 109)
+{
+	Resource.loadSprite("GFX_ATTACK_YASUO_UNDERWORLD");
+	return {name:"reuse_skill", params:{nameFunc:"JannaSkill", spriteId:Resource.getSpriteId("GFX_ATTACK_YASUO_UNDERWORLD"), castAnim:6, travAnim:10, hitAnim:9, sound:"Janna_eyeofthestorm.wav"}};
+}else if(id == 110)
+{
+	Resource.loadSprite("GFX_ATTACK_YASUO_UNDERWORLD");
+	return {name:"stab_skill", params:{spriteId:"GFX_ATTACK_YASUO_UNDERWORLD", atkUpAnim:12, atkDownAnim:11, hitUpAnim:13, hitDownAnim:13,sound:"Garen_BasicAttack.wav"}};
+}else if(id == 111)
+{
+	Resource.loadSprite ("GFX_ATTACK_04_YI_03");
+	return {name:"reuse_skill", params:{nameFunc:"MeleeDamage_Yi", spriteId:Resource.getSpriteId("GFX_ATTACK_04_YI_03")}};
+}else if(id == 112)
+{
+	Resource.loadSprite ("GFX_EFFECT_ANNIE_SKILL_03");
+	return {name:"reuse_skill", params:{nameFunc:"MagicSkill", spriteId:Resource.getSpriteId("GFX_EFFECT_ANNIE_SKILL_03"), castAnim:3, travAnim:4, hitAnim:2, sound:Sound.SOUND_BRAND_BASICATTACK, waitTime:150, isGlobal:false}};
+	
+}else if(id == 113)
+{
+	Resource.loadSprite ("GFX_EFFECT_ANNIE_SKILL_03");
+	return {name:"annie_util", params:{spriteId:"GFX_EFFECT_ANNIE_SKILL_03", element:null}};
+}else if(id == 114)
+{
+	Resource.loadSprite("GFX_ATTACK_YASUO_BLOODMOON");
+	return {name:"reuse_skill", params:{nameFunc:"JannaSkill", spriteId:Resource.getSpriteId("GFX_ATTACK_YASUO_BLOODMOON"), castAnim:6, travAnim:10, hitAnim:9, sound:"Janna_eyeofthestorm.wav"}};
+}else if(id == 115)
+{
+	Resource.loadSprite("GFX_ATTACK_YASUO_BLOODMOON");
+	return {name:"stab_skill", params:{spriteId:"GFX_ATTACK_YASUO_BLOODMOON", atkUpAnim:12, atkDownAnim:11, hitUpAnim:13, hitDownAnim:13,sound:"Garen_BasicAttack.wav"}};
+}else if(id == 116)
+{
+	Resource.loadSprite ("GFX_ATTACK_06_MF_03");
+	return {name:"reuse_skill", params:{nameFunc:"Bullet_MissFortune", spriteId:Resource.getSpriteId("GFX_ATTACK_06_MF_03"), castAnim:0, travAnim:1, hitAnim:2}};
+}else if(id == 117)
+{
+	Resource.loadSprite ("GFX_ATTACK_06_MF_03");
+	return {name:"MissFortune_util", params:{timeMove:500, waitTime:200,spriteId:"GFX_ATTACK_06_MF_03",castAnim:0,travAnim:1,hitAnim:2,sound:Sound.SOUND_MISSFORTUNE_BASICATTACK}};
+}else if(id == 118)
+{
+	Resource.loadSprite ("GFX_ATTACK_TRISTANA_03");
+	return {name:"reuse_skill", params:{nameFunc:"Bullet_MissFortune", spriteId:Resource.getSpriteId("GFX_ATTACK_TRISTANA_03"), castAnim:0, travAnim:2, hitAnim:2}};
+}else if(id == 119)
+{
+	Resource.loadSprite ("GFX_ATTACK_TRISTANA_03");
+	return {name:"reuse_skill", params:{nameFunc:"Bullet_MissFortune", spriteId:Resource.getSpriteId("GFX_ATTACK_TRISTANA_03"), castAnim:0, travAnim:1, hitAnim:2}};
+}else if(id == 120)
+{
+	Resource.loadSprite ("GFX_FIDDLE_SKILL_03");
+	return {name:"reuse_skill", params:{nameFunc:"BrandSkill", spriteId:Resource.getSpriteId("GFX_FIDDLE_SKILL_03"), castAnim:0, travAnim:1, hitAnim:2}};
+}else if(id == 121)
+{
+	Resource.loadSprite ("GFX_FIDDLE_SKILL_03");
+	return {name:"corki_util", params:{spriteId:"GFX_FIDDLE_SKILL_03", castAnimId:0, travAnim:1, travAnimBig:1, hitAnim:2, waitTime:200, sound:Sound.SOUND_FIDDLE_DARKWIND}};
+}
+else
+	return {name:"General_Skill"};

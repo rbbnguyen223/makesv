@@ -1,0 +1,111 @@
+var Math				= Type.resolveClass ("Math");
+var Rectangle			= Type.resolveClass ("flash.geom.Rectangle");
+var URLRequest			= Type.resolveClass ("flash.net.URLRequest");
+if (URLRequest == null)
+	URLRequest			= Type.resolveClass ("openfl.net.URLRequest");
+if (URLRequest == null)
+	URLRequest			= Type.resolveClass ("openfl._v2.net.URLRequest");
+var Loader				= Type.resolveClass ("flash.display.Loader");
+if (Loader == null)
+	Loader				= Type.resolveClass ("openfl._v2.display.Loader");
+var LoaderContext		= Type.resolveClass ("flash.system.LoaderContext");
+
+var functionList = new FunctionList ();
+
+
+functionList.set ("new", function (url, view)
+{
+	var loader = null;
+	var viewport = view;
+	var onError = null;
+	var onProgress = null;
+	var draw = null;
+	var onComplete = null;
+	var clean = null;
+	
+	onError = function onError (e)
+	{
+		clean ();
+		this.dispatchEvent (e);
+	};
+	
+	onProgress = function (e)
+	{
+		this.dispatchEvent (e);
+		draw (e.bytesLoaded / e.bytesTotal);
+	};
+	
+	draw = function (percent)
+	{
+		var r1 = 20;
+		var r2 = 30;
+		var maxStep = 32;
+		var radius = 2 * Math.PI / maxStep;
+		var step = Math.ceil (maxStep * percent);
+		var start = -0.5 * Math.PI;
+		var graphics = this.getGraphics ();
+		var offsetX = 0;
+		var offsetY = 0;
+		
+		graphics.clear ();
+		
+		if (viewport != null)
+		{
+			graphics.beginFill (0xFFFFFF, 0.75);
+			graphics.drawRect (viewport.x, viewport.y, viewport.width, viewport.height);
+			
+			offsetX = viewport.x + 0.5 * viewport.width;
+			offsetY = viewport.y + 0.5 * viewport.height;
+		}
+		
+		graphics.beginFill (0x000000, 1);
+		graphics.lineStyle (1, 0x050505, 1);
+		graphics.moveTo (offsetX + r1 * Math.cos (start), offsetY + r1 * Math.sin (start));
+		graphics.lineTo (offsetX + r2 * Math.cos (start), offsetY + r2 * Math.sin (start));
+		
+		var i = 0;
+		while (i++ < step) graphics.lineTo (
+			offsetX + r2 * Math.cos (start + radius * i),
+			offsetY + r2 * Math.sin (start + radius * i)
+		);
+		while (i-- > 0) graphics.lineTo (
+			offsetX + r1 * Math.cos (start + radius * i),
+			offsetY + r1 * Math.sin (start + radius * i)
+		);
+	};
+	
+	onComplete = function (e)
+	{
+		clean ();
+		this.dispatchEvent (e);
+		this.getGraphics ().clear ();
+		
+		if (viewport != null)
+		{
+			var scaleWidth = viewport.width / loader.width;
+			var scaleHeight = viewport.height / loader.height;
+			var scaleImage = Math.min (scaleWidth, scaleHeight);
+			loader.scaleX = loader.scaleY = scaleImage;
+			
+			loader.x = viewport.x;
+			loader.y = viewport.y;
+		}
+	}
+	
+	clean = function ()
+	{
+		loader.contentLoaderInfo.removeEventListener ("ioError", onError);
+		loader.contentLoaderInfo.removeEventListener ("progress", onProgress);
+		loader.contentLoaderInfo.removeEventListener ("complete", onComplete);
+	}
+	
+	loader = new Loader ();
+	loader.contentLoaderInfo.addEventListener ("ioError", onError);
+	loader.contentLoaderInfo.addEventListener ("progress", onProgress);
+	loader.contentLoaderInfo.addEventListener ("complete", onComplete);
+	loader.load (new URLRequest (url));
+	trace ("loader: " + loader);
+	this.addChild (loader);
+});
+
+return functionList;

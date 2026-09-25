@@ -1,0 +1,112 @@
+var OnFinishHideEffect = function (arr) 
+{
+	for(obj in arr)
+		sCurLayer.remove(obj);
+}
+
+var FocusCard = function (obj) 
+{
+	var focusBg = Resource.getSprite ("GFX_EFFECT_COVER", true).GetFrame (0);
+	focusBg.x = - GraphicsConfig.VIEW_WIDTH / 2;
+	focusBg.y = - GraphicsConfig.VIEW_HEIGHT / 2;
+	focusBg.scaleX = GraphicsConfig.VIEW_WIDTH / focusBg.data.bound.width;
+	focusBg.scaleY = GraphicsConfig.VIEW_HEIGHT / focusBg.data.bound.height;
+	focusBg.alpha = 0.0;
+	
+	sCurLayer.add (focusBg);
+	
+	var showFocus = new OpacityEffect(focusBg, 0.8, 200, null);
+	showFocus.Init();	
+	sCurState.AddScript(showFocus);
+	return focusBg;
+}
+var focusBg = FocusCard(attacker);
+attacker.isLocked = true;	
+attacker.GetDisplayCard().moveToTop();
+
+var strongAnim = Resource.getSprite(spriteId).GetAnim (strongAnimId, Std_int(attacker.xOri), Std_int(attacker.yOri), false, renderMode);
+sCurLayer.add(strongAnim);
+	
+var strongEff = new SimulateAnimEffect(attacker.GetDisplayCard(), strongAnim, strongTime, null);
+strongEff.AddEffectListener(function OnFinishHideEffect(arr)
+{
+	sCurLayer.remove(strongAnim);
+});
+strongEff.Init();
+sCurState.AddScript(strongEff);
+
+var centerX = 0;
+var centerY = attacker.GetFormation().IsPlayer() ? (-250) : (250);
+
+var jumpMoving = new MovingEffect(attacker.GetDisplayCard(), centerX - attacker.xOri, centerY - attacker.yOri, jumpTime, strongEff);
+jumpMoving.Init();
+sCurState.AddScript(jumpMoving);
+
+var jumpAnim = Resource.getSprite(spriteId).GetAnim (jumpAnimId, 0, 0, false, renderMode);
+	
+var jumpEff = new SimulateAnimEffect(attacker.GetDisplayCard(), jumpAnim, jumpTime - 50, strongEff);
+jumpEff.Init();
+sCurState.AddScript(jumpEff);
+
+var crackAnim = Resource.getSprite(spriteId).GetAnim (crackAnimId, centerX, centerY, false, renderMode);
+var crackEff = new AnimEffect(false, crackAnim, crackTime, jumpEff);
+crackEff.AddEffectListener(function OnFinishHideEffect(arr)
+{
+	sCurLayer.remove(crackAnim);
+	attacker.ResetPosition();
+});
+crackEff.Init();
+sCurState.AddScript(crackEff);		
+
+jumpEff.AddEffectListener(function OnFinishHideEffect(arr)
+{
+	sCurLayer.add(crackAnim);
+	sCurLayer.remove(focusBg);
+});
+
+var endEff = [];
+
+var i = 0;
+var lastEff = null;
+for(card in defender)
+{
+	var hitAnim = Resource.getSprite(spriteId).GetAnim (hitAnimId, Std_int(card.xOri), Std_int(card.yOri), false, renderMode);
+	if(card.isBoss)
+		hitAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);	
+	var hitEff = new SimulateAnimEffect(card.GetDisplayCard(), hitAnim, hitTime, jumpEff);				
+	hitEff.Init();
+	sCurState.AddScript(hitEff);
+	
+	hitEff.AddEffectListener(function OnFinishHideEffect(arr)
+	{
+		sCurLayer.remove(hitAnim);
+	});	
+	
+	jumpEff.AddEffectListener(function OnFinishHideEffect(arr)
+	{
+		sCurLayer.add(hitAnim);
+	});		
+/* 	
+	var cbUpdate = null;
+	cbUpdate = function(obj){
+		if(moveEff.TimeRemaining() < waitTime)
+		{
+			// sCurState.nextStep = true;
+			sCurLayer.add(hitAnim);
+			hitEff.SetDependEffect(null);	
+			moveEff.RemoveCallbackPerUpdate(cbUpdate);
+			Sound.GetSound(sound).Play();	
+		}
+	};
+	moveEff.AddCallbackPerUpdate(cbUpdate); */
+
+	endEff.push(hitEff);
+	lastEff = hitEff;
+	i++;
+}
+
+lastEff.AddEffectListener(function OnFinishHideEffect(arr)
+{
+	attacker.isLocked = false;
+});
+endEff

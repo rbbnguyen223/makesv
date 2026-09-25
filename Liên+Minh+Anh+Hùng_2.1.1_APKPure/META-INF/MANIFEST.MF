@@ -1,0 +1,3593 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (Android)
+
+Name: res/drawable-xhdpi-v4/com_facebook_tooltip_black_background.9.pn
+ g
+SHA1-Digest: 2xgU0++/KN5qhzcL/Lhz8p8cTNU=
+
+Name: res/drawable-mdpi-v4/sacombank.png
+SHA1-Digest: M7APayV/WFyf6DVZHg3OeX3a9Co=
+
+Name: res/drawable-mdpi-v4/i_edit.png
+SHA1-Digest: fzIz1tWy+DEksNg6vB6lO8oFsN0=
+
+Name: res/drawable-hdpi-v4/ic_checked.png
+SHA1-Digest: HuHy76crM+L2oqQCpBhf6YkVJXQ=
+
+Name: res/drawable/com_facebook_picker_list_longpressed.9.png
+SHA1-Digest: GFCjouEOsx2zwJ4qrfooYQ63590=
+
+Name: assets/assets/card_216_icon.png
+SHA1-Digest: lc5erB8mO6iv28PMBq94ON/cQUk=
+
+Name: res/layout/login_container.xml
+SHA1-Digest: IoOBxmu+5RHBQt0dtG0wZ8JfuE8=
+
+Name: assets/assets/shop.single.png
+SHA1-Digest: rEfcVjG9KTerGqw3vAn3XCocHuo=
+
+Name: res/drawable/zalosdk_border05.xml
+SHA1-Digest: DXWjm+5Rs60oB/3Ed98RAlR14Vw=
+
+Name: res/drawable-hdpi-v4/acb.png
+SHA1-Digest: AgcFvUe/FNv5di75Kx+hXFTpHY8=
+
+Name: assets/assets/card_352_icon.png
+SHA1-Digest: 6JObG0nF/FIkcP57zpPQo/bHtog=
+
+Name: res/drawable-mdpi-v4/tienphongbank.png
+SHA1-Digest: xLLeTB9rSNagT+Iu+owkcqxQJw4=
+
+Name: assets/assets/card_brand_icon_01.skin.png
+SHA1-Digest: L93EHAilhi+lhpW8jlkK41HOdEo=
+
+Name: assets/assets/card_082_icon.png
+SHA1-Digest: URghUNstcMO69ce+Gk7/4YX9VQ4=
+
+Name: assets/assets/temple_monster_warriors_avatar.png
+SHA1-Digest: Z/WiQt7+xRTm7zbtk9Sy/e/es1Y=
+
+Name: res/drawable-mdpi-v4/i_check2.png
+SHA1-Digest: ccJBS3fHV41yrhMKTv2iw/eWrAk=
+
+Name: res/drawable/zalosdk_ct_check_box_on.9.png
+SHA1-Digest: M3OzzIWxcOF7FLKwHUdIDwp7cI0=
+
+Name: res/drawable-mdpi-v4/acb.png
+SHA1-Digest: mEe/PMGAW8CNrKdARvLWuHWkPHk=
+
+Name: res/drawable-hdpi-v4/com_facebook_button_like_icon.png
+SHA1-Digest: ++sOw/916EgdnS4iNxu5GVStnL8=
+
+Name: assets/assets/card_gnar_icon_03.png
+SHA1-Digest: y3t8sY10FchOPy/RrwuogLUTLVY=
+
+Name: res/drawable-hdpi-v4/ic_id.png
+SHA1-Digest: Fw9WyLWLIZXE3PsQPZVQOrhdS0A=
+
+Name: assets/assets/card_423_icon.png
+SHA1-Digest: lZUkeJEIoJkOjHKt/JFJ6q0pvCo=
+
+Name: assets/assets/Ahri_Hon_Gio.wav
+SHA1-Digest: 71eXkkOEkVc7TX2HIwc9lZTmYeo=
+
+Name: assets/assets/Calculator.hscript
+SHA1-Digest: SMWGVSrn6bjrtYhz2xR/Gmuj2w4=
+
+Name: res/drawable-hdpi-v4/com_facebook_button_grey_normal.9.png
+SHA1-Digest: 2+NE/XvdQUVpFKNt+C7seIqax3w=
+
+Name: res/layout/zalosdk_activity_payment_gateway.xml
+SHA1-Digest: YDuCwIBCt+qCwgsX8Dtefv0z43I=
+
+Name: assets/assets/jayce.single.png
+SHA1-Digest: ChM7LWNhuuN+XqCTnjTt3zr2OFY=
+
+Name: res/drawable/zalosdk_border07.xml
+SHA1-Digest: ueQkn+YbCxlyGhIc9PTexf2hPFk=
+
+Name: res/drawable-ldpi-v4/ic_checked.png
+SHA1-Digest: uwG/syCMKbBR/rmGoA4V7ebOjzk=
+
+Name: res/drawable-hdpi-v4/vpbank.png
+SHA1-Digest: ZLZAVHL3nw3Sy1k/wAkc6+Ez4jQ=
+
+Name: assets/assets/card_268_icon.png
+SHA1-Digest: EgzgCB9zYr0ebz/G5cmgzTtOZ3s=
+
+Name: res/drawable-hdpi-v4/ic_arrow.png
+SHA1-Digest: t5Ysy3n81dlYtJlKxW5Ku38epwg=
+
+Name: assets/assets/card_475_icon.png
+SHA1-Digest: yfAMp6mlvmvm7SXjqjsvoclmmmg=
+
+Name: res/drawable-mdpi-v4/mbbank.png
+SHA1-Digest: WgYwBYoXTmcQTxmuUm1aaLhGdeo=
+
+Name: res/drawable-xhdpi-v4/ico_cardcredit.png
+SHA1-Digest: qmCWoVh6jcgcEhWTz6DFiH2r63I=
+
+Name: assets/assets/ekko_normal.hscript
+SHA1-Digest: JsDNxSO4GAU8Ms1Ss1rNvagE/OA=
+
+Name: assets/assets/card_shen_icon_01.skin.png
+SHA1-Digest: YR683IR3MZoQneD7DV46jR6UibM=
+
+Name: res/drawable-mdpi-v4/ic_email.png
+SHA1-Digest: oaSTab/z0yRc5y1CcoBzaSLZ9WQ=
+
+Name: assets/assets/card_089_icon.png
+SHA1-Digest: K1mQHcSrku/xlyefcFDdg6XF4Ps=
+
+Name: assets/assets/spell_02_offend_06_thunder.single.png
+SHA1-Digest: o0vigeJLbj69zyEEhKJ5bUf0kbM=
+
+Name: assets/assets/treasure.single.png
+SHA1-Digest: fbWvByOk5wBz/gm5ewEzUQoAPFY=
+
+Name: res/drawable-ldpi-v4/ic_id.png
+SHA1-Digest: baAaxZXpFvSXBXe2AMmSujOAPrY=
+
+Name: assets/assets/card_jayce_icon_02.skin.png
+SHA1-Digest: 6KpWpwxlrQnfebMklMdXUP41lmY=
+
+Name: assets/assets/Amumu_xoay_vai.wav
+SHA1-Digest: 9oYY8s7gxsVmmlbcO9wo+rcM3qc=
+
+Name: assets/assets/card_037_icon.png
+SHA1-Digest: vkEMfVRuJXGl1+/wnldvsBLJmvM=
+
+Name: assets/assets/extensions_webview_close_ldpi.png
+SHA1-Digest: 4uC5z+TEtPM2X/fZBpDNVWitGMo=
+
+Name: res/layout/zalosdk_bank_selected.xml
+SHA1-Digest: INMyGJi84SeoITrQugyHBh2njqw=
+
+Name: assets/assets/card_corki_icon_lv4.png
+SHA1-Digest: doe8Y17vUK96SWhIhqxwYo5qiN0=
+
+Name: assets/assets/text_bitmap.single.png
+SHA1-Digest: bYj2t6SX0QqNDof7if7Yhfj7fxw=
+
+Name: res/anim/pull_up_from_bottom.xml
+SHA1-Digest: EfXnThC6OCj2Vc98bnNPKTp0yIE=
+
+Name: res/drawable-mdpi-v4/oceanbank.png
+SHA1-Digest: Gcp904K8v0+HZwhhhvZj4CYUp30=
+
+Name: assets/assets/border.single.png
+SHA1-Digest: IEYw0Dkwbkh1pT02vdMVLxij/qc=
+
+Name: assets/assets/card_489_icon.png
+SHA1-Digest: Nzm1lcokV2XPISeKASKIh7CzxwM=
+
+Name: assets/assets/EventUI.hscript
+SHA1-Digest: mnOiY68vsP3IHnEXO2LpANlOFTo=
+
+Name: res/drawable-hdpi-v4/eximbank.png
+SHA1-Digest: c4IzhmbhDhBCGF1V9RpkfHODB6g=
+
+Name: res/layout-v17/zalosdk_activity_atm_card_selector.xml
+SHA1-Digest: FHa3ALEJdYgPta8FqEBK0oIiMf0=
+
+Name: assets/assets/kayle_util.single.png
+SHA1-Digest: xMTq60DpBQdG35FmCtCvyQrLVQo=
+
+Name: res/drawable-xhdpi-v4/ic_checked.png
+SHA1-Digest: 7tEeoX108eYaKVEMB/wdva4dEj4=
+
+Name: assets/assets/embed_gfx_cards_01
+SHA1-Digest: LVMim+FTsWH/pnkKCiBoisXnt5Y=
+
+Name: res/drawable-mdpi-v4/com_facebook_tooltip_black_topnub.png
+SHA1-Digest: yY8/t0s+QXhpJiUSW/BkWQiYs6A=
+
+Name: res/drawable-mdpi-v4/ic_play_zing.png
+SHA1-Digest: szH20XPZqL+AYPu+/rMNn8t0Kds=
+
+Name: res/drawable-mdpi-v4/i_next2.png
+SHA1-Digest: AHqq3gZjG8WY51KIkStL+gofAgs=
+
+Name: assets/assets/card_132_icon.png
+SHA1-Digest: 823sta5YxZlgqXD5KImXfMt+L7I=
+
+Name: res/drawable-mdpi-v4/ico_cardatm.png
+SHA1-Digest: Y0qorJufZCzH9hugq7ExGlxt7w4=
+
+Name: res/drawable/zalosdk_checkbox_bk.xml
+SHA1-Digest: fdkBpjd2B+i6/YAakw2eai3+fG4=
+
+Name: res/drawable/com_facebook_picker_list_pressed.9.png
+SHA1-Digest: Ik47+fgRRRwLdz/WZqj11JNO2HA=
+
+Name: res/drawable/com_facebook_button_check_on.png
+SHA1-Digest: ObcSDxnphDDTROHTniwThtnJVWk=
+
+Name: res/drawable-hdpi-v4/com_facebook_logo.png
+SHA1-Digest: pI4xXskj1ods7E6ysp4+Rr2fh2U=
+
+Name: assets/assets/effect_cover.single.png
+SHA1-Digest: vwncIfimgFYKarvE1VOl8Ua/+go=
+
+Name: res/drawable-mdpi-v4/vietinbank.png
+SHA1-Digest: Vgzn2i8wq2lv/oVNu2krMIURG+E=
+
+Name: res/drawable-hdpi-v4/oceanbank.png
+SHA1-Digest: BvjokaSvCOX/XqYRNeHqoNIGXbQ=
+
+Name: res/drawable-hdpi-v4/ic_uncheck.png
+SHA1-Digest: VXFw1vOBxEphxhiq5D5RglsR9Gc=
+
+Name: res/drawable-hdpi-v4/maritimebank.png
+SHA1-Digest: rroAGIUlO5kAOJOlZxCgGdiwhCk=
+
+Name: assets/assets/riven_03.single.png
+SHA1-Digest: /uHUCSS4mKLKPKEXQtAKLaIEp5g=
+
+Name: assets/assets/card_pantheon_icon_01.skin.png
+SHA1-Digest: f3HG0Jo/BhcAQikyeKiOypzx0YQ=
+
+Name: assets/assets/card_soraka_icon_lv3.png
+SHA1-Digest: LlwOjh00Hf72RyWIo4JnEdICvUM=
+
+Name: assets/assets/card_045_icon.png
+SHA1-Digest: IrBhCRPXcmQjEGl29Uq94h/mjzI=
+
+Name: res/layout/zalosdk_activity_retry.xml
+SHA1-Digest: TdjIhni3rRdKyHSHU1um0cdvtqs=
+
+Name: assets/assets/card_boro_lv3_icon.png
+SHA1-Digest: zyRuiTw+EAaz16UQ2Df6xple7Cc=
+
+Name: assets/assets/card_086_icon.png
+SHA1-Digest: 1zLZy13i7Oz7vO8Yye03CnAoq7I=
+
+Name: assets/assets/shield_light.single.png
+SHA1-Digest: nNEEWlF+FW/+w2T5xLa21A4LRMo=
+
+Name: res/drawable/com_facebook_button_like.xml
+SHA1-Digest: ZB8HR8RyjCEfx/NVPEIQG9M68Xo=
+
+Name: assets/assets/level_up.single.png
+SHA1-Digest: MNZvZKrPACXRPURgus1ZKjvAb4I=
+
+Name: assets/assets/spell_02_offend_02_ice.single.png
+SHA1-Digest: pTzj8HpfbHEvjfqWV5ZZJsHfPN4=
+
+Name: assets/assets/embed_gfx_card_ui
+SHA1-Digest: Ek1v9bygFTRsMSxLrg7YPTTe+oo=
+
+Name: assets/assets/emotion.single.png
+SHA1-Digest: nVeY3TR8bmddx/LQmQuoYfgMMjE=
+
+Name: assets/assets/Ashe_BasicAttack.wav
+SHA1-Digest: Pa6ca5SZFFyGpDz46qdG2Mnnbk4=
+
+Name: res/layout/com_facebook_usersettingsfragment.xml
+SHA1-Digest: Vv/znRiTt5ZeFNzPigXMCjtloPc=
+
+Name: assets/assets/card_019_icon.png
+SHA1-Digest: HKthbaa+nLBmYZcAnhfqoBx4+Es=
+
+Name: assets/assets/equip_icon.single.png
+SHA1-Digest: w9GexX7OYFg3ek9N9K9k7C8t93Y=
+
+Name: res/drawable-xhdpi-v4/com_facebook_button_like_background_select
+ ed.png
+SHA1-Digest: BYDCtKmXbj2aa5lajPLkLWjnkn8=
+
+Name: res/drawable-xhdpi-v4/namabank.png
+SHA1-Digest: D1KOeml6ig005hAIRGFUN/+rIUQ=
+
+Name: assets/assets/card_jarvan_iv_icon_lv3.png
+SHA1-Digest: 8uBHD4U5gfEINK0JD0x8YAF9Fis=
+
+Name: assets/assets/newbie.single.png
+SHA1-Digest: MB9glqoiR6APQ7CdDtpTj6lNm8o=
+
+Name: assets/assets/card_385_icon.png
+SHA1-Digest: oHTJO6Px/hXs/3fRb9llmH7anTo=
+
+Name: res/drawable/zalosdk_border03.xml
+SHA1-Digest: oAbhu0LXDZ5tI2jHOg7aERQIIiQ=
+
+Name: res/drawable-xhdpi-v4/tienphongbank.png
+SHA1-Digest: 41Jd8IsyI1JTkWJvKJ+IgA1R+5Q=
+
+Name: res/layout/dialog_zing_me_login.xml
+SHA1-Digest: 8enqYRCz5z3Z4YN4fte1yq57a5I=
+
+Name: res/drawable-mdpi-v4/ic_protect.png
+SHA1-Digest: cry/DCwMs+Ko+OZtvY6vFvhYY60=
+
+Name: assets/assets/tournament.single.png
+SHA1-Digest: pIOluiy3K4f+VCg9d1YtxRNp1XA=
+
+Name: res/layout/com_facebook_picker_checkbox.xml
+SHA1-Digest: qFbuGYJ6FGm9syKn+3lph+xQA7g=
+
+Name: assets/assets/embed_gfx_effect_battle
+SHA1-Digest: bQplasW371WHPUzZ486cRXxwCw0=
+
+Name: assets/assets/card_344_icon.png
+SHA1-Digest: Cqw2I/ghCeawk+dAfdQi0TSiNc0=
+
+Name: assets/assets/jayce_util.hscript
+SHA1-Digest: 6avN/luT/YN+ayLz1bmYdEXSTQQ=
+
+Name: assets/assets/card_027_icon.png
+SHA1-Digest: v/mvR4ghq1DAkYl2Vpvzo26RB9s=
+
+Name: assets/assets/card_vladimir_icon_01.skin.png
+SHA1-Digest: X/jLKyAqbsTP579MQyuTth/wPtk=
+
+Name: assets/assets/card_ziggs_icon_01.skin.png
+SHA1-Digest: bmVsbefQiT/+kQXd2ZTeLlVTdxQ=
+
+Name: res/drawable-hdpi-v4/zalosdk_ic_success.128.png
+SHA1-Digest: 1LlAvGaCpv2nwAd0bPJ1kjWNuM0=
+
+Name: res/drawable-xhdpi-v4/com_facebook_tooltip_black_xout.png
+SHA1-Digest: GRVPhQjnqMlZsnYF1YFKphQHJm0=
+
+Name: assets/assets/Cassiopeia_Hoa_Da.wav
+SHA1-Digest: +Ry1L3ZNghC01+ht7rx6/mYuvDo=
+
+Name: assets/assets/card_442_icon.png
+SHA1-Digest: EfnxbMoxjpdOldtiE5peBF1YHgg=
+
+Name: res/drawable-mdpi-v4/com_facebook_tooltip_blue_xout.png
+SHA1-Digest: VpSoMW/6yLkYe65/CO1eWu25/vg=
+
+Name: assets/assets/card_334_icon.png
+SHA1-Digest: lnnEb7L5R3vpQ+Ret0Urt1CmG7M=
+
+Name: assets/assets/card_161_icon.png
+SHA1-Digest: 0SbxIe95N45GCzLJvoc3a7KSO68=
+
+Name: assets/assets/card_071_icon.png
+SHA1-Digest: MetYt/mZ0d/jn80DYFPxaVhSyAk=
+
+Name: res/layout/zalosdk_page_content.xml
+SHA1-Digest: lF0BXWT25Hnbnt71luHbiAaQj/E=
+
+Name: assets/assets/PanelSellInfo.hscript
+SHA1-Digest: vSUdhHL9FKCkyCnkpq0KVdlybbE=
+
+Name: res/drawable-hdpi-v4/vietcombank.png
+SHA1-Digest: HyXvso+bzPB847vWAOglG7mnlng=
+
+Name: assets/assets/ekko_skill.hscript
+SHA1-Digest: 9vxeQKVmBHgdS3BdLf+Dox71U88=
+
+Name: res/drawable/zalosdk_border_rectangle_no_corner_partial_transpar
+ ent_12_percent.xml
+SHA1-Digest: exKkpu9frz/paVbJj84nz4KR0Xw=
+
+Name: res/layout/com_facebook_placepickerfragment.xml
+SHA1-Digest: W9ByaSC2aPXicZQkCYBuKN9AyDk=
+
+Name: assets/assets/card_467_icon.png
+SHA1-Digest: sonT12Tg6blaeuSeOcl1V3i8u6Q=
+
+Name: res/drawable/zalosdk_border_rectangle_no_corner_partial_transpar
+ ent_02.xml
+SHA1-Digest: 7GitJKe30Yvo5F391dUR7fvd4fE=
+
+Name: res/drawable-xhdpi-v4/mbbank.png
+SHA1-Digest: jEPa3LPYAWodW1kEIDkB9mTthgU=
+
+Name: assets/assets/card_264_icon.png
+SHA1-Digest: FLOvV8bX3bloidSxUfbI5PmIKXM=
+
+Name: res/drawable-mdpi-v4/i_next.png
+SHA1-Digest: 7daCdkAh+U1cDAoMBupzFH66Oqs=
+
+Name: res/drawable/com_facebook_button_blue_normal.9.png
+SHA1-Digest: qxtCfCywN4Q8vxg2cKsJq3qyrpI=
+
+Name: assets/assets/jarvan_01.single.png
+SHA1-Digest: maRc/7LGlXwIPw/Hg7TQ31xsbRw=
+
+Name: res/drawable-xxhdpi-v4/com_facebook_button_like_icon.png
+SHA1-Digest: p7bFOF7rB5pnl5sbpyygQrLzHSU=
+
+Name: res/drawable-hdpi-v4/ic_launcher.png
+SHA1-Digest: RQ09RDJf3yWYEKYOavo2ED4Yaz0=
+
+Name: assets/assets/garen_util.hscript
+SHA1-Digest: yQM7Ezz8II5agCnbuvQ8HAtqZfE=
+
+Name: res/drawable-hdpi-v4/zalosdk_btn_show.128.png
+SHA1-Digest: vk7WbHfovJl1N4ORHFoqZZBeJwI=
+
+Name: res/layout/zalosdk_mobile_card.xml
+SHA1-Digest: BWGKYgEOSrkAp3DGwuW296OH8aU=
+
+Name: assets/assets/card_327_icon.png
+SHA1-Digest: gopvObYWZZpfhmhExqaTDMc5/Bg=
+
+Name: assets/assets/noembed_gfx_cards_full_01
+SHA1-Digest: L2zDXu0DA9encsKokAFMWfN+Rew=
+
+Name: res/drawable-hdpi-v4/zalosdk_ic_select.128.png
+SHA1-Digest: LAYzh9DFXUOpHsn04GB/Yz2QaAc=
+
+Name: res/drawable-mdpi-v4/com_facebook_inverse_icon.png
+SHA1-Digest: F87dFjM8iCRCeWSfrxkG/jcMtZY=
+
+Name: assets/assets/card_375_icon.png
+SHA1-Digest: e+JBVR59b4gDs58Q8iBVZbMU9rU=
+
+Name: res/layout/zalosdk_atm_card_info.xml
+SHA1-Digest: nmen+D7llojy3SJux41Q9xau3DM=
+
+Name: assets/assets/Diana_passive_oc.wav
+SHA1-Digest: gLrUEl1eyJfGMIKXqWYyqaiOusA=
+
+Name: assets/assets/temple_monster_heal_avatar.png
+SHA1-Digest: 5jYgY9WvsBM9r1BVBlBxbohX+Mo=
+
+Name: res/layout/zalosdk_gg.xml
+SHA1-Digest: BlSLzmdjrj5wsL5N3P+Zt/wxrhM=
+
+Name: assets/assets/card_328_icon.png
+SHA1-Digest: 0ncc+NOPncAfKcNO1h5/1/puvOY=
+
+Name: assets/assets/card_corki_icon_lv3.png
+SHA1-Digest: r52fOclSJBgdSKvypo3S72C/+4s=
+
+Name: assets/assets/card_204_icon.png
+SHA1-Digest: jSzXjQCIjbk5//5U5KyfyS9G/sc=
+
+Name: res/layout/zalosdk_activity_mobile_acc.xml
+SHA1-Digest: qJBf01ZGxJ/00zGiVmTVpmlsrLE=
+
+Name: res/drawable-hdpi-v4/com_facebook_picker_magnifier.png
+SHA1-Digest: nXJW1x0AfiwPV3k/lG07VVTYcN4=
+
+Name: res/drawable/zalosdk_border10.xml
+SHA1-Digest: 4MSGsA48Sy17xzGeUmVlalfrCe4=
+
+Name: res/drawable-xhdpi-v4/com_facebook_button_like_background.png
+SHA1-Digest: bCS0i+L/pj0A+dtiUyrxzLeFPZw=
+
+Name: res/drawable-hdpi-v4/ic_warning.png
+SHA1-Digest: 5p+RqiDNh9fLZylapvxdjB+VggQ=
+
+Name: res/drawable-mdpi-v4/i_next_disable.png
+SHA1-Digest: b+Tlis0gb/itVWBtho+xBZqWFnc=
+
+Name: res/drawable-hdpi-v4/close.png
+SHA1-Digest: vzoVwUXnEtJQCL4582EeDreqvIA=
+
+Name: assets/assets/card_031_icon.png
+SHA1-Digest: rBmNVcOMgtScS4UfgAa2tY+nIpU=
+
+Name: assets/assets/card_missfortune_icon_03.skin.png
+SHA1-Digest: XB7JUMf1rwvxDMvYcfzTgnaJe/I=
+
+Name: assets/assets/card_tristana_icon_lv3.png
+SHA1-Digest: f/bxqrwAvumNJpfsJhvp9hLQHy0=
+
+Name: res/drawable/zalosdk_border16.xml
+SHA1-Digest: Mbuk1NXlZ/FQNmjeqqU8BLCvKf8=
+
+Name: res/drawable-xhdpi-v4/com_facebook_button_grey_normal.9.png
+SHA1-Digest: lEEkZV10o/fTM2pB5w8MpFSsu+w=
+
+Name: res/drawable-xhdpi-v4/ic_play_fb.png
+SHA1-Digest: mdigRuwUJ3nPWINM7Ai44mo1BfA=
+
+Name: res/drawable/zalosdk_guest.xml
+SHA1-Digest: fJ/IX3HA1Rgo0Hwk5SLk4BzWvTY=
+
+Name: res/drawable-mdpi-v4/com_facebook_picker_magnifier.png
+SHA1-Digest: 1goyp8kAwtOgOyzxYWcSC6HHhLI=
+
+Name: assets/assets/card_blue_icon_01.png
+SHA1-Digest: QviXYjE7shgvPPNtqtni3Oh+2HU=
+
+Name: res/drawable-xxhdpi-v4/com_facebook_button_like_icon_selected.pn
+ g
+SHA1-Digest: NSlYeM2+QKHBQXTX6bFC/uBEsM4=
+
+Name: assets/assets/card_vayne_icon_03.png
+SHA1-Digest: 2IHRyrqdr5WFcvszG6Be2Y10uGM=
+
+Name: assets/assets/Malzahar_am_anh.wav
+SHA1-Digest: AoXdGsRpvSU8b7Ay9YOIezDYWaA=
+
+Name: assets/assets/card_003_icon.png
+SHA1-Digest: iMwnezEye8tY9j18i4Tzc09r1e0=
+
+Name: res/layout/cmnd_container.xml
+SHA1-Digest: 1xMhzgALj5ZldYk62TLVFueqdLw=
+
+Name: assets/assets/pvp_rank_icons.single.png
+SHA1-Digest: S+Pkv2zKwP48lklyhuPR0l20M9o=
+
+Name: assets/assets/card_179_icon.png
+SHA1-Digest: WF+xZlD15NGU//VBJk7svulxhQE=
+
+Name: assets/assets/embed_gfx_pvp
+SHA1-Digest: Bmo2B7S4WW0+eTgM2Rewf3908XQ=
+
+Name: assets/assets/masteryi_util.single.png
+SHA1-Digest: KlBWZFas4tYvS1Eydr4TusBhGuU=
+
+Name: res/drawable-hdpi-v4/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: v6VGjmirliRdl2QuBQHgyJr4Z8s=
+
+Name: res/layout/zalosdk_credit_card_info.xml
+SHA1-Digest: JCRz9g2VM+3KoZFa8ELvor+Gt2M=
+
+Name: assets/assets/card_annie_icon_02.skin.png
+SHA1-Digest: RyKDhW7IvekqUaim9CFsU59efjQ=
+
+Name: assets/assets/card_118_icon.png
+SHA1-Digest: MdxmQ8okmlmgmVyZv8TdipBoSnc=
+
+Name: assets/assets/card_gangplank_icon_lv4.png
+SHA1-Digest: ayCdQJP3dYKxuW1OJ5TyJ0vafgY=
+
+Name: assets/assets/jarvan_util.hscript
+SHA1-Digest: AIQtiM7EKZhwezCP/chkzEcCtM8=
+
+Name: res/drawable-hdpi-v4/btn_close.128.png
+SHA1-Digest: DTLdXzjDjLwp2NxarSOiCqtRhNU=
+
+Name: res/drawable-mdpi-v4/techcombank.png
+SHA1-Digest: nyHKVx1AOshC2TZtzHLa7ZNOUMk=
+
+Name: assets/assets/card_tower_icon_lv1.png
+SHA1-Digest: lav1EhqIW30k0B3h9hcbpjx761I=
+
+Name: res/layout/email_guard_container.xml
+SHA1-Digest: oYf4yVwUTkW3a47AnvENbwKRkMk=
+
+Name: assets/assets/card_yasuo_icon_03.skin.png
+SHA1-Digest: 82L2w/eX6g3dkGfcsMEMuUE7wT4=
+
+Name: assets/assets/academy_ui.single.png
+SHA1-Digest: a0pQ7jxUqlZnsxvImcsYbR8FW48=
+
+Name: assets/assets/attack_04_yi_03.single.png
+SHA1-Digest: BKmp/MsKFWiFG8tSF4TbWyQXBXU=
+
+Name: assets/assets/card_092_icon.png
+SHA1-Digest: ZQ8WEn5qXE1OgIyM+9G+XOAb9fA=
+
+Name: res/drawable-mdpi-v4/saigonbank.png
+SHA1-Digest: DjIN/S78gQu5n0No/7PZviCSTHU=
+
+Name: res/drawable-hdpi-v4/i_back.png
+SHA1-Digest: NAE5Zrv8zqimqfMFCm06LkOqesI=
+
+Name: res/drawable/zalosdk_button00.xml
+SHA1-Digest: QvpHQBNnLvN3Kg7wVFmp9kB9tAw=
+
+Name: assets/assets/card_051_icon.png
+SHA1-Digest: XUbAlf9mnPqruE75yok/LuCyyb4=
+
+Name: assets/assets/ziggs_skill.hscript
+SHA1-Digest: efrpF1mlXyv2/sRK0Iep8KyGqas=
+
+Name: assets/assets/card_119_icon.png
+SHA1-Digest: Gp5yCE2NONJLKbjB1HxffSs4R2I=
+
+Name: assets/assets/extensions_webview_close_hdpi.png
+SHA1-Digest: BpjQkr4hvU/OM/G6vlGRE2kn8+0=
+
+Name: assets/assets/card_236_icon.png
+SHA1-Digest: gBOSnh/DvUguz5bz6vwaDCYWvfg=
+
+Name: res/drawable-mdpi-v4/bidv.png
+SHA1-Digest: tt3nrWTI4PYoElXfzbKiGjtLGzE=
+
+Name: res/drawable-mdpi-v4/com_facebook_tooltip_blue_background.9.png
+SHA1-Digest: catelxgP4Vurpy+V7+L3PNxSwKk=
+
+Name: assets/assets/HealingEffect_Sona.hscript
+SHA1-Digest: z4W77YP44ti8i0pNSdsOmL85hr8=
+
+Name: assets/assets/card_icon_yasuo_underworld_lv4.png
+SHA1-Digest: 5/91d0YWxtyBcpfoOJV4gXzTsLk=
+
+Name: res/drawable-hdpi-v4/com_facebook_tooltip_black_topnub.png
+SHA1-Digest: 9OR68UmIYlhlkWt56QGdFVj0nR0=
+
+Name: assets/assets/embed_gfx_font
+SHA1-Digest: 1vM5E3yOJb2p311kLiGswmLGr5I=
+
+Name: assets/assets/home_bg.single.png
+SHA1-Digest: FKori5yu5x1WI/nmkHadQXr7cP0=
+
+Name: assets/assets/spell_02_offend_03_poison.single.png
+SHA1-Digest: Zz6FQMXd2W1V1t97moGaV/skRpU=
+
+Name: assets/assets/Event_30_4.hscript
+SHA1-Digest: S2+frGTbgvirptbdVv5iWB7zt0M=
+
+Name: res/drawable-mdpi-v4/gpbank.png
+SHA1-Digest: RBL/aNEnr+CtxWJa2WCCmmx59rY=
+
+Name: assets/assets/card_masteryi_icon_04.skin.png
+SHA1-Digest: Fym9TnA6TbAhxHm82zwRbwBex38=
+
+Name: res/layout/zalosdk_payment_gateway.xml
+SHA1-Digest: 77lSX5afslHDFtRL5rJokAXu1tQ=
+
+Name: res/drawable/com_facebook_button_like_background_selected.png
+SHA1-Digest: RwqHSR17Um8C7eTFB7n2zA6R8YA=
+
+Name: assets/assets/card_033_icon.png
+SHA1-Digest: SPIWkppYjzX25XE96nxifZjy9p4=
+
+Name: assets/assets/card_219_icon.png
+SHA1-Digest: oLdjTBYwOTTu2HguEAIwBecImOE=
+
+Name: assets/assets/embed_gfx_shop_ui
+SHA1-Digest: KWEKLr7FufFoAtkC/12Vf1QMRCA=
+
+Name: assets/assets/Masteryi_luot_den.wav
+SHA1-Digest: fuPmq9LcmnglFTICAGDnwpnSEzA=
+
+Name: assets/assets/card_riven_icon_lv4.png
+SHA1-Digest: xPYbngfjzcXT0iszgdIK8dNsqD4=
+
+Name: assets/assets/card_281_icon.png
+SHA1-Digest: emRaMx3ikYhTvtfp4rzR7mh1rM4=
+
+Name: assets/assets/ezreal_util.hscript
+SHA1-Digest: SR/yxKaEHgySPvbhapQ6RaeTv+E=
+
+Name: assets/assets/card_riven_icon_01.skin.png
+SHA1-Digest: TAGtOF8GjFE9lUpYMhk6sCPlr58=
+
+Name: assets/assets/flying_control.single.png
+SHA1-Digest: QOvTjO3Ke4JyZ01g6+JB+8Q/LWM=
+
+Name: assets/assets/Event_HeroFusion.hscript
+SHA1-Digest: 2zN95eHTSq8/m4TtV2P+GuW2QmI=
+
+Name: assets/assets/card_zed_icon_lv4.png
+SHA1-Digest: 3tCCE92tfRmWZBF6eiEtasOv50A=
+
+Name: assets/assets/new_map_monster_lucklady_avatar.png
+SHA1-Digest: oVOodMPVeWnlvUcNlKMltipw/wk=
+
+Name: res/drawable/com_facebook_profile_picture_blank_square.png
+SHA1-Digest: ii3g4mqHjQXtghNZE1cibJA1Jbs=
+
+Name: assets/assets/card_106_icon.png
+SHA1-Digest: iF943gkfz1VUYZMpnXbUNAe06+0=
+
+Name: assets/assets/card_gnar_icon_05.png
+SHA1-Digest: f63mw4hyxiSLfuitwO3hbrxX8xo=
+
+Name: assets/assets/attack_06_mf.single.png
+SHA1-Digest: o2QXV6ZawjSHX4auKdHVH6WPTJA=
+
+Name: assets/assets/card_icon_yasuo_underworld_lv6.png
+SHA1-Digest: fDkqoLvxFi/dq8yQ5b3BCnEaBkY=
+
+Name: assets/assets/card_477_icon.png
+SHA1-Digest: Y4qcNgcBw9MH0Q6s38JL9QsWEBY=
+
+Name: res/drawable-xhdpi-v4/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: nAUaue7LFT4Y8UIpIa2lrh8kmlA=
+
+Name: res/drawable-hdpi-v4/ic_email.png
+SHA1-Digest: pDQfaL5Fzq9HIsYC+sAkEkKchM8=
+
+Name: res/drawable/zalosdk_cancel.xml
+SHA1-Digest: SKbQkgd0aYTUvUQNQcCOpDKt68o=
+
+Name: assets/assets/card_060_icon.png
+SHA1-Digest: 5Z+jbOOHUiFy35ttbnZhDWQeUwk=
+
+Name: assets/assets/attack_15_mazalhar.single.png
+SHA1-Digest: OrTZSm4TmxOcTsYeJ4+IaZNHGtI=
+
+Name: assets/assets/card_diana_icon_02.skin.png
+SHA1-Digest: cR6nmQt4g1Rc4w3+FZX9rS6fq8s=
+
+Name: res/layout/zalosdk_retry_item.xml
+SHA1-Digest: sJDknudipCuqraiXw5L640BwFSE=
+
+Name: res/drawable/com_facebook_picker_list_focused.9.png
+SHA1-Digest: l3wzvzlifU8FD7gRCsDqrAgX6qs=
+
+Name: assets/assets/card_040_icon.png
+SHA1-Digest: FOY3EwdYOFZ5I1oQNAs/c5GDvDk=
+
+Name: assets/assets/card_068_icon.png
+SHA1-Digest: MJg3tA4v9jKeavU+XdJDeRxIDAo=
+
+Name: res/drawable-xhdpi-v4/com_facebook_tooltip_blue_topnub.png
+SHA1-Digest: 8xf5T2QSgzy/NKnf0KaAztuK+8s=
+
+Name: assets/assets/listitem.single.png
+SHA1-Digest: rxitbugm8VjKifok8amja7uxQ2A=
+
+Name: res/drawable/zalosdk_border06.xml
+SHA1-Digest: hdapXQcdXt3BA3BP7oGxTvxQ2+Y=
+
+Name: assets/assets/card_266_icon.png
+SHA1-Digest: gb6CPSHkWcPCljdfkp5knZkN2Qo=
+
+Name: assets/assets/ezreal_util.single.png
+SHA1-Digest: WOKodAxFbBFW2B7cfhvJkkY9vN8=
+
+Name: res/drawable-hdpi-v4/com_facebook_tooltip_blue_bottomnub.png
+SHA1-Digest: CKHzLZgwqxRHlq7CjCoPJAt9oVI=
+
+Name: assets/assets/card_053_icon.png
+SHA1-Digest: WbJRON+rTcJcIDJsq0iS82m7jo4=
+
+Name: assets/assets/lux_util.wav
+SHA1-Digest: wK33BgD5764gNOs/crg+1N/fhlM=
+
+Name: res/drawable/zalosdk_ic_page_xml.xml
+SHA1-Digest: +RDfdpWCcjYG/wZdppu6cWg2r3M=
+
+Name: assets/assets/result_battle_win.single.png
+SHA1-Digest: JyMBdsEZSk9OeUUBk0TEIwfqVMI=
+
+Name: assets/assets/card_garen_icon_01.skin.png
+SHA1-Digest: fmii16FK8ffRe6huC8HDo0pZY/Q=
+
+Name: res/drawable-mdpi-v4/com_facebook_button_blue_normal.9.png
+SHA1-Digest: qxtCfCywN4Q8vxg2cKsJq3qyrpI=
+
+Name: assets/assets/card_050_icon.png
+SHA1-Digest: SW1aGpbVnrtxrj5EprTSXQYVj50=
+
+Name: assets/assets/Event_14_2.hscript
+SHA1-Digest: gO7l3jcMTEc4aWwLNO8p/t0IFkU=
+
+Name: res/drawable-hdpi-v4/i_phone.png
+SHA1-Digest: JoZOg8SeYpBdp1XJ2T3OsB5vQSI=
+
+Name: res/layout-v12/email_guard_container.xml
+SHA1-Digest: eOJEG/MYescWn+7KK25mXFe1HKg=
+
+Name: res/drawable-xhdpi-v4/acb.png
+SHA1-Digest: kW+F3EOzHLtKymCd+urRJJNUeuc=
+
+Name: assets/assets/card_148_icon.png
+SHA1-Digest: v3c6fykXCbNKt5oulVmzsGgyVeo=
+
+Name: assets/assets/guild_icon.single.png
+SHA1-Digest: ug4b9t/lQGklFbHf+h1bgfjzr0s=
+
+Name: res/drawable-mdpi-v4/navibank.png
+SHA1-Digest: 7BnjQg9LJCOqyyphAW+Sclc3W9s=
+
+Name: assets/assets/attack_10_liss.single.png
+SHA1-Digest: oP37Fwn6dfX9whjC6azfPhwb/BU=
+
+Name: res/drawable-hdpi-v4/i_next.png
+SHA1-Digest: J8U1H14licC9MjR7NgstJX+Kbzg=
+
+Name: assets/assets/card_361_icon.png
+SHA1-Digest: nRQtnJvf4RLyjnVaTW5NESSV138=
+
+Name: assets/assets/card_309_icon.png
+SHA1-Digest: tKJ1GQj7HmcgIeDfSmyztPkGpk8=
+
+Name: res/drawable-hdpi-v4/com_facebook_tooltip_black_background.9.png
+SHA1-Digest: +DxTpyUKpT11iz68MG1Q0iB2EvA=
+
+Name: lib/armeabi/libregexp.so
+SHA1-Digest: ciO66vIGXH8aWlWct+hTUmNNaBM=
+
+Name: assets/assets/common_card.single.png
+SHA1-Digest: nqcVOwgmaapTn9ZmQ2TBcTs0s9g=
+
+Name: res/drawable-xxhdpi-v4/btn_close.256.png
+SHA1-Digest: gdfJd26j0xXL3m05CU4+Ws7nIbM=
+
+Name: res/drawable-ldpi-v4/ic_user.png
+SHA1-Digest: amtxhjGRTvD3gcOHpvPu112bOd0=
+
+Name: assets/assets/card_232_icon.png
+SHA1-Digest: +/I1/5553mTyFypoUyaej20jnyQ=
+
+Name: assets/assets/card_102_icon.png
+SHA1-Digest: pGmSbzIuqyUN4J8+xxcn7I0wkAI=
+
+Name: assets/assets/lux_util.single.png
+SHA1-Digest: KO9EAPBwXigtYRiL/2bvWU5o1d4=
+
+Name: res/drawable-ldpi-v4/ic_play_zalo.png
+SHA1-Digest: GAUpCbmbbgt1K322a62CNtSi6AA=
+
+Name: assets/assets/splash_screen.png
+SHA1-Digest: WMDCI4TK/ql6J3LZi6p1dzIo9nQ=
+
+Name: assets/assets/text.txt
+SHA1-Digest: bEJ33NPm5C7fPt90YqApt3srWnA=
+
+Name: res/drawable-mdpi-v4/agribank.png
+SHA1-Digest: meGh+kYhcjUB9FcdNARPzrRPxz4=
+
+Name: assets/assets/card_144_icon.png
+SHA1-Digest: grw/gV3FK+DV3nNGZgcF+p/RRIc=
+
+Name: res/drawable-xxhdpi-v4/icon.png
+SHA1-Digest: rjqiNxJob0ImQDVFumO/3Mb7bok=
+
+Name: assets/assets/attack_14_renekton.single.png
+SHA1-Digest: gRrYwlsMA89px8NZ512EDZBwnZY=
+
+Name: assets/assets/twistedfate.single.png
+SHA1-Digest: CSVR4an/dU5JgJokwh7eMvV6bPg=
+
+Name: assets/assets/card_005_icon.png
+SHA1-Digest: 6lKo1IwKdPbztzin/3PAJten8KU=
+
+Name: assets/assets/card_kayle_icon_01.skin.png
+SHA1-Digest: ttfE89rVT0RkjYhSdG0nEhF/G1U=
+
+Name: res/drawable/zalosdk_background_dark_grey_stroke_no_corner_4.xml
+SHA1-Digest: BBzbOAzQS/Ds5/wfCdKvJ2+fHi0=
+
+Name: res/drawable/com_facebook_button_like_pressed.png
+SHA1-Digest: AIaP242IZwhQCLLgajVq5yK1p3g=
+
+Name: res/drawable-hdpi-v4/ico_cardatm.png
+SHA1-Digest: j7OSBO2rC6YC/fXq7HfmigSXzeU=
+
+Name: res/drawable-xhdpi-v4/ico_support.png
+SHA1-Digest: 80czKmzR8PhNSpTei4T/b7+cVQA=
+
+Name: res/anim/trans_right_in.xml
+SHA1-Digest: S97/E8iP+7b0uJx19kttTaqwU98=
+
+Name: res/drawable-mdpi-v4/vib.png
+SHA1-Digest: dKDiMOf0QvgM80BJwymYqYG+sgc=
+
+Name: assets/assets/spell_02_offend_08_water.single.png
+SHA1-Digest: cgUDfVf0rTC73uMn1GUlOMSZ/S4=
+
+Name: assets/assets/Brand_BasicAttack.wav
+SHA1-Digest: ve5nK13G6ZEiKlWsNe3NfdGat1E=
+
+Name: assets/assets/formation_select.single.png
+SHA1-Digest: jdWsiwRlUWEDUGwZjO81vlDuhMw=
+
+Name: assets/assets/card_340_icon.png
+SHA1-Digest: wdZs+LMJTkpYUZYm9kCINVQxBzs=
+
+Name: res/drawable/com_facebook_button_grey_focused.9.png
+SHA1-Digest: xpVRnAd4DFklBjS5knWuHVzft9Y=
+
+Name: assets/assets/card_196_icon.png
+SHA1-Digest: 5laIlKEtTyMFX+9i2pPn5fN4PFo=
+
+Name: assets/assets/card_128_icon.png
+SHA1-Digest: P2xcHLfPdqUNwR2qTA2VHm7YHKU=
+
+Name: assets/assets/win_music.ogg
+SHA1-Digest: fkQhNvK63ZYIVnnXHTWJRKvNzv4=
+
+Name: res/drawable/zalosdk_border_rectangle_no_corner_partial_transpar
+ ent.xml
+SHA1-Digest: 8WQ9+eFwDTPCikGf+4Mit/ynzh8=
+
+Name: res/layout/com_facebook_picker_image.xml
+SHA1-Digest: +DNr9qaEK69uJleWHUiiv3hLwIo=
+
+Name: assets/assets/card_lulu_icon_lv4.png
+SHA1-Digest: zr0luq+gc9eKL/INxj305yrL6JQ=
+
+Name: assets/assets/Lux_BasicAttack.wav
+SHA1-Digest: 9ucwCLHrEwFD6O/+VTAF0B+Fdtw=
+
+Name: assets/assets/card_175_icon.png
+SHA1-Digest: G8YJwprTtd7mVijmzGJxvx3uuPE=
+
+Name: res/drawable/zalosdk_fb.xml
+SHA1-Digest: GevNKVpRZUZTMJVdnKAZmxkrAkI=
+
+Name: assets/assets/card_sona_icon_01.skin.png
+SHA1-Digest: edJ0qKxRPvE9PJ4ersFT4EFZ+II=
+
+Name: res/drawable-ldpi-v4/ic_launcher.png
+SHA1-Digest: MYTbj2oKXzhZqzpfKoOgI9uyQ14=
+
+Name: assets/assets/card_178_icon.png
+SHA1-Digest: n1D+6AOtQ2j4xeHthGl3PIm3360=
+
+Name: assets/assets/card_116_icon.png
+SHA1-Digest: gnNN02So96qbAp3e6xncFRm8Oq8=
+
+Name: res/drawable/com_facebook_profile_default_icon.png
+SHA1-Digest: hnc7R7K+VpzIWKki/iGEw6AlfPw=
+
+Name: assets/assets/card_ezreal_icon_01.skin.png
+SHA1-Digest: 6W5JGHH8S5KoRH/bNbEiAY3MOkI=
+
+Name: res/drawable-mdpi-v4/namabank.png
+SHA1-Digest: 4MvTQ7isX9trtbOpcf9NBwzTG+E=
+
+Name: res/drawable-hdpi-v4/icon.png
+SHA1-Digest: AZiEjPSVE1ZcvZ4EhBXQ7OWKZCY=
+
+Name: assets/assets/card_310_icon.png
+SHA1-Digest: rHJhiDcmJzmAtZRgLRtHN7EbuYY=
+
+Name: res/drawable-mdpi-v4/dongabank.png
+SHA1-Digest: I6+ZeIOMKoHaXoCAgOymREOWNUA=
+
+Name: assets/assets/embed_gfx_gacha_ui
+SHA1-Digest: sJnnqjmuC/3+9OE1EPcCxL13FAE=
+
+Name: assets/assets/loading_bg.single.png
+SHA1-Digest: M64aR1D0l2lyY8VknycGXdTPGkk=
+
+Name: res/drawable/zalosdk_support.xml
+SHA1-Digest: LGfLTPIbtT/RG4XcOtdx43kn1E0=
+
+Name: assets/assets/card_137_icon.png
+SHA1-Digest: o4rY0C0upoIzku2vIv0AbWIswus=
+
+Name: res/drawable-xhdpi-v4/pgbank.png
+SHA1-Digest: QG8oRCLJPkcZhfXQexWvYTT6Wbg=
+
+Name: res/drawable/zalosdk_seekbar00.xml
+SHA1-Digest: TGGyTF0VO+memVXXy8Te+eWSj/Y=
+
+Name: assets/assets/attack_02_zed.single.png
+SHA1-Digest: gmGagpw2Yy+jDSzEfNxtuCRQAT8=
+
+Name: assets/assets/card_474_icon.png
+SHA1-Digest: br97rGXfeVCKooxK62L/J5gbPUI=
+
+Name: assets/assets/gnar_skill.single.png
+SHA1-Digest: QBMkGBA1kfe267nHrwUoLi7tmxA=
+
+Name: assets/assets/card_134_icon.png
+SHA1-Digest: fBi7k8xt1HSv9c3ecnXSD2FnAT0=
+
+Name: res/drawable/com_facebook_inverse_icon.png
+SHA1-Digest: F87dFjM8iCRCeWSfrxkG/jcMtZY=
+
+Name: assets/assets/akali_00.single.png
+SHA1-Digest: 0MorqvM9cP+uFgYjQnWQHbHuM2o=
+
+Name: assets/assets/knockout_leesin_util.hscript
+SHA1-Digest: cAZZEF6Vmj0BMCSR9GMp3pusu8w=
+
+Name: res/layout/zalosdk_zing_card.xml
+SHA1-Digest: 8zR2l2+H8pSal2HYPKZjpjlhBJo=
+
+Name: assets/assets/card_class_icon.single.png
+SHA1-Digest: +BwGspQ3InyjQakPPMCouyFJtls=
+
+Name: res/drawable/com_facebook_button_like_icon.png
+SHA1-Digest: dXnEKr4KU5992xWhw0vc4vtFQF4=
+
+Name: assets/assets/card_223_icon.png
+SHA1-Digest: KM0fgMwmh5+12rwnjAXlXfcT6BY=
+
+Name: assets/assets/wukong_skill.single.png
+SHA1-Digest: kzdiRu7GZwK2CZpwDgkMqn7sv7k=
+
+Name: assets/assets/card_346_icon.png
+SHA1-Digest: 93C/5fv7jJFt1x+Xy45Pgm3/b9I=
+
+Name: assets/assets/diana_skill.hscript
+SHA1-Digest: AHReWlnYnsMiVhzSCxJywKwknuU=
+
+Name: assets/assets/script_info.json
+SHA1-Digest: DRS5lg1EaA0KNaLHx+zrZoQWhI0=
+
+Name: assets/assets/card_126_icon.png
+SHA1-Digest: 9Yuy3hMn8Dz30QnxMUEpJe62oOo=
+
+Name: assets/assets/font_pvp_combo.single.png
+SHA1-Digest: IfPpKQzL79JY10k/OK4JM3jbc20=
+
+Name: assets/assets/card_002_icon.png
+SHA1-Digest: NCmw/rbWfGD8VX5o8HvrgBzTWqw=
+
+Name: assets/assets/angle.single.png
+SHA1-Digest: 9D57hJudzZdW0fph4hOAyR8KyJA=
+
+Name: assets/assets/reuse_skill.hscript
+SHA1-Digest: JSGjexS73Wp9UMgNeWDHv6dtR3c=
+
+Name: res/drawable-xhdpi-v4/gpbank.png
+SHA1-Digest: WKed6CWdKGP7zu0/joN1TxxnNtk=
+
+Name: assets/assets/card_181_icon.png
+SHA1-Digest: ukiM27lgX4jXZKVPqeelJUT+N9E=
+
+Name: res/drawable-hdpi-v4/mobiphone.png
+SHA1-Digest: l9DJmdzf5SZOtMoXE9gpdxpZyC4=
+
+Name: assets/assets/card_011_icon.png
+SHA1-Digest: Uy5pnm+N7c5/ZeDDYudl6yP73oo=
+
+Name: assets/assets/embed_border_init
+SHA1-Digest: k+u2ksDD0ye9vAX0bLJxl0adHHY=
+
+Name: assets/assets/slash.wav
+SHA1-Digest: PAr2ZRubbTS+a7WNSu+kkpiJwnY=
+
+Name: assets/assets/card_fizz_icon_01.skin.png
+SHA1-Digest: 0FHtSK2fznh3R0VOvf2tvh8j6FQ=
+
+Name: assets/assets/card_415_icon.png
+SHA1-Digest: Xraz4L0tfbTYcHNppmxMf9zjfTE=
+
+Name: assets/assets/sd/loading_bg.single.png
+SHA1-Digest: l27Q+s9xlEUtmmi4rpO1PDmUnqo=
+
+Name: assets/assets/card_036_icon.png
+SHA1-Digest: W0Xngzs0XysXVDT8g+8Vn1H183Q=
+
+Name: res/drawable-xhdpi-v4/navibank.png
+SHA1-Digest: 0HaXZs8BnAuJybmBKaS+MXGe/Fk=
+
+Name: res/drawable-hdpi-v4/ico_cardzing.png
+SHA1-Digest: FLDtQ1E7N1VHDJNrjlk4PY+EBUE=
+
+Name: res/drawable-xhdpi-v4/ic_play_google.png
+SHA1-Digest: UuVEg2y2DNOdGn5cDLdmGr/apeU=
+
+Name: res/drawable-ldpi-v4/ic_lock.png
+SHA1-Digest: yfE+pd6TEnMWz3dbRaVfre+B87E=
+
+Name: res/drawable-xhdpi-v4/vinaphone.png
+SHA1-Digest: xsoRIZLWxVMX3wEdbrueRerdSW4=
+
+Name: res/drawable-xhdpi-v4/com_facebook_tooltip_blue_bottomnub.png
+SHA1-Digest: mQ3CAtvuslifIzCG9WBbt2IEob8=
+
+Name: assets/assets/rune_system.single.png
+SHA1-Digest: lYBkcwJY65dlpN3XNfh/TrTAIyg=
+
+Name: assets/assets/card_twisted_fate_icon_01.skin.png
+SHA1-Digest: CfyLXDxt2+C0NeuR51GGp4nnmwk=
+
+Name: res/drawable-xhdpi-v4/com_facebook_button_blue_normal.9.png
+SHA1-Digest: gZjHdyUbkxHGTwTTyhzU7ZhhoUs=
+
+Name: res/drawable-mdpi-v4/vietcombank.png
+SHA1-Digest: Uh0yCI9yQfPtUocrSkkkPac23aY=
+
+Name: res/layout/zalosdk_activity_atm_card_selector.xml
+SHA1-Digest: r5AX8oMamtNt3i/POML/lV1xH0I=
+
+Name: assets/assets/embed_gfx_newbie
+SHA1-Digest: LoSCAj32TADzBOSyJMkOqkHy7yY=
+
+Name: assets/assets/card_311_icon.png
+SHA1-Digest: Wh25/682V8BL6YKcXH+GbVwu52Y=
+
+Name: res/layout-v12/login_zing_id_form.xml
+SHA1-Digest: 6Y+e25kOEcKEEJhdIoDZ8uDrLOw=
+
+Name: res/drawable-hdpi-v4/com_facebook_button_like_icon_selected.png
+SHA1-Digest: AI82AcgbBGuUm0saKN6cW1HPv+w=
+
+Name: assets/assets/embed_gfx_achieve
+SHA1-Digest: z9JMaIXwfQj/Puz1C1+JgcdCpWU=
+
+Name: assets/assets/card_diana_icon_lv3.png
+SHA1-Digest: qpr4z6AoyuhzmxZG7qqpjnnj+GA=
+
+Name: assets/assets/card_356_icon.png
+SHA1-Digest: shLG7zSRgJTwyoEKPO04qQUfkbw=
+
+Name: res/drawable-mdpi-v4/com_facebook_tooltip_black_bottomnub.png
+SHA1-Digest: he4dRICJIQSRqHSi4hNgp4sPlxg=
+
+Name: res/drawable-ldpi-v4/icon.png
+SHA1-Digest: EVTHWR1tybwHiu4XZDWA8qmX6V8=
+
+Name: assets/assets/card_100_icon.png
+SHA1-Digest: Gi3r61P4yWmwoDxTyUDeZNTehsI=
+
+Name: assets/assets/card_fiddle_icon_lv2.png
+SHA1-Digest: 7ExEM5MWHhQICr6tb3V34WtkcN8=
+
+Name: res/layout/com_facebook_picker_activity_circle_row.xml
+SHA1-Digest: 6+/oII2bjRQCKSlZRsJzBN2BTXM=
+
+Name: res/drawable-hdpi-v4/navibank.png
+SHA1-Digest: GYyDIQ4AfddvEcVkW38Pdhay7I0=
+
+Name: assets/assets/recover_card.single.png
+SHA1-Digest: Nuamkfq56FwONwx8o6X4r+Z8SoE=
+
+Name: assets/assets/card_default.png
+SHA1-Digest: LkDVdh89/8laWpAk5snoItJEytM=
+
+Name: assets/assets/card_ashe_icon_03.skin.png
+SHA1-Digest: iUbcNcZKGyxoSLz0EQPCxoTi50o=
+
+Name: assets/assets/card_239_icon.png
+SHA1-Digest: Q+YCBWThoqn+3gZiTaRaUDhULBk=
+
+Name: assets/assets/card_371_icon.png
+SHA1-Digest: 9bPfQaHjjCUTRVNjrYBuByHIpYI=
+
+Name: assets/assets/card_330_icon.png
+SHA1-Digest: kb2cnoaWGvy0D5P8rZ+AVKHdODA=
+
+Name: assets/assets/card_vladimir_icon_lv1.png
+SHA1-Digest: D8NKFcSPwUvdhpG794PvlR/yJd8=
+
+Name: assets/assets/embed_gfx_popup_feedback
+SHA1-Digest: oVq9dXNl8fDNZkRMqgMovQOaIBI=
+
+Name: assets/assets/spell_02_offend_05_light.single.png
+SHA1-Digest: xAQ978bhLOeGT256DTi1lU/RYvw=
+
+Name: assets/assets/card_460_icon.png
+SHA1-Digest: StAzqrt4//MYBGJN2q6Ct+LEQb8=
+
+Name: assets/assets/card_151_icon.png
+SHA1-Digest: F+bT2Y9gsAO6SO2Rq00/pPlV/bs=
+
+Name: assets/assets/card_009_icon.png
+SHA1-Digest: ao9J/3PWypFi+j+kbCMcWfDvrdk=
+
+Name: assets/assets/ashe_util.wav
+SHA1-Digest: CnO6LniiXd0mgcm4PxayEuGOElQ=
+
+Name: res/drawable-hdpi-v4/com_facebook_button_like_pressed.png
+SHA1-Digest: uk68l9vWfqVav3OXwieSqnM18u0=
+
+Name: res/drawable-hdpi-v4/i_close.png
+SHA1-Digest: j60jN2hqDBMKkLsZ6fB3sGgy6ls=
+
+Name: assets/assets/ahri_util.single.png
+SHA1-Digest: ZdP1oWmlfY3UL+KmgOFG7eURP6w=
+
+Name: res/drawable-hdpi-v4/viettel.png
+SHA1-Digest: BqD+82pOs3LYRu+Y4jCw49va4m8=
+
+Name: assets/assets/card_221_icon.png
+SHA1-Digest: FQmL5rbtv6RYsJwPnTONKDs6xLo=
+
+Name: assets/assets/attack_08_kennen.single.png
+SHA1-Digest: ae0IsuyADFT6GZGCJ+pnJEeyISw=
+
+Name: res/drawable-xhdpi-v4/i_next.png
+SHA1-Digest: WZ31Z7a/x0uRnH6flwx/BjkO2yg=
+
+Name: assets/assets/card_157_icon.png
+SHA1-Digest: E41aHV0HmvVqoEptBdcnXTSs/KE=
+
+Name: assets/assets/arrow.single.png
+SHA1-Digest: aPvJRAjztb47JtF8TH0BawjvAus=
+
+Name: res/drawable/camera_beta_disable.xml
+SHA1-Digest: XLxHlh9LM6CnWQ3pFk16TCgJp5E=
+
+Name: res/drawable-hdpi-v4/ico_sms.png
+SHA1-Digest: Jci9qFuqHHkGB8pPe+qORBqwA2I=
+
+Name: assets/assets/card_185_icon.png
+SHA1-Digest: dKiFM5IsiLjLYbLOm8l4t1h4FmA=
+
+Name: assets/assets/card_baron_icon.png
+SHA1-Digest: FeQXdgYd8LswyRk4RWO1LNIro+s=
+
+Name: assets/assets/card_055_icon.png
+SHA1-Digest: A5DyLuHD2ljO4fN4mV63uYTAZII=
+
+Name: assets/assets/card_022_icon.png
+SHA1-Digest: bXLiXfQXsNLngp5EEx+Iu8injxQ=
+
+Name: res/drawable/zalosdk_border20.xml
+SHA1-Digest: 4bn/1gzhV1f6Dm95TAge0o85yT0=
+
+Name: assets/assets/card_ziggs_icon_lv4.png
+SHA1-Digest: FAw25N+VUYlQ2jCyvdVgNxvt2cs=
+
+Name: res/drawable-ldpi-v4/com_facebook_close.png
+SHA1-Digest: kTtEL++729cJQKWaJ8H4hFXPMJo=
+
+Name: res/layout/com_facebook_picker_list_section_header.xml
+SHA1-Digest: CVjQjajSwWBP6Nk6n230pFvGyrI=
+
+Name: res/drawable-mdpi-v4/i_back.png
+SHA1-Digest: cTnJqlVcJXqzGNsO7tLg7VK1Fkg=
+
+Name: assets/assets/NewsElement.hscript
+SHA1-Digest: DMN0PIZ2IMlDdgXT0aBrCjRzmyA=
+
+Name: res/drawable-mdpi-v4/zingxu_icon.png
+SHA1-Digest: TQdiGbF2IequNFhJZBgkXAyDsz4=
+
+Name: assets/assets/card_trundle_icon_01.skin.png
+SHA1-Digest: eyiRCZyG0PnVYSECxirIXTMA/Ro=
+
+Name: assets/assets/sona_util.wav
+SHA1-Digest: Ioj5jue/ZuNBd6Jw0e0CkYHhQGM=
+
+Name: res/drawable/zalosdk_togglebutton_background.xml
+SHA1-Digest: jLxS8ufa9h3DRTN6UYUtyyACSbw=
+
+Name: res/drawable-mdpi-v4/ico_cardphone.png
+SHA1-Digest: S6H3Ddb2yaTw4VCxAXSFVSBDGCU=
+
+Name: res/drawable-ldpi-v4/close.png
+SHA1-Digest: lg0izCnB1flsd2QqLisbxkcuGyU=
+
+Name: assets/assets/evo_effect.single.png
+SHA1-Digest: LDNflkSJDmmIJlaMx7u8NJ2Rj3Y=
+
+Name: res/drawable-mdpi-v4/icon.png
+SHA1-Digest: SrBDLcDgf6iQlWaQUaQnrT2ek+M=
+
+Name: res/drawable/zalosdk_ct_check_box_off.9.png
+SHA1-Digest: ARTNVLsWx4SA7TG8R9tdJlUuFwI=
+
+Name: res/layout/com_facebook_picker_title_bar.xml
+SHA1-Digest: t33Wq8Pei+KQLO6WFckWovX3uK8=
+
+Name: assets/assets/Pantheon_nem_lao.wav
+SHA1-Digest: 5a/oQXf0HBn3dauiNtKtC9sLH+Y=
+
+Name: assets/assets/darius_util.wav
+SHA1-Digest: rlU8WIlHM0AkT7InuGHmrUsiFIM=
+
+Name: assets/assets/twiterfate_util.single.png
+SHA1-Digest: tJCj7hb+35AFggL3Ls4llW710xQ=
+
+Name: assets/assets/chat_box_2.single.png
+SHA1-Digest: nXd3DMjasZq01rhzBxNMdTzTzeg=
+
+Name: assets/assets/card_131_icon.png
+SHA1-Digest: foMedRq2JGLu4WNP0QNlNjTofWU=
+
+Name: res/drawable-mdpi-v4/ic_play.png
+SHA1-Digest: nzpaqvoW4llY/NZZq0lOUvxjhQI=
+
+Name: assets/assets/akali_tang_hinh.single.png
+SHA1-Digest: 9sqi2YRDaUWnlQQ13h+dP03BWto=
+
+Name: assets/assets/card_162_icon.png
+SHA1-Digest: MAGjKczxmGQ5xlcSBdGzt/6ri7U=
+
+Name: assets/assets/sd/font_damage.single.png
+SHA1-Digest: YLj8qfMx/ZizSulK6rgCJM88QOs=
+
+Name: assets/assets/card_rose_icon.png
+SHA1-Digest: BPhCCfTuRd8ZajWwqoIn+zPIGkQ=
+
+Name: res/drawable/zalosdk_ic_alert.png
+SHA1-Digest: Exwgc4f3phhJI0IEdW1HbQMCMp4=
+
+Name: assets/assets/card_023_icon.png
+SHA1-Digest: OHVGbT1n6dKRZTP8G6K6rHPfqmQ=
+
+Name: assets/assets/card_tristana_icon_lv4.png
+SHA1-Digest: CTpnCLL7CBpRGx0f2AkKNN0pOfk=
+
+Name: assets/assets/card_149_icon.png
+SHA1-Digest: 3tPU/z9qFxTcV5e/qiJMcNHIEQw=
+
+Name: assets/assets/gacha_effect.single.png
+SHA1-Digest: y7pQafXx9L+7m35Dkammx0/928M=
+
+Name: res/drawable-mdpi-v4/i_phone.png
+SHA1-Digest: y/hPluyxETLRdyxe8zpS2xzAqwE=
+
+Name: assets/assets/card_387_icon.png
+SHA1-Digest: 3pH2YtGugCuyU4/aBROSRgiCqn4=
+
+Name: assets/assets/leesin.single.png
+SHA1-Digest: LSNJhjldzA2YsGvtn4lWSn6o7l4=
+
+Name: assets/assets/manifest.json
+SHA1-Digest: sTXueulV+qCMonVBrxhABBZlEY4=
+
+Name: assets/assets/card_317_icon.png
+SHA1-Digest: AES1AoD373sYfZ7Z9yUnuxNZcSM=
+
+Name: assets/assets/card_288_icon.png
+SHA1-Digest: pgfjOnV+unRSI/eYujxMLnZHhis=
+
+Name: assets/assets/card_444_icon.png
+SHA1-Digest: 4jxkVUBMnh9mDX44TUQ3gj73SEo=
+
+Name: assets/assets/card_vayne_icon_05.png
+SHA1-Digest: pGydl6pQjxCk5XpF2kAvK9Fmppk=
+
+Name: assets/assets/lv_number.single.png
+SHA1-Digest: aSyhbuNShvFB4at7/YeHLlIezMI=
+
+Name: assets/assets/card_ezreal_icon_lv3.png
+SHA1-Digest: 00O6vl6WrYJThMVXRD27UG9y3x4=
+
+Name: res/layout-v17/choose_type_and_account.xml
+SHA1-Digest: 8PTdjWf7hCjFWED/HJEKUzHcSRs=
+
+Name: assets/assets/card_170_icon.png
+SHA1-Digest: jBrLANZl53USnIrngu52a8dYHqk=
+
+Name: res/drawable-mdpi-v4/plus.png
+SHA1-Digest: N/s26OsfUsn0W6xZtK8+sIvE2qE=
+
+Name: assets/assets/corki_util.hscript
+SHA1-Digest: J8MBzZZQTPQOriK8hbsVAe5NeuE=
+
+Name: res/layout/zalosdk_activity_processing.xml
+SHA1-Digest: wyeP+N7g7HPun3KyviHdbWFSpsk=
+
+Name: assets/assets/card_cassiopeia_icon_01.skin.png
+SHA1-Digest: rL+wYGxPdPzH5jTsyXJmSqymujE=
+
+Name: res/drawable-hdpi-v4/com_facebook_inverse_icon.png
+SHA1-Digest: dhL1KUuhev6DQVcnYYCm2Qa+oCk=
+
+Name: assets/assets/card_049_icon.png
+SHA1-Digest: AKirWL59F37cgnbhMBeG+TgATcA=
+
+Name: res/layout/confirm_cmnd.xml
+SHA1-Digest: fB1AgKkEytQoSLIJi2XPpbUKXwA=
+
+Name: res/drawable-mdpi-v4/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: CSWs+/gmAz2rkuEMtOQ/ZTY3/Kc=
+
+Name: assets/assets/backup_CongratulateElement.hscript
+SHA1-Digest: x8eJdPnQgUygYh7XfUTZLn0jEbE=
+
+Name: assets/assets/card_tower_icon_lv3.png
+SHA1-Digest: XeLV0UXYrIpRlo/STix6weuUlAw=
+
+Name: res/drawable/com_facebook_picker_item_background.xml
+SHA1-Digest: 2LZIuQWpMsVmJ3xVRDg9o7rNS7U=
+
+Name: res/drawable-xhdpi-v4/ic_uncheck.png
+SHA1-Digest: PLtxXtT0HSohg3Qh3cPv/M7Fjhs=
+
+Name: assets/assets/Kennen_BasicAttack_.wav
+SHA1-Digest: C3+La3doDxJoVVbwIiQAF7OaoAE=
+
+Name: assets/assets/card_masteryi_icon_01.skin.png
+SHA1-Digest: iAxnuCAz6Twq7giwgw5cC/2Zgz4=
+
+Name: assets/assets/dum.single.png
+SHA1-Digest: JdCAEo8k+R9k4J/XH1486SyNstw=
+
+Name: assets/assets/garen_util.wav
+SHA1-Digest: 3T3kFcBuJAQfwoM8DpiY1Bca5Dg=
+
+Name: res/drawable-xhdpi-v4/vpbank.png
+SHA1-Digest: 91oDNjETgq/zg6MerMRMTQmCJoM=
+
+Name: assets/assets/MasterYi_Chem_nhieu_muc_tieu.wav
+SHA1-Digest: 1cH12rc+D67DLDKH1K+MZcRVvFo=
+
+Name: res/drawable-mdpi-v4/vinaphone.png
+SHA1-Digest: /dOgvb8eOjAVH36ef7+A5R9As0c=
+
+Name: res/drawable-hdpi-v4/com_facebook_tooltip_black_xout.png
+SHA1-Digest: gidiAUAJjJias1MRTuSOr4/2dvI=
+
+Name: assets/assets/card_lotus_icon.png
+SHA1-Digest: +f6okjbatZu8KZCpKHhTz06CjO4=
+
+Name: assets/assets/card_boro_lv2_icon.png
+SHA1-Digest: wzUdQoHZlba+5sZ5ZqyDW9PYduQ=
+
+Name: res/drawable-mdpi-v4/com_facebook_tooltip_black_background.9.png
+SHA1-Digest: uxEQ5CeVdDLdVI/wV2UpqEvNpQ4=
+
+Name: assets/assets/Liassandra_BasicAttack.wav
+SHA1-Digest: XmFbCDun/QXx4M29ihTEuPCnDZI=
+
+Name: assets/assets/PromotionElement.hscript
+SHA1-Digest: AVVzeZSfdR/p5FkFJdn5ZFsI/jE=
+
+Name: assets/assets/Event_QuestBingo.hscript
+SHA1-Digest: 12h82AspOPCAP56L+4zaNtiE+64=
+
+Name: assets/assets/card_103_icon.png
+SHA1-Digest: hOLvfseKepkx2EURsxYnv/n3jrA=
+
+Name: res/drawable-xhdpi-v4/ico_cardatm.png
+SHA1-Digest: 74mlPsOQLdia9JAp+woERZB4Xq0=
+
+Name: res/drawable-xhdpi-v4/hdbank.png
+SHA1-Digest: a1h+1UAta7mpf3GrnV7X9KMitvY=
+
+Name: res/layout-v11/choose_type_and_account.xml
+SHA1-Digest: Ea7ITR8YJLu0ifTDLkZnup/FdN4=
+
+Name: assets/assets/card_alistar_icon_01.skin.png
+SHA1-Digest: idg6BzWbkB11YEtyQfxVn+lSndA=
+
+Name: res/drawable-mdpi-v4/ico_support.png
+SHA1-Digest: byZ8BbHK7Xhf1O1gej6cQxeNM4w=
+
+Name: assets/assets/rebirth_icon.single.png
+SHA1-Digest: 6qUH50AWqzIe+t/tA5E6lK+ZgUU=
+
+Name: assets/assets/card_164_icon.png
+SHA1-Digest: /mOOiCWHCETAbsktr7RY03BE2yo=
+
+Name: assets/assets/card_gangplank_icon_lv3.png
+SHA1-Digest: O/E68GswnES9O7lqvceuxWFGm+4=
+
+Name: assets/assets/card_233_icon.png
+SHA1-Digest: 6JtwsVdL7n60SOCdC61Fjk/qnvY=
+
+Name: assets/assets/ekko_skills_set.single.png
+SHA1-Digest: RjGNkEIJd32ZxmjwRR2kY68JFxI=
+
+Name: res/drawable/com_facebook_button_like_selected.xml
+SHA1-Digest: vlEKKUmic/EhJegu+xDdf6m7bfA=
+
+Name: assets/assets/card_078_icon.png
+SHA1-Digest: c1R20N3IwphZEhmeT4dOPBTLO60=
+
+Name: res/drawable-xhdpi-v4/ic_play_zalo.png
+SHA1-Digest: cWx2+AXbcV5dD+MO6XGvheuvOJQ=
+
+Name: res/drawable-mdpi-v4/ic_play_fb.png
+SHA1-Digest: 9fGHNa9CdfqV+CumM86ZoI4raS8=
+
+Name: assets/assets/temple_monster_defend_avatar.png
+SHA1-Digest: wZgRlLgmnvYC7mdt/ifO3gkybuM=
+
+Name: res/layout/com_facebook_picker_title_bar_stub.xml
+SHA1-Digest: Zw2Zt8jIM3g85fZD/hRnQyDpDXE=
+
+Name: assets/assets/attack_12_cass.single.png
+SHA1-Digest: 0ygt9rOEeghQiGK0txx2JCQLxSE=
+
+Name: res/drawable-xhdpi-v4/sacombank.png
+SHA1-Digest: bYNiXjFVaSZpZzPNynMXH5m0+Jk=
+
+Name: res/drawable-ldpi-v4/ic_play.png
+SHA1-Digest: 1yyrpbvix8+UunYxvGQQ1jkjdT4=
+
+Name: assets/assets/card_494_icon.png
+SHA1-Digest: xPWet9IR1FpplaXIuIjJDx5nP/c=
+
+Name: assets/assets/Nami_BasicAttack.wav
+SHA1-Digest: PP9wFpFVv77SewqVVqq9Sd163F0=
+
+Name: assets/assets/ezreal_effect.single.png
+SHA1-Digest: ixPpWwP9Tord8JFJcTwtBClUsTU=
+
+Name: assets/assets/teemo.single.png
+SHA1-Digest: G885b5shPb2i1NCth+/+vRwaopc=
+
+Name: res/drawable-xhdpi-v4/com_facebook_tooltip_blue_background.9.png
+SHA1-Digest: ewmojyQLbwcPjW/HwZL3ryTwxZQ=
+
+Name: assets/assets/amumu_01.single.png
+SHA1-Digest: tCjiiSebvB96NcE82M9OGe+pBZg=
+
+Name: assets/assets/card_484_icon.png
+SHA1-Digest: BreDgJ0kIkpJtm87ehBuAS5buCs=
+
+Name: assets/assets/embed_load_ui_init
+SHA1-Digest: s7nKlbbSTGozoiJBfprt+/iiaps=
+
+Name: res/drawable-hdpi-v4/ico_cardcredit.png
+SHA1-Digest: sMnO+B7A0C2vS3cKZzyiToUvayA=
+
+Name: assets/assets/font_damage.single.png
+SHA1-Digest: yfssP8x5cFRpu/BPmq8XEsh7fHs=
+
+Name: res/layout-v17/zalosdk_activity_retry.xml
+SHA1-Digest: 6U/cxIG+SvSm9rx6Y/bYdLiErA4=
+
+Name: res/drawable-hdpi-v4/ic_protect.png
+SHA1-Digest: TPdLbam6WraC/9/ifJveWkt+KC4=
+
+Name: assets/assets/card_237_icon.png
+SHA1-Digest: RcIlTFgNPQ2hNwmtOkew/Rs2Dws=
+
+Name: assets/assets/embed_gfx_single
+SHA1-Digest: LOeInFv4OfCrpR/t8PyF2fNXZIU=
+
+Name: assets/assets/extensions_webview_close_xhdpi.png
+SHA1-Digest: i9lYZZOBgyVfCZZ5Vlclzb5W9II=
+
+Name: assets/assets/info_panel.single.png
+SHA1-Digest: zLwOEQr4MT0VAYLaUEI/Yf31YFU=
+
+Name: assets/assets/card_076_icon.png
+SHA1-Digest: 1vXOKlP+Na6+IgeMfDhJS+6b3pU=
+
+Name: assets/assets/card_trydamere_icon_01.skin.png
+SHA1-Digest: WWoAfsDDq7m/hi63JsKhZnFG0OM=
+
+Name: assets/assets/card_141_icon.png
+SHA1-Digest: K1WMkXNf6Bvgw/IXmHbkeICqRy4=
+
+Name: assets/assets/card_fiddlestick_icon_04.skin.png
+SHA1-Digest: lQYfKBuqpig8EX0J4An8p99b0Lc=
+
+Name: assets/assets/card_043_icon.png
+SHA1-Digest: 6PNaotroJAJYLQOd7u9r35lEduA=
+
+Name: assets/assets/Tahoma.ttf
+SHA1-Digest: sQZi6DG62aDUOtagHMSRFiV71e0=
+
+Name: assets/assets/card_070_icon.png
+SHA1-Digest: ujZ8sJpnTgzTJ0ShHNS/jgwO63Q=
+
+Name: res/drawable-mdpi-v4/ic_warning.png
+SHA1-Digest: 3qUI4sCv7ZJcQfEzGdQrgSMuMSw=
+
+Name: res/drawable-hdpi-v4/ocb.png
+SHA1-Digest: 5cjkDkK6cIj30fBjI9QC6QWyjYw=
+
+Name: assets/assets/card_bg_1.single.png
+SHA1-Digest: ARgwD2cihVgZUR1YTOkbQjph1Uc=
+
+Name: res/layout/choose_account_type.xml
+SHA1-Digest: gR7kQNYX8NQXppo+2R/htL1JW4g=
+
+Name: assets/assets/card_default_big.png
+SHA1-Digest: LkDVdh89/8laWpAk5snoItJEytM=
+
+Name: assets/assets/card_125_icon.png
+SHA1-Digest: iYckoGMQjabpq1En6W0l3+GEA/M=
+
+Name: assets/assets/card_masteryi_icon_03.skin.png
+SHA1-Digest: zdvLO5jpUbl2P+yyNuXvRIXdycI=
+
+Name: assets/assets/card_064_icon.png
+SHA1-Digest: 7gpXtyQwTgiPKWCOdMLe6RRF6T0=
+
+Name: res/drawable-xhdpi-v4/daiabank.png
+SHA1-Digest: NqUHn8pYFSFxJ1pqi8BeLm55W5I=
+
+Name: assets/assets/card_015_icon.png
+SHA1-Digest: nXKzkvl0zzvmWSePRBfJ/G3JSgk=
+
+Name: assets/assets/card_volibear_icon_01.skin.png
+SHA1-Digest: jpMNNLY6vVG1JQodtArw0xLjEuE=
+
+Name: assets/assets/embed_gfx_equipment
+SHA1-Digest: NRqCrPOJyaSHVL7KzaYUeyM+Bbg=
+
+Name: res/drawable-mdpi-v4/ic_uncheck.png
+SHA1-Digest: lvgpbF2ze378NRrRlnnwLWx7b2U=
+
+Name: assets/assets/noembed_gfx_cards_big_01
+SHA1-Digest: R8MMeYXZVvCtfW9TjBd9fO00r+I=
+
+Name: res/drawable/zalosdk_background_white_stroke_grey_corner_4.xml
+SHA1-Digest: xcqNyab80cwFVhQvB0dblvUnHVg=
+
+Name: assets/assets/card_yasuo_icon_lv3.png
+SHA1-Digest: iOndhr0bCTiR/9x5SymmWlfeHkI=
+
+Name: res/drawable-hdpi-v4/i_next_disable.png
+SHA1-Digest: /AveNhf1ttVWuyvglFBP261EbO0=
+
+Name: res/drawable-mdpi-v4/daiabank.png
+SHA1-Digest: HKQFFgYDQ0WjOPXTqHZjN3PrXqA=
+
+Name: res/drawable/com_facebook_picker_list_selector_disabled.9.png
+SHA1-Digest: S/+WIalIT7QGoZ4J/VOqr0XEGEM=
+
+Name: assets/assets/card_111_icon.png
+SHA1-Digest: OZJbdndXyuOhSjzSruK5fV/dy7k=
+
+Name: assets/assets/card_190_icon.png
+SHA1-Digest: H1WIeiGWecrfLsnwXbGA648kwuk=
+
+Name: assets/assets/embed_gfx_tournament
+SHA1-Digest: iMdC8CoINneqD3dUKCZootgkr0s=
+
+Name: assets/assets/yasuo.single.png
+SHA1-Digest: 3Ajw+1tZ9AGH6KpaKUD4IvalC1Y=
+
+Name: res/drawable-xhdpi-v4/ic_warning.png
+SHA1-Digest: EYRqnXBOCbe5yyihjnDy7Zs/WVE=
+
+Name: res/drawable-xhdpi-v4/maritimebank.png
+SHA1-Digest: HdYrXWyt067fYBOVc1up8/+IAGI=
+
+Name: res/anim/animation_enter.xml
+SHA1-Digest: 4Gn9O6fZp5yjWEC4MDQhfV6hpWY=
+
+Name: assets/assets/card_146_icon.png
+SHA1-Digest: K4lQ2aYsPWXQPJa+N0tTw/7gmvo=
+
+Name: assets/assets/sd/text_bitmap.single.png
+SHA1-Digest: +gfw+ws6s/840o2OY1f8XiirTW0=
+
+Name: res/drawable-mdpi-v4/abbank.png
+SHA1-Digest: E95kQ/mqVSsBJ3EDz/pIOqWYAJM=
+
+Name: res/drawable-mdpi-v4/ic_id.png
+SHA1-Digest: 1wLcqguXsPLxqxiWDs9j+fJKoIc=
+
+Name: assets/assets/card_leona_icon_01.skin.png
+SHA1-Digest: r1JDb9xyE0DSdJfM+NoZcW9S8KM=
+
+Name: assets/assets/card_215_icon.png
+SHA1-Digest: 7x1XRe/84qJnSPCwPII+UW/9pq4=
+
+Name: res/drawable/zalosdk_border_rectangle_no_corner_partial_transpar
+ ent_01.xml
+SHA1-Digest: exKkpu9frz/paVbJj84nz4KR0Xw=
+
+Name: res/drawable-hdpi-v4/sacombank.png
+SHA1-Digest: caSDKLIT3BaPWv+CEbkRJjUmRDE=
+
+Name: assets/assets/card_074_icon.png
+SHA1-Digest: R6jIESXWtbRvSzW9HWmAAAqu5/Y=
+
+Name: res/drawable-xhdpi-v4/ic_launcher.png
+SHA1-Digest: UCzYT6RE8m1+z99KNVBkhnl38jY=
+
+Name: assets/assets/card_fiddlestick_icon_03.skin.png
+SHA1-Digest: 62BaHIGVgnWaLPemyvG5KPFLn5s=
+
+Name: assets/assets/event_icon.single.png
+SHA1-Digest: zopwW/iFsUMj5acCajr3NvPaSC4=
+
+Name: assets/assets/garen_util.single.png
+SHA1-Digest: Exgem1AT8R9ox++PEp4FDetfqOg=
+
+Name: res/layout/retry_container.xml
+SHA1-Digest: MR1FUSxU6UvFe8M1O0ojgQYPecI=
+
+Name: assets/assets/card_tristana_icon_01.skin.png
+SHA1-Digest: ipH8Vgo+1FAaJAaD/GYlhY1B+D8=
+
+Name: assets/assets/attack_yasuo_underworld.single.png
+SHA1-Digest: iyELMspnUT3MvgNWU2kImUQoSF4=
+
+Name: assets/assets/card_katarina_icon_01.skin.png
+SHA1-Digest: Xq5XwpTT8bDJm2L9xuq+Nfl8mbs=
+
+Name: res/drawable/zalosdk_background02.xml
+SHA1-Digest: xcqNyab80cwFVhQvB0dblvUnHVg=
+
+Name: assets/assets/sd/newbie.single.png
+SHA1-Digest: m8l1z/N8thD7Ceum3tnRWTLTw4c=
+
+Name: res/drawable-hdpi-v4/zalosdk_exit.png
+SHA1-Digest: gVcuXh0WP/7IW6ag3YqlxPeuXjo=
+
+Name: res/drawable-hdpi-v4/ic_play_zing.png
+SHA1-Digest: v57ixJwmF3472/GQwicCf1wesjU=
+
+Name: res/drawable-xhdpi-v4/com_facebook_close.png
+SHA1-Digest: OGFKQ7QhUQCfytXd5dfPsaUil0w=
+
+Name: res/drawable-hdpi-v4/plus.png
+SHA1-Digest: N/s26OsfUsn0W6xZtK8+sIvE2qE=
+
+Name: assets/assets/card_397_icon.png
+SHA1-Digest: r6yIDb1w4oRVdcN7SK2mciVh2wA=
+
+Name: assets/assets/card_163_icon.png
+SHA1-Digest: tswNiWM4wffRyADarVkcAhguEEo=
+
+Name: res/drawable-hdpi-v4/com_facebook_button_blue_focused.9.png
+SHA1-Digest: ntXUarP34vPdVwLmlXR16ctIPLo=
+
+Name: res/layout/com_facebook_placepickerfragment_list_row.xml
+SHA1-Digest: EUDihlENx7YOVR8SBqLPCKjFaG4=
+
+Name: assets/assets/sd/font_heal.single.png
+SHA1-Digest: wEu7Guce5Ei8EbURil9NfunCbv4=
+
+Name: assets/assets/card_missfortune_icon_04.skin.png
+SHA1-Digest: uzBOk6QQREb7/P4D5T8kkpjSAls=
+
+Name: res/drawable-xhdpi-v4/com_facebook_tooltip_black_topnub.png
+SHA1-Digest: bkx9QZs8aYlH6Bbt1aDDs/ZXWws=
+
+Name: assets/assets/darius_util.single.png
+SHA1-Digest: r5AhRPyqyugi21VMHNiltVFADsc=
+
+Name: res/drawable-mdpi-v4/ic_checked.png
+SHA1-Digest: zNXN9siIg0wv2OQYkSg2SiXnklU=
+
+Name: assets/assets/janna_attack.single.png
+SHA1-Digest: XZvFNcgoFIMteuL4jM82OBt/Knc=
+
+Name: res/drawable-xhdpi-v4/bacabank.png
+SHA1-Digest: 0NcNpYydPEo5W3hAbraccn5Baws=
+
+Name: res/drawable-mdpi-v4/i_beta.png
+SHA1-Digest: KfUiZ+lTuE+WAFaTXIie5N3YB90=
+
+Name: assets/assets/card_471_icon.png
+SHA1-Digest: EGtgTR87N2MXLEUQEM82zOiRe9U=
+
+Name: assets/assets/card_122_icon.png
+SHA1-Digest: sBRsPfbJL/b/pNKUmUBEdxSMcDU=
+
+Name: res/layout/camera_activity.xml
+SHA1-Digest: iECvoIe+iswyB8MWjgW2OqKM4VM=
+
+Name: assets/assets/card_271_icon.png
+SHA1-Digest: ecOaiENnz83VG/Ys6BzjdPw3XHU=
+
+Name: assets/assets/sd/splash_screen.png
+SHA1-Digest: eSuZwjNaek7adPwsQLNgb1UAAKo=
+
+Name: res/drawable-hdpi-v4/com_facebook_close.png
+SHA1-Digest: APOib1/odAKIK8vQvQ7RZF7aOSE=
+
+Name: assets/assets/card_056_icon.png
+SHA1-Digest: f/0mYz4qlMN4wcoJ6qxUVjyL9Mw=
+
+Name: res/layout/zalosdk_bank_item.xml
+SHA1-Digest: QtzjJf0vxHDS2kcTFlrVlBBlFNQ=
+
+Name: res/drawable/zalosdk_google.xml
+SHA1-Digest: tAt2StLaG3w9wHr4UGG77r04zkM=
+
+Name: assets/assets/Event_2_9.hscript
+SHA1-Digest: Kc4/BjHzk/EBRoyAXzzsbG65ATY=
+
+Name: assets/assets/card_gnar_icon_04.png
+SHA1-Digest: HoRoMQsUowmSjOPF6d9m/5MXikI=
+
+Name: assets/assets/card_393_icon.png
+SHA1-Digest: n3CgUNLml9PhZ/uK9b4k+5nF5o0=
+
+Name: res/drawable-hdpi-v4/ic_play.png
+SHA1-Digest: gKYerFKmVc8NQfgnjeAlxInffbI=
+
+Name: res/drawable/zalosdk_border18.xml
+SHA1-Digest: 75ieyHpOkB4nswcJt8xifvqRQpA=
+
+Name: assets/assets/card_411_icon.png
+SHA1-Digest: OBM7D37JYcSE0CKsYj6oG97ASYA=
+
+Name: assets/assets/effect_card.hscript
+SHA1-Digest: 8dhOvvLNYCGA9uk013nCFotCjcI=
+
+Name: assets/assets/card_285_icon.png
+SHA1-Digest: Fsvt5+9OGgA8eel7d0M4eKK9JWc=
+
+Name: assets/assets/heal.wav
+SHA1-Digest: ZybQn/AKz2FAXEaegZuTGREWNUc=
+
+Name: assets/assets/card_teemo_icon_01.skin.png
+SHA1-Digest: MTNavtps1bc80EMPwxRaDvnEXAU=
+
+Name: res/drawable-mdpi-v4/viettel.png
+SHA1-Digest: 8gHg6J+dztO3ehnT1jrlxBm4PHE=
+
+Name: assets/assets/card_419_icon.png
+SHA1-Digest: pIf0GyWYiXbVEdytOKIMzgAzly0=
+
+Name: assets/assets/battle_ui.single.png
+SHA1-Digest: ABpgkPxGCMTSX7yBNH1Uoz9sTD8=
+
+Name: assets/assets/attack_11_soraka.single.png
+SHA1-Digest: bLLR/JT3QX0J0XuxFJORTFdV6Fc=
+
+Name: res/drawable-xhdpi-v4/saigonbank.png
+SHA1-Digest: YBReLMTerFgSQCySkMPC5WXNcnQ=
+
+Name: assets/assets/card_riven_icon_lv3.png
+SHA1-Digest: uKzTsw1dx/3F+UrxC4tJ0ODc2QM=
+
+Name: assets/assets/sona_util_action.single.png
+SHA1-Digest: 4SWohA+CB/3EwJ+b05CptCct8Gs=
+
+Name: assets/assets/card_029_icon.png
+SHA1-Digest: VUgnKIMAfow2e0XlYp8SX5ZB/ZQ=
+
+Name: assets/assets/card_260_icon.png
+SHA1-Digest: NvlxlB5svrDLCfLElUzUx/ohEIU=
+
+Name: assets/assets/fusion_ui.single.png
+SHA1-Digest: 5gt1aWeRulRlSwgJ8RH5MhkKnxU=
+
+Name: assets/assets/card_lux_icon_01.skin.png
+SHA1-Digest: 2Y0lewou0WytKadynhAPUIn6TRk=
+
+Name: assets/assets/Event_NewServer.hscript
+SHA1-Digest: Z0KjtSYdD5JBNlsogow/G6Fn548=
+
+Name: res/drawable-mdpi-v4/com_facebook_tooltip_blue_topnub.png
+SHA1-Digest: rxKAStLl/8uIoZskTt6N9AMuG+I=
+
+Name: res/drawable-xhdpi-v4/vietcombank.png
+SHA1-Digest: PzgVZx33IufPq1bO8UMDwPWbtrY=
+
+Name: res/drawable-hdpi-v4/com_facebook_tooltip_black_bottomnub.png
+SHA1-Digest: Yv03+LhA+UZt+z7csDqgVvySQdY=
+
+Name: assets/assets/card_396_icon.png
+SHA1-Digest: Skxk8nDTht2CqKHMqGfQ6C2u3sI=
+
+Name: res/drawable/zalosdk_border09.xml
+SHA1-Digest: Pq8GOCo6C6ANRGm+PVlN95jtHHw=
+
+Name: res/drawable-xhdpi-v4/ic_user.png
+SHA1-Digest: /NZxXH033mWXiz9odwldGVMewGk=
+
+Name: res/drawable/zalosdk_border02.xml
+SHA1-Digest: sskVJObdflhDBGDFw6DmGljKJoQ=
+
+Name: res/drawable-hdpi-v4/vietabank.png
+SHA1-Digest: i9cweFZTky4ufaRxaLL3pAqgOKo=
+
+Name: assets/assets/card_084_icon.png
+SHA1-Digest: cZmg2dC8W5KS5YwunfoW5SmqPDA=
+
+Name: assets/assets/card_diana_icon_01.skin.png
+SHA1-Digest: sUWErubyGTDlCIf+TzxQ+qMElP4=
+
+Name: res/drawable-xhdpi-v4/oceanbank.png
+SHA1-Digest: CpGwDQ5uE1Xq5jIeGmDbkp8WFi4=
+
+Name: assets/assets/card_034_icon.png
+SHA1-Digest: y+YwIctInAizsTNIjo8JSiNA0VY=
+
+Name: assets/assets/noembed_gfx_event
+SHA1-Digest: 6qUNZqjc85aE0KgSGQgvKElT8nA=
+
+Name: assets/assets/card_374_icon.png
+SHA1-Digest: 64xNmiOgt8fxOLlLAEnqjik1tmQ=
+
+Name: assets/assets/user_lv_number.single.png
+SHA1-Digest: PfVoDCTRoSMMl2D2BKjlvI3ngZU=
+
+Name: res/drawable-hdpi-v4/vib.png
+SHA1-Digest: 0H9WqpUslO2jM94YFZt+GkLiI0k=
+
+Name: assets/assets/card_439_icon.png
+SHA1-Digest: bJIm8zNR8IOzzFNzdZ4KAmyeWA4=
+
+Name: assets/assets/lock_feature.single.png
+SHA1-Digest: UNCfP+NilmYnHZ4+42j8iCDOoQE=
+
+Name: res/drawable-xhdpi-v4/com_facebook_button_like_icon.png
+SHA1-Digest: NGY0vczL+gmSadSmWZVch+0t7C0=
+
+Name: assets/assets/card_025_icon.png
+SHA1-Digest: e1gZXJPlsAcXD3j4zf4LZhJ1a00=
+
+Name: res/drawable-hdpi-v4/techcombank.png
+SHA1-Digest: oVRT6I/lCTH8HTLnxIHyjDQ2aoc=
+
+Name: assets/assets/card_zed_icon_lv3.png
+SHA1-Digest: eZIVLUGAhp9pkUDGkkZMPx34x8Q=
+
+Name: assets/assets/card_203_icon.png
+SHA1-Digest: aYBchMnHakD/JJKPW1iWVBYw2mI=
+
+Name: assets/assets/Vladimir_BasicAttack.wav
+SHA1-Digest: vyJYkZ1jKbD0Mz8AlmVXJSEHu4c=
+
+Name: res/drawable-mdpi-v4/i_beta_enable.png
+SHA1-Digest: OVQUWyHUAc/nblltTjOAy2DFDkY=
+
+Name: assets/assets/card_117_icon.png
+SHA1-Digest: 325pXNj1ILJSeGelbvsnk+/BG4M=
+
+Name: res/drawable-mdpi-v4/ico_cardcredit.png
+SHA1-Digest: 7hwma2J4q2FTnP17Go0uGIUEwDI=
+
+Name: res/layout/zalosdk_sms.xml
+SHA1-Digest: 9RmTPIgzjjzANyHM0BXGDhWLZMk=
+
+Name: assets/assets/Lulu_r_oba.wav
+SHA1-Digest: HL6pSXhtrywMUHOzCOKcrsL/8tI=
+
+Name: res/layout/zalosdk_activity_mobile_card.xml
+SHA1-Digest: sGALK+aG8aPUkGT8kT4u/4PrwaY=
+
+Name: res/layout/review_img.xml
+SHA1-Digest: Nfa947VuotGTtrCK77NFP3sNF+Q=
+
+Name: lib/armeabi/libandroidedittext.so
+SHA1-Digest: vvs3UE63Pc4QLbZ05XuIFGvDW2g=
+
+Name: assets/assets/card_258_icon.png
+SHA1-Digest: sgzvocTDgAH2JQO9WFxnORa+Mz8=
+
+Name: assets/assets/card_336_icon.png
+SHA1-Digest: 6OtxZXLlTCedGRtOmc3gaeL7EiU=
+
+Name: assets/assets/evoitem.single.png
+SHA1-Digest: Uuy56ygNmFgtmf4xCwEhovOSekI=
+
+Name: res/drawable-xhdpi-v4/com_facebook_logo.png
+SHA1-Digest: eLhmuI8qy69Vxe66/CMns3bXewc=
+
+Name: assets/assets/card_red_icon_01.png
+SHA1-Digest: 03DIVwYpTJgIRJHLe8YcUyOOtKc=
+
+Name: res/layout/choose_account_row.xml
+SHA1-Digest: PUTMl7IqpppuA5MOFYVXEVItFms=
+
+Name: assets/assets/card_177_icon.png
+SHA1-Digest: oBZNH5KXeROtYcWFscLx8IZiT/I=
+
+Name: res/drawable-xhdpi-v4/com_facebook_inverse_icon.png
+SHA1-Digest: JlToIy/BS1SwLA3JoedKEQBE76E=
+
+Name: assets/assets/card_263_icon.png
+SHA1-Digest: d61KvRGpBa1ageMe2I37LG68sXY=
+
+Name: assets/assets/attack_tristana_03.single.png
+SHA1-Digest: dxQg9EJTFZ0s7BX7oSgg2ydWy+o=
+
+Name: assets/assets/alistar_util.wav
+SHA1-Digest: 0pnvQjJmYF+8UUKT/WWgQDFMrxY=
+
+Name: lib/armeabi/libstd.so
+SHA1-Digest: oRdyvb2ykXUfwfTY53c+E3GnPqQ=
+
+Name: assets/assets/card_067_icon.png
+SHA1-Digest: tLqcruSg4vv+DHCKyzMx230NqhE=
+
+Name: res/layout/com_facebook_search_bar_layout.xml
+SHA1-Digest: dNM1Wf453UjKC30zAXjIYvOgABI=
+
+Name: assets/assets/card_soraka_icon_lv4.png
+SHA1-Digest: UlnosvpNh3MHZcKla720cpJceCo=
+
+Name: assets/assets/nunu_powerup.single.png
+SHA1-Digest: GFZWXH4jHx1zc7Y/yWPc+Vh2TMg=
+
+Name: assets/assets/lose_music.ogg
+SHA1-Digest: nL2VG3eq+E9NZ49wX31y2GJoV60=
+
+Name: assets/assets/card_lulu_icon_01.skin.png
+SHA1-Digest: S1UkXso4OB9QVkhpJ4mKPpwJgaQ=
+
+Name: assets/assets/card_046_icon.png
+SHA1-Digest: vA7a0NWEKQbDNRWLY/xBSrwLqo8=
+
+Name: assets/assets/ui_pvp.single.png
+SHA1-Digest: Q9Cu11YD9fck8MniH9hPNkh7NxQ=
+
+Name: res/drawable/zalosdk_zing.xml
+SHA1-Digest: RTXerkX3Ej3AOo2p2zwvsN9UUsI=
+
+Name: res/drawable/com_facebook_logo.png
+SHA1-Digest: TIvVq8m1g3ekhFefO/gFHs7fueU=
+
+Name: assets/assets/card_jayce_icon_lv3.png
+SHA1-Digest: MhSMJSmj3OwpUGoDCBM+aAG+VqI=
+
+Name: assets/assets/card_252_icon.png
+SHA1-Digest: 6Wh0w+CsCGTsEq7p+JihpTqDMX0=
+
+Name: assets/assets/Poster.hscript
+SHA1-Digest: 5K/WpDYOCUmUE4KG9XqfjFaeQic=
+
+Name: res/anim/trans_left_out.xml
+SHA1-Digest: F1pG62efK1ugZC85yg4f8+qzt1I=
+
+Name: res/drawable-xhdpi-v4/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: nSc+L5W+ATRTgOid8E+Z5Q2l7yE=
+
+Name: assets/assets/card_010_icon.png
+SHA1-Digest: cuExLMeNZeOtFK50CdafUdHiWEY=
+
+Name: res/drawable-mdpi-v4/com_facebook_button_blue_focused.9.png
+SHA1-Digest: r/eQ4lVtqUneb1/AXEHu+2WLWDM=
+
+Name: assets/assets/master_yi_util.wav
+SHA1-Digest: NotYnVYYfJYIytUft4XphIvUAHs=
+
+Name: assets/assets/card_150_icon.png
+SHA1-Digest: 1SAkn6NseYTBMTcLxWNkbhcpCV4=
+
+Name: res/drawable/com_facebook_button_blue.xml
+SHA1-Digest: J71S09HLnGZ+cEHpzYP9o7fMvPI=
+
+Name: assets/assets/card_soraka_icon_01.skin.png
+SHA1-Digest: 1yIGOBcz8u52oGLR81R2CJ4LnyU=
+
+Name: res/drawable-hdpi-v4/com_facebook_button_like_background_selecte
+ d.png
+SHA1-Digest: u4tNjKnKlD22DVMv5srJxxaGipo=
+
+Name: res/layout/zalosdk_merge_card.xml
+SHA1-Digest: r4fWwrxTzpL5H1nDOX7ccFG+Qz8=
+
+Name: res/drawable-ldpi-v4/ic_email.png
+SHA1-Digest: OtdRrVIIOprMm04Sv3bV4Vyw5vI=
+
+Name: assets/assets/Event_Bingo_8_3.hscript
+SHA1-Digest: XvSWZa9hE1JYfk/K25NfvNnBNBc=
+
+Name: assets/assets/card_088_icon.png
+SHA1-Digest: jPFtsx2gq7CXrcick2FzZ2XBXC8=
+
+Name: res/drawable/zalosdk_rounded_frame.xml
+SHA1-Digest: 6MgCzTikelf2+xfk0tgCVVbEMMo=
+
+Name: res/drawable/com_facebook_picker_list_selector_background_transi
+ tion.xml
+SHA1-Digest: lCQBsphSn2o+36NlspHAfhNoYKg=
+
+Name: assets/assets/extensions_webview_close_mdpi.png
+SHA1-Digest: lPlIbbW7NpLV1mLzR5iSJbYh4Do=
+
+Name: assets/assets/annie_skill_03.single.png
+SHA1-Digest: lJTq9GWv9pUC5jb6vM72JkSVXUA=
+
+Name: assets/assets/card_469_icon.png
+SHA1-Digest: hZDy9nKeDEErr1mZ/3mgnRNB5ZQ=
+
+Name: assets/assets/attack_04_yi.single.png
+SHA1-Digest: BXk5kUBebRvmPYaHZ52zUSmNqmQ=
+
+Name: assets/assets/card_130_icon.png
+SHA1-Digest: 8vuUam//s0hFoz9K/q6GzQBOThk=
+
+Name: assets/assets/card_206_icon.png
+SHA1-Digest: 0A0oaVuvAzx2sGC7s+gYNnt3Luc=
+
+Name: res/layout/activity_web_view_fullscreen.xml
+SHA1-Digest: Renz2b2v3HM4xmxRkg7vOdv+gGI=
+
+Name: assets/assets/card_yasuo_icon_02.skin.png
+SHA1-Digest: oi1CQ/YTLMwkKH8E1MYxDCl6TAQ=
+
+Name: assets/assets/card_066_icon.png
+SHA1-Digest: Ya5qAEw5twGh+e14TaqLlXHVPuk=
+
+Name: res/drawable/zalosdk_border15.xml
+SHA1-Digest: bJ9T7/hOncGfulz5LCFl2hObmWA=
+
+Name: res/drawable-mdpi-v4/com_facebook_tooltip_black_xout.png
+SHA1-Digest: +NOQmfBahK9wgyl14UEHXrBM1lQ=
+
+Name: res/drawable-xhdpi-v4/ic_email.png
+SHA1-Digest: gd96Cx29Bc6OP4qZTVaM8k0ntt0=
+
+Name: assets/assets/card_220_icon.png
+SHA1-Digest: RsUQ7i2w9fcnJYKQAKvrVSCAo5k=
+
+Name: assets/assets/card_nunu_icon_01.skin.png
+SHA1-Digest: geZVAKL1IKRQyDCVhX69Akdlf8Q=
+
+Name: assets/assets/card_nami_icon_01.skin.png
+SHA1-Digest: wKuNEV55YD1XOJPvV2GGSAIu0TQ=
+
+Name: res/drawable-xhdpi-v4/logo_zalopayment.png
+SHA1-Digest: A6vvMawXC7V4FOLJWSBWeCcXTAU=
+
+Name: assets/assets/attack_01_ashe.single.png
+SHA1-Digest: GSva3NSRmjFiHqLCMTWswj+XYGE=
+
+Name: res/drawable/zalosdk_background_grey_stroke_grey_corner_4.xml
+SHA1-Digest: PVynFEn54Iun9ZeNyU4VfWqlclM=
+
+Name: res/drawable-hdpi-v4/zalosdk_ic_launcher.png
+SHA1-Digest: IVRTIWSSUN2lzJhKLTbLmn7mNTU=
+
+Name: assets/assets/icon_vip.single.png
+SHA1-Digest: vDFvrMV6uw2IVjD5VQ88K+dEM9Y=
+
+Name: assets/assets/font_pvp_combo_big.single.png
+SHA1-Digest: y+BH5etjo0ODMNpyZOdmKUQWgQY=
+
+Name: assets/assets/card_347_icon.png
+SHA1-Digest: sv61eG5bkeuSytQ6r7TLHHQeYs4=
+
+Name: assets/assets/effect_buff.single.png
+SHA1-Digest: ycInfG07mPbLPrpGu1s070g4dds=
+
+Name: assets/assets/embed_gfx_academy
+SHA1-Digest: VYYSz3CZZIzeF9/JOEHs2Sd6oRU=
+
+Name: res/drawable-xhdpi-v4/icon.png
+SHA1-Digest: LRa87vd7hg/WbMQmgOWJXNBAMjg=
+
+Name: res/drawable/zalosdk_border00.xml
+SHA1-Digest: wgtQTD7vw7XMhnFUap5QVUEea3A=
+
+Name: assets/assets/card_zed_icon_lv5.png
+SHA1-Digest: 9AL0oE6EJPtAjhIlRQOtJe+58vs=
+
+Name: assets/assets/Kayle_chem_lan.wav
+SHA1-Digest: 2dQ9kvfCJqVYLPiyueHZdzw7Qqk=
+
+Name: res/drawable-xxhdpi-v4/com_facebook_button_like_background.png
+SHA1-Digest: SgfxDAFdrbaCdeSUjnMvqhy6oHg=
+
+Name: assets/assets/card_174_icon.png
+SHA1-Digest: tl92RQnHz2sB3G3e6Hyf3LMHDQs=
+
+Name: res/drawable-xhdpi-v4/eximbank.png
+SHA1-Digest: 1AMlut1wbNGqnZCnGe8/8agZ8hU=
+
+Name: res/drawable-ldpi-v4/ic_play_google.png
+SHA1-Digest: 5nP58zjq0tc4/H3tRKtjPjTnz50=
+
+Name: assets/assets/card_354_icon.png
+SHA1-Digest: BVywYP/xWMmhCFU/SYrtK6sJHms=
+
+Name: assets/assets/lissandra_00.single.png
+SHA1-Digest: vUo9EFUz+g144vKrouQcJBKy1lg=
+
+Name: res/drawable/zalosdk_border19.xml
+SHA1-Digest: 7UNMHmnAkVqzAvZj8EkMolJCY18=
+
+Name: res/drawable/zalosdk_white_border_rectangle_corner_partial_trans
+ parent.xml
+SHA1-Digest: XpZRv+bduQfxUAoibRFpyzHGXJA=
+
+Name: assets/assets/card_shen_icon_lv3.png
+SHA1-Digest: keML92eNyZ3lcTcnZlwaejTJGzo=
+
+Name: assets/assets/CongratulateElement.hscript
+SHA1-Digest: iSpVHpcasOiWfc16oiqIWKMYXZM=
+
+Name: assets/assets/card_elise_icon_01.skin.png
+SHA1-Digest: SKGSORtLzOdcvrCW4vcNQE9o2JU=
+
+Name: assets/assets/card_153_icon.png
+SHA1-Digest: vDneX3xBtIaxlWwRUuUJS0alGwc=
+
+Name: assets/assets/card_104_icon.png
+SHA1-Digest: Iz/9D4syRW6tuxRhn02UoC9QjcY=
+
+Name: assets/assets/version.txt
+SHA1-Digest: aNSW7gjmRRHBJ19H6FoYQsl46RM=
+
+Name: assets/assets/card_nasus_icon_01.skin.png
+SHA1-Digest: dfHPTtNh/LP2bx/PfAd46Szqwd4=
+
+Name: res/layout/zalosdk_atm_card_otp.xml
+SHA1-Digest: g2ugCBuZvO+qgqslrHg5DRnJHH0=
+
+Name: res/anim/trans_right_out.xml
+SHA1-Digest: RK1eS/96e2KKCkAzJ86Cl57o1pQ=
+
+Name: res/drawable-mdpi-v4/i_pttr1.png
+SHA1-Digest: ZWnpW8ILD6mMn5LnSZykmPl10oM=
+
+Name: res/drawable/zalosdk_border13.xml
+SHA1-Digest: O93cd+pVAGyUF1Yb6Bx3ZvRBGY4=
+
+Name: res/drawable-hdpi-v4/i_edit.png
+SHA1-Digest: 9aChNr5utbqHXo33ICiFngFrNBc=
+
+Name: res/drawable-mdpi-v4/ic_play_google.png
+SHA1-Digest: SayWv0KBN9gAjBG0+l7bAmXYbsY=
+
+Name: assets/assets/text_bitmap_02.single.png
+SHA1-Digest: fpqLTORafDybJ6F2tHWYoHb9LOE=
+
+Name: assets/assets/dropitem.single.png
+SHA1-Digest: CyoBWIAhz4vwxKesxWlsmE56FCA=
+
+Name: assets/assets/Janna_eyeofthestorm.wav
+SHA1-Digest: /irrnmzCkG+lWn5g/SRpk7ZWX64=
+
+Name: assets/assets/embed_gfx_evolution
+SHA1-Digest: oeKN2oSxX8/hjhbmuVa9YKcYQDs=
+
+Name: res/drawable-ldpi-v4/ic_arrow.png
+SHA1-Digest: F2yqX1VQrd05g8y9xD9sG0YjGSw=
+
+Name: assets/assets/card_ekko_icon_lv3.png
+SHA1-Digest: JeI+WNmsyyHoRnjprp8lBdmy1Ps=
+
+Name: assets/assets/card_293_icon.png
+SHA1-Digest: yGNAwHa2Bnmw+OmWpen9i6YytEI=
+
+Name: lib/armeabi/liblime.so
+SHA1-Digest: GxxEUb1ecMoNUATcTZRUvDZfT3g=
+
+Name: assets/assets/rune_level_up.single.png
+SHA1-Digest: qweOLOZayQKpc3B+wrF20+vu9Os=
+
+Name: assets/assets/card_189_icon.png
+SHA1-Digest: PIZEROfO6cbwBM6+a8hIJEoa2JE=
+
+Name: assets/assets/Event_FirstPayment.hscript
+SHA1-Digest: xFp7ZQTm9ETW56ZFVOAtV/8XdX4=
+
+Name: assets/assets/vayne_skill.single.png
+SHA1-Digest: eTBKtlia7e2cuL+TukSZrrg7MDg=
+
+Name: assets/assets/ui.single.png
+SHA1-Digest: 9VsDVnJh7qaLXosFJLfDZuKlcc4=
+
+Name: res/drawable-hdpi-v4/zalosdk_btn_hide.128.png
+SHA1-Digest: t1oMcErclWt+JvwYp3jA+sUSnpM=
+
+Name: res/drawable-hdpi-v4/saigonbank.png
+SHA1-Digest: IGLwKtqcEXnhtCuZxES5JnSZKFk=
+
+Name: assets/assets/battle_music.ogg
+SHA1-Digest: Kl0alggOrpt9WgFBivtklCtImjU=
+
+Name: assets/assets/card_113_icon.png
+SHA1-Digest: DyLUfrjNDaHGEnKk4gniSszENaA=
+
+Name: res/drawable-xhdpi-v4/vietinbank.png
+SHA1-Digest: rcQUPxAxTZsm6D7PCTasj+Aiy4k=
+
+Name: res/drawable/zalosdk_border08.xml
+SHA1-Digest: mGg7UNj9/4bfQ4kG3XSs+OBuwh0=
+
+Name: res/drawable-xhdpi-v4/ico_sms.png
+SHA1-Digest: Jci9qFuqHHkGB8pPe+qORBqwA2I=
+
+Name: assets/assets/ahri_util.wav
+SHA1-Digest: jTIcuidHDrcPiq635GPduJgihqY=
+
+Name: assets/assets/Event_BuffTet.hscript
+SHA1-Digest: TgoalRMkFYA8XVSO7PN553VsKW0=
+
+Name: assets/assets/card_495_icon.png
+SHA1-Digest: OdFER9ta89+sC4bfUTdfHbL4hBw=
+
+Name: assets/assets/teemo_mushroom.single.png
+SHA1-Digest: bzL2dd8z+fzMKP0RCn/5Fv8C/Cs=
+
+Name: assets/assets/card_tristana_icon_04.skin.png
+SHA1-Digest: Bb8nFUexEFA7AvU54ahrKjHKhe0=
+
+Name: assets/assets/skill_bufff.single.png
+SHA1-Digest: YY0zVOXXT1XtP0BB56w3O6TTSEM=
+
+Name: res/drawable-hdpi-v4/agribank.png
+SHA1-Digest: yWGrH7we3nxlFmjkkkl4R7nTMwA=
+
+Name: res/drawable-hdpi-v4/gpbank.png
+SHA1-Digest: U0sEipzPvEj6yMHQ9GpU1NoQLCY=
+
+Name: res/drawable-mdpi-v4/mobiphone.png
+SHA1-Digest: VAEReaOxHJJkXM4jUgpyvFF8pIo=
+
+Name: assets/assets/card_miss_fortune_icon_01.skin.png
+SHA1-Digest: Q9ZE/+HPioxAkF200FyoEHD39xQ=
+
+Name: assets/assets/card_kennen_icon_01.skin.png
+SHA1-Digest: 1hs6kWNzSOsKRaEffA6tlRz3YH0=
+
+Name: assets/assets/card_yasuo_icon_lv4.png
+SHA1-Digest: yMToPqrfHsdogpbVZ18f7R7QPkk=
+
+Name: res/drawable-hdpi-v4/com_facebook_tooltip_blue_background.9.png
+SHA1-Digest: sC70NtI1TOrQ25tTttVbTOvGpzY=
+
+Name: res/layout/com_facebook_friendpickerfragment.xml
+SHA1-Digest: efDiWmy/Go7FNDbjvmKwXavFGOo=
+
+Name: assets/assets/card_202_icon.png
+SHA1-Digest: XGP9rvOkoewpOfjS6HE1RXLiRPs=
+
+Name: res/drawable-mdpi-v4/eximbank.png
+SHA1-Digest: KqvdQ0NxOOHo1J1z6//fthpeIiE=
+
+Name: assets/assets/TwistedFate_BasicAttack.wav
+SHA1-Digest: WSYLgdmSWQXUYb3WkH7o4c2eVTc=
+
+Name: res/drawable-hdpi-v4/com_facebook_tooltip_blue_topnub.png
+SHA1-Digest: 5SQuqZIQRsYoN4TBMlAnsPgKzLU=
+
+Name: assets/assets/lulu_attack_01.single.png
+SHA1-Digest: PGdjcMbYXjoQumoilt6ukj+Cj0o=
+
+Name: res/anim/trans_left_in.xml
+SHA1-Digest: 0qFMxKA7Da4mJ+nb1sPNjfqsENg=
+
+Name: res/drawable-hdpi-v4/zalosdk_plus.png
+SHA1-Digest: N/s26OsfUsn0W6xZtK8+sIvE2qE=
+
+Name: res/drawable-xhdpi-v4/btn_close.256.png
+SHA1-Digest: gdfJd26j0xXL3m05CU4+Ws7nIbM=
+
+Name: assets/assets/card_176_icon.png
+SHA1-Digest: rNw+MdtJDOCF9Kk+CFUMc97L/Ik=
+
+Name: assets/assets/Event_yasuo_underworld.hscript
+SHA1-Digest: SGT7R0ea9Fo/KnLkaqE+e3hSebE=
+
+Name: assets/assets/card_485_icon.png
+SHA1-Digest: lP6TBnQ1Dp6WWLTVxF7aXU0d204=
+
+Name: res/drawable-hdpi-v4/namabank.png
+SHA1-Digest: seVjFRFPUd4lp1arXV++h+bI20M=
+
+Name: assets/assets/stick.wav
+SHA1-Digest: CESCcNSTvfxIG4OYMs5+YrzWO5Q=
+
+Name: res/layout/zalosdk_activity_mobile_acc_otp.xml
+SHA1-Digest: ccgTRTDsVwvKRY5o3XcPzoX93SQ=
+
+Name: assets/assets/sona_util.single.png
+SHA1-Digest: 14iTutQZ8pnYcy/38IU5J8kjFWM=
+
+Name: res/drawable-xhdpi-v4/vib.png
+SHA1-Digest: SSNGUSVthZgH24CHWoinEY3IgFo=
+
+Name: assets/assets/card_leesin_icon_01.skin.png
+SHA1-Digest: wTo1h9SFl5fT1/dTvC8KAlZJXO4=
+
+Name: res/drawable/zalosdk_divider.xml
+SHA1-Digest: vYA47hZKiDjAIOaMezIZaPq9ukE=
+
+Name: assets/assets/card_jarvan_iv_icon_lv2.png
+SHA1-Digest: bCLJoIU2PCZrfkGKrZT2kSNYi/c=
+
+Name: res/drawable-mdpi-v4/com_facebook_tooltip_blue_bottomnub.png
+SHA1-Digest: EQjyUui+aWxwq+rwMQeRNG8lJd0=
+
+Name: assets/assets/card_diana_icon_lv2.png
+SHA1-Digest: 6BNqmj/AxbZ+YnJV6xbS6r0OyT4=
+
+Name: assets/assets/card_183_icon.png
+SHA1-Digest: lLohjtDepxiBJJXKBxgmrJgvpgw=
+
+Name: assets/assets/diana_attack.single.png
+SHA1-Digest: 7/HJj5HiwhYMeK2I4GI+DzewhXA=
+
+Name: res/layout/com_facebook_picker_list_row.xml
+SHA1-Digest: SdSRrAc08oZpmSoc/TUi8WxxU2o=
+
+Name: res/layout-v17/choose_account.xml
+SHA1-Digest: nOCOlkACAV2iwT8htjMTBnchHLY=
+
+Name: assets/assets/card_gangplank_icon_01.skin.png
+SHA1-Digest: L0m9jzltkQGyAbYZuWwlsQ53FAg=
+
+Name: res/layout/zalosdk_zingcoin.xml
+SHA1-Digest: dhAjoZL3Fb1/pWLAcdUkk387H88=
+
+Name: assets/assets/noembed_sound
+SHA1-Digest: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+
+Name: assets/assets/armorset.single.png
+SHA1-Digest: DWZeWLvBZ6uMQbJKyC7Q30kcNqE=
+
+Name: assets/assets/General_Skill.hscript
+SHA1-Digest: hVHGGGzsRfgPIpzfzmO5oebNdlI=
+
+Name: assets/assets/elise.single.png
+SHA1-Digest: nbExHGAHZKsIEL3e+D9Kqqhz1M4=
+
+Name: res/drawable-xhdpi-v4/com_facebook_tooltip_blue_xout.png
+SHA1-Digest: WjFm0tp4nyOULhL2U3mNcNv66H0=
+
+Name: res/drawable/com_facebook_place_default_icon.png
+SHA1-Digest: T6PfkzvzoTErI9HPUHhPTzYuaOw=
+
+Name: res/drawable/zalosdk_border04.xml
+SHA1-Digest: nHUgCXJeqLLANXjlzSJKRaMKQus=
+
+Name: res/drawable-mdpi-v4/ic_user.png
+SHA1-Digest: eCMXfIhSACQ+tsnJyb5g7/t4mBI=
+
+Name: manifest
+SHA1-Digest: mMPMo8V6pVtuzWe7ZFR440kXloo=
+
+Name: assets/assets/spell_02_offend_01_fire.single.png
+SHA1-Digest: HfC4nPpXxhOuVk6X7xD5ZWnvo1s=
+
+Name: assets/assets/card_ahri_icon_01.skin.png
+SHA1-Digest: p/tlnwL0t1yPyF57l6Ff7CRqfnE=
+
+Name: res/layout/login_activity.xml
+SHA1-Digest: ajOd0/82///4VnoJE0ULPAa0p24=
+
+Name: assets/assets/card_hecarim_icon_01.skin.png
+SHA1-Digest: FpekAS2rx9SCweqCWDDl/Xvyu/4=
+
+Name: assets/assets/card_519_icon.png
+SHA1-Digest: mbQNGRG6n/YxNrwnt7OqmtcpXUI=
+
+Name: assets/assets/card_191_icon.png
+SHA1-Digest: kaDXFHzgyRqtY6unsDElRZo29mE=
+
+Name: res/drawable-mdpi-v4/ic_arrow.png
+SHA1-Digest: yCb3wT/N2N5t+3Mw0H/cwEmqyqc=
+
+Name: assets/assets/card_212_icon.png
+SHA1-Digest: 5biPPbF8MWjDoM0rPWm25asz2MQ=
+
+Name: AndroidManifest.xml
+SHA1-Digest: KTO0Vz7g9Ft+lixSSJPnz9rfnJQ=
+
+Name: res/drawable-xhdpi-v4/mobiphone.png
+SHA1-Digest: mxaPsfd0yAgauPL/HnDNUSfeU4Y=
+
+Name: res/layout/com_facebook_picker_search_box.xml
+SHA1-Digest: effuEWe2uqYceofzUTOV1QDcv5M=
+
+Name: res/drawable-hdpi-v4/ic_lock.png
+SHA1-Digest: BZF3TVpFvDNG4tOP8sunR3buBOY=
+
+Name: res/drawable-hdpi-v4/ic_user.png
+SHA1-Digest: di8fnIzUhQOeidZgIhFCp48sFQQ=
+
+Name: assets/assets/card_408_icon.png
+SHA1-Digest: qT+Bm6oXeBCTKJGHb3Vj77JEeMk=
+
+Name: assets/assets/card_332_icon.png
+SHA1-Digest: UaGOjjpR56X41bLNuhe+dDYR9+8=
+
+Name: res/drawable-hdpi-v4/vinaphone.png
+SHA1-Digest: gg3jwS8cedWLTrO6bvYXYTgx53A=
+
+Name: assets/assets/card_107_icon.png
+SHA1-Digest: u6PYsVlymLwkI4jCcF2SyXT9RFE=
+
+Name: res/drawable/zalosdk_border01.xml
+SHA1-Digest: 71aMK+LETVY6reEGKe4UOkO8s6U=
+
+Name: assets/assets/card_jayce_icon_lv4.png
+SHA1-Digest: N3kPNGnuQMT9oCH1uTIm/YhYIm8=
+
+Name: assets/assets/card_vayne_icon_01.skin.png
+SHA1-Digest: l1uone24RUdeB+TksGfVin5aLQs=
+
+Name: assets/assets/card_090_icon.png
+SHA1-Digest: TWg9n3juF4xLa3h60LZtBkhkq5Q=
+
+Name: assets/assets/card_leesin_icon_02.png
+SHA1-Digest: SeaMT/cmIBKLPvmnwsEJ4Zsa5DQ=
+
+Name: res/drawable/zalosdk_background00.xml
+SHA1-Digest: 12l3Y0v/qFvkj28vek9Ie1KI75Q=
+
+Name: assets/assets/card_tower_icon_lv2.png
+SHA1-Digest: oZGu/wtL2Bh1dVnfstzF8HN75/A=
+
+Name: classes.dex
+SHA1-Digest: GU1OUt9IVHXAT1FwCRxm/lzu/68=
+
+Name: res/drawable-ldpi-v4/plus.png
+SHA1-Digest: N/s26OsfUsn0W6xZtK8+sIvE2qE=
+
+Name: res/drawable-ldpi-v4/ic_uncheck.png
+SHA1-Digest: sHYIr8jDpeom+Ou2QZ49CMSQ+lQ=
+
+Name: assets/assets/fizz_util.hscript
+SHA1-Digest: Nbc1V+PwBWQxzTXQhv7FG/Ql9KM=
+
+Name: assets/assets/card_329_icon.png
+SHA1-Digest: Za3RxXzH43y5uzA6oeD91BPIuqk=
+
+Name: assets/assets/loading_teemo.single.png
+SHA1-Digest: TbQpQLXWZlKAf+mf4mRI2O1Hqwg=
+
+Name: assets/assets/card_amumu_icon_01.skin.png
+SHA1-Digest: 0vD0IladjFZBvfhmEg8lJtVwxDE=
+
+Name: assets/assets/card_609_icon.png
+SHA1-Digest: tMYIZ2v724DAIDzFhimhZB1NfwM=
+
+Name: assets/assets/spell_02_offend_07_blood.single.png
+SHA1-Digest: LnB9R+EdtT6o+C8uQ9a5Do73ou0=
+
+Name: res/drawable-mdpi-v4/ocb.png
+SHA1-Digest: kJ1Ptijpj1qegktYSRX+jfIRuwA=
+
+Name: assets/assets/card_461_icon.png
+SHA1-Digest: FrHMAsFffse3iJvSJ2kt2hgNF78=
+
+Name: assets/assets/card_205_icon.png
+SHA1-Digest: ixlj9EHFLcoJGYaeD/MUYUvn1fU=
+
+Name: assets/assets/card_yasuo_icon_04.skin.png
+SHA1-Digest: ZcwtBUDOHbyfBOlJ753M8bYa+To=
+
+Name: assets/assets/diana_attack_02.single.png
+SHA1-Digest: 8Azl8YZ/y7TdlaQfFtRjis7MFgQ=
+
+Name: res/drawable/zalosdk_border11.xml
+SHA1-Digest: V6jGkuyRfTmp6KrfwsXkD68nGYM=
+
+Name: res/drawable-mdpi-v4/i_capture.png
+SHA1-Digest: 02igxvtriTHkCpk7k32B0DkR/fo=
+
+Name: assets/assets/embed_gfx_fusion
+SHA1-Digest: YaUf2m4EmkzFEoksYKx5dPo9kY4=
+
+Name: lib/armeabi/libApplicationMain.so
+SHA1-Digest: WGlssGryQ9kXtqg9lwfabYI14Jc=
+
+Name: assets/assets/darius_util.hscript
+SHA1-Digest: 3OAc5orVxU6G9tlIBrzIBHCtY8Y=
+
+Name: res/drawable-xhdpi-v4/ico_cardzing.png
+SHA1-Digest: UcYA3UCiKmttEPMjXao7knfEYfI=
+
+Name: assets/assets/ress_card.hscript
+SHA1-Digest: iIQQqOntC2dB+wRJQPQZEVE1Ses=
+
+Name: assets/assets/Event_SummonTet.hscript
+SHA1-Digest: lOm1lvOfOqFS1M9+EfvpdK5xbqk=
+
+Name: assets/assets/tf_util.wav
+SHA1-Digest: DWZoM+TlGcDOFOEO4WUKYk9T1Js=
+
+Name: res/drawable-xhdpi-v4/com_facebook_button_like_icon_selected.png
+SHA1-Digest: 9vrWnp1DKsrgj6R4IGYpQU4Q6zQ=
+
+Name: res/drawable-xhdpi-v4/com_facebook_tooltip_black_bottomnub.png
+SHA1-Digest: KlhlPq9cEDac9rtf0YM03Bb5OUU=
+
+Name: assets/assets/annie_skill.single.png
+SHA1-Digest: 3XOpOJir2qeo8i70omXTslgWaPI=
+
+Name: assets/assets/card_ezreal_icon_lv4.png
+SHA1-Digest: micRS+dcNvhfgIw5ILsU3zbvXDo=
+
+Name: res/layout/support_container.xml
+SHA1-Digest: byEGS9szU2G4rstcJ/1aeqIJMVM=
+
+Name: res/layout/zalosdk_atm_card_selector.xml
+SHA1-Digest: RYzNfXFgU2ZkOZdjIiwlNncHRsA=
+
+Name: res/drawable-xxhdpi-v4/com_facebook_button_like_pressed.png
+SHA1-Digest: kfFHLC5nMeoEjXEAll/73jL1YIo=
+
+Name: res/drawable/com_facebook_button_check.xml
+SHA1-Digest: eIhYb4XnRLRo6NG5dTEsrUYnv3A=
+
+Name: assets/assets/card_192_icon.png
+SHA1-Digest: CXUQ7AfAZSSd5v8MNYmi29q+bRQ=
+
+Name: assets/assets/card_413_icon.png
+SHA1-Digest: RGXHARGxwsjli3EwHmcMmdzuess=
+
+Name: assets/assets/card_135_icon.png
+SHA1-Digest: qWDn2A/bBoIXowxhihQG56rRb0Q=
+
+Name: assets/assets/sd/ui.single.png
+SHA1-Digest: mroVKMIGCI9TNTL5fSH7M/4PJUU=
+
+Name: assets/assets/card_085_icon.png
+SHA1-Digest: L4wMp/5b44cJsofPG6VW4HVvjks=
+
+Name: assets/assets/card_054_icon.png
+SHA1-Digest: K5g3yKljkscB/o7HRqNXbQJHSiM=
+
+Name: assets/assets/alistar_util.single.png
+SHA1-Digest: 2NM5HAgKZmFnDlZ8zc//XdcLnqs=
+
+Name: res/drawable-ldpi-v4/ic_protect.png
+SHA1-Digest: SBrTD9qlb0c5dYXj6bzlys8owu8=
+
+Name: assets/assets/annie_util.hscript
+SHA1-Digest: jQpcqoHsVii6o+W2sWzppxn9050=
+
+Name: assets/assets/card_001_icon.png
+SHA1-Digest: Hi0CqUIq/XrcuVi4GPS/E/JU2PY=
+
+Name: assets/assets/card_463_icon.png
+SHA1-Digest: i3+yXMOexOV15Jj+0ZtcYULDyV4=
+
+Name: assets/assets/card_shen_icon_lv4.png
+SHA1-Digest: AvxedH2WlNjIuBtvq4sxCWHG7Xk=
+
+Name: res/layout/zalosdk_redeem_code.xml
+SHA1-Digest: mePdpU98qhT1KeBqzk4YhCRQoqE=
+
+Name: res/drawable/com_facebook_picker_top_button.xml
+SHA1-Digest: FpCN68q2eV+3WjoqLCPZ0C/7pGQ=
+
+Name: res/drawable-mdpi-v4/logo_zalopayment.png
+SHA1-Digest: NlGDhwe45VmRJIZmV4SlVBp5xaY=
+
+Name: res/drawable-mdpi-v4/vpbank.png
+SHA1-Digest: 0RoAkFzyGeBlS6m0PzwY+u7AiqU=
+
+Name: res/drawable-ldpi-v4/ic_play_zing.png
+SHA1-Digest: W3dGSfj1OKAu3Lk6G2IMHg1Zz4w=
+
+Name: res/drawable/com_facebook_top_background.xml
+SHA1-Digest: 2jGeRfgb5Xm7OmXOYRKQWRbaaUw=
+
+Name: assets/assets/card_094_icon.png
+SHA1-Digest: Sp56WN9kF6lo+fPWFuBBWP6ia6c=
+
+Name: assets/assets/card_080_icon.png
+SHA1-Digest: SIyAAAeYJ3sCZFUMBB4D0SR0XIs=
+
+Name: assets/assets/card_026_icon.png
+SHA1-Digest: dvO548bAA0znqgOk09aNge2tdcs=
+
+Name: assets/assets/card_021_icon.png
+SHA1-Digest: Rj9xBx1fzwFvPkAIHeCz0vAM2/4=
+
+Name: assets/assets/card_358_icon.png
+SHA1-Digest: Zi7+G25/zMRPm3gVbfT1cDHIrB8=
+
+Name: assets/assets/knockout_leesin_multi.hscript
+SHA1-Digest: zSqUlrf0frhgiPrjraj+OOWcz14=
+
+Name: res/layout/choose_account.xml
+SHA1-Digest: 1dm5izKDyLVB7x3gYWZSInW1f3E=
+
+Name: res/drawable/com_facebook_button_like_background.png
+SHA1-Digest: mA/rLYQ5jj3/H+r2fDZuzu1Gh9Q=
+
+Name: res/drawable-xhdpi-v4/ocb.png
+SHA1-Digest: vPZJfPiwwXeNO8rG48PDny8MUwE=
+
+Name: assets/assets/ErrorText.hscript
+SHA1-Digest: GU/8FL9oISQnvVLkF0d9UUa9ldE=
+
+Name: res/drawable-xhdpi-v4/com_facebook_picker_magnifier.png
+SHA1-Digest: NjTjXCO0OGIK9fwB/UeOonoc+VI=
+
+Name: assets/assets/gnar_rage.single.png
+SHA1-Digest: hzKRRjWkEFbz6OT7ROpoGDeN5ho=
+
+Name: assets/assets/card_168_icon.png
+SHA1-Digest: EQNe1k9FiMuCW2LQ7NqRc/o6LxM=
+
+Name: assets/manifest
+SHA1-Digest: GtaRyv2eQyCc4f62LwxHqPLz8JM=
+
+Name: lib/armeabi/libzlib.so
+SHA1-Digest: RWgjjwtc6E/eiYPGovB+sI6xPwQ=
+
+Name: res/drawable-mdpi-v4/i_close.png
+SHA1-Digest: oVcm+l10/U/SO59AtqksG19JFGY=
+
+Name: assets/assets/card_188_icon.png
+SHA1-Digest: 4vMR3wSC5Nc+oX4kDncZBZI6bt4=
+
+Name: res/drawable/com_facebook_profile_picture_blank_portrait.png
+SHA1-Digest: 9kGOeq/tVClWE7Lz9AgjtukRZnQ=
+
+Name: res/drawable-xhdpi-v4/i_edit.png
+SHA1-Digest: 8hNe0FLUCW7h9qsZeUFTqwLYJXI=
+
+Name: assets/assets/Ezreal_mysticshot.wav
+SHA1-Digest: mOoyJGF++e4eMGLXd2hCsu/S/7Q=
+
+Name: res/drawable-xhdpi-v4/i_back.png
+SHA1-Digest: Ou6nxXxuXV/6UZF+76/duPKN5I0=
+
+Name: res/drawable-mdpi-v4/pgbank.png
+SHA1-Digest: Yp8MCW6h2X3LoWCzNQ/jCnLqr24=
+
+Name: assets/assets/card_taric_icon_01.skin.png
+SHA1-Digest: n8D/tH8S0nAfAXpMskMDCXRTyUg=
+
+Name: res/layout/zalosdk_activity_sml_card.xml
+SHA1-Digest: b2FUfpVJ/uP197WJc+p4KCeybgo=
+
+Name: res/drawable/com_facebook_picker_list_selector.xml
+SHA1-Digest: Y4FWe+CxqPZJjRbKZU5TgUhWF0o=
+
+Name: assets/assets/card_155_icon.png
+SHA1-Digest: 4b2zQZ9++on4LKxFx6XdH/Ni/IA=
+
+Name: assets/assets/card_jarvan_iv_icon_lv1.png
+SHA1-Digest: z+c/dmidmGaCCsB3oh61ULLoN7Q=
+
+Name: res/layout/choose_type_and_account.xml
+SHA1-Digest: dvUv1SVHt4fNlNwrFSHP8MG4DZo=
+
+Name: res/drawable-xhdpi-v4/com_facebook_button_blue_focused.9.png
+SHA1-Digest: tEbd6ZHud+WKPmfZRNY10IneUmY=
+
+Name: res/drawable/com_facebook_list_divider.9.png
+SHA1-Digest: OsW90hfk5k17EPqJ6H8fWnWe8p0=
+
+Name: lib/armeabi/libzme_oauth.so
+SHA1-Digest: a0EwfBLa+JN5k6AKEW1ZO54u4dg=
+
+Name: res/drawable-hdpi-v4/logo_zalopayment.png
+SHA1-Digest: Imv0Hkq7yU7F8XQ1a03wgVofDlc=
+
+Name: res/drawable/com_facebook_close.png
+SHA1-Digest: 3ghe2qEAIfHDS2Vog44GyFmuhsA=
+
+Name: assets/assets/spell_02_offend_05_light_diana.single.png
+SHA1-Digest: 2pXsYeFemR6ZxqEZNMij2UlALbs=
+
+Name: res/drawable/zalosdk_button_takephoto.xml
+SHA1-Digest: X6i3URl7MLpwZhkbvQnq5kSW+28=
+
+Name: assets/assets/card_annie_icon_04.skin.png
+SHA1-Digest: AYiH947rBlDxR7I9Bxeo+kvyl3A=
+
+Name: res/drawable/com_facebook_loginbutton_silver.xml
+SHA1-Digest: KHe2uO49AT8GBgt89JrQXvtkN/A=
+
+Name: res/drawable-xhdpi-v4/abbank.png
+SHA1-Digest: DYu4lMJ3ZeLAx7FjGV2JyKqDbRU=
+
+Name: assets/assets/card_soraka_icon_lv1.png
+SHA1-Digest: W7y+knNFePhllnRXhCvuJZX2UlY=
+
+Name: assets/assets/fiddle_skill_03.single.png
+SHA1-Digest: bvdi1RJoRel4H6ApLmBiOGJgFyc=
+
+Name: res/drawable-mdpi-v4/bacabank.png
+SHA1-Digest: OHbQoy65HMcCP/O68M3WM6tkJfU=
+
+Name: assets/assets/card_069_icon.png
+SHA1-Digest: U+evQ+kKUlT5WZ6DllhHbTU3Fdc=
+
+Name: assets/assets/card_338_icon.png
+SHA1-Digest: /mFvL9DY3ZUs1CJGVLGpCy2Mahs=
+
+Name: assets/assets/gnar_skill.hscript
+SHA1-Digest: 26Zqwvk/qT6KtTbGJegnKe/G/eA=
+
+Name: assets/assets/card_lulu_icon_lv3.png
+SHA1-Digest: y2Ha54RdcRvgWvj28Aev5xmQ7Qk=
+
+Name: res/drawable-mdpi-v4/ic_launcher.png
+SHA1-Digest: I3MP0NXnINH3Gb4a/IxI+nMF2mw=
+
+Name: assets/assets/Tahoma_regular.ttf
+SHA1-Digest: 9D1795vot4fVP3sGotUTaGWv8Wk=
+
+Name: res/drawable-ldpi-v4/ico_sms.png
+SHA1-Digest: 9fv4Sk5JP2Fx6JinUEZ74qKMsAw=
+
+Name: assets/assets/card_janna_icon_01.skin.png
+SHA1-Digest: NWA9RNfOOOlT9n0ekQ6VSz+n4Ls=
+
+Name: res/drawable-xhdpi-v4/i_close.png
+SHA1-Digest: eipPVw94u1LZT09nkrMj2Y5EGI0=
+
+Name: assets/assets/achieve_ui.single.png
+SHA1-Digest: aHpkfC4/9b1jD1iOjk4RRz3yBAo=
+
+Name: res/drawable-hdpi-v4/tienphongbank.png
+SHA1-Digest: clngzSBA49ki1UmteFeb5vLKr0Y=
+
+Name: assets/assets/card_283_icon.png
+SHA1-Digest: oEX1Fu9C3cik+cL6Sv7t0Y9N778=
+
+Name: assets/assets/card_border_80.png
+SHA1-Digest: x+u6ZV0mOQ6FJPvj9oCjOpqBOao=
+
+Name: assets/assets/kenen.single.png
+SHA1-Digest: ILZa2bRw/OkGytz7ucj+YIKr87s=
+
+Name: assets/assets/jayce_skill.hscript
+SHA1-Digest: zYLlLl5/GxSBaYEht3vB0Ou4pIU=
+
+Name: assets/assets/Nanus_nhoi_dam.wav
+SHA1-Digest: hBxyJ4xx4/gxU+xP0eviMoN3/ow=
+
+Name: assets/assets/rolling.ogg
+SHA1-Digest: HSaUuCxVjIRIIQSQAsNssaqKRcY=
+
+Name: res/drawable-hdpi-v4/vietinbank.png
+SHA1-Digest: CAT9bofQNawOuVTHUff9eMZztRA=
+
+Name: res/drawable/zalosdk_button01.xml
+SHA1-Digest: dJQEILD7drf4+i1wDiQOLFszHmw=
+
+Name: res/drawable-ldpi-v4/btn_close.32.png
+SHA1-Digest: 17ndxuotHW6OzomZzV9zSwJEcC4=
+
+Name: assets/assets/embed_gfx_battle_effect_init
+SHA1-Digest: 4laAxM77VaEblLfDpFfrCeYdwE8=
+
+Name: res/drawable-xhdpi-v4/ic_play_zing.png
+SHA1-Digest: A8E15VxaPPyZ4Vr4mbl0JsT+ddg=
+
+Name: assets/assets/card_diana_icon_lv4.png
+SHA1-Digest: M9t61uBB5q0d0rxfleN9Flf7lv4=
+
+Name: assets/assets/special_items.single.png
+SHA1-Digest: SaJmyO7ARQA+uzOBT6aeZMCDkKE=
+
+Name: res/layout/zalosdk_sml_card.xml
+SHA1-Digest: vMDAec0O0saBQvh7RF+JmB82Di8=
+
+Name: assets/assets/embed_gfx_interface_battle
+SHA1-Digest: u9ETA718dy2MrcFL44xsCt6trzg=
+
+Name: assets/assets/skill_map.hscript
+SHA1-Digest: DfiynhyNdSxqpDxFL0tyPdDiNrg=
+
+Name: res/drawable/zalosdk_border17.xml
+SHA1-Digest: y8xXA0CQAfVTgvAfV0py150p4Ok=
+
+Name: assets/assets/news_board.single.png
+SHA1-Digest: r02qBvPYTO3/8xsN8fJpRgXkzjo=
+
+Name: assets/assets/card_ekko_icon_lv4.png
+SHA1-Digest: 4flBdo+Vblq7sffYyS9HqCqO9Zg=
+
+Name: assets/assets/card_030_icon.png
+SHA1-Digest: whvJGG5UGhrVfqdjC/xrh/PK5TM=
+
+Name: assets/assets/card_065_icon.png
+SHA1-Digest: 7c1PhVBH9xlS2CZYIGYourxFFyo=
+
+Name: assets/assets/card_icon_puzzle.png
+SHA1-Digest: adL2SEk67tAeidiZYzmnz+rkY3s=
+
+Name: res/drawable-mdpi-v4/hdbank.png
+SHA1-Digest: xg+vrOjecKWOMqmKNX1mPiUIkBs=
+
+Name: res/drawable-mdpi-v4/i_pttr2.png
+SHA1-Digest: UkGSTzEMY3zIa+G+wFZxPn0AWMk=
+
+Name: assets/assets/card_zed_icon_01.skin.png
+SHA1-Digest: eoifzqRWv7m5tZfMeWaTn5JYh+s=
+
+Name: assets/assets/embed_gfx_main_ui_bg
+SHA1-Digest: H8Ch4U3TZ45NtiwZHwKCSYpcSzs=
+
+Name: res/drawable-hdpi-v4/com_facebook_tooltip_blue_xout.png
+SHA1-Digest: TC+NkOcwahA1AJHprbLOuITSC8s=
+
+Name: res/drawable-hdpi-v4/daiabank.png
+SHA1-Digest: U0Tp6m6A1onzRB89NCukWGbk5nw=
+
+Name: res/drawable-ldpi-v4/ic_play_fb.png
+SHA1-Digest: R7NkYBQzD4h4Y1XzQ4qiVDHjy7g=
+
+Name: res/drawable-xxhdpi-v4/ic_launcher.png
+SHA1-Digest: GVIfdEOBv4gEny2T1jDhGGsZOBo=
+
+Name: assets/assets/embed_gfx_treasure
+SHA1-Digest: d4Widtyxoek8yrD/OUv8NoMrZas=
+
+Name: res/drawable/zalosdk_border14.xml
+SHA1-Digest: dqVjZWDtZwf6t9qapEwTHFJB8cc=
+
+Name: assets/assets/payment_icon.png
+SHA1-Digest: avY+zYAu4RZ+4K7XehGzu4Ln+wo=
+
+Name: res/drawable/camera_beta_enable.xml
+SHA1-Digest: S/8SHhu9/TCVITY1hoBHN4Exv/8=
+
+Name: assets/assets/card_105_icon.png
+SHA1-Digest: /bpMH4P70TmGhPpYog1PULz8fZ0=
+
+Name: assets/assets/embed_gfx_effect_battle_4
+SHA1-Digest: 2zTXH/sRomfpBv/kVHdJWotoldY=
+
+Name: assets/assets/hotfix.hscript
+SHA1-Digest: Ej8skj7++xoNvkpewkSHfdVNRXw=
+
+Name: res/layout/zalosdk_sandbox.xml
+SHA1-Digest: HJCS6qD+NApO2Nx21+xqZfRx5dQ=
+
+Name: assets/assets/star.single.png
+SHA1-Digest: T5s3gKbqmgySlbDb9fvOFcDl6Ow=
+
+Name: res/drawable-xhdpi-v4/vietabank.png
+SHA1-Digest: gALOyOqFxgVSap/2A1mg/PBtnc0=
+
+Name: assets/assets/card_098_icon.png
+SHA1-Digest: 4/TLn5k1I5NP6R2e6fAPl8kcd+8=
+
+Name: res/drawable-mdpi-v4/ic_play_zalo.png
+SHA1-Digest: Kj5pOLUxxllH7BnBXuf2NC//pO4=
+
+Name: assets/assets/temple_monster_magic_avatar.png
+SHA1-Digest: 7cr3atjDA0mBq0rVTVwjUofBJuM=
+
+Name: assets/assets/card_boro_lv1_icon.png
+SHA1-Digest: +fl3ggsb7y+nuHsFW6SD5ZqOQAc=
+
+Name: assets/assets/card_087_icon.png
+SHA1-Digest: cBaj3qF8fLl1qkWkMZa/xByq94k=
+
+Name: assets/assets/attack_03_ashe.single.png
+SHA1-Digest: K3Jttg/PsaRs6nRw/26l9LsnoVg=
+
+Name: assets/assets/attack_yasuo_bloodmoon.single.png
+SHA1-Digest: kwkMYK3MBHkun7ei6SAu8dvblsU=
+
+Name: assets/assets/TwistedFate_util.hscript
+SHA1-Digest: U51Te+K0fTWYfFngukcQ2oCh46M=
+
+Name: res/drawable-xhdpi-v4/ic_lock.png
+SHA1-Digest: qln4SvZ8iZxePCQkYzkwAFmgvKE=
+
+Name: assets/assets/comboui.single.png
+SHA1-Digest: DWQIGrl/e1Nt/qEoH/UAnBx5erA=
+
+Name: assets/assets/Fiddle_darkwind.wav
+SHA1-Digest: uL+nxHgWjeFPkVfbANtNrs7paoY=
+
+Name: res/drawable-xhdpi-v4/ic_arrow.png
+SHA1-Digest: vvVBzvZlL+kVY599iHONt1Zfnys=
+
+Name: assets/assets/card_240_icon.png
+SHA1-Digest: diV1H2fqIgAaqCsC7UYbtDMbFFs=
+
+Name: assets/assets/effect_rabbit.single.png
+SHA1-Digest: 9qmet6mLUHyMNMt9m5gTf8l0QSo=
+
+Name: res/drawable-mdpi-v4/i_done.png
+SHA1-Digest: /iOBb2LqGEG0biL+NFyp6w8II+Q=
+
+Name: assets/assets/Temmo_BasicAttack.wav
+SHA1-Digest: hZSz8x77WAgBqbcUXBjRy+O79sU=
+
+Name: res/drawable-xhdpi-v4/agribank.png
+SHA1-Digest: 3t/elZMSNkib9vlzCcikW2O/TsI=
+
+Name: assets/assets/jarvan_skill.hscript
+SHA1-Digest: ItTRAZWMqE5r+JRxfTEG5n9gK4s=
+
+Name: res/drawable-xhdpi-v4/ico_cardphone.png
+SHA1-Digest: e6g+eui5Z8Fua7lKOG9NmCqU5sg=
+
+Name: res/drawable/zalosdk_background03.xml
+SHA1-Digest: BBzbOAzQS/Ds5/wfCdKvJ2+fHi0=
+
+Name: assets/assets/ziggs_skill.single.png
+SHA1-Digest: gCOBhIGL98vGHNThF3OCdwfrn0I=
+
+Name: assets/assets/spell_01_support_01_heal.single.png
+SHA1-Digest: nU2/Yz8/yD3hHSLxablcw88mLDA=
+
+Name: res/drawable-mdpi-v4/i_back2.png
+SHA1-Digest: cTnJqlVcJXqzGNsO7tLg7VK1Fkg=
+
+Name: res/drawable-hdpi-v4/ico_cardphone.png
+SHA1-Digest: iCMu9mp5LamhejKzqYklcjGlDog=
+
+Name: assets/assets/card_jayce_icon_01.skin.png
+SHA1-Digest: meC4Fz32fxhGbcnfcQWHRlZvB9A=
+
+Name: assets/assets/gnar_util.hscript
+SHA1-Digest: mstTO/4W9gtcv51u9f0C983/Ick=
+
+Name: assets/assets/Soraka_cam_lang.wav
+SHA1-Digest: 9uv3D0DGQ98R/OlaZGr6W39CYg0=
+
+Name: assets/assets/ziggs_util.hscript
+SHA1-Digest: JLc7pL77gJd4po8WihL0hGlVNBQ=
+
+Name: res/drawable-mdpi-v4/maritimebank.png
+SHA1-Digest: 2P3joU0bEkGUEDIsItmRBK80HqQ=
+
+Name: res/drawable-hdpi-v4/com_facebook_button_blue_normal.9.png
+SHA1-Digest: BEUCE9mA+fbTS9B593yrPaMniKQ=
+
+Name: assets/assets/card_274_icon.png
+SHA1-Digest: ZN2cjD8lP8nPmP/LHYno3boyhRw=
+
+Name: res/drawable-hdpi-v4/abbank.png
+SHA1-Digest: saeRDbCLr5d8v6m8QM6y9KtUJIk=
+
+Name: res/drawable-hdpi-v4/bidv.png
+SHA1-Digest: kU3kQ+L8Hn1CRniMam0whtFe5tw=
+
+Name: assets/assets/card_wukong_icon_01.skin.png
+SHA1-Digest: Xnt3iWQv/7yg6Mw0QjeEAhav+xA=
+
+Name: res/layout/com_facebook_login_activity_layout.xml
+SHA1-Digest: DsNq9ktJERzgubOhmQRE0vneMqM=
+
+Name: assets/assets/fiddle_skill.single.png
+SHA1-Digest: M5nTXtdMNFwMeKcj9moLxFyp1OU=
+
+Name: assets/assets/equip_tree_view.single.png
+SHA1-Digest: 5vZaoTQgHw78Srd5XhqtP7nG8dc=
+
+Name: res/drawable-hdpi-v4/zalosdk_ic_unknown.png
+SHA1-Digest: kGa1BWXvrob+639fwr7f5iA9GAA=
+
+Name: assets/assets/card_194_icon.png
+SHA1-Digest: FoOQNwrakxvt9inCRW/HlddffKE=
+
+Name: assets/assets/attack_13_nasus.single.png
+SHA1-Digest: iO90R97a1m+LR87dzmxzXegKEUA=
+
+Name: assets/assets/Sona_BasicAttack.wav
+SHA1-Digest: GXDq6uT+JpQHjWg6x/NKiadMUYg=
+
+Name: res/drawable-hdpi-v4/com_facebook_button_grey_focused.9.png
+SHA1-Digest: vME29rlA8fBBFjwLzHUWQ2vVQ2k=
+
+Name: res/layout/zalosdk_header_payment_info.xml
+SHA1-Digest: MP6icvLaUDPs7kriPM/x5wHAJa0=
+
+Name: assets/assets/card_tristana_icon_03.skin.png
+SHA1-Digest: dn5XNZTtVR7Ppz4TGjyuaDht8X0=
+
+Name: res/layout/login_zing_id_form.xml
+SHA1-Digest: /CcKkIXhexCnjoTWJ79cm78JwI4=
+
+Name: assets/assets/card_yasuo_icon_01.skin.png
+SHA1-Digest: zsF9Pq8W41lO252YMNdGcZTrOeU=
+
+Name: res/drawable-xxhdpi-v4/plus.png
+SHA1-Digest: N/s26OsfUsn0W6xZtK8+sIvE2qE=
+
+Name: assets/assets/card_129_icon.png
+SHA1-Digest: XYeBegQN9XIvwGyHqwYyMQnNGvQ=
+
+Name: assets/assets/ashe_util.hscript
+SHA1-Digest: cCxP2GM4dba/xK/GYOakErw2Re8=
+
+Name: res/drawable-mdpi-v4/zing.jpg
+SHA1-Digest: jxuKoEGQGWebY3c0qz+qHCZED7E=
+
+Name: assets/assets/elise_01.single.png
+SHA1-Digest: PlPQV/7aJYSTD+zjoAhHjfjZwGI=
+
+Name: assets/assets/violet_yelow.single.png
+SHA1-Digest: gLB85FsSLnUUu6+JPZf02ohvRfU=
+
+Name: assets/assets/card_418_icon.png
+SHA1-Digest: eMIXOX2D0dJDyTXMCr+5qfWkFZ8=
+
+Name: assets/assets/only_hit.hscript
+SHA1-Digest: pS2fDMbyzzSKXP7LcUwbNSNQDtY=
+
+Name: assets/assets/card_corki_icon_lv5.png
+SHA1-Digest: raBg4K++UFPsUKV2rqyyza9aSa0=
+
+Name: assets/assets/card_222_icon.png
+SHA1-Digest: lc5erB8mO6iv28PMBq94ON/cQUk=
+
+Name: res/drawable-xhdpi-v4/ic_play.png
+SHA1-Digest: 499L8P2H6Cs2e/WkcdzaAV12Ai0=
+
+Name: assets/assets/card_013_icon.png
+SHA1-Digest: wL3HDhQ9GjJ9gluzywhOQg7WJi4=
+
+Name: res/layout-v17/choose_account_row.xml
+SHA1-Digest: oozm65L4AiTGhaTo0Fe3SC4K11U=
+
+Name: res/layout-v17/login_activity.xml
+SHA1-Digest: LCFJ0xdiaM46W7y8iNztXOHfSy8=
+
+Name: res/drawable/com_facebook_button_check_off.png
+SHA1-Digest: s2EahmK/sGPkABaloYB+AiJ/3gU=
+
+Name: assets/assets/card_jarvan_iv_icon_lv4.png
+SHA1-Digest: jLrSBhBWa1mFD/lX9N42GaFMETs=
+
+Name: assets/assets/noembed_gfx_bg_battle
+SHA1-Digest: X6JJnsUVmci3+f8H8wn/VPSVZ9A=
+
+Name: assets/assets/effect_text.single.png
+SHA1-Digest: caEqHFzR7OtE7xEzaQ8hdF1W/Ek=
+
+Name: assets/assets/card_diana_icon_03.skin.png
+SHA1-Digest: A7R0i3EshSaPqreqCIEA1FsRLUw=
+
+Name: assets/assets/knockout_lee_sin_skills.single.png
+SHA1-Digest: c6LWiqBUC/EeLJ3UKzXgOnZ5g/8=
+
+Name: assets/assets/card_238_icon.png
+SHA1-Digest: iWisc9XfK10wFztE5kbO8vTqt6w=
+
+Name: assets/assets/card_jayce_icon_03.skin.png
+SHA1-Digest: 2OGxb4rlHRigN6FuRPMttl4F5jA=
+
+Name: res/drawable-xhdpi-v4/bidv.png
+SHA1-Digest: HFeuJlYa/Fw9hX+wTQUx7iw2msE=
+
+Name: res/drawable-xhdpi-v4/techcombank.png
+SHA1-Digest: ndPZ2mc4nTKw2B0H6kSDTlLzyS8=
+
+Name: res/layout/zalosdk_credit_card_amount.xml
+SHA1-Digest: dHhHKQhR+e62DjLT3hn/aaWHLZ8=
+
+Name: assets/assets/stab_skill.hscript
+SHA1-Digest: +OANftSP/87sVt8JaIUQegtcI0U=
+
+Name: assets/assets/card_147_icon.png
+SHA1-Digest: nzFbTalhNmnVr71j3Nz/INmdePI=
+
+Name: assets/assets/rank_medals.single.png
+SHA1-Digest: qWshHrRKQCRv9uBxcsIrtClRB1A=
+
+Name: res/drawable-xhdpi-v4/ic_id.png
+SHA1-Digest: w/XZ6UO9M3yfW8dcqAbIS4jaXAc=
+
+Name: res/drawable/zalosdk_ic_page_active_xml.xml
+SHA1-Digest: a7nYZRK16fv3HUq7oxnEOVyCFDQ=
+
+Name: assets/assets/attack_corki.single.png
+SHA1-Digest: fj7v8DKrZnwm82t2XBZcdfazhyU=
+
+Name: assets/assets/card_172_icon.png
+SHA1-Digest: PJTUUd1WBt043Ig0Ebmlbda6JSM=
+
+Name: assets/assets/result_battle_lose.single.png
+SHA1-Digest: 1DKzEP8otqfGa87aGxXWLnoeLtI=
+
+Name: res/drawable-mdpi-v4/ic_lock.png
+SHA1-Digest: TzNwA6xG3gCyeZB4bmP1Q4j1Af4=
+
+Name: assets/assets/card_072_icon.png
+SHA1-Digest: ez5b5HnOyCT9OFDsjY2le0BWPpg=
+
+Name: res/drawable-hdpi-v4/ic_play_fb.png
+SHA1-Digest: YzXH02uAyS35R3CBjoiIcKmUoMU=
+
+Name: assets/assets/attack_09_amumu.single.png
+SHA1-Digest: /aP2byzxryb4AvUEdGT2zNsd66g=
+
+Name: res/layout/zalosdk_activity_alert.xml
+SHA1-Digest: QWQ00k2K+oOHg0EgScG+DGHscvk=
+
+Name: assets/assets/info_panel_aura.single.png
+SHA1-Digest: 7I6Dr+TsCym774Ejv4yP8fm383E=
+
+Name: res/drawable-xhdpi-v4/close.png
+SHA1-Digest: 0IaTuYpHdwNgyn8PrCfM4P1LSUM=
+
+Name: assets/assets/card_lulu_icon_lv2.png
+SHA1-Digest: qmrkJNUZXIPveAZWW70YqqZ3Tvk=
+
+Name: res/layout/com_facebook_tooltip_bubble.xml
+SHA1-Digest: 5KxW/mQMTqTOISV6yimuWDzl1SY=
+
+Name: res/drawable-mdpi-v4/btn_close.64.png
+SHA1-Digest: G7J4WoQjonaFmUTCgaNc+1IeIVg=
+
+Name: assets/assets/card_446_icon.png
+SHA1-Digest: nPTux+j7HyPXUK/G1nT4JhRx3Tg=
+
+Name: assets/assets/card_phoenix_decor.single.png
+SHA1-Digest: rt1H3qZ4qRGQIOC2M37/wJxNj6g=
+
+Name: assets/assets/temple_monster_range_avatar.png
+SHA1-Digest: dNGm6LeS36jNAT4pOMGC6eYfXGA=
+
+Name: assets/assets/card_014_icon.png
+SHA1-Digest: maWyuQJfnfrtFeHTU4RnwtAJ6cM=
+
+Name: assets/assets/Riven_stun.wav
+SHA1-Digest: bU9qLsCJRnPHTv8hxwU/Pm5Hgl8=
+
+Name: assets/assets/card_114_icon.png
+SHA1-Digest: fSqAo3GuNlGQveonn21fd0sG7Rk=
+
+Name: assets/assets/card_447_icon.png
+SHA1-Digest: o7oxRNkv1ovcuRvz75rWP39ZP4g=
+
+Name: assets/assets/effect_icon.single.png
+SHA1-Digest: ifHZFEkgCZ0p1BRLJtDHRPXtVo4=
+
+Name: assets/assets/card_242_icon.png
+SHA1-Digest: utyISdZCf/yX+SxSMi+NgBUyDbg=
+
+Name: assets/assets/card_312_icon.png
+SHA1-Digest: jWwoIBAX0i6MX+GQoYrlVBMrTzs=
+
+Name: res/drawable/com_facebook_list_section_header_background.9.png
+SHA1-Digest: kqLWo7h7m619+NndxMriFmxS/s8=
+
+Name: res/layout/zalosdk_activity_atm_card_otp.xml
+SHA1-Digest: QGhJnUQiDiW/LZ4mpUF+DmI2EwU=
+
+Name: assets/assets/card_janna_icon_lv3.png
+SHA1-Digest: 584wYsgVyV/EV+ZvrR+Qy8ETipQ=
+
+Name: assets/assets/card_459_icon.png
+SHA1-Digest: 53OjuyLIpjU6sFnSEOFXUYlnPP8=
+
+Name: assets/assets/card_vayne_icon_04.png
+SHA1-Digest: PC2jTMwuI+uJkjK1LDKIFrVYhAM=
+
+Name: assets/assets/card_359_icon.png
+SHA1-Digest: JqRZN0g/eRndOjQbDV7fCGLBCEQ=
+
+Name: res/drawable-mdpi-v4/close.png
+SHA1-Digest: FDOOYcRoxfXB5QdY1YikzqT7kx8=
+
+Name: res/drawable-hdpi-v4/ic_play_zalo.png
+SHA1-Digest: wG23EJEOwQUVRxPSdkTGmH45kV8=
+
+Name: res/layout/zalosdk_credit_card_otp.xml
+SHA1-Digest: ZRRPpLtq1QJTRLAAObmIslwTgCQ=
+
+Name: assets/assets/card_109_icon.png
+SHA1-Digest: 4wA/xUcUSu2pMlMvH2P4GrLOzzQ=
+
+Name: assets/assets/card_006_icon.png
+SHA1-Digest: 3XJy63G/8i7y9aGJS59knd1kufs=
+
+Name: assets/assets/card_ekko_icon_lv2.png
+SHA1-Digest: iJh3234XSu3mt1Vj7My2AOoeT24=
+
+Name: assets/assets/card_007_icon.png
+SHA1-Digest: j4Knlx+dPCpAqjdJAbWbr0fVr34=
+
+Name: res/drawable-ldpi-v4/ico_support.png
+SHA1-Digest: tRUHqPQlfkg+oKx5i7i5Wsxg/+s=
+
+Name: res/drawable-hdpi-v4/com_facebook_button_like_background.png
+SHA1-Digest: VB1+UZ2hGAaVxKJQIt8xYr5+K0c=
+
+Name: res/drawable-xhdpi-v4/com_facebook_button_like_pressed.png
+SHA1-Digest: UamQCE7EnlmMUm+f1n7CH5GYdIY=
+
+Name: assets/assets/card_pk_effect.single.png
+SHA1-Digest: P2aTtlwazTpHExcp2PpE7c1WuAI=
+
+Name: assets/assets/card_160_icon.png
+SHA1-Digest: 2ph76suAuyHeKCiQZdFU7qO20zY=
+
+Name: assets/assets/card_vayne_icon_02.png
+SHA1-Digest: PEEhsM3xvgeUMxZVFPi5iMdwhp8=
+
+Name: res/drawable-xhdpi-v4/com_facebook_button_grey_focused.9.png
+SHA1-Digest: WtZOyqXCecnCw4anwY38VgDyeOE=
+
+Name: res/drawable-hdpi-v4/zalosdk_ic_fail.128.png
+SHA1-Digest: F3Q4rPOJ4s+YIrzGlZYSrXnQmGs=
+
+Name: assets/assets/daily_reward.single.png
+SHA1-Digest: VIGFM/ZyTlYKP986cQsE+4mJuvo=
+
+Name: assets/assets/card_fiddle_icon_lv4.png
+SHA1-Digest: 0Sg+PSs61HgLw3yap2jocWF5fb8=
+
+Name: assets/assets/card_annie_icon_03.skin.png
+SHA1-Digest: AYiH947rBlDxR7I9Bxeo+kvyl3A=
+
+Name: res/drawable-xhdpi-v4/i_phone.png
+SHA1-Digest: sKX2Z7iosRjV/thwDr0xYdxsenE=
+
+Name: res/drawable-mdpi-v4/ico_cardzing.png
+SHA1-Digest: uoEs+j4YYFT/ICYTdL6rDsgRafM=
+
+Name: assets/assets/embed_gfx_level_up
+SHA1-Digest: lnolvdsL6HbYpaYQmX/3DDJUBQ8=
+
+Name: assets/assets/spell_02_offend_04_sound.single.png
+SHA1-Digest: xnIfkTAL6dxmc9mP00iqRBdr/Xw=
+
+Name: assets/assets/attack_06_mf_03.single.png
+SHA1-Digest: L4/1CCrWQiHjs3dRXj7SjNZ4eKk=
+
+Name: assets/assets/bg_music.ogg
+SHA1-Digest: gWrvAF73T7GeIG+KI30nPQLdlyg=
+
+Name: res/drawable/com_facebook_usersettingsfragment_background_gradie
+ nt.xml
+SHA1-Digest: UudkMujfDbVwQrl+1pBZ2WIJ8ro=
+
+Name: assets/assets/card_darius_icon_01.skin.png
+SHA1-Digest: QvTv3GULX0OkcmHXuPXCAi/Gk7o=
+
+Name: assets/assets/embed_gfx_text
+SHA1-Digest: 4yA/Xqx1tkY2LjNyxl+ctKgwRcA=
+
+Name: assets/assets/card_267_icon.png
+SHA1-Digest: IjK7UVgvSdcapw1fczYeG8OcnJw=
+
+Name: assets/assets/card_254_icon.png
+SHA1-Digest: F8VZ/IwuOHLt1tKt4kQSQDRRLec=
+
+Name: res/layout/zalosdk_activity_zing_card.xml
+SHA1-Digest: EuTGKNnA/cbfsZ0y4X14/kBp+VE=
+
+Name: assets/assets/card_041_icon.png
+SHA1-Digest: 750MATKil2vfEMLpTGh5+VdF2Uk=
+
+Name: assets/assets/boss_hunt.single.png
+SHA1-Digest: nTo77UcL9IinAijCWBK85j8Icr8=
+
+Name: assets/assets/card_421_icon.png
+SHA1-Digest: fIGRo+Ea2fKeqBnCIhnJ2IGt/J0=
+
+Name: assets/assets/card_390_icon.png
+SHA1-Digest: fcl/HJPwpSDwRzu2c4gWbhdi4ds=
+
+Name: res/drawable-xhdpi-v4/viettel.png
+SHA1-Digest: oGFWU8K4qpVCNuDcv6BBpGYIH74=
+
+Name: assets/assets/card_059_icon.png
+SHA1-Digest: EgPAIOCaGsjEQOdKh46dZf7zjOs=
+
+Name: assets/assets/new_map_monster_bloobatd_avatar.png
+SHA1-Digest: Cq50x4IIAtmUxYLZ+bFCctJKTlQ=
+
+Name: assets/assets/card_ashe_icon_01.skin.png
+SHA1-Digest: gp0wd3Is1n/FyvPSPInsc8ORtiQ=
+
+Name: assets/assets/fizz_util.single.png
+SHA1-Digest: 6/7916BeZw99T2a/SjCJBtgepeE=
+
+Name: assets/assets/card_096_icon.png
+SHA1-Digest: 5KCzsGBYmRF4e4hRuaKqjd1ghkA=
+
+Name: resources.arsc
+SHA1-Digest: fe2rqqLlGzAlwIxtC/Kkao4iGbo=
+
+Name: assets/assets/attack_02_garen.single.png
+SHA1-Digest: ZtqudaX5aRKlgQArkEpasWwQwr0=
+
+Name: res/drawable-xhdpi-v4/dongabank.png
+SHA1-Digest: wI41y4uuTopx25su5tLp0px047Y=
+
+Name: assets/assets/card_139_icon.png
+SHA1-Digest: 3CIhhP2JM7C0U6OKq6ao45Tt7aM=
+
+Name: res/drawable-hdpi-v4/switch_off.9.png
+SHA1-Digest: 9RDqaPndRyLsQVDhVC7qXTCI8as=
+
+Name: res/drawable/com_facebook_button_grey_normal.9.png
+SHA1-Digest: Etf2qalORGK1Nr1dGHK8wXTk9OA=
+
+Name: assets/assets/card_janna_icon_lv4.png
+SHA1-Digest: 0DyLBP590Nnl0H+U5zGZVRHRb+M=
+
+Name: res/drawable-mdpi-v4/i_beta_disable.png
+SHA1-Digest: KfUiZ+lTuE+WAFaTXIie5N3YB90=
+
+Name: res/drawable-xxhdpi-v4/com_facebook_button_like_background_selec
+ ted.png
+SHA1-Digest: gytSweV1KaPN3AUegvzQjjbvfgo=
+
+Name: assets/assets/card_466_icon.png
+SHA1-Digest: ap9h1im/9zKaN7oS6KN3P9MyJLE=
+
+Name: assets/assets/card_soraka_icon_lv2.png
+SHA1-Digest: FlEo9PVVCfzKWINV9tdg6gzyTuU=
+
+Name: assets/assets/evolution_ui.single.png
+SHA1-Digest: k5VGkgTSYeKBwENUgNaGVcI4+Wk=
+
+Name: assets/assets/MissFortune_BasicAttack.wav
+SHA1-Digest: vXwe9vL0VLOy2miHEfpqC7qyrcs=
+
+Name: assets/assets/card_fiddle_icon_01.skin.png
+SHA1-Digest: C2zT2da9/Mn389T21xrSXnQY1O0=
+
+Name: res/drawable-hdpi-v4/dongabank.png
+SHA1-Digest: 9W5Sv6CQEe186uz4ZWVsy4PvV7U=
+
+Name: res/layout-v12/cmnd_container.xml
+SHA1-Digest: +uRrFDq2VC6HhtPG5dmxmvddQMc=
+
+Name: assets/assets/card_315_icon.png
+SHA1-Digest: lO+7a9gKjgJTRmQG0ecpovi4Gmc=
+
+Name: assets/assets/card_230_icon.png
+SHA1-Digest: UWYbGjVM9/rXikTP2XmXnTnLAdg=
+
+Name: assets/assets/Zed_stormninja_death.wav
+SHA1-Digest: 0U9B/JgRf7WWUnmf9vuY2edcYz4=
+
+Name: res/anim/animation_leave.xml
+SHA1-Digest: lsIr9xPcQoftPY8UPy1qCiK6o2o=
+
+Name: res/drawable/com_facebook_button_like_icon_selected.png
+SHA1-Digest: kUmUey5QabQ95BgU5hktOm3ZlMs=
+
+Name: res/drawable/com_facebook_top_button.xml
+SHA1-Digest: lh0hfAA8Hg1scvEAIgyfoUUSrfo=
+
+Name: assets/assets/card_047_icon.png
+SHA1-Digest: D8zUatGswtKmZQjhxBh/yGMV5fM=
+
+Name: assets/assets/font_heal.single.png
+SHA1-Digest: 4sxdrZgFUy8RIiIDEWiKspBQigE=
+
+Name: assets/assets/card_annie_icon_01.skin.png
+SHA1-Digest: N7GjgN6E6YWxDbbrONbg0/CCyuI=
+
+Name: assets/assets/card_dragon_decor.single.png
+SHA1-Digest: 0MLqtIeMMnIumbJFSCnxSQn1mbM=
+
+Name: res/drawable/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: CSWs+/gmAz2rkuEMtOQ/ZTY3/Kc=
+
+Name: assets/assets/hoisinh.single.png
+SHA1-Digest: W6eSEgtSYcUbyctbAkXVhqu0ETU=
+
+Name: res/layout-v17/zalosdk_activity_alert.xml
+SHA1-Digest: vnyqYOvZUtkNeMwMZ6cxwREXQe8=
+
+Name: res/drawable-mdpi-v4/vietabank.png
+SHA1-Digest: yV2r9Ftzwrn/Haod2V+unrURtm4=
+
+Name: assets/assets/card_decor.single.png
+SHA1-Digest: uHkTNNFsW0Szyf1S9Db+kzlJtGs=
+
+Name: assets/assets/card_166_icon.png
+SHA1-Digest: xBPkifHb2xO9yNKHAGN2utQ1O4E=
+
+Name: assets/assets/card_janna_icon_lv2.png
+SHA1-Digest: DfPDDYYlmNzjvmK5vE3ziO0E4x4=
+
+Name: assets/assets/Event_Code.hscript
+SHA1-Digest: U/fcYqimbmpwkoFnUO2hl7pQ9u4=
+
+Name: res/layout/activity_web_view_floating.xml
+SHA1-Digest: U97Dvs6uoGjtIHPtuLeELwfKQZg=
+
+Name: assets/assets/Ahri_util.hscript
+SHA1-Digest: SUbEgVcjZ34ULqETj7HZBzv8YtM=
+
+Name: assets/assets/card_124_icon.png
+SHA1-Digest: hDCMs7j7yErJuXgrANAVJtMj+qo=
+
+Name: res/drawable/zalosdk_zalo.xml
+SHA1-Digest: giWshZglJztBcFcIHa9FZtTti7g=
+
+Name: assets/assets/info_panel_bg.single.png
+SHA1-Digest: BknsrQFxaQjSDlc7DhuaZkNHi9g=
+
+Name: res/drawable/zalosdk_border_rectangle_no_corner_partial_transpar
+ ent_31_percent.xml
+SHA1-Digest: 8WQ9+eFwDTPCikGf+4Mit/ynzh8=
+
+Name: res/drawable-hdpi-v4/ic_play_google.png
+SHA1-Digest: PKvEnbG/F1vI4lPNlov5H2fqr3s=
+
+Name: assets/assets/card_350_icon.png
+SHA1-Digest: sx11t46WNSpvWsOJtU9E+F2JcQI=
+
+Name: assets/assets/Renekton_xoay_kiem.wav
+SHA1-Digest: satc7i3xRBaw+IlvaTbX+fu1Ac8=
+
+Name: res/drawable-hdpi-v4/com_facebook_button_blue_pressed.9.png
+SHA1-Digest: sbou7tVApZxop4taBBAzXnQ+0P0=
+
+Name: assets/assets/embed_load_init
+SHA1-Digest: IfqgWLGSHJBEeGQgESx8LaVe9Go=
+
+Name: res/drawable-xhdpi-v4/i_next_disable.png
+SHA1-Digest: uVZ1RN3XFocdNL4skZXt2YM4OTc=
+
+Name: assets/assets/card_vladimir_icon_lv2.png
+SHA1-Digest: KwIfoO2Z9j9aeTCHRV1O78yv8VA=
+
+Name: res/drawable/com_facebook_button_blue_focused.9.png
+SHA1-Digest: r/eQ4lVtqUneb1/AXEHu+2WLWDM=
+
+Name: assets/assets/card_313_icon.png
+SHA1-Digest: 2+pxNVUTIhvBMM+ev6SlC+eJgLY=
+
+Name: assets/assets/card_262_icon.png
+SHA1-Digest: zJstpR4aYZBtRof2tz5uZWSsnNM=
+
+Name: assets/assets/nasus.single.png
+SHA1-Digest: x9tEh6gj+8OMyjXyATv3WMC1BD8=
+
+Name: assets/assets/embed_gfx_main_ui_02
+SHA1-Digest: ZgRMemmZl/vPfSJmZnOGhrJ0Cfo=
+
+Name: assets/assets/embed_gfx_main_ui_01
+SHA1-Digest: zD/wn9BAM8o0e0Lt8KilDzjT+XE=
+
+Name: res/drawable/zalosdk_border_rectangle_no_corner_partial_transpar
+ ent_44_percent.xml
+SHA1-Digest: 7GitJKe30Yvo5F391dUR7fvd4fE=
+
+Name: assets/assets/Darius_BasicAttack.wav
+SHA1-Digest: g1u7xgUVPUbLkDkuFyRCDF1Ckx4=
+
+Name: assets/assets/card_388_icon.png
+SHA1-Digest: 6RyyTdGCiiNU9MQfPCAhe2tAyKM=
+
+Name: res/drawable/zalosdk_border12.xml
+SHA1-Digest: ri/bckh4fEDnJJ5k6589tIHqvw0=
+
+Name: assets/assets/fusion_effect.single.png
+SHA1-Digest: y1cKX0y3GZF0FJAFEyxHme4YllM=
+
+Name: assets/assets/attack_05_ahri.single.png
+SHA1-Digest: EJUrhnOh1LsFYFYqmz8I1Cm6sWI=
+
+Name: assets/assets/card_042_icon.png
+SHA1-Digest: sUEZSmd4jDGVHA2z+82SxReQwTc=
+
+Name: assets/assets/Garen_BasicAttack.wav
+SHA1-Digest: W1Vl/F4/yOwBgq6b46pqj50aIQs=
+
+Name: res/drawable/zalosdk_background_white_stroke_no_corner_4.xml
+SHA1-Digest: 12l3Y0v/qFvkj28vek9Ie1KI75Q=
+
+Name: res/drawable-hdpi-v4/ico_support.png
+SHA1-Digest: bzq1sMVvs3bHAlTP8TGM5/n5/RY=
+
+Name: assets/assets/tut_popup_char.single.png
+SHA1-Digest: /qLx0nmLP+G7DcRUUmpb+MhFk7c=
+
+Name: res/layout/zalosdk_retry.xml
+SHA1-Digest: PhzDJYOg5FpzoaHHGu6+c9ZI7+0=
+
+Name: assets/assets/card_368_icon.png
+SHA1-Digest: 3R7kpbP5rZKh7IAEqcFkN1XcEiA=
+
+Name: res/drawable-hdpi-v4/bacabank.png
+SHA1-Digest: tUpcMB++0osC8+jZ30QQ+ga09Eg=
+
+Name: res/drawable-mdpi-v4/ico_sms.png
+SHA1-Digest: 9fv4Sk5JP2Fx6JinUEZ74qKMsAw=
+
+Name: res/layout/zalosdk_activity_atm_card_info.xml
+SHA1-Digest: rlc2caXfAx5mCTfh/lZTzLXiZCk=
+
+Name: assets/assets/card_253_icon.png
+SHA1-Digest: D12FXjDYfhanK4XHQt/NSIOsumM=
+
+Name: assets/assets/attack_16_yasuo.single.png
+SHA1-Digest: OpdDt19mUEeS4Ne4O1gez6FBSE4=
+
+Name: res/drawable/com_facebook_button_grey_pressed.9.png
+SHA1-Digest: z5CeK72bld17CK7hE+jYhc/zgs4=
+
+Name: res/drawable-xhdpi-v4/ic_protect.png
+SHA1-Digest: hL4jGQZ5wr68Jg6pKH5uKahmIJ4=
+
+Name: res/drawable/rounded_frame.xml
+SHA1-Digest: 6MgCzTikelf2+xfk0tgCVVbEMMo=
+
+Name: res/drawable-hdpi-v4/mbbank.png
+SHA1-Digest: flRbDrwf6UXh1+SqYxqd9/cK+Lw=
+
+Name: res/layout/payment_method_container.xml
+SHA1-Digest: 1+um7zrMuNOqKRf+emlTqna6XA4=
+
+Name: assets/assets/teemo_boom.wav
+SHA1-Digest: gLAIzNkdmp4ToEfBcX0REGaaeyo=
+
+Name: res/drawable-hdpi-v4/hdbank.png
+SHA1-Digest: PpunGjS/gX1npJ/BrlQoIbSzdDE=
+
+Name: assets/assets/card_akali_icon_01.skin.png
+SHA1-Digest: Dh6fKNOzCU67UXGR6uZzq7jSwLU=
+
+Name: res/drawable/zalosdk_background01.xml
+SHA1-Digest: PVynFEn54Iun9ZeNyU4VfWqlclM=
+
+Name: assets/assets/MissFortune_util.hscript
+SHA1-Digest: gG+NbXQO4visErTKcdA9yMa54Gs=
+
+Name: res/drawable-hdpi-v4/zalosdk_ic_wallet.128.png
+SHA1-Digest: kW/uqy5T/N2ne3dTZw/Et9/WzJY=
+
+Name: assets/assets/chatbox.single.png
+SHA1-Digest: zeYpBBPKb//IIDkmR98B/JMuaCQ=
+
+Name: assets/assets/card_342_icon.png
+SHA1-Digest: JxfKDcsQ7qMwjRQhbqYdRnDVsnc=
+
+Name: assets/assets/card_209_icon.png
+SHA1-Digest: BiE9Ner4JJJFgQkq7bmmX2jIsI8=
+
+Name: assets/assets/card_lissadra_icon_01.skin.png
+SHA1-Digest: nKl5VLr0U5cAAvO1A6+Kdz9gvdk=
+
+Name: assets/assets/range_attack.wav
+SHA1-Digest: oHyfbcbBFz/Vz2T9MRW10E/nmRg=
+
+Name: res/drawable-hdpi-v4/pgbank.png
+SHA1-Digest: 4UAUihwjrPGSdCdaA0Vr/ab4or8=
+
+Name: assets/assets/card_133_icon.png
+SHA1-Digest: 3bZmvcYr/HdTjNq+1jLX3sSiAAg=
+
+Name: assets/assets/roll_end.ogg
+SHA1-Digest: LmSUQmeeegEQQKXUHN+SPcna3Lc=
+
+Name: assets/assets/attack_07_pantheon.single.png
+SHA1-Digest: 3oH6Gfpdychn3g6ZWnNiLBpf2eQ=
+
+Name: res/anim/push_out_to_bottom.xml
+SHA1-Digest: tFZj+WZ4qrsT19QKLAxMScuPBrs=
+
+Name: assets/assets/card_ashe_icon_02.skin.png
+SHA1-Digest: QZdEaNhNUoiRNytmn8EcwK1qjf8=
+
+Name: assets/assets/card_fiddle_icon_lv3.png
+SHA1-Digest: frO3Ya7j8T5GoUNztPpHVtxY0o0=
+

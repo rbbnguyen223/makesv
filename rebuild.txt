@@ -1,0 +1,663 @@
+Đúng hướng rồi anh Hoàng đẹp trai. Với APK gốc + rebuild.py hiện tại, mục tiêu không phải chỉ “mock server cho app đăng nhập được”, mà là khôi phục phần server/game-state để game chạy hoàn toàn offline.
+
+Hiện trạng của rebuild.py mới chỉ làm được lớp đăng nhập/gateway + giữ TCP socket, chưa phải game server thật. Cụ thể:
+
+HTTP giả lập ZCE/Zing.
+gateway2.php giả lập listS, login, getServerConstant.
+Trả một account cố định 10001.
+TCP 8888 chỉ đọc packet rồi log hex, không xử lý packet và không gửi game-state.
+
+Trong khi APK có một lượng lớn resource game trực tiếp bên trong assets, cùng native libraries như libApplicationMain.so, liblime.so, libstd.so... Đây mới là phần quan trọng để đào tiếp.
+
+Em sẽ đi theo hướng này
+
+1. Mổ APK
+
+Manifest
+classes.dex
+toàn bộ assets
+.hscript
+.single
+native .so
+cấu trúc resource
+URL/domain/IP hardcode
+tên class/package
+protocol/socket
+các chuỗi liên quan role, item, bag, hero, equip, quest, skill, map, login...
+
+2. Xác định kiến trúc game
+
+Ta cần phân biệt rõ:
+
+Android APK
+   │
+   ├── UI / client logic
+   │
+   ├── Game engine
+   │
+   ├── assets/data
+   │
+   └── network client
+          │
+          ├── HTTP API
+          │
+          └── TCP game protocol
+                    │
+                    ▼
+              GAME SERVER
+                    │
+                    ├── account
+                    ├── character
+                    ├── inventory
+                    ├── equipment
+                    ├── skills
+                    ├── quests
+                    ├── map
+                    ├── combat
+                    └── persistence
+
+3. Đặc biệt đào TCP protocol
+
+rebuild.py hiện tại chỉ:
+
+client → packet → server
+                 ↓
+              log hex
+
+Muốn rebuild thật phải biến nó thành:
+
+client → packet → decoder → game state → handler
+                                      ↓
+                                  encoder
+                                      ↓
+client ← response packet ←────────────
+
+4. Xác định game-state nằm ở đâu
+
+Đây là phần quan trọng nhất đối với mục tiêu của anh:
+
+Account
+ └── Character
+      ├── Level
+      ├── EXP
+      ├── Gold
+      ├── Diamond
+      ├── HP/MP
+      ├── Stats
+      ├── Heroes
+      ├── Equipment
+      ├── Inventory
+      ├── Skills
+      ├── Quest
+      └── Progress
+
+Sau đó mới thiết kế database offline tương ứng.
+
+Một điểm rất đáng chú ý
+
+APK này có 704 asset entries và rất nhiều .hscript, .single, audio, font, animation/resource... Nghĩa là client đã chứa một lượng đáng kể dữ liệu game. Ví dụ ngay trong APK đã có các resource kiểu:
+
+Ahri_util.hscript
+EventUI.hscript
+General_Skill.hscript
+PanelSellInfo.hscript
+PromotionElement.hscript
+academy_ui.single
+achieve_ui.single
+armorset.single
+...
+
+Điều này rất có giá trị vì ta có thể dùng client để đối chiếu ID/resource với packet và game-state, thay vì đoán tên field.
+
+Nếu làm nghiêm túc, em đề xuất chưa sửa rebuild.py ngay.
+
+Bước đầu tiên là mổ APK thành một báo cáo kỹ thuật hoàn chỉnh, đặc biệt tìm:
+
+endpoint/API thật;
+địa chỉ server;
+class network;
+protocol TCP;
+packet/message ID;
+serialization;
+cấu trúc role;
+cấu trúc item/inventory;
+các ID hero/equipment;
+nơi client nhận và parse game-state;
+dữ liệu nào nằm local;
+dữ liệu nào bắt buộc lấy từ server.
+
+Sau đó mới viết server offline thật, thay vì tiếp tục mở rộng cái mock hiện tại.
+
+Anh đã đưa đúng 2 thứ cần thiết: APK gốc 2.1.1 và server mock hiện tại. Em có thể bắt đầu từ APK và dựng cho anh bản đồ kiến trúc + protocol + data model, rồi từ đó rebuild từng tầng.
+
+Chưa. Lượt trước mới dừng ở bản đồ kiến trúc. Em vừa kiểm tra lại file rebuild.py hiện có để không nói quá những gì source thực sự chứng minh được.
+
+Điểm chắc chắn hiện tại:
+
+rebuild.py đang giả lập HTTP gateway, trả account cố định 10001, server 192.168.1.13:8888.
+listS trả startConnect=1, còn login trả ip/port TCP.
+TCP 8888 chỉ đọc tối đa 4096 byte, log HEX rồi trả zero-byte; chưa decode, chưa response.
+
+Vì vậy chưa thể gọi là offline server.
+
+Việc phải làm tiếp theo
+
+Mục tiêu bây giờ không phải tiếp tục liệt kê class. Phải lấy được packet thực tế:
+
+APK
+ ↓
+HTTP listS
+ ↓
+HTTP login
+ ↓
+TCP connect :8888
+ ↓
+client gửi packet đầu tiên
+ ↓
+rebuild.py ghi RAW HEX
+ ↓
+client gửi packet tiếp
+ ↓
+...
+
+Sau đó đối chiếu chuỗi packet với các hàm:
+
+RequestGennarator
+RequestObject
+FBClientSocket
+SocketHandler
+Response
+
+để dựng:
+
+┌───────────────┐
+│ TCP Frame     │
+├───────────────┤
+│ length        │
+│ command       │
+│ request id    │
+│ payload       │
+└───────────────┘
+
+Không được tự đoán layout.
+
+Và có một thay đổi quan trọng trong rebuild.py
+
+Server hiện tại:
+
+writer.write(b"")
+
+phải đổi thành packet capture server, lưu từng packet thành:
+
+captures/
+  001_client_to_server.bin
+  002_client_to_server.bin
+  003_server_to_client.bin
+
+kèm:
+
+timestamp
+connection_id
+direction
+length
+hex
+
+để sau đó phân tích byte-for-byte.
+
+Sau khi có capture đầu tiên, ta sẽ xác định được chính xác:
+
+TCP framing.
+Request header.
+Command/opcode.
+Session truyền thế nào.
+Login request.
+Initial role request.
+Initial inventory request.
+Response tương ứng.
+Cách client chuyển response thành UserInfo / StockManager / TeamsManager.
+
+Đây mới là bước biến dự án từ reverse tĩnh sang rebuild thực sự.
+
+Và rebuild.py hiện tại đủ nền để làm capture vì nó đã nhận được kết nối TCP; phần còn thiếu chỉ là ghi và giữ nguyên byte, tuyệt đối không trả response giả nữa.
+
+Nếu mục tiêu là offline hoàn toàn, sau khi giải packet đầu tiên, ta sẽ tiến thẳng theo chuỗi:
+
+LOGIN
+ ↓
+INITIAL USER DATA
+ ↓
+FULL INVENTORY
+ ↓
+FORMATION
+ ↓
+DUNGEON
+ ↓
+BATTLE
+ ↓
+SAVE STATE
+
+chứ không vòng lại mock HTTP nữa.
+
+làm cách nào cũng được, miễn login được vào game và chới là được.
+
+Được. Vậy mục tiêu đổi hẳn:
+
+Không cần rebuild toàn bộ server. Không cần hiểu hết protocol. Mục tiêu trước mắt duy nhất là:
+
+APK 2.1.1
+   ↓
+localhost
+   ↓
+LOGIN
+   ↓
+vào được game
+   ↓
+hiển thị nhân vật
+   ↓
+vào map / dungeon
+   ↓
+CHƠI ĐƯỢC
+
+Sau đó mới mở rộng inventory, quest, PvP...
+
+Cách làm tối ưu
+
+Ta sẽ dùng chính APK gốc làm client, còn server chỉ giả lập những gì client bắt buộc phải có.
+
+                  APK gốc
+                     │
+             ┌───────┴────────┐
+             │                │
+          HTTP               TCP
+             │                │
+             ▼                ▼
+       Local Gateway      Local Game Server
+             │                │
+             └───────┬────────┘
+                     ▼
+                Game State
+                     │
+                  SQLite
+
+rebuild.py hiện tại đã có sẵn HTTP gateway và TCP listener; HTTP đang trả startConnect=1 và hướng client tới 192.168.1.13:8888.
+
+Nhưng TCP hiện tại chỉ:
+
+data = await reader.read(4096)
+logger.info(...)
+writer.write(b"")
+
+nên client không nhận được game-state.
+
+Ta không cần reverse hết
+
+Thay vì cố lấy:
+
+100% protocol
+100% role
+100% item
+100% battle
+100% guild
+...
+
+ta làm minimum viable server:
+
+1. connect
+2. login
+3. initial user state
+4. character
+5. inventory tối thiểu
+6. formation
+7. map/dungeon
+8. battle
+9. save
+
+Client báo thiếu cái gì → bổ sung đúng cái đó.
+
+Đây là con đường nhanh nhất để đạt "bấm vào game → chơi được".
+
+Và có một lợi thế lớn
+
+APK đã chứa:
+
+UI
+card/hero
+equipment
+skill
+animation
+dungeon resource
+battle script
+client game logic
+
+nên server không cần dựng lại những thứ đó.
+
+Server chỉ cần cung cấp state mà client yêu cầu.
+
+Việc em sẽ ưu tiên
+
+Không tiếp tục đào lan man.
+
+Target #1:
+
+TCP connect
+      ↓
+packet đầu tiên
+      ↓
+response tối thiểu
+      ↓
+login success
+      ↓
+GameStateLoop
+
+Khi đạt được:
+
+LOGIN → GAME
+
+mới chuyển sang:
+
+GAME → ROLE
+
+rồi:
+
+ROLE → MAP
+
+rồi:
+
+MAP → BATTLE
+
+Nếu một response thiếu field làm client crash, ta bổ sung field đó. Không xây cả server trước rồi mới thử.
+
+Trạng thái mục tiêu
+[✓] HTTP redirect
+[✓] TCP listener
+[ ] TCP protocol
+[ ] login response
+[ ] initial UserInfo
+[ ] StockManager state
+[ ] Team state
+[ ] GameStateLoop
+[ ] map
+[ ] dungeon
+[ ] battle
+[ ] persistence
+
+Và rebuild.py sẽ trở thành server thật từng bước, không phải viết lại từ đầu.
+
+Quan trọng: với những gì file hiện có chứng minh được, chưa có đủ byte-level protocol để em đưa cho anh một packet login chính xác mà không bịa. Bước kế tiếp phải lấy packet thật từ client hoặc disassemble đúng các hàm encode/decode; đó là thứ quyết định việc "login được" chứ không phải tiếp tục đoán JSON/API.
+
+tiếp tục
+
+Tiếp tục. Với mục tiêu chỉ cần login vào game và chơi được, giờ bỏ toàn bộ phần phụ sang một bên.
+
+rebuild.py hiện đã làm xong phần HTTP gateway → trả server → trỏ client sang TCP 8888. Cụ thể listS trả startConnect=1, còn login trả IP/port TCP.
+
+Điểm chết hiện tại chỉ còn TCP. Server nhận packet nhưng không trả bất kỳ byte nào.
+
+Ta đổi chiến thuật ngay
+
+Không cố đoán protocol.
+
+Bước 1 — biến TCP thành packet recorder
+
+Thay đoạn:
+
+writer.write(b"")
+await writer.drain()
+
+bằng cơ chế:
+
+client
+  │
+  ├── packet 001 ──→ server
+  │
+  ├── packet 002 ──→ server
+  │
+  ├── packet 003 ──→ server
+  │
+  └── ...
+
+Mỗi packet giữ nguyên byte:
+
+captures/
+  connection_001/
+    0001_C2S.bin
+    0002_C2S.bin
+    0003_C2S.bin
+
+đồng thời log:
+
+direction
+length
+hex
+timestamp
+
+Không sửa byte. Không decode. Không trả packet giả.
+
+Lý do: reader.read(4096) hiện tại không đảm bảo một lần read = một message. Nó chỉ là một chunk TCP.
+
+Vì vậy phải lưu raw TCP stream, sau đó phân tích framing.
+
+Bước 2 — bắt client gửi gì sau login
+
+Ta cần chuỗi:
+
+HTTP
+ ↓
+login
+ ↓
+TCP CONNECT
+ ↓
+C2S #1
+ ↓
+C2S #2
+ ↓
+C2S #3
+ ...
+
+Sau khi có raw stream, tìm packet đầu tiên mà client gửi sau TCP connection.
+
+Đó gần như chắc chắn nằm trong một trong các nhóm:
+
+session/login
+info
+mapping
+
+Chưa gọi nó là login packet cho đến khi đối chiếu được response.
+
+Bước 3 — server phải replay được packet
+
+Sau khi capture:
+
+C2S #1
+
+ta thử response tương ứng.
+
+Nếu client:
+
+không disconnect
+       ↓
+gửi C2S #2
+
+thì response đúng cấu trúc ở mức framing.
+
+Tiếp:
+
+C2S #2 → response
+C2S #3 → response
+...
+
+Đến lúc client chuyển sang màn hình game:
+
+LOGIN
+ ↓
+LOADING
+ ↓
+MAIN GAME
+
+là mốc thành công đầu tiên.
+
+Nhưng có một việc còn quan trọng hơn
+
+Không nên để server mỗi lần chạy lại tạo nhân vật mới.
+
+Ta tạo state offline cố định:
+
+offline/
+├── account.json
+├── user.json
+├── cards.json
+├── equipment.json
+├── formation.json
+└── save.json
+
+Ban đầu:
+
+{
+  "userId": "10001",
+  "name": "Offline_Player",
+  "level": 1,
+  "gold": 100000,
+  "rune": 10000,
+  "ap": 100,
+  "friendPoint": 1000
+}
+
+Nhưng chỉ thêm field nào client thực sự yêu cầu.
+
+Không nhồi một đống field đoán mò.
+
+Mục tiêu login tối thiểu
+
+Ta cần client nhận được state tương đương:
+
+Session
+   │
+   ├── userId
+   ├── account
+   └── server
+          │
+          ▼
+       UserInfo
+          │
+          ├── basic information
+          ├── resources
+          ├── cards
+          ├── equipment
+          └── formation
+
+Nếu response thiếu:
+
+card
+
+client báo lỗi → thêm card.
+
+Nếu thiếu:
+
+equipment
+
+→ thêm equipment.
+
+Nếu thiếu:
+
+formation
+
+→ thêm formation.
+
+Làm theo nhu cầu thực tế của APK, không dựng trước cả database.
+
+Sau khi vào được game
+
+Thứ tự mở chức năng:
+
+                    LOGIN
+                      │
+                      ▼
+                 MAIN SCREEN
+                      │
+             ┌────────┴────────┐
+             ▼                 ▼
+          CHARACTER           MAP
+             │                 │
+             ▼                 ▼
+        INVENTORY            DUNGEON
+             │                 │
+             └────────┬────────┘
+                      ▼
+                    BATTLE
+                      │
+                      ▼
+                   REWARD
+                      │
+                      ▼
+                    SAVE
+
+Đến đây mới có game offline thật.
+
+PVP, guild, ranking, friend, payment, Zing SDK... tạm bỏ hết.
+
+Có một điểm rất đáng tận dụng từ file hiện tại
+
+HTTP catch-all hiện đang trả thành công cho mọi endpoint:
+
+status=1
+code=200
+error_code=0
+ErrorCode=0
+Message=success
+data.result=1
+
+Nghĩa là phần HTTP hiện tại không phải nút thắt chính.
+
+Ta không cần tiếp tục đào HTTP nữa.
+
+Toàn bộ lực lượng chuyển sang:
+TCP 8888
+   ↓
+RAW CAPTURE
+   ↓
+FRAME
+   ↓
+REQUEST
+   ↓
+RESPONSE
+   ↓
+LOGIN
+
+Đây là đường ngắn nhất.
+
+Và rebuild.py hiện tại chưa nên sửa lung tung
+
+Bản hiện tại có nền đúng:
+
+HTTP :80
++
+TCP :8888
++
+ZCE
++
+gateway2
++
+session
+
+Chỉ cần thay TCP handler thành recorder trước.
+
+Sau khi có packet thật, mới viết decoder/encoder.
+
+Không cần tiếp tục reverse toàn bộ APK trước.
+
+Đích của giai đoạn kế tiếp chỉ có một:
+APK
+ ↓
+login
+ ↓
+TCP
+ ↓
+server nhận packet thật
+ ↓
+server trả packet thật tương ứng
+ ↓
+APK vượt qua login
+ ↓
+MAIN GAME
+
+Đó là mốc đầu tiên cần đạt.

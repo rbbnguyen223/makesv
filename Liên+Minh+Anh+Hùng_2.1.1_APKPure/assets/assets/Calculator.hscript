@@ -1,0 +1,375 @@
+var functionList = new FunctionList ();
+
+functionList.set ("card_skill_desc", function (info, cardLevel, skill, skillLevel, guildTrophy, rebirthRank)
+{
+	var skill_value = 0;
+		var skill_damage = 0;
+		var base = skill.GetDesc();
+		
+		if (Std_is (info, CardPrototypeInfo))
+		{
+			var prototype = info;
+			skill_value = call ("cardPrototype_skillDamage_base", [prototype, skillLevel]);
+			skill_damage = call ("cardPrototype_skillDamage", [prototype, cardLevel, skill, skillLevel]);
+		}
+		else if (Std_is (info, CardInfo))
+		{
+			var cardInfo =info;
+			skill_value = call ("cardInfo_skillDamage_base", [cardInfo, skillLevel, guildTrophy, rebirthRank]);
+			skill_damage = call ("cardInfo_skillDamage", [cardInfo, cardLevel, skill, skillLevel, guildTrophy, rebirthRank]);
+		}
+		
+		if (base.indexOf("#Level") >= 0)
+		{
+			base = StringTools.replace (base, "#Level", skill_value );
+			skill_damage -= skill_value;
+		}
+		
+		var replace = " (";
+		if (skill_damage >= 0) replace += "+" + skill_damage + ") ";
+		else replace += skill_damage + ") ";
+		
+		if (base.indexOf("(+AD)") >= 0)
+			base = StringTools.replace(base, "(+AD)", "<font color=\"#C3412E\">" + replace + "</font>");
+		
+		if (base.indexOf("(+AP)") >= 0)
+			base = StringTools.replace(base, "(+AP)", "<font color=\"#0880DD\">" + replace + "</font>");
+		if (base.indexOf("#UTI_MASTERJI") >= 0){
+			var dame = 16 + 2*skillLevel;
+			base = StringTools.replace(base, "#UTI_MASTERJI", "<font color=\"#0880DD\">" + dame + "%</font>");
+		}
+		if (base.indexOf("#UTI_DARIUS") >= 0){
+			var dame = 10 + 0.5*skillLevel;
+			base = StringTools.replace(base, "#UTI_DARIUS", "<font color=\"#0880DD\">" + dame + "%</font>");
+		}
+		if (base.indexOf("#UTI_ALISTA") >= 0){
+			var dame = 36 + 2*skillLevel;
+			base = StringTools.replace(base, "#UTI_ALISTA", "<font color=\"#0880DD\">" + dame + "%</font>");
+		}
+		if (base.indexOf("#UTI_TARIC_AD") >= 0){
+			var dame = 12 + skillLevel;
+			base = StringTools.replace(base, "#UTI_TARIC_AD", "<font color=\"#0880DD\">" + dame + "%</font>");
+		}
+		if (base.indexOf("#UTI_TARIC_AP") >= 0){
+			var dame = 15 + skillLevel;
+			base = StringTools.replace(base, "#UTI_TARIC_AP", "<font color=\"#0880DD\">" + dame + "%</font>");
+		}
+		if (base.indexOf("#UTI_GNAR") >= 0){
+			var dame = 15 + 0.5*skillLevel;
+			base = StringTools.replace(base, "#UTI_GNAR", "<font color=\"#0880DD\">" + dame + "%</font>");
+		}	
+		if (base.indexOf("#INIT_VAYNE") >= 0){
+			var dame = 10 + 0.5*skillLevel;
+			base = StringTools.replace(base, "#INIT_VAYNE", "<font color=\"#0880DD\">" + dame + "%</font>");
+		}
+		if (base.indexOf("#UTI_VAYNE") >= 0){
+			var dame = 10 + skillLevel;
+			base = StringTools.replace(base, "#UTI_VAYNE", "<font color=\"#0880DD\">" + dame + "%</font>");
+		}
+		if (base.indexOf("#EKKO") >= 0){
+			var dame = 25 + skillLevel*1;
+			base = StringTools.replace(base, "#EKKO", "<font color=\"#0880DD\">" + dame + "%</font>");
+		}
+		if (base.indexOf("#EKKO") >= 0){
+			var dame = 25 + skillLevel*1;
+			base = StringTools.replace(base, "#EKKO", "<font color=\"#0880DD\">" + dame + "%</font>");
+		}
+		if (base.indexOf("#UIT_EKKO_HP") >= 0){
+			var dame = 30 + skillLevel*2;
+			base = StringTools.replace(base, "#UIT_EKKO_HP", "<font color=\"#0880DD\">" + dame + "%</font>");
+		}
+		if (base.indexOf("#UIT_EKKO_AP") >= 0){
+			var dame = 100 + skillLevel*5;
+			base = StringTools.replace(base, "#UIT_EKKO_AP", "<font color=\"#0880DD\">" + dame + "%</font>");
+		}
+		return base;
+});
+var equiForCard;
+functionList.set ("check_equi_for_card", function (cardID, equiId)
+{
+	if (equiForCard == null)
+	{
+		equiForCard = [];
+		var arrayCard = [187,489,606,7489,1187,2187,3187,1489,4489,2489,5489,3489,6489,439,442,7442,441,1440,1442,4442,2440,2442,5442,3440,3442,6442];
+		equiForCard [210] = arrayCard;
+		equiForCard [211] = arrayCard;
+		equiForCard [212] = arrayCard;
+		equiForCard [213] = arrayCard;
+		equiForCard [214] = arrayCard;
+		equiForCard [215] = arrayCard;
+	}
+	
+	var arrayCard = equiForCard [equiId];
+	if (arrayCard != null)	{
+		if (arrayCard.indexOf (cardID) == -1) {
+			return false;
+		}
+	}
+	
+	return true;
+});
+
+functionList.set ("get_max_equi_power", function (cardInfo, al, targetType, valueType, valueTar)
+{
+	var value = 0;
+	var _star = 0;
+	for (equip in cardInfo.GetListEquip())
+	{
+		
+		if (equip == null)
+			continue;
+		var check =  call ("check_equi_for_card", [cardInfo.GetPrototypeId(), equip.prototypeId]);
+		if (!check)
+			continue;
+		if(equip.prototype.get_list_properties(_star) != null)
+		{
+			for (equip_pro in equip.prototype.get_list_properties(_star))
+			{
+				if (equip_pro.algorithm == al &&
+				equip_pro.targetType == targetType &&
+				equip_pro.valueType == valueType &&
+				equip_pro.valueTarget == valueTar) 
+				{
+					if(equip_pro.value > value){
+						value = equip_pro.value;
+					}
+				}
+			}
+		}
+	}
+	return Std_int(value);
+});
+functionList.set ("get_equi_power", function (cardInfo, al, targetType, valueType, valueTar)
+	{
+		var value = 0;
+		var _star = 0;
+		
+		for (equip in cardInfo.GetListEquip())
+		{
+			
+			if (equip == null)
+				continue;
+			var check =  call ("check_equi_for_card", [cardInfo.GetPrototypeId(), equip.prototypeId]);
+			if (!check)
+				continue;
+			if(equip.prototype.get_list_properties(_star) != null)
+			{
+				for (equip_pro in equip.prototype.get_list_properties(_star))
+				{
+						
+					if (equip_pro.algorithm == al &&
+					equip_pro.targetType == targetType &&
+					equip_pro.valueType == valueType &&
+					equip_pro.valueTarget == valueTar) 
+					{
+						value += equip_pro.value;
+						
+					}
+				}
+			}
+			
+		}
+		
+		return Std_int(value);
+	});
+functionList.set ("cardInfo_skillDamage", function (cardInfo, cardLevel, skill, skillLevel, guildTrophy,rebirthRank)
+{
+		var percent = skill.mDamageMultiplier  + skillLevel * skill.mGrowthPerLevel ;
+		var baseDamage = cardInfo.GetBaseDamage() * (1 + percent/ 100);
+		var plusPoint = 0;
+		var plusPercent = 0;
+		var plusTotalPercent = 0;
+		
+		var guildBuff =  GuildBuff.GetBuff(guildTrophy);
+		if (guildBuff !=  null) 
+				plusPercent += guildBuff.powerBuff;
+			
+		
+		var rebirthData = RebirthUser.getRebirthData(rebirthRank);
+		if (rebirthData !=  null) {
+				plusPercent += rebirthData.buff.atk_pt/10 ; 
+		}
+		if(cardInfo.GetPrototype().cardClass == CardClass.AD
+			|| cardInfo.GetPrototype().cardClass == CardClass.Tanker
+		   || cardInfo.GetPrototype().cardClass == CardClass.ADS
+		   || cardInfo.GetPrototype().cardClass == CardClass.Unknow)
+		{
+					plusPoint += call ("get_equi_power", [cardInfo,1,1,1,1]);
+					plusPercent 	+= call ("get_equi_power", [cardInfo,1,1,2,1]) / 10000;
+					plusTotalPercent = call ("get_max_equi_power", [cardInfo, 6,1,2,2]);
+		}else{
+					plusPoint += call ("get_equi_power", [cardInfo,1,1,1,2]) ;
+					plusPercent 	+= call ("get_equi_power", [cardInfo,1,1,2,2]) / 10000;	
+					plusTotalPercent = call ("get_max_equi_power", [cardInfo, 5,1,2,2]);
+		}
+		
+		baseDamage += plusPoint + baseDamage*plusPercent/10000;
+		baseDamage = baseDamage + baseDamage*plusTotalPercent/10000;
+		return Std_int(baseDamage);
+});
+functionList.set ("cardInfo_damage_ad_plus", function (cardInfo, cardLevel,guildTrophy,rebirthRank)
+{
+		var baseDamage =  cardInfo.GetBaseDamage ();
+		
+		var plusPoint = 0;
+		var plusPercent = 0;
+		var plusTotalPercent = 0;
+		var guildBuff =  GuildBuff.GetBuff(guildTrophy);
+		if(guildBuff!= null)
+			plusPercent += guildBuff.powerBuff;
+		
+		var rebirthData = RebirthUser.getRebirthData(rebirthRank);
+		if (rebirthData !=  null) {
+			plusPercent += rebirthData.buff.atk_pt/10 ; 
+		}
+		plusPoint += call ("get_equi_power", [cardInfo,1,1,1,1]);
+		plusPercent 	+= call ("get_equi_power", [cardInfo,1,1,2,1]) ;
+		plusTotalPercent = call ("get_max_equi_power", [cardInfo, 6,1,2,2]);
+		
+		var plusDamage = plusPoint + baseDamage*plusPercent/10000;
+			plusDamage += (plusDamage + baseDamage)*plusTotalPercent/10000;
+			return Std_int(plusDamage);
+});
+functionList.set ("cardInfo_damage_ap_plus", function (cardInfo, cardLevel,guildTrophy,rebirthRank)
+	{
+			var baseDamage =  cardInfo.GetBaseDamage ();
+		
+			var plusPoint = 0;
+			var plusPercent = 0;
+			var plusTotalPercent = 0;
+			var guildBuff =  GuildBuff.GetBuff(guildTrophy);
+			if(guildBuff!= null)
+				plusPercent += guildBuff.powerBuff;
+			
+			var rebirthData = RebirthUser.getRebirthData(rebirthRank);
+			if (rebirthData !=  null) {
+				plusPercent += rebirthData.buff.atk_pt/10 ; 
+			}
+			plusPoint += call ("get_equi_power", [cardInfo,1,1,1,2]) ;
+			plusPercent 	+= call ("get_equi_power", [cardInfo,1,1,2,2]) ;	
+			plusTotalPercent = call ("get_max_equi_power", [cardInfo, 5,1,2,2]);
+			
+			var plusDamage = plusPoint + baseDamage*plusPercent/10000;
+			plusDamage += (plusDamage + baseDamage)*plusTotalPercent/10000;
+			return Std_int(plusDamage);
+		
+	});
+	functionList.set ("cardInfo_hp_plus", function (cardInfo, cardLevel,guildTrophy,rebirthRank)
+	{
+		
+			var baseDamage = cardInfo.GetBaseHP ();
+			var plusPoint = 0;
+			var plusPercent = 0;
+			var guildBuff =  GuildBuff.GetBuff(guildTrophy);
+			if (guildBuff !=  null) 
+				plusPercent += guildBuff.hpBuff;
+			
+			var rebirthData =  RebirthUser.getRebirthData(rebirthRank);
+			if (rebirthData !=  null) {
+				plusPercent += rebirthData.buff.hp_pt/10;
+			}
+			plusPoint += call ("get_equi_power", [cardInfo,1,1,1,5]) ;
+			plusPercent 	+= call ("get_equi_power", [cardInfo,1,1,2,5]) ;	
+			
+			
+			baseDamage = plusPoint + baseDamage*plusPercent/10000;
+			return Std_int(baseDamage);
+	});
+	functionList.set ("cardInfo_damage_ad_plus_equi", function (cardInfo, cardLevel,guildTrophy,rebirthRank)
+	{
+		var baseDamage =  cardInfo.GetBaseDamage ();
+		
+		var plusPoint = 0;
+		var plusPercent = 0;
+		var plusTotalPercent  = 0;
+			
+		plusPoint += call ("get_equi_power", [cardInfo,1,1,1,1]);
+		plusPercent 	+= call ("get_equi_power", [cardInfo,1,1,2,1]) ;
+		plusTotalPercent = call ("get_max_equi_power", [cardInfo, 6,1,2,2]);
+		
+		var plusDamage = plusPoint + baseDamage*plusPercent/10000;
+			plusDamage += (plusDamage + baseDamage)*plusTotalPercent/10000;
+			return Std_int(plusDamage);
+	});
+	functionList.set ("cardInfo_damage_ap_plus_equi", function (cardInfo, cardLevel,guildTrophy,rebirthRank)
+	{
+			var baseDamage =  cardInfo.GetBaseDamage ();
+		
+			var plusPoint= 0;
+			var plusPercent = 0;
+			var plusTotalPercent  = 0;
+			plusPoint += call ("get_equi_power", [cardInfo,1,1,1,2]) ;
+			plusPercent 	+= call ("get_equi_power", [cardInfo,1,1,2,2]) ;	
+			plusTotalPercent = call ("get_max_equi_power", [cardInfo, 5,1,2,2]);
+			
+			var plusDamage = plusPoint + baseDamage*plusPercent/10000;
+			plusDamage += (plusDamage + baseDamage)*plusTotalPercent/10000;
+			return Std_int(plusDamage);
+		
+	});
+	functionList.set ("cardInfo_hp_plus_equi", function (cardInfo, cardLevel,guildTrophy,rebirthRank)
+	{
+		
+			var baseDamage = cardInfo.GetBaseHP ();
+			var plusPoint = 0;
+			var plusPercent = 0;
+				plusPoint += call ("get_equi_power", [cardInfo,1,1,1,5]) ;
+			plusPercent 	+= call ("get_equi_power", [cardInfo,1,1,2,5]) ;	
+			
+			
+			baseDamage = plusPoint + baseDamage*plusPercent/10000;
+			return Std_int(baseDamage);
+	});
+	functionList.set ("cardInfo_total_damage", function (cardInfo, cardLevel,guildTrophy,rebirthRank)
+	{
+		var baseDamage =  cardInfo.GetBaseDamage ();
+			var plusPoint = 0;
+			var plusPercent = 0;
+			var plusTotalPercent = 0;
+			var guildBuff =  GuildBuff.GetBuff(guildTrophy);
+			if(guildBuff!= null)
+				plusPercent += guildBuff.powerBuff;
+			var rebirthData = RebirthUser.getRebirthData(rebirthRank);
+			if (rebirthData !=  null) {
+				plusPercent += rebirthData.buff.atk_pt/10 ; 
+			}
+			if(cardInfo.GetPrototype().cardClass == CardClass.AD
+			|| cardInfo.GetPrototype().cardClass == CardClass.Tanker
+			|| cardInfo.GetPrototype().cardClass == CardClass.ADS)
+			{
+					plusPoint += call ("get_equi_power", [cardInfo,1,1,1,1]);
+					plusPercent 	+= call ("get_equi_power", [cardInfo,1,1,2,1]) ;
+					plusTotalPercent = call ("get_max_equi_power", [cardInfo, 6,1,2,2]);
+				
+			}else{
+					plusPoint += call ("get_equi_power", [cardInfo,1,1,1,2]) ;
+					plusPercent 	+= call ("get_equi_power", [cardInfo,1,1,2,2]) ;	
+					plusTotalPercent = call ("get_max_equi_power", [cardInfo, 5,1,2,2]);
+			}
+			baseDamage += plusPoint + baseDamage*plusPercent/10000;
+			baseDamage = baseDamage + baseDamage*plusTotalPercent/10000;
+			return Std_int(baseDamage);
+	});
+	functionList.set ("cardInfo_total_hp", function (cardInfo, cardLevel,guildTrophy,rebirthRank)
+	
+	{
+		var baseDamage =  cardInfo.GetBaseHP ();
+		
+			var plusPoint = 0;
+			var plusPercent = 0;
+			var guildBuff =  GuildBuff.GetBuff(guildTrophy);
+			if(guildBuff!= null)
+				plusPercent += guildBuff.hpBuff;
+			
+			var rebirthData = RebirthUser.getRebirthData(rebirthRank);
+			if (rebirthData !=  null) {
+				plusPercent += rebirthData.buff.hp_pt/10 ; 
+			}
+		
+			plusPoint += call ("get_equi_power", [cardInfo,1,1,1,5]);
+			plusPercent 	+= call ("get_equi_power", [cardInfo,1,1,2,5]) ;
+		
+			baseDamage += plusPoint + baseDamage*plusPercent/10000;
+			return Std_int(baseDamage);
+	});
+return functionList;

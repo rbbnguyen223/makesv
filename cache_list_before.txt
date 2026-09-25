@@ -1,0 +1,83 @@
+ls: /sdcard/Android/data/lmah.vn: No such file or directory
+/data/data/lmah.vn:
+total 48
+drwxr-x--x   7 u0_a111 u0_a111        4096 2026-09-20 23:51 .
+drwxrwx--x 137 system  system        12288 2026-09-20 19:13 ..
+drwxrws--x   3 u0_a111 u0_a111_cache  4096 2026-09-20 23:51 cache
+drwx------   2 u0_a111 u0_a111        4096 2026-09-20 23:51 code_cache
+drwxrwx--x   2 u0_a111 u0_a111        4096 2026-09-20 23:51 databases
+drwxrwx--x   3 u0_a111 u0_a111        4096 2026-09-20 23:51 files
+lrwxrwxrwx   1 root    root             77 2026-09-20 23:51 lib -> /data/app/~~OxATu14755aIJcz0pSpWMg==/lmah.vn-OW2or4JXLO1HVB_UhUqm6g==/lib/arm
+drwxrwx--x   2 u0_a111 u0_a111        4096 2026-09-20 23:51 shared_prefs
+
+/data/data/lmah.vn/cache:
+total 20
+drwxrws--x 3 u0_a111 u0_a111_cache 4096 2026-09-20 23:51 .
+drwxr-x--x 7 u0_a111 u0_a111       4096 2026-09-20 23:51 ..
+-rw------- 1 u0_a111 u0_a111_cache    4 2026-09-20 23:51 .appInfo
+drwx--S--- 3 u0_a111 u0_a111_cache 4096 2026-09-20 23:51 oat_primary
+
+/data/data/lmah.vn/cache/oat_primary:
+total 12
+drwx--S--- 3 u0_a111 u0_a111_cache 4096 2026-09-20 23:51 .
+drwxrws--x 3 u0_a111 u0_a111_cache 4096 2026-09-20 23:51 ..
+drwx--S--- 2 u0_a111 u0_a111_cache 4096 2026-09-20 23:51 x86
+
+/data/data/lmah.vn/cache/oat_primary/x86:
+total 80
+drwx--S--- 2 u0_a111 u0_a111_cache  4096 2026-09-20 23:51 .
+drwx--S--- 3 u0_a111 u0_a111_cache  4096 2026-09-20 23:51 ..
+-rw------- 1 u0_a111 u0_a111_cache 73728 2026-09-20 23:51 base.art
+
+/data/data/lmah.vn/code_cache:
+total 1172
+drwx------ 2 u0_a111 u0_a111    4096 2026-09-20 23:51 .
+drwxr-x--x 7 u0_a111 u0_a111    4096 2026-09-20 23:51 ..
+-rw------- 1 u0_a111 u0_a111 1187670 2026-09-20 23:51 .hptc_kache_lmah.vn
+
+/data/data/lmah.vn/databases:
+total 28
+drwxrwx--x 2 u0_a111 u0_a111  4096 2026-09-20 23:51 .
+drwxr-x--x 7 u0_a111 u0_a111  4096 2026-09-20 23:51 ..
+-rw-rw---- 1 u0_a111 u0_a111 16384 2026-09-20 23:51 session.db
+-rw-rw---- 1 u0_a111 u0_a111     0 2026-09-20 23:51 session.db-journal
+
+/data/data/lmah.vn/files:
+total 100
+drwxrwx--x 3 u0_a111 u0_a111 4096 2026-09-20 23:51 .
+drwxr-x--x 7 u0_a111 u0_a111 4096 2026-09-20 23:51 ..
+drwx------ 2 u0_a111 u0_a111 4096 2026-09-20 23:51 AFRequestCache
+-rw------- 1 u0_a111 u0_a111   33 2026-09-20 23:51 AF_INSTALLATION
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 battle_bg_01.single.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 battle_bg_11.single.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 changehero.single.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 changehero_eff.single.png
+-rw-rw---- 1 u0_a111 u0_a111  110 2026-09-20 23:51 ddinfo2
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 event_14_2.single.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 event_2_9.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 event_30_4.single.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 event_8_3.single.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 event_banner.single.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 event_bingo.single.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 event_bufftet.single.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 event_firstpayment.single.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 event_gacha.single.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 event_general_item.single.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 event_newserver.single.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 event_ui.single.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 event_yasuo_underworld.png
+-rw------- 1 u0_a111 u0_a111 1096 2026-09-20 23:51 eventtrungthu.single.png
+-rw-rw---- 1 u0_a111 u0_a111   78 2026-09-20 23:51 pkgninfo
+
+/data/data/lmah.vn/files/AFRequestCache:
+total 8
+drwx------ 2 u0_a111 u0_a111 4096 2026-09-20 23:51 .
+drwxrwx--x 3 u0_a111 u0_a111 4096 2026-09-20 23:51 ..
+
+/data/data/lmah.vn/shared_prefs:
+total 24
+drwxrwx--x 2 u0_a111 u0_a111 4096 2026-09-20 23:51 .
+drwxr-x--x 7 u0_a111 u0_a111 4096 2026-09-20 23:51 ..
+-rw-rw---- 1 u0_a111 u0_a111  185 2026-09-20 23:51 appsflyer-data.xml
+-rw-rw---- 1 u0_a111 u0_a111  412 2026-09-20 23:51 lmah.vn_preferences.xml
+-rw-rw---- 1 u0_a111 u0_a111 1410 2026-09-20 23:51 nmeAppPrefs.xml

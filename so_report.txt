@@ -1,0 +1,125 @@
+APK: Liên+Minh+Anh+Hùng_2.1.1_APKPure.apk
+  ban goc: lib/armeabi/libApplicationMain.so  15265008 B  ELF 32-bit, ARM (armeabi-v7a)  sha256=82988ed8a1e788e2
+
+=== DANH SACH (moi nhat truoc) ===
+2026-09-21 08:41:47    15265008 B  b4ffd4ea6d595520  ELF 32-bit, ARM (armeabi-v7a) installed.so
+2026-09-20 23:30:34    15265008 B  b4ffd4ea6d595520  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain_ld_loadok.so
+2026-09-20 19:31:16    15265008 B  b4ffd4ea6d595520  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain_clean_arm.so
+2026-09-20 19:27:16    15265010 B  dc48d2c05f240291  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain_phone.so
+2026-09-20 19:21:45    15265008 B  b4ffd4ea6d595520  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain_arm.so
+2026-09-20 19:17:18    15265008 B  50e34deb020e3e64  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain_nop.so
+2026-09-20 19:07:06    15265008 B  b4ffd4ea6d595520  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain_fixall.so
+2026-09-20 19:05:56    15265008 B  b4ffd4ea6d595520  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain_clean_stable.so
+2026-09-20 19:04:24    15265008 B  c05e56dd6f16ef23  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain_master.so
+2026-09-20 18:59:27    15265008 B  6151196fb717bf56  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain_final.so
+2026-09-20 18:57:36    15265008 B  b4ffd4ea6d595520  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain_auto.so
+2026-09-20 18:33:08    15265008 B  db994993a312f2fd  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain_clean.so
+2026-09-20 15:55:02    15265008 B  2cb39d92b34869bf  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain_allinone.so
+2026-09-20 15:30:36    15265008 B  db994993a312f2fd  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain_fixload.so
+2026-09-20 13:09:52    15265008 B  a82c8a31d0d79a1a  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain_patched2.so
+2026-09-20 13:00:47    15265008 B  39b2b3884964999e  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain_patched.so
+2026-09-20 11:59:13    15265008 B  82988ed8a1e788e2  ELF 32-bit, ARM (armeabi-v7a) libApplicationMain.so
+
+=== NHOM GIONG HET NHAU (cung SHA256) ===
+[b4ffd4ea6d595520] installed.so, libApplicationMain_ld_loadok.so, libApplicationMain_clean_arm.so, libApplicationMain_arm.so, libApplicationMain_fixall.so, libApplicationMain_clean_stable.so, libApplicationMain_auto.so
+[dc48d2c05f240291] libApplicationMain_phone.so
+[50e34deb020e3e64] libApplicationMain_nop.so
+[c05e56dd6f16ef23] libApplicationMain_master.so
+[6151196fb717bf56] libApplicationMain_final.so
+[db994993a312f2fd] libApplicationMain_clean.so, libApplicationMain_fixload.so
+[2cb39d92b34869bf] libApplicationMain_allinone.so
+[a82c8a31d0d79a1a] libApplicationMain_patched2.so
+[39b2b3884964999e] libApplicationMain_patched.so
+[82988ed8a1e788e2] libApplicationMain.so
+
+=== KHAC BIET SO VOI BAN GOC ===
+--- installed.so, libApplicationMain_ld_loadok.so, libApplicationMain_clean_arm.so, libApplicationMain_arm.so, libApplicationMain_fixall.so, libApplicationMain_clean_stable.so, libApplicationMain_auto.so
+    23 byte khac, 4 vung, so voi lib/armeabi/libApplicationMain.so  | 2 vung GAN diem crash 0x7AF92C
+      0x004D9984-0x004D998B (8 B): c8 3f 9f e5 0d 20 a0 e3 -> 01 00 a0 e3 1e ff 2f e1
+      0x007AC874-0x007AC877 (4 B): f4 f0 93 e5 -> 1e ff 2f e1
+      0x007AF920-0x007AF927 (8 B): 20 30 94 e5 03 00 a0 e1 -> 00 00 53 e3 07 00 00 0a  <== GAN DIEM CRASH
+      0x007B0F80-0x007B0F83 (4 B): 60 10 94 e5 -> 1e ff 2f e1  <== GAN DIEM CRASH
+--- libApplicationMain_phone.so
+    CANH BAO: kich thuoc khac ban goc (15265010 vs 15265008) tu lib/armeabi/libApplicationMain.so
+    1655714 byte khac, 109 vung, so voi lib/armeabi/libApplicationMain.so  | 2 vung GAN diem crash 0x7AF92C
+      0x004D9984-0x004D998B (8 B): c8 3f 9f e5 0d 20 a0 e3 -> 01 00 a0 e3 1e ff 2f e1
+      0x007AC874-0x007AC877 (4 B): f4 f0 93 e5 -> 1e ff 2f e1
+      0x007AF920-0x007AF927 (8 B): 20 30 94 e5 03 00 a0 e1 -> 00 00 53 e3 07 00 00 0a  <== GAN DIEM CRASH
+      0x007B0F80-0x007B0F83 (4 B): 60 10 94 e5 -> 1e ff 2f e1  <== GAN DIEM CRASH
+      0x00CD4383-0x00CD439C (26 B): 6c 69 65 6e 6d 69 6e 68 2e 73 74 61 74 69 63 2e -> 31 39 32 2e 31 36 38 2e 31 2e 31 33 00 00 00 00
+      0x00CD6E2B-0x00CD6E44 (26 B): 6c 69 65 6e 6d 69 6e 68 2e 67 36 2d 6d 6f 62 69 -> 31 39 32 2e 31 36 38 2e 31 2e 31 33 00 00 00 00
+      0x00CE0E57-0x00CE21F9 (5027 B): 6d 65 2e 7a 69 6e 67 2e 76 6e 00 00 00 ff ff ff -> 31 39 32 2e 31 36 38 2e 31 2e 31 33 00 00 00 ff
+      0x00CE2223-0x00CF9832 (95760 B): 00 31 39 53 68 6f 70 49 74 65 6d 52 65 71 75 65 -> 2d 2d 00 31 39 53 68 6f 70 49 74 65 6d 52 65 71
+      0x00CF9850-0x00CF9852 (3 B): 07 00 00 -> 00 00 07
+      0x00CF986C-0x00D157E6 (114555 B): 31 30 4d 6f 64 75 6c 65 5f 6f 62 6a 00 00 00 00 -> 00 00 31 30 4d 6f 64 75 6c 65 5f 6f 62 6a 00 00
+      0x00D15804-0x00D15812 (15 B): 56 00 00 00 4b 00 00 00 4b 00 00 00 4b 00 00 -> 00 00 56 00 00 00 4b 00 00 00 4b 00 00 00 4b
+      0x00D1581C-0x00D3ACA7 (152716 B): 84 00 00 00 92 00 00 00 8f 00 00 00 90 00 00 00 -> 00 00 84 00 00 00 92 00 00 00 8f 00 00 00 90 00
+      0x00D3ACBF-0x00D3AD2B (109 B): 00 ff ff ff ff 46 52 41 4d 45 5f 30 30 5f 4a 41 -> 5f 5f 00 ff ff ff ff 46 52 41 4d 45 5f 30 30 5f
+      0x00D3AD42-0x00D3ADCB (138 B): 00 00 ff ff ff ff 46 52 41 4d 45 5f 30 31 5f 4a -> 5f 5f 00 00 ff ff ff ff 46 52 41 4d 45 5f 30 31
+      0x00D3ADE2-0x00D3AE72 (145 B): 00 00 ff ff ff ff 46 52 41 4d 45 5f 30 33 5f 4a -> 5f 5f 00 00 ff ff ff ff 46 52 41 4d 45 5f 30 33
+      0x00D3AE8A-0x00D3AEF2 (105 B): 00 00 ff ff ff ff 41 4e 49 4d 5f 30 30 5f 4a 41 -> 5f 5f 00 00 ff ff ff ff 41 4e 49 4d 5f 30 30 5f
+      0x00D3AF09-0x00D3AF8E (134 B): 00 00 00 ff ff ff ff 41 4e 49 4d 5f 30 31 5f 4a -> 5f 5f 00 00 00 ff ff ff ff 41 4e 49 4d 5f 30 31
+      0x00D3AFA5-0x00D3B037 (147 B): 00 00 00 ff ff ff ff 41 4e 49 4d 5f 30 33 5f 4a -> 5f 5f 00 00 00 ff ff ff ff 41 4e 49 4d 5f 30 33
+      0x00D3B04F-0x00D3B0BB (109 B): 00 ff ff ff ff 66 72 61 6d 65 5f 30 30 5f 6a 61 -> 5f 5f 00 ff ff ff ff 66 72 61 6d 65 5f 30 30 5f
+      0x00D3B0D2-0x00D3B15B (138 B): 00 00 ff ff ff ff 66 72 61 6d 65 5f 30 31 5f 6a -> 5f 5f 00 00 ff ff ff ff 66 72 61 6d 65 5f 30 31
+      0x00D3B172-0x00D3B202 (145 B): 00 00 ff ff ff ff 66 72 61 6d 65 5f 30 33 5f 6a -> 5f 5f 00 00 ff ff ff ff 66 72 61 6d 65 5f 30 33
+      0x00D3B21A-0x00D3B282 (105 B): 00 00 ff ff ff ff 61 6e 69 6d 5f 30 30 5f 6a 61 -> 5f 5f 00 00 ff ff ff ff 61 6e 69 6d 5f 30 30 5f
+      0x00D3B299-0x00D3B31E (134 B): 00 00 00 ff ff ff ff 61 6e 69 6d 5f 30 31 5f 6a -> 5f 5f 00 00 00 ff ff ff ff 61 6e 69 6d 5f 30 31
+      0x00D3B335-0x00DDB9FD (657097 B): 00 00 00 ff ff ff ff 61 6e 69 6d 5f 30 33 5f 6a -> 5f 5f 00 00 00 ff ff ff ff 61 6e 69 6d 5f 30 33
+      0x00DDBBCC-0x00DDCECA (4863 B): ac 77 15 00 14 88 15 00 88 ad 15 00 14 c0 15 00 -> 00 00 ac 77 15 00 14 88 15 00 88 ad 15 00 14 c0
+      0x00DDCED4-0x00DDD042 (367 B): 61 00 00 00 3c 14 d6 00 0e 00 00 00 3c 14 d6 00 -> 00 00 61 00 00 00 3c 14 d6 00 0e 00 00 00 3c 14
+      0x00DDD058-0x00DDD0A2 (75 B): 80 13 d6 00 04 00 00 00 80 13 d6 00 04 00 00 00 -> 00 00 80 13 d6 00 04 00 00 00 80 13 d6 00 04 00
+      0x00DDD0E4-0x00DDD106 (35 B): 84 10 cc 00 05 00 00 00 84 10 cc 00 05 00 00 00 -> 00 00 84 10 cc 00 05 00 00 00 84 10 cc 00 05 00
+      0x00DDD120-0x00DDD53A (1051 B): c8 13 d6 00 04 00 00 00 c8 13 d6 00 04 00 00 00 -> 00 00 c8 13 d6 00 04 00 00 00 c8 13 d6 00 04 00
+      0x00DDD554-0x00DE055C (12297 B): f4 e5 dd 00 0c 83 15 00 14 85 15 00 98 78 15 00 -> 00 00 f4 e5 dd 00 0c 83 15 00 14 85 15 00 98 78
+      0x00DE0565-0x00DE18F4 (5008 B): 16 de 00 70 6a 17 00 e0 af 17 00 fc 85 15 00 50 -> 00 00 16 de 00 70 6a 17 00 e0 af 17 00 fc 85 15
+      0x00DE18FD-0x00DE460C (11536 B): 2a de 00 ac 6d 18 00 78 67 18 00 fc 85 15 00 50 -> 00 00 2a de 00 ac 6d 18 00 78 67 18 00 fc 85 15
+      0x00DE4615-0x00DE650C (7928 B): 56 de 00 44 6f 1b 00 08 6f 1b 00 b8 6b 1b 00 50 -> 00 00 56 de 00 44 6f 1b 00 08 6f 1b 00 b8 6b 1b
+      0x00DE6515-0x00DE6E5C (2376 B): 75 de 00 58 d7 1d 00 04 dc 1d 00 d8 d3 1d 00 e8 -> 00 00 75 de 00 58 d7 1d 00 04 dc 1d 00 d8 d3 1d
+      0x00DE6E65-0x00DE750C (1704 B): 7f de 00 54 55 1e 00 58 55 1e 00 fc 85 15 00 50 -> 00 00 7f de 00 54 55 1e 00 58 55 1e 00 fc 85 15
+      0x00DE7515-0x00DEBD0C (18424 B): 85 de 00 e4 15 c6 00 d4 12 c6 00 7c 71 1e 00 5c -> 00 00 85 de 00 e4 15 c6 00 d4 12 c6 00 7c 71 1e
+      0x00DEBD15-0x00DEDC54 (8000 B): cd de 00 b8 3b ca 00 64 39 ca 00 00 5e 27 00 50 -> 00 00 cd de 00 b8 3b ca 00 64 39 ca 00 00 5e 27
+      0x00DEDC5D-0x00DEE44C (2032 B): ed de 00 f4 85 15 00 f8 85 15 00 0c 0f 2a 00 04 -> 00 00 ed de 00 f4 85 15 00 f8 85 15 00 0c 0f 2a
+      0x00DEE455-0x00DEF50C (4280 B): f5 de 00 58 08 c9 00 7c 3f 2a 00 fc 85 15 00 28 -> 00 00 f5 de 00 58 08 c9 00 7c 3f 2a 00 fc 85 15
+      0x00DEF515-0x00DEF954 (1088 B): 05 df 00 f4 85 15 00 f8 85 15 00 c0 11 2b 00 50 -> 00 00 05 df 00 f4 85 15 00 f8 85 15 00 c0 11 2b
+      ... con 69 vung nua
+--- libApplicationMain_nop.so
+    27 byte khac, 5 vung, so voi lib/armeabi/libApplicationMain.so  | 2 vung GAN diem crash 0x7AF92C
+      0x004D9984-0x004D998B (8 B): c8 3f 9f e5 0d 20 a0 e3 -> 01 00 a0 e3 1e ff 2f e1
+      0x007AC874-0x007AC877 (4 B): f4 f0 93 e5 -> 1e ff 2f e1
+      0x007AF920-0x007AF927 (8 B): 20 30 94 e5 03 00 a0 e1 -> 00 00 53 e3 07 00 00 0a  <== GAN DIEM CRASH
+      0x007B0F80-0x007B0F83 (4 B): 60 10 94 e5 -> 1e ff 2f e1  <== GAN DIEM CRASH
+      0x00C76038-0x00C7603B (4 B): 8d 84 d3 eb -> 00 00 a0 e1
+--- libApplicationMain_master.so
+    24 byte khac, 5 vung, so voi lib/armeabi/libApplicationMain.so  | 2 vung GAN diem crash 0x7AF92C
+      0x004D9984-0x004D998B (8 B): c8 3f 9f e5 0d 20 a0 e3 -> 01 00 a0 e3 1e ff 2f e1
+      0x007AC874-0x007AC877 (4 B): f4 f0 93 e5 -> 1e ff 2f e1
+      0x007AF920-0x007AF927 (8 B): 20 30 94 e5 03 00 a0 e1 -> 00 00 53 e3 07 00 00 0a  <== GAN DIEM CRASH
+      0x007B0F80-0x007B0F83 (4 B): 60 10 94 e5 -> 1e ff 2f e1  <== GAN DIEM CRASH
+      0x00C76040-0x00C76040 (1 B): 01 -> 00
+--- libApplicationMain_final.so
+    31 byte khac, 5 vung, so voi lib/armeabi/libApplicationMain.so  | 2 vung GAN diem crash 0x7AF92C
+      0x004D9984-0x004D998B (8 B): c8 3f 9f e5 0d 20 a0 e3 -> 01 00 a0 e3 1e ff 2f e1
+      0x007AC874-0x007AC877 (4 B): f4 f0 93 e5 -> 1e ff 2f e1
+      0x007AF920-0x007AF927 (8 B): 20 30 94 e5 03 00 a0 e1 -> 00 00 53 e3 07 00 00 0a  <== GAN DIEM CRASH
+      0x007B0F80-0x007B0F83 (4 B): 60 10 94 e5 -> 1e ff 2f e1  <== GAN DIEM CRASH
+      0x00C76028-0x00C7602F (8 B): 40 30 9f e5 10 40 2d e9 -> 00 00 a0 e3 1e ff 2f e1
+--- libApplicationMain_clean.so, libApplicationMain_fixload.so
+    8 byte khac, 1 vung, so voi lib/armeabi/libApplicationMain.so
+      0x004D9984-0x004D998B (8 B): c8 3f 9f e5 0d 20 a0 e3 -> 01 00 a0 e3 1e ff 2f e1
+--- libApplicationMain_allinone.so
+    16 byte khac, 3 vung, so voi lib/armeabi/libApplicationMain.so  | 1 vung GAN diem crash 0x7AF92C
+      0x004D9984-0x004D998B (8 B): c8 3f 9f e5 0d 20 a0 e3 -> 01 00 a0 e3 1e ff 2f e1
+      0x007AC874-0x007AC877 (4 B): f4 f0 93 e5 -> 1e ff 2f e1
+      0x007B0F80-0x007B0F83 (4 B): 60 10 94 e5 -> 1e ff 2f e1  <== GAN DIEM CRASH
+--- libApplicationMain_patched2.so
+    2 byte khac, 2 vung, so voi lib/armeabi/libApplicationMain.so
+      0x007C8D07-0x007C8D07 (1 B): 0a -> ea
+      0x007C96F7-0x007C96F7 (1 B): 1a -> ea
+--- libApplicationMain_patched.so
+    1 byte khac, 1 vung, so voi lib/armeabi/libApplicationMain.so
+      0x007C8D07-0x007C8D07 (1 B): 0a -> ea
+--- libApplicationMain.so
+    GIONG HET ban goc (lib/armeabi/libApplicationMain.so)  -> ban 'sach'
+
+Luu y: offset o day la offset TRONG FILE; dia chi trong crash.txt la dia chi ao, thuong gan bang nhau nhung khong dam bao.

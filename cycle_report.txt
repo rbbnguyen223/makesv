@@ -1,0 +1,27 @@
+=== CYCLE 09/22/2026 Tue  0:55:13.91 === 
+cdn_mode: 
+blank512
+ 
+uid=0(root) gid=0(root) groups=0(root),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:su:s0
+hosts hien tai: 
+127.0.0.1 localhost
+192.168.1.13 lienminh.g6-mobile.zing.vn lienminh.static.g6.zing.vn me.zing.vn
+ 
+=== .so dang cai trong LDPlayer === 
+-rwxr-xr-x 1 root root 15265008 2026-09-22 00:54 /data/app/~~OxATu14755aIJcz0pSpWMg==/lmah.vn-OW2or4JXLO1HVB_UhUqm6g==/lib/arm/libApplicationMain.so
+ 
+=== pid game (trong = da chet) === 
+3767
+ 
+=== crash === 
+ 
+=== thanh ghi + bo nho luc crash (GLThread, de Claude doc r4/eax..edi/ebp truc tiep, khong doan tu disasm) === 
+khong tim thay GLThread trong crash_cycle.txt
+ 
+=== request server trong lan chay nay === 
+2026-09-22 00:55:29,511 [INFO] [Gateway] func=listS | params={'func': 'listS', 'version': '2.1.1', 'la': 'VN'}
+2026-09-22 00:55:29,512 [INFO] [HTTP] GET /lmadmin/gateway2.php host=lienminh.g6-mobile.zing.vn -> 200
+ 
+=== captures TCP (co ket noi TCP khong?) === 
+ 
+=== anh chup: shots\s1.png ... s15.png (moi 3 giay) === 

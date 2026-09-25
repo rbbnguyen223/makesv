@@ -1,0 +1,84 @@
+trace("11111111");
+var Math = Type.resolveClass ("Math");
+var endEff = [];
+
+Sound.GetSound("Masteryi_luot_den.wav").Play();
+var hideeff = new OpacityEffect(attacker.GetDisplayCard(), -1, 100, null);
+hideeff.Init();
+sCurState.AddScript(hideeff);
+
+var i = 0;
+var dependAnim = hideeff;
+trace("2222");
+for(card in defender)
+{
+	trace("33333");
+	var atkX = 0;
+	var atkY = 0;
+	if(attacker.GetFormation().IsPlayer())
+	{
+		atkX = card.xOri;
+		atkY = card.yOri + (card.GetDisplayCard().height/2 + attacker.GetDisplayCard().height/2) - 10;
+	}
+	else
+	{
+		atkX = card.xOri;
+		atkY = card.yOri - (card.GetDisplayCard().height/2 + attacker.GetDisplayCard().height/2);
+	}
+	
+	var func = function(){
+		attacker.GetDisplayCard().moveToTop ();
+		attacker.GetDisplayCard().x = atkX;
+		attacker.GetDisplayCard().y = atkY;
+	}			
+
+
+	var atkAnim = Resource.getSprite(spriteId).GetAnim (attacker.GetFormation().IsPlayer()?atkUpAnim:atkDownAnim, Math.round(atkX), Math.round(atkY), false, renderMode);
+	
+	var atkEff = new SimulateAnimEffect(attacker.GetDisplayCard(), atkAnim, 330, dependAnim);
+	atkEff.AddEffectListener(function OnFinishHideEffect(arr)
+						{
+							sCurLayer.remove(atkAnim);
+							attacker.ResetPosition();
+						});
+	atkEff.Init();
+	
+	var hitAnim = Resource.getSprite(spriteId).GetAnim (hitAnim, Math.round(card.xOri), Math.round(card.yOri), false, renderMode);
+	if (GameStateCardBattle.rotateBattle)
+		hitAnim.rotation = -90;
+	if(card.isBoss)
+		hitAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);	
+	
+	var hitEff = new SimulateAnimEffect(card.GetDisplayCard(), hitAnim, 330, dependAnim);
+	hitEff.AddEffectListener(function OnFinishHideEffect(arr)
+					{
+						trace("DianaSkill hitEff remove effect " + i);
+						sCurLayer.remove(hitAnim);
+						
+						if(i == defender.length - 1)
+							sCurState.nextStep = true;
+					});						
+	hitEff.Init();
+	endEff.push(hitEff);
+	
+	dependAnim.AddEffectListener(function OnFinishHideEffect(arr)
+		{
+			Sound.GetSound("Diana_passive_oc.wav").Play();	
+			func();
+			sCurLayer.add(atkAnim);						
+			sCurState.AddScript(atkEff);
+			sCurLayer.add(hitAnim);
+			sCurState.AddScript(hitEff);
+			attacker.GetDisplayCard().SetOpacity(1.0);
+			trace("DianaSkill add effect " + i);
+		});
+	// Actuate.tween (shootanim, 0.2, {}, false).delay (0.2*i).onComplete (function():Void
+	// {
+		// hitEff.SetDependEffect(null);
+	// }, []);
+	i++;
+	dependAnim = hitEff;
+}
+trace("@@@@@@@@i " + i);
+
+return endEff;

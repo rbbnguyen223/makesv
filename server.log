@@ -1,0 +1,117 @@
+2026-09-25 11:49:15,173 [INFO] Starting LMHB Dual Server v3.9.7 (HTTP: 80, TCP: 8888)...
+2026-09-25 11:49:15,208 [INFO] TCP Game Server đang lắng nghe trên 0.0.0.0:8888
+2026-09-25 11:50:34,785 [INFO] [Gateway] func=listS | params={'func': 'listS', 'version': '2.1.1', 'la': 'VN'}
+2026-09-25 11:50:34,787 [INFO] [HTTP] GET /lmadmin/gateway2.php host=lienminh.g6-mobile.zing.vn -> 200
+2026-09-25 11:50:37,114 [WARNING] [CDN MISS] changehero.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:50:37,114 [INFO] [HTTP] GET /cdn/2.1.1/android/changehero.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:50:37,193 [WARNING] [CDN MISS] event_2_9.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:50:37,193 [INFO] [HTTP] GET /cdn/2.1.1/android/event_2_9.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:50:37,315 [WARNING] [CDN MISS] event_8_3.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:50:37,315 [INFO] [HTTP] GET /cdn/2.1.1/android/event_8_3.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:50:37,446 [WARNING] [CDN MISS] event_14_2.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:50:37,446 [INFO] [HTTP] GET /cdn/2.1.1/android/event_14_2.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:50:37,521 [WARNING] [CDN MISS] event_firstpayment.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:50:37,521 [INFO] [HTTP] GET /cdn/2.1.1/android/event_firstpayment.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:50:37,647 [WARNING] [CDN MISS] eventtrungthu.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:50:37,647 [INFO] [HTTP] GET /cdn/2.1.1/android/eventtrungthu.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:50:37,719 [WARNING] [CDN MISS] event_bingo.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:50:37,720 [INFO] [HTTP] GET /cdn/2.1.1/android/event_bingo.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:50:37,845 [WARNING] [CDN MISS] event_30_4.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:50:37,846 [INFO] [HTTP] GET /cdn/2.1.1/android/event_30_4.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:50:37,920 [WARNING] [CDN MISS] event_bufftet.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:50:37,921 [INFO] [HTTP] GET /cdn/2.1.1/android/event_bufftet.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:50:38,050 [WARNING] [CDN MISS] event_general_item.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:50:38,051 [INFO] [HTTP] GET /cdn/2.1.1/android/event_general_item.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:50:38,120 [WARNING] [CDN MISS] changehero_eff.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:50:38,121 [INFO] [HTTP] GET /cdn/2.1.1/android/changehero_eff.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:50:38,248 [WARNING] [CDN MISS] event_yasuo_underworld.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:50:38,248 [INFO] [HTTP] GET /cdn/2.1.1/android/event_yasuo_underworld.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:50:38,325 [WARNING] [CDN MISS] event_banner.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:50:38,325 [INFO] [HTTP] GET /cdn/2.1.1/android/event_banner.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:50:38,457 [WARNING] [CDN MISS] event_ui.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:50:38,457 [INFO] [HTTP] GET /cdn/2.1.1/android/event_ui.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:50:38,556 [WARNING] [CDN MISS] event_gacha.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:50:38,556 [INFO] [HTTP] GET /cdn/2.1.1/android/event_gacha.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:50:43,033 [INFO] [TCP #1] Client kết nối từ: ('127.0.0.1', 22987)
+2026-09-25 11:50:43,034 [INFO] [TCP #1] Handshake hoàn tất (0x63)!
+2026-09-25 11:50:43,034 [INFO] [TCP #1] PUSHED session packet to client
+2026-09-25 11:50:43,329 [INFO] [TCP #1] REQ: cmd=0x01 | req_cmd='register' | map={'cmd': 'register', 'ver': '2.1.1', 'did': '3587103607882432-null0', 'lgp': 168, 'hid': 1, 'typ': 1, 'rers': '', 'osver': 'unknown', 'dev': 'SAMSUNG SM-S9470', 'fir': 'REL', 'con': 'WIFI', 'car': 'Viettel Telecom', 'rers2': 'GLOBAL_ANDROID', 'la': 'VN', 'pig': '3587103607882432-null0'}
+2026-09-25 11:50:43,330 [INFO] [TCP #1] RESP: Gửi phản hồi thành công cho 'register'
+2026-09-25 11:50:43,831 [INFO] [TCP #1] RESP: PUSHED flat 'loginGame'
+2026-09-25 11:51:09,941 [INFO] [Gateway] func=listS | params={'func': 'listS', 'version': '2.1.1', 'la': 'VN'}
+2026-09-25 11:51:09,941 [INFO] [HTTP] GET /lmadmin/gateway2.php host=lienminh.g6-mobile.zing.vn -> 200
+2026-09-25 11:51:13,599 [WARNING] [CDN MISS] changehero.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:51:13,600 [INFO] [HTTP] GET /cdn/2.1.1/android/changehero.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:51:13,691 [WARNING] [CDN MISS] event_2_9.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:51:13,692 [INFO] [HTTP] GET /cdn/2.1.1/android/event_2_9.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:51:13,767 [WARNING] [CDN MISS] event_8_3.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:51:13,767 [INFO] [HTTP] GET /cdn/2.1.1/android/event_8_3.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:51:13,897 [WARNING] [CDN MISS] event_14_2.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:51:13,898 [INFO] [HTTP] GET /cdn/2.1.1/android/event_14_2.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:51:13,974 [WARNING] [CDN MISS] event_firstpayment.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:51:13,974 [INFO] [HTTP] GET /cdn/2.1.1/android/event_firstpayment.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:51:14,102 [WARNING] [CDN MISS] eventtrungthu.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:51:14,103 [INFO] [HTTP] GET /cdn/2.1.1/android/eventtrungthu.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:51:14,173 [WARNING] [CDN MISS] event_bingo.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:51:14,174 [INFO] [HTTP] GET /cdn/2.1.1/android/event_bingo.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:51:14,303 [WARNING] [CDN MISS] event_30_4.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:51:14,303 [INFO] [HTTP] GET /cdn/2.1.1/android/event_30_4.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:51:14,376 [WARNING] [CDN MISS] event_bufftet.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:51:14,376 [INFO] [HTTP] GET /cdn/2.1.1/android/event_bufftet.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:51:14,500 [WARNING] [CDN MISS] event_general_item.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:51:14,501 [INFO] [HTTP] GET /cdn/2.1.1/android/event_general_item.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:51:14,610 [WARNING] [CDN MISS] changehero_eff.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:51:14,611 [INFO] [HTTP] GET /cdn/2.1.1/android/changehero_eff.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:51:14,731 [WARNING] [CDN MISS] event_yasuo_underworld.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:51:14,731 [INFO] [HTTP] GET /cdn/2.1.1/android/event_yasuo_underworld.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:51:14,846 [WARNING] [CDN MISS] event_banner.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:51:14,846 [INFO] [HTTP] GET /cdn/2.1.1/android/event_banner.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:51:14,964 [WARNING] [CDN MISS] event_ui.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:51:14,964 [INFO] [HTTP] GET /cdn/2.1.1/android/event_ui.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:51:15,074 [WARNING] [CDN MISS] event_gacha.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:51:15,074 [INFO] [HTTP] GET /cdn/2.1.1/android/event_gacha.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:51:20,654 [INFO] [TCP #2] Client kết nối từ: ('127.0.0.1', 23041)
+2026-09-25 11:51:20,654 [INFO] [TCP #2] Handshake hoàn tất (0x63)!
+2026-09-25 11:51:20,654 [INFO] [TCP #2] PUSHED session packet to client
+2026-09-25 11:51:20,949 [INFO] [TCP #2] REQ: cmd=0x01 | req_cmd='register' | map={'cmd': 'register', 'ver': '2.1.1', 'did': '3587103607882432-null0', 'lgp': 168, 'hid': 1, 'typ': 1, 'rers': '', 'osver': 'unknown', 'dev': 'SAMSUNG SM-S9470', 'fir': 'REL', 'con': 'WIFI', 'car': 'Viettel Telecom', 'rers2': 'GLOBAL_ANDROID', 'la': 'VN', 'pig': '3587103607882432-null0'}
+2026-09-25 11:51:20,950 [INFO] [TCP #2] RESP: Gửi phản hồi thành công cho 'register'
+2026-09-25 11:51:21,452 [INFO] [TCP #2] RESP: PUSHED flat 'loginGame'
+2026-09-25 11:57:54,086 [INFO] [Gateway] func=listS | params={'func': 'listS', 'version': '2.1.1', 'la': 'VN'}
+2026-09-25 11:57:54,086 [INFO] [HTTP] GET /lmadmin/gateway2.php host=lienminh.g6-mobile.zing.vn -> 200
+2026-09-25 11:57:56,516 [WARNING] [CDN MISS] changehero.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:57:56,516 [INFO] [HTTP] GET /cdn/2.1.1/android/changehero.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:57:56,589 [WARNING] [CDN MISS] event_2_9.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:57:56,590 [INFO] [HTTP] GET /cdn/2.1.1/android/event_2_9.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:57:56,707 [WARNING] [CDN MISS] event_8_3.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:57:56,707 [INFO] [HTTP] GET /cdn/2.1.1/android/event_8_3.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:57:56,817 [WARNING] [CDN MISS] event_14_2.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:57:56,818 [INFO] [HTTP] GET /cdn/2.1.1/android/event_14_2.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:57:56,941 [WARNING] [CDN MISS] event_firstpayment.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:57:56,941 [INFO] [HTTP] GET /cdn/2.1.1/android/event_firstpayment.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:57:57,017 [WARNING] [CDN MISS] eventtrungthu.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:57:57,017 [INFO] [HTTP] GET /cdn/2.1.1/android/eventtrungthu.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:57:57,141 [WARNING] [CDN MISS] event_bingo.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:57:57,142 [INFO] [HTTP] GET /cdn/2.1.1/android/event_bingo.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:57:57,217 [WARNING] [CDN MISS] event_30_4.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:57:57,217 [INFO] [HTTP] GET /cdn/2.1.1/android/event_30_4.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:57:57,340 [WARNING] [CDN MISS] event_bufftet.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:57:57,341 [INFO] [HTTP] GET /cdn/2.1.1/android/event_bufftet.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:57:57,452 [WARNING] [CDN MISS] event_general_item.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:57:57,452 [INFO] [HTTP] GET /cdn/2.1.1/android/event_general_item.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:57:57,572 [WARNING] [CDN MISS] changehero_eff.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:57:57,572 [INFO] [HTTP] GET /cdn/2.1.1/android/changehero_eff.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:57:57,686 [WARNING] [CDN MISS] event_yasuo_underworld.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:57:57,686 [INFO] [HTTP] GET /cdn/2.1.1/android/event_yasuo_underworld.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:57:57,806 [WARNING] [CDN MISS] event_banner.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:57:57,806 [INFO] [HTTP] GET /cdn/2.1.1/android/event_banner.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:57:57,914 [WARNING] [CDN MISS] event_ui.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:57:57,914 [INFO] [HTTP] GET /cdn/2.1.1/android/event_ui.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:57:58,040 [WARNING] [CDN MISS] event_gacha.single.png -> PNG trắng 512x512 (mode=blank512)
+2026-09-25 11:57:58,040 [INFO] [HTTP] GET /cdn/2.1.1/android/event_gacha.single.png host=lienminh.static.g6.zing.vn -> 200
+2026-09-25 11:58:02,831 [INFO] [TCP #3] Client kết nối từ: ('127.0.0.1', 23989)
+2026-09-25 11:58:02,831 [INFO] [TCP #3] Handshake hoàn tất (0x63)!
+2026-09-25 11:58:02,831 [INFO] [TCP #3] PUSHED session packet to client
+2026-09-25 11:58:03,125 [INFO] [TCP #3] REQ: cmd=0x01 | req_cmd='register' | map={'cmd': 'register', 'ver': '2.1.1', 'did': '3587103607882432-null0', 'lgp': 168, 'hid': 1, 'typ': 1, 'rers': '', 'osver': 'unknown', 'dev': 'SAMSUNG SM-S9470', 'fir': 'REL', 'con': 'WIFI', 'car': 'Viettel Telecom', 'rers2': 'GLOBAL_ANDROID', 'la': 'VN', 'pig': '3587103607882432-null0'}
+2026-09-25 11:58:03,126 [INFO] [TCP #3] RESP: Gửi phản hồi thành công cho 'register'
+2026-09-25 11:58:03,626 [INFO] [TCP #3] RESP: PUSHED flat 'loginGame'
+2026-09-25 12:03:03,627 [INFO] [TCP #3] Đóng kết nối (TimeoutError)

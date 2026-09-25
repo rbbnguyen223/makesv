@@ -1,0 +1,86 @@
+var atkX = 0;
+var atkY = 0;
+var card = defender[0];
+if(attacker.GetFormation().IsPlayer())
+{
+	atkX = card.xOri;
+	atkY = card.yOri + (card.GetDisplayCard().height/2 + attacker.GetDisplayCard().height/2) - 10 + 80;
+}
+else
+{
+	atkX = card.xOri;
+	atkY = card.yOri - (card.GetDisplayCard().height/2 + attacker.GetDisplayCard().height/2) - 80;
+}
+
+attacker.GetDisplayCard().moveToTop ();
+attacker.GetDisplayCard().x = atkX;
+attacker.GetDisplayCard().y = atkY;		
+
+attacker.isLocked = true;	
+
+var jumpAnim = Resource.getSprite(spriteId).GetAnim (jumpAnimId, Std_int(atkX), Std_int(atkY), false, renderMode);
+	
+var jumpEff = new SimulateAnimEffect(attacker.GetDisplayCard(), jumpAnim, jumpTime - 100, null);
+jumpEff.Init();
+sCurState.AddScript(jumpEff);
+
+var jumpMoving = new MovingEffect(attacker.GetDisplayCard(), 0, (attacker.GetFormation().IsPlayer() ? -70:70), jumpTime, null);
+jumpMoving.Init();
+sCurState.AddScript(jumpMoving);
+
+var moveAnim = Resource.getSprite(spriteId).GetAnim (attacker.GetFormation().IsPlayer()?moveUpAnimId:moveDownAnimId, Std_int(atkX), Std_int(atkY) + (attacker.GetFormation().IsPlayer() ? -50:50), false, renderMode);
+	
+var moveEff = new SimulateAnimEffect(attacker.GetDisplayCard(), moveAnim, moveTime, jumpMoving);
+jumpMoving.AddEffectListener(function OnFinishHideEffect(arr)
+{
+	sCurLayer.add(moveAnim);
+});
+moveEff.AddEffectListener(function OnFinishHideEffect(arr)
+{
+	sCurLayer.remove(moveAnim);
+	attacker.ResetPosition();
+});
+moveEff.Init();
+sCurState.AddScript(moveEff);
+
+var endEff = [];
+
+var i = 0;
+var lastEff = null;
+for(card in defender)
+{
+	var hitAnim = Resource.getSprite(spriteId).GetAnim (hitAnimId, Std_int(card.xOri), Std_int(card.yOri), false, renderMode);
+	if(card.isBoss)
+		hitAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);	
+	var hitEff = new SimulateAnimEffect(card.GetDisplayCard(), hitAnim, hitTime, moveEff);
+	hitEff.AddEffectListener(function OnFinishHideEffect(arr)
+	{
+		trace("DianaSkill hitEff remove effect " + i);
+		sCurLayer.remove(hitAnim);
+	});						
+	hitEff.Init();
+	sCurState.AddScript(hitEff);
+	
+	var cbUpdate = null;
+	cbUpdate = function(obj){
+		if(moveEff.TimeRemaining() < waitTime)
+		{
+			// sCurState.nextStep = true;
+			sCurLayer.add(hitAnim);
+			hitEff.SetDependEffect(null);	
+			moveEff.RemoveCallbackPerUpdate(cbUpdate);
+			Sound.GetSound(sound).Play();	
+		}
+	};
+	moveEff.AddCallbackPerUpdate(cbUpdate);
+
+	endEff.push(hitEff);
+	lastEff = hitEff;
+	i++;
+}
+
+lastEff.AddEffectListener(function OnFinishHideEffect(arr)
+{
+	attacker.isLocked = false;
+});
+endEff

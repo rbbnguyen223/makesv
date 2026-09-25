@@ -1,0 +1,185 @@
+var shootanim = Resource.getSprite(spriteId).GetAnim (castAnim, attacker.xOri, attacker.yOri, false, renderMode);
+// shootanim.useBlendMode = true;
+sCurLayer.add(shootanim);
+var shooteffect = new SimulateAnimEffect(attacker.GetDisplayCard(), shootanim, 330);
+shooteffect.Init();
+shooteffect.SetEffectListener(function (arr) 
+							{
+								sCurLayer.remove(shootanim);
+							});
+sCurState.AddScript(shooteffect);
+
+var endEffect = [];
+var hitAnimArray = [];
+var setcb = true;
+var map = EffectBattleFactory.CreateMap();
+var lastData = null;
+
+for(card in defender)
+{	
+	var anim = null;
+	if(lastData == null)
+	{
+		var arrow = Resource.getSprite(spriteId).GetAnim(travAnim, attacker.xOri, attacker.yOri, true, renderMode);	
+		arrow.SetRotate(AngleBetweenCards(attacker, card) + 90);
+		arrow.SetOpacity(0);
+		// arrow.useBlendMode = true;
+		sCurLayer.add(arrow);	
+		
+		var showeff = new OpacityEffect(arrow, 1, 50, null);
+		showeff.Init();
+		sCurState.AddScript(showeff);
+		
+		var meff = new MovingEffect(arrow, card.xOri - attacker.xOri,card.yOri - attacker.yOri, 500, null);
+		meff.SetEffectListener(OnFinishHideEffect);
+		meff.Init();
+		sCurState.AddScript(meff);
+		
+		var arrowAnim = new AnimEffect(false, arrow, 1100, null, false);
+		arrowAnim.Init();
+		sCurState.AddScript(arrowAnim);	
+		
+		showeff.SetTimeDuration(10);
+		meff.SetTimeDuration(1100);
+		
+		var hitAnim = Resource.getSprite(spriteId).GetAnim (hitAnim, card.xOri, card.yOri, false, renderMode);
+		if (GameStateCardBattle.rotateBattle)
+			hitAnim.rotation = -90;
+		if(card.isBoss)
+			hitAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);
+		
+		anim = new SimulateAnimEffect(card.GetDisplayCard(), hitAnim, 666, meff);			
+		anim.AddEffectListener(function (arr)
+						{
+							sCurLayer.remove(hitAnim);
+						});
+		anim.Init();
+		
+		meff.AddEffectListener(function (arr)
+						{
+							sCurState.RemoveScript(arrowAnim);	
+							sCurLayer.add(hitAnim);
+							Sound.GetSound(sound).Play();
+						});
+		sCurState.AddScript(anim);
+		lastData = {lastcard:card, manim:meff, arrow:arrow, arrowAnim:arrowAnim, heffect:anim};	
+	}else if(lastData.lastcard.mCard.GetUniqueId() == card.mCard.GetUniqueId())
+	{
+		var atkP = new gPoint(attacker.xOri, attacker.yOri);
+		var p = new gPoint(card.xOri - attacker.xOri, card.yOri - attacker.yOri);
+		var newP = null;
+		p.normalize(gPoint.distance(new gPoint(card.xOri, card.yOri), atkP) + 200);
+		newP = atkP.add(p);
+			
+		trace("card.xOri " + card.xOri + " card.yOri " + card.yOri);
+		trace("attacker.xOri " + attacker.xOri + " attacker.yOri " + attacker.yOri);
+		trace("p.x " + p.x + " p.y " + p.y);
+		trace("atkP.x " + atkP.x + " atkP.y " + atkP.y);
+		lastData.manim.AddEffectListener(function(e){
+				sCurLayer.add(lastData.arrow);
+				sCurState.AddScript(lastData.arrowAnim);
+			});
+		var firstmeff = new MovingEffect(lastData.arrow, newP.x - card.xOri, newP.y - card.yOri, 300, lastData.manim);
+		firstmeff.Init();
+		sCurState.AddScript(firstmeff);
+		
+		var secondmeff = new MovingEffect(lastData.arrow, card.xOri - newP.x, card.yOri - newP.y, 300, firstmeff);
+		secondmeff.SetEffectListener(OnFinishHideEffect);
+		secondmeff.Init();
+		sCurState.AddScript(secondmeff);
+		trace("11111111111");
+		var hitAnim = Resource.getSprite(spriteId).GetAnim (hitAnim, card.xOri, card.yOri, false, renderMode);
+		if (GameStateCardBattle.rotateBattle)
+			hitAnim.rotation = -90;
+		if(card.isBoss)
+			hitAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);
+		trace("222222222");
+		secondmeff.AddEffectListener(function (arr)
+				{
+					sCurState.RemoveScript(lastData.arrowAnim);	
+					sCurLayer.add(hitAnim);
+					lastData.heffect.Finish();
+				});
+		trace("3333333333");
+		anim = new SimulateAnimEffect(card.GetDisplayCard(), hitAnim, 666, secondmeff);			
+		anim.AddEffectListener(function (arr)
+				{
+					sCurLayer.remove(hitAnim);
+				});
+		anim.Init();
+		sCurState.AddScript(anim);
+		trace("4444444");
+	}else if(lastData.id != card.mCard.GetUniqueId())
+	{
+		lastData.manim.AddEffectListener(function(e){
+				sCurLayer.add(lastData.arrow);
+				sCurState.AddScript(lastData.arrowAnim);
+			});
+		var firstmeff = new MovingEffect(lastData.arrow, card.xOri - lastData.lastcard.xOri, card.yOri - lastData.lastcard.yOri, 300, lastData.manim);
+		firstmeff.Init();
+		sCurState.AddScript(firstmeff);
+		
+		var hitAnim = Resource.getSprite(spriteId).GetAnim (hitAnim, card.xOri, card.yOri, false, renderMode);
+		if (GameStateCardBattle.rotateBattle)
+			hitAnim.rotation = -90;
+		if(lastData.lastcard.isBoss)
+			hitAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);
+		trace("222222222");
+		firstmeff.AddEffectListener(function (arr)
+				{
+					sCurLayer.add(hitAnim);
+				});
+		trace("3333333333");
+		anim = new SimulateAnimEffect(card.GetDisplayCard(), hitAnim, 666, firstmeff);			
+		anim.AddEffectListener(function (arr)
+				{
+					sCurLayer.remove(hitAnim);
+				});
+		anim.Init();
+		sCurState.AddScript(anim);
+		endEffect.push(anim);
+		
+		var secondmeff = new MovingEffect(lastData.arrow, lastData.lastcard.xOri - card.xOri, lastData.lastcard.yOri - card.yOri, 300, firstmeff);
+		secondmeff.SetEffectListener(OnFinishHideEffect);
+		secondmeff.Init();
+		sCurState.AddScript(secondmeff);
+		trace("11111111111");
+		
+		hitAnim = Resource.getSprite(spriteId).GetAnim (hitAnim, lastData.lastcard.xOri, lastData.lastcard.yOri, false, renderMode);
+		if (GameStateCardBattle.rotateBattle)
+			hitAnim.rotation = -90;
+		if(lastData.lastcard.isBoss)
+			hitAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);
+		trace("222222222");
+		secondmeff.AddEffectListener(function (arr)
+				{
+					sCurState.RemoveScript(lastData.arrowAnim);	
+					sCurLayer.add(hitAnim);
+					lastData.heffect.Finish();
+				});
+		trace("3333333333");
+		anim = new SimulateAnimEffect(lastData.lastcard.GetDisplayCard(), hitAnim, 666, secondmeff);			
+		anim.AddEffectListener(function (arr)
+				{
+					sCurLayer.remove(hitAnim);
+				});
+		anim.Init();
+		sCurState.AddScript(anim);
+		trace("4444444");
+	}
+	
+	endEffect.push(anim);
+}
+		// if(setcb == true)
+		// {
+			// var nextstep = true;
+			// anim.AddCallbackPerUpdate(function (arr){
+							// if(anim.TimeRemaining() < waitTime && nextstep)
+							// {
+								// sCurState.nextStep = true;
+								// nextstep = false;
+							// }
+						// });
+			// setcb = false;
+		// }
+return endEffect;

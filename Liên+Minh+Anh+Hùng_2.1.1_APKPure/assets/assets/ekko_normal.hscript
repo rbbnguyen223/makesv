@@ -1,0 +1,86 @@
+var atkAnim = null;		
+var atkEff = null;		
+var endEff = [];
+var hitAnimArray = [];
+var setcb = true;
+var damagedEff = null;
+var Math = Type.resolveClass ("Math");
+// Resource.loadSprite(spriteId);
+for(card in defender)
+{	
+	if(atkAnim == null)
+	{
+		attacker.GetDisplayCard().moveToTop ();
+		if(attacker.GetFormation().IsPlayer())
+		{
+			attacker.GetDisplayCard().x = card.xOri;
+			attacker.GetDisplayCard().y = card.yOri + (card.GetDisplayCard().height/2 + attacker.GetDisplayCard().height/2) - 10;
+		}
+		else
+		{
+			attacker.GetDisplayCard().x = card.xOri;
+			attacker.GetDisplayCard().y = card.yOri - (card.GetDisplayCard().height/2 + attacker.GetDisplayCard().height/2);
+		}	
+		
+		atkAnim = Resource.getSprite(spriteId).GetAnim (atkUpAnim, Math.round(attacker.GetDisplayCard().x), Math.round(attacker.GetDisplayCard().y), false, renderMode);
+		if (!attacker.GetFormation().IsPlayer()) atkAnim.rotation = -180;
+		sCurLayer.add(atkAnim);	
+	
+		atkEff = new SimulateAnimEffect (attacker.GetDisplayCard(), atkAnim, 900);
+		atkEff.AddEffectListener(function OnFinishHideEffect(arr)
+		{
+			sCurLayer.remove(atkAnim);
+			attacker.ResetPosition();
+		});
+		atkEff.Init();
+		sCurState.AddScript(atkEff);
+	}
+	
+	var hitAnim = Resource.getSprite(spriteId).GetAnim (attacker.GetFormation().IsPlayer()?hitUpAnim:hitDownAnim, Math.round(card.xOri), Math.round(card.yOri), false, renderMode);
+	if (GameStateCardBattle.rotateBattle)
+		hitAnim.rotation = -90;
+	if(card.isBoss)
+		hitAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);
+
+	damagedEff = new SimulateAnimEffect(card.GetDisplayCard(), hitAnim, 500, atkEff);
+	damagedEff.AddEffectListener(function OnFinishHideEffect(arr)
+	{
+		sCurLayer.remove(hitAnim);
+	});
+	damagedEff.Init();
+	sCurState.AddScript(damagedEff);	
+	
+	if(setcb == true)
+	{
+		var nextstep = true;
+		damagedEff.AddCallbackPerUpdate(function (arr){
+			if(damagedEff.TimeRemaining() < 50 && nextstep)
+			{
+				sCurState.nextStep = true;
+				nextstep = false;
+			}
+		});
+		setcb = false;
+	}
+	
+	endEff.push(damagedEff);	
+	hitAnimArray.push(hitAnim);
+}
+
+var casted = true;
+atkEff.AddCallbackPerUpdate(function (arr){
+	if(atkEff.TimeRemaining() < 300 && casted)
+	{							
+		casted = false;
+		for(eff in endEff)
+			eff.SetDependEffect(null);	
+		for(anim in hitAnimArray)
+		{
+			sCurLayer.add(anim);
+			anim.moveToTop ();
+		}
+	}
+});
+
+Sound.GetSound(sound).Play();
+return endEff;

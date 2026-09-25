@@ -1,0 +1,1015 @@
+var SmallIcon			= Type.resolveClass ("SmallIcon");
+var DF_BATTLE_UI		= Type.resolveClass ("DF_BATTLE_UI");
+ var PixmaGame		= Type.resolveClass ("PixmaGame");
+
+var define_gfx_icon = null;
+var define_gfx_text = null;
+var sprite_icon = null;
+var sprite_text = null;
+
+if(SoftDefines.gfx_effect_text != null)
+{
+	define_gfx_icon = SoftDefines.gfx_effect_icon;
+	define_gfx_text = SoftDefines.gfx_effect_text;
+	sprite_icon = DF_EFFECT_ICON;
+	sprite_text = DF_EFFECT_TEXT;
+}else
+//if(SoftDefines.gfx_effect_buff_battle != null)
+{
+	define_gfx_icon = SoftDefines.gfx_effect_buff_battle;
+	define_gfx_text = SoftDefines.gfx_effect_buff_battle;
+	sprite_icon = DF_EFFECT_03;
+	sprite_text = DF_EFFECT_03;
+}
+
+var RemoveDebuffEffect = function()
+{
+	for(type in effArr)
+	{	
+		var t = SkillInfo.GetSkillEffectType(type);
+		if(t == 1) //stun
+			cthis.buff_status.isStun = false;
+		else if(t == 2) //armor debuff
+			cthis.buff_status.isArmorDebuff = false;
+		else if(t == 3) //burn
+			cthis.buff_status.isBurned = false;
+		else if(t == 4) //resist magic debuff
+			cthis.buff_status.isMagicDebuff = false;
+		else if(t == 5) //heal hp per turn
+			cthis.buff_status.isPoisoned = false;
+		else if(t == 6) //silent
+			cthis.buff_status.isSilent = false;
+		else if(t == 7) //silent
+			cthis.buff_status.isFear = false;
+		else if(t == 9) //silent
+			cthis.buff_status.isBlind = false;
+		else if(t == 10) //silent
+			cthis.buff_status.isExor = false;
+		else if(t == 12) //silent
+			cthis.buff_status.isBuffDamage = false;
+		else if(t == 13) //silent
+			cthis.buff_status.isShieldBlue = false;
+		else if(t == 14) //silent
+			cthis.buff_status.isDoubleDamage = false;
+		else if(t == 16) //silent
+			cthis.buff_status.isAutoRegen = false;
+		else if(t == 19) //silent
+			cthis.buff_status.isRabbit = false;
+		else if(t == 20) //silent
+			cthis.buff_status.isUndead = false;
+		else if(t == 21) //silent
+			cthis.buff_status.isBleeding = false;				
+		else if(t == 22) //giot mau
+			cthis.buff_status.isAntiHealing = false;
+		//available---
+		else if(t == 23) //silent
+			cthis.buff_status.isInvi = false;
+		else if(t == 24) //silent
+			cthis.buff_status.isPowerUp = false;
+		else if(t == 25) //silent
+			cthis.buff_status.isDecoy = false;
+		else if(t == 26) //bong ma
+			cthis.buff_status.isMarking = false;
+		else if(t == 46)//taunt, shen
+			cthis.buff_status.isTaunt = false;
+		else if(t == 50)//yi ulti
+			cthis.buff_status.immuneMagicYi = false;
+		else if(t == 51)//taunt, shen
+			cthis.buff_status.unbreakableAlistar = false;
+		else if(t == 53)//mushroomBuff
+			cthis.buff_status.mushroomBuff = false;
+		else if(t == 54)//mushroomBuff
+			cthis.buff_status.magicArmor = false;
+		else if(t == 55)//mushroomBuff
+			cthis.buff_status.hattung = false;
+		else if(t == 56)//mushroomBuff
+			cthis.buff_status.boom = false;
+		else if(t == 57) //silent
+			cthis.buff_status.isShieldRed = false;
+		else if(t == 58) //silent
+			cthis.buff_status.isShieldYellow = false;
+		else if(t == 59) //silent
+			cthis.buff_status.isShieldWhite = false;
+		else if(t == 60)//taunt, shen
+			cthis.buff_status.kayleUtil = false;
+		else if(t == 61)//taunt, shen
+			cthis.buff_status.taricUtil = false;
+		else if(t == 62)//taunt, shen
+			cthis.buff_status.wukongUtil = false;
+		else if(t == 63)//taunt, shen
+			cthis.buff_status.taricBuff = false;
+		else if(t == 64)//taunt, shen
+			cthis.buff_status.gnarRage = false;
+		else if(t == 65)//taunt, shen
+		{
+			cthis.buff_status.vayneBuff = false;
+			cthis.buff_status.vayneActiveSkill = false;
+		}else if(t == 66)//taunt, shen
+		{
+			cthis.buff_status.vayneValentineBuff = false;
+			cthis.buff_status.vayneValentineActiveSkill = false;
+		}else if(t == 67)//ressurect
+			cthis.buff_status.waitRes = false;
+		else if(t == 68) //silent
+			cthis.buff_status.isShieldPurple = false;
+		else if(t == 69) //knockout leesin shield
+			cthis.buff_status.isKnockoutLeesin = false;
+		else if(t == 70) //corki passive
+			cthis.buff_status.isReductDamage = false;
+		else if(t == 71)//yi ulti 3
+			cthis.buff_status.immuneMagicYi3 = false;
+	}			
+}
+trace("333333");
+
+var UpdateBuffStatus = function()
+{			
+	if(cthis.buffObject != null)
+		cthis.buffObject.removeAllChildren();
+	else	
+	{
+		cthis.buffObject = new DisplayObject();
+		cthis.buffObject.x = -70;
+		cthis.buffObject.y = 160;
+		cthis.GetDisplayCard().addChild(cthis.buffObject);	
+	}
+	if(cthis.frontbuffObject != null)
+		cthis.frontbuffObject.removeAllChildren();
+	else	
+	{
+		cthis.frontbuffObject = new DisplayObject();
+		cthis.frontbuffObject.x = -70;
+		cthis.frontbuffObject.y = 160;
+		cthis.GetDisplayCard().addChild(cthis.frontbuffObject);
+	}
+	if(cthis.backbuffObject != null)
+		cthis.backbuffObject.removeAllChildren();
+	else	
+	{
+		cthis.backbuffObject = new DisplayObject();
+		cthis.backbuffObject.x = -70;
+		cthis.backbuffObject.y = 160;
+		cthis.GetDisplayCard().addChild(cthis.backbuffObject);
+		cthis.GetDisplayCard().setChildIndex (cthis.backbuffObject, 0);
+	}
+	if(cthis.effectObjects != null)	
+	{
+		for(obj in cthis.effectObjects)
+			EffectBattleFactory.sCurState.textLayer.remove(obj);
+		cthis.effectObjects = [];
+	}
+	trace("UpdateBuffStatus: " + cthis.buff_status);
+	var index = 0;
+	if(cthis.buff_status.isStun)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_choang, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isArmorDebuff)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_phagiap_01, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isBurned)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_thieudot, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isMagicDebuff)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_phagiap_02, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isPoisoned)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_trungdoc, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isSilent)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_camlang, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isFear)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_sohai, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isBlind)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_mu, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isExor)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_amanh, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isBuffDamage)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_tangsucmanh, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isReductDamage)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (17/* sprite_icon.frame_icon_giamsucmanh */, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isShieldBlue)
+	{
+		var anim = Resource.getSprite(SoftDefines.gfx_effect_shield_light).GetAnim (0, 70, -160, true, cthis.renderMode);
+		anim.Scale(3.0, 3.0);
+		cthis.buffObject.addChild(anim);
+	}
+	if(cthis.buff_status.isShieldRed)
+	{
+		var anim = Resource.getSprite(SoftDefines.gfx_effect_shield_light).GetAnim (2, 70, -160, true, cthis.renderMode);
+		anim.Scale(3.0, 3.0);
+		cthis.buffObject.addChild(anim);
+	}
+	if(cthis.buff_status.isShieldYellow)
+	{
+		var anim = Resource.getSprite(SoftDefines.gfx_effect_shield_light).GetAnim (4, 70, -160, true, cthis.renderMode);
+		anim.Scale(3.0, 3.0);
+		cthis.buffObject.addChild(anim);
+	}
+	if(cthis.buff_status.isShieldWhite)
+	{
+		var anim = Resource.getSprite(SoftDefines.gfx_effect_shield_light).GetAnim (6, 70, -160, true, cthis.renderMode);
+		anim.Scale(3.0, 3.0);
+		cthis.buffObject.addChild(anim);
+	}
+	if(cthis.buff_status.isShieldPurple)
+	{
+		var anim = Resource.getSprite(SoftDefines.gfx_effect_shield_light).GetAnim (8, 70, -160, true, cthis.renderMode);
+		anim.Scale(3.0, 3.0);
+		cthis.buffObject.addChild(anim);
+	}
+	if(cthis.buff_status.isKnockoutLeesin)
+	{
+		var func = function(){
+			cthis.buff_status.isKnockoutLeesin = false;
+
+			var fanim = Resource.getSprite("GFX_KNOCKOUT_LEE_SIN", true).GetAnim (0, 70, -160, false);
+			cthis.frontbuffObject.addChild(fanim);
+
+			var animEff = new AnimEffect(false, fanim, 1000, null, false);	
+			animEff.Init();
+			cthis.mParentFormation.AddScript(animEff);
+			animEff.AddEffectListener(function (arr){
+				cthis.frontbuffObject.removeChild(fanim);
+			});		
+		};
+		if(effFollow != null)
+			effFollow.AddEffectListener(function(arr) { func(); });
+		else
+			func();
+	}
+	if(cthis.buff_status.isDoubleDamage)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_songkiem, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isAutoRegen)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_cocquy, index *40, 0));
+		index++;
+	}	
+	if(cthis.buff_status.magicArmor)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_text).GetFrame (sprite_text.frame_giapmathuat, index *40, 0));
+		index++;
+	}		
+	if(cthis.buff_status.hattung)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_text).GetFrame (sprite_text.frame_hattung, index *40, 0));
+		index++;
+	}		
+	if(cthis.buff_status.boom)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_text).GetFrame (sprite_text.frame_no, index *40, 0));
+		index++;
+	}	
+	if(cthis.buff_status.isRabbit)
+	{
+		var func = function(){
+			var anim = Resource.getSprite(SoftDefines.gfx_effect_rabbit).GetAnim (0, 70, -160, false);
+			cthis.buffObject.addChild(anim);
+			var animEff = new AnimEffect(false, anim, 2000, null, false);	
+			animEff.Init();
+			cthis.mParentFormation.AddScript(animEff);
+			animEff.AddEffectListener(function (arr){	
+						cthis.buffObject.removeChild(anim);
+						cthis.buffObject.addChild(Resource.getSprite(SoftDefines.gfx_effect_rabbit).GetAnim (1, 70, -160, true));
+					});				
+		};
+		if(effFollow != null){
+			effFollow.AddEffectListener(function(arr)
+				{
+					func();
+				});
+		}else
+			func();
+	}
+	if(cthis.buff_status.immuneMagicYi || cthis.buff_status.immuneMagicYi3)
+	{
+		var func = function (spriteId, animId)
+		{
+			Sound.GetSound(Sound.SOUND_MASTER_YI_UTIL).Play();
+			Resource.loadSprite (spriteId);
+			var anim = Resource.getSprite(spriteId).GetAnim (animId, 70, -210, true);
+			cthis.frontbuffObject.addChild(anim);
+			
+			var focusBg = EffectBattleFactory.FocusCard(cthis);
+			cthis.isLocked = true;	
+			cthis.GetDisplayCard().moveToTop();
+			Actuate.tween (cthis.GetDisplayCard(), 1.0, {}, false).onComplete (function()
+			{
+				trace("hide bg focus");
+				cthis.isLocked = false;
+				EffectBattleFactory.sCurLayer.remove(focusBg);
+			});
+		};
+		var spriteId = "GFX_EFFECT_MASTERYI_UTIL";
+		var animId = 0;
+		if (cthis.buff_status.immuneMagicYi3)
+		{
+			spriteId = "GFX_ATTACK_04_YI_03";
+			animId = 2;
+		}
+		if (effFollow != null)
+		{
+			effFollow.AddEffectListener(function(arr)
+			{
+				func (spriteId, animId);
+			});
+		}
+		else func (spriteId, animId);
+	}
+	if(cthis.buff_status.unbreakableAlistar)
+	{
+		var func = function(){
+			Sound.GetSound(Sound.SOUND_ALISTAR_UTIL).Play();
+			var anim = Resource.getSprite(SoftDefines.gfx_effect_alistar_util).GetAnim (1, 70, -160, true);
+			anim.Scale(1.2, 1.2);
+			cthis.backbuffObject.addChild(anim);
+			
+			trace("bg focus");
+			var focusBg = EffectBattleFactory.FocusCard(cthis);
+			cthis.isLocked = true;	
+			cthis.GetDisplayCard().moveToTop();
+			Actuate.tween (cthis.GetDisplayCard(), 1.0, {alpha:1}, false).onComplete (function()
+				{
+					trace("hide bg focus");
+					cthis.isLocked = false;
+					EffectBattleFactory.sCurLayer.remove(focusBg);
+				});
+		};
+		if(effFollow != null){
+			effFollow.AddEffectListener(function(arr)
+				{
+					func();
+				});
+		}else
+			func();
+	}	
+	if(cthis.buff_status.kayleUtil)
+	{
+		var func = function(){
+			Sound.GetSound(Sound.SOUND_ALISTAR_UTIL).Play();
+			var banim = Resource.getSprite(SoftDefines.gfx_effect_kayle_util).GetAnim (0, 70, -160, true);
+			banim.Scale(1.5, 1.5);
+			cthis.backbuffObject.addChild(banim);
+			
+			var fanim = Resource.getSprite(SoftDefines.gfx_effect_kayle_util).GetAnim (1, 70, -160, true);
+			fanim.Scale(1.5, 1.5);
+			cthis.frontbuffObject.addChild(fanim);
+			
+			var focusBg = EffectBattleFactory.FocusCard(cthis);
+			cthis.isLocked = true;	
+			cthis.GetDisplayCard().moveToTop();
+			Actuate.tween (cthis.GetDisplayCard(), 1.0, {alpha:1}, false).onComplete (function()
+				{
+					cthis.isLocked = false;
+					EffectBattleFactory.sCurLayer.remove(focusBg);
+				});
+		};
+		if(effFollow != null){
+			effFollow.AddEffectListener(function(arr)
+				{
+					func();
+				});
+		}else
+			func();
+	}	
+	if(cthis.buff_status.taricUtil)
+	{
+		var func = function(){
+			cthis.buff_status.taricUtil = false;
+			Sound.GetSound(Sound.SOUND_ALISTAR_UTIL).Play();
+			
+			var focusBg = EffectBattleFactory.FocusCard(cthis);
+			cthis.isLocked = true;	
+			cthis.GetDisplayCard().moveToTop();
+			
+			var fanim = Resource.getSprite(SoftDefines.gfx_effect_skill_bufff).GetAnim (0, 70, -160, false);
+			fanim.Scale(1.5, 1.5);
+			cthis.frontbuffObject.addChild(fanim);
+
+			var animEff = new AnimEffect(false, fanim, 1000, null, false);	
+			animEff.Init();
+			cthis.mParentFormation.AddScript(animEff);
+			animEff.AddEffectListener(function (arr){	
+						cthis.frontbuffObject.removeChild(fanim);
+						cthis.isLocked = false;
+						EffectBattleFactory.sCurLayer.remove(focusBg);
+					});		
+		};
+		if(effFollow != null){
+			effFollow.AddEffectListener(function(arr)
+				{
+					func();
+				});
+		}else
+			func();
+	}		
+	if(cthis.buff_status.taricBuff)
+	{
+		var func = function(){
+			cthis.buff_status.taricBuff = false;
+			// cthis.isLocked = true;	
+
+			var fanim = Resource.getSprite(SoftDefines.gfx_effect_skill_bufff).GetAnim (0, 70, -160, false);
+			fanim.Scale(1.5, 1.5);
+			cthis.frontbuffObject.addChild(fanim);
+
+			var animEff = new AnimEffect(false, fanim, 1000, null, false);	
+			animEff.Init();
+			cthis.mParentFormation.AddScript(animEff);
+			animEff.AddEffectListener(function (arr){	
+						cthis.frontbuffObject.removeChild(fanim);
+						// cthis.isLocked = false;
+					});		
+		};
+		if(effFollow != null){
+			effFollow.AddEffectListener(function(arr)
+				{
+					func();
+				});
+		}else
+			func();
+	}		
+	if(cthis.buff_status.vayneBuff)
+	{
+		var func = function(){
+			cthis.buff_status.vayneBuff = false;
+			// Sound.GetSound(Sound.SOUND_ALISTAR_UTIL).Play();
+			
+			var focusBg = EffectBattleFactory.FocusCard(cthis);
+			cthis.isLocked = true;	
+			cthis.GetDisplayCard().moveToTop();
+			
+			var fanim = Resource.getSprite(SoftDefines.gfx_effect_vayne_skill).GetAnim (9, 70, -160, false);
+			fanim.Scale(1.5, 1.5);
+			cthis.frontbuffObject.addChild(fanim);
+
+			var animEff = new AnimEffect(false, fanim, 1000, null, false);	
+			animEff.Init();
+			cthis.mParentFormation.AddScript(animEff);
+			animEff.AddEffectListener(function (arr){	
+						cthis.frontbuffObject.removeChild(fanim);
+						cthis.isLocked = false;
+						EffectBattleFactory.sCurLayer.remove(focusBg);
+					});						
+		};
+		if(effFollow != null){
+			effFollow.AddEffectListener(function(arr)
+				{
+					func();
+				});
+		}else
+			func();
+	}	
+	if(cthis.buff_status.vayneValentineBuff)
+	{
+		var func = function(){	
+			cthis.buff_status.vayneValentineBuff = false;
+			// Sound.GetSound(Sound.SOUND_ALISTAR_UTIL).Play();
+			
+			var focusBg = EffectBattleFactory.FocusCard(cthis);
+			cthis.isLocked = true;	
+			cthis.GetDisplayCard().moveToTop();
+			
+			var fanim = Resource.getSprite(SoftDefines.gfx_effect_vayne_skill).GetAnim (22, 70, -160, false);
+			fanim.Scale(1.5, 1.5);
+			cthis.frontbuffObject.addChild(fanim);
+
+			var animEff = new AnimEffect(false, fanim, 1000, null, false);	
+			animEff.Init();
+			cthis.mParentFormation.AddScript(animEff);
+			animEff.AddEffectListener(function (arr){	
+						cthis.frontbuffObject.removeChild(fanim);
+						cthis.isLocked = false;
+						EffectBattleFactory.sCurLayer.remove(focusBg);
+					});						
+		};
+		if(effFollow != null){
+			effFollow.AddEffectListener(function(arr)
+				{
+					func();
+				});
+		}else
+			func();
+	}	
+	if(cthis.buff_status.wukongUtil)
+	{
+		var func = function(){
+			Sound.GetSound(Sound.SOUND_ALISTAR_UTIL).Play();
+			
+			var focusBg = EffectBattleFactory.FocusCard(cthis);
+			cthis.isLocked = true;	
+			cthis.GetDisplayCard().moveToTop();
+			
+			var fanim = Resource.getSprite(SoftDefines.gfx_wukong_skill).GetAnim (0, 70, -160, false);
+			// fanim.Scale(1.5, 1.5);
+			cthis.frontbuffObject.addChild(fanim);
+
+			var animEff = new AnimEffect(false, fanim, 1000, null, false);	
+			animEff.Init();
+			cthis.mParentFormation.AddScript(animEff);
+			animEff.AddEffectListener(function (arr){	
+					cthis.frontbuffObject.removeChild(fanim);
+					cthis.isLocked = false;
+					EffectBattleFactory.sCurLayer.remove(focusBg);
+					
+					var rod = Resource.getSprite(SoftDefines.gfx_wukong_skill).GetAnim (3, 0, 230, true);
+					EffectBattleFactory.sCurState.textLayer.add(rod);
+					if(cthis.GetFormation().IsPlayer())
+						rod.y = -230;	
+
+					cthis.effectObjects.push(rod);
+				});		
+		};
+		if(effFollow != null){
+			effFollow.AddEffectListener(function(arr)
+				{
+					func();
+				});
+		}else
+			func();
+	}	
+
+	var rage = cthis.mDisplayCard != null ? cthis.mDisplayCard.getChildByName("rage"):null;
+	if(cthis.buff_status.gnarRage && rage == null)
+	{
+		trace("111111111111111");
+		cthis.isLocked = true;	
+		var func = function(){
+			var frame = new SmallIcon (cthis.mCard, 0, 0, {type:3});
+			frame.name = "rage";
+			var rage = Resource.getSprite(SoftDefines.gfx_effect_gnar_rage).GetFrame (0, 0, 0);
+			frame.addChild(rage);
+			frame.alpha = 0;
+			frame.setChildIndex(rage, frame.getChildIndex(frame.iconFrame));
+			frame.removeChild(frame.iconFrame);
+			cthis.mDisplayCard.addChild(frame);	
+			var oriScaleX = frame.scaleX;
+			var oriScaleY = frame.scaleY;
+			Actuate.tween (frame, 0.3, {scaleX:oriScaleX + 0.5, scaleY:oriScaleY + 0.5}, false).onComplete (function()	
+			{
+				frame.alpha = 1.0;
+				Actuate.tween (frame, 0.2, {scaleX:oriScaleX, scaleY:oriScaleY}, false).onComplete (function()
+				{
+					cthis.isLocked = false;	
+				});
+			});			
+		};
+		if(effFollow != null){
+			effFollow.AddEffectListener(function(arr)
+				{
+					func();
+				});
+		}else
+			func();
+	}else if(cthis.buff_status.gnarRage == false && rage != null)
+	{
+		var func = function(){
+			cthis.isLocked = true;	
+			cthis.mDisplayCard.removeChild(rage);	
+			cthis.isLocked = false;
+		};
+		if(effFollow != null){
+			effFollow.AddEffectListener(function(arr)
+				{
+					func();
+				});
+		}else
+			func();
+	}
+	
+	if(cthis.buff_status.mushroomBuff)
+	{
+		trace("taunt mushroom");
+		var func = function(){
+			var anim = Resource.getSprite(SoftDefines.gfx_teemo_mushroom).GetAnim (2, 70, -160, true);
+			cthis.frontbuffObject.addChild(anim);
+		};
+		if(effFollow != null){
+			effFollow.AddEffectListener(function(arr)
+				{
+					func();
+				});
+		}else
+			func();
+	}
+	
+	var resAnim = cthis.frontbuffObject != null ? cthis.frontbuffObject.getChildByName("res"):null;
+	if(cthis.buff_status.waitRes && resAnim == null)
+	{
+		trace("wait res");
+		var func = function(){
+			var anim = Resource.getSprite(SoftDefines.gfx_battle_ui).GetAnim (DF_BATTLE_UI.anim_card_dead, 70, -160, true);
+			anim.name = "res";
+			cthis.frontbuffObject.addChild(anim);
+		};
+		if(effFollow != null){
+			effFollow.AddEffectListener(function(arr)
+				{
+					func();
+				});
+		}else
+			func();
+	}else if(cthis.buff_status.waitRes == false && resAnim != null)
+	{
+		var func = function(){
+			cthis.mDisplayCard.removeChild(resAnim);	
+		};
+		if(effFollow != null){
+			effFollow.AddEffectListener(function(arr)
+				{
+					func();
+				});
+		}else
+			func();
+	}
+	
+	if(cthis.buff_status.isTaunt)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_mat, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isBleeding)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_giotmau, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isAntiHealing)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_camhoimau, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isMarking)
+	{
+		cthis.buffObject.addChild(Resource.getSprite(define_gfx_icon).GetFrame (sprite_icon.frame_icon_bongma, index *40, 0));
+		index++;
+	}
+	if(cthis.buff_status.isDecoy)
+	{
+		var func = function(){
+			cthis.isLocked = true;
+			var anim = Resource.getSprite(SoftDefines.gfx_wukong_skill).GetAnim (1, 70, -160, false);
+			anim.Scale(1.5, 1.5);
+			cthis.frontbuffObject.addChild(anim);
+			
+			var meff = new AnimEffect(false, anim, 2000, null, false);
+			meff.Init();
+			cthis.mParentFormation.battleState.AddScript(meff);
+			
+			// Actuate.tween(cthis.GetDisplayCard(), 1.0*AbstractEffect.mEffectSpeed, {alpha:1.0}).tween(cthis.GetDisplayCard(), 0.5*AbstractEffect.mEffectSpeed, {alpha:0.0}).tween(cthis.GetDisplayCard(), 0.5*AbstractEffect.mEffectSpeed, {alpha:1.0});
+			var tween = Actuate.tween(cthis.GetDisplayCard(), 0.5*AbstractEffect.mEffectSpeed, {alpha:0.0}).delay(1.0*AbstractEffect.mEffectSpeed).onComplete (function(){
+						Actuate.tween(cthis.GetDisplayCard(), 0.5*AbstractEffect.mEffectSpeed, {alpha:1.0}).onComplete (function(){
+								cthis.isLocked = false;							
+							});
+					});
+
+			meff.AddEffectListener(function (arr){	
+				cthis.frontbuffObject.removeChild(anim);	
+			});	
+		};
+		if(effFollow != null){
+			var cbUpdate = null;
+			cbUpdate = function(obj){
+				if(effFollow.TimeRemaining() < 200)
+				{
+					func();
+				}
+			};
+			effFollow.AddCallbackPerUpdate(cbUpdate);
+			// effFollow.AddEffectListener(function(arr)
+				// {
+					// func();
+				// });
+		}else
+			func();
+	}
+	if(cthis.buff_status.isInvi)
+	{
+		cthis.SetupInvisibleAnim(cthis.buff_status.isInvi != true);
+	}
+	if(cthis.buff_status.isPowerUp)
+	{
+		cthis.SetupPowerUpAnim(cthis.buff_status.isPowerUp != true);	
+	}
+}
+
+var DebuffEffectHit = function()
+{
+	trace("DebuffEffectHit type " + type);
+	trace("SkillInfo.GetSkillEffectType(type) " + SkillInfo.GetSkillEffectType(type));
+	var sprite = Resource.getSprite(define_gfx_text);
+	var frameid = -1;
+	var animSimId = -1;
+	var spriteSimId = -1;
+	var x = 0;
+	var y = 0;
+	var scale = 0.7;
+	var isCenter = false;
+	var timeAnim = 500;
+	var animIndex = 0;
+	var sound = "";
+	cthis.SIZE_TEXT_RATIO = 1.0;
+	var t = SkillInfo.GetSkillEffectType(type);
+	if(t == -1) //stun
+	{
+		return;
+	}else if(t == 1) //stun
+	{
+		target.buff_status.isStun = true;
+		frameid = sprite_text.frame_choang;
+		y = -100;
+	}
+	else if(t == 2) //armor debuff
+	{
+		target.buff_status.isArmorDebuff = true;
+		frameid = sprite_text.frame_phagiap_01;
+	}
+	else if(t == 3) //burn
+	{
+		target.buff_status.isBurned = true;
+		frameid = sprite_text.frame_thieudot;
+		// scale = 1.2;
+		y = 110;
+	}
+	else if(t == 4) //resist magic debuff
+	{
+		target.buff_status.isMagicDebuff = true;
+		frameid = sprite_text.frame_phagiap_02;
+	}
+	else if(t == 5) //heal hp per turn
+		target.buff_status.isPoisoned = true;
+	else if(t == 6) //silent
+	{
+		target.buff_status.isSilent = true;
+		frameid = sprite_text.frame_camlang;
+	}
+	else if(t == 7) //silent
+	{
+		target.buff_status.isFear = true;
+		frameid = sprite_text.frame_sohai;
+	}
+	else if(t == 9) //silent
+	{
+		target.buff_status.isBlind = true;
+		frameid = sprite_text.frame_mu;
+	}
+	else if(t == 10) //silent
+	{
+		target.buff_status.isExor = true;
+		frameid = sprite_text.frame_amanh;
+	}
+	else if(t == 12) //silent
+	{
+		target.buff_status.isBuffDamage = true;
+		frameid = sprite_text.frame_tangsucmanh;	
+	}
+	else if(t == 13) //silent
+		target.buff_status.isShieldBlue = true;		
+	else if(t == 14) //silent
+		cthis.buff_status.isDoubleDamage = true;
+	else if(t == 15) //Decrease MR
+	{
+		spriteSimId = SoftDefines.gfx_effect_violet_yelow;
+		animSimId = 0;
+		scale = 1.0;
+	}
+	else if(t == 16) //silent
+		cthis.buff_status.isAutoRegen = true;		
+	else if(t == 18) //Increase AR
+	{
+		spriteSimId = SoftDefines.gfx_effect_violet_yelow;
+		animSimId = 1;		
+		scale = 1.0;
+	}
+	else if(t == 19) //Increase AR
+		target.buff_status.isRabbit= true;
+	else if(t == 20) //silent
+	{
+		target.buff_status.isUndead = true;
+		frameid = sprite_text.frame_battu;	
+	}
+	else if(t == 21) //silent
+	{
+		target.buff_status.isBleeding = true;
+		frameid = sprite_text.frame_xuathuyet;				
+	}
+	else if(t == 22) //silent
+		target.buff_status.isAntiHealing = true;		
+	else if(t == 23) //silent
+	{
+		target.buff_status.isInvi = true;
+		frameid = sprite_text.frame_tanghinh;
+	}
+	else if(t == 24) //silent
+		target.buff_status.isPowerUp = true;
+	else if(t == 25) //silent
+		target.buff_status.isDecoy = true;	
+	else if(t == 26) //silent
+		target.buff_status.isMarking = true;	
+	else if(t == 46) //silent
+	{
+		target.buff_status.isTaunt = true;
+		frameid = sprite_text.frame_khieukhich;	
+	}
+	else if(t == 47) //buff blue
+	{
+		frameid = sprite_text.frame_tangthu;	
+		
+		spriteSimId = SoftDefines.gfx_buff_boss;
+		animSimId = 1;		
+		scale = 1.0;
+		// isCenter = true;
+		timeAnim = 1500;
+		cthis.mParentFormation.battleState.timeStep -= 1000;
+	}
+	else if(t == 48) //buff red
+	{
+		frameid = sprite_text.frame_tangsucmanh;	
+		
+		spriteSimId = SoftDefines.gfx_buff_boss;
+		animSimId = 0;		
+		scale = 1.0;
+		// isCenter = true;
+		timeAnim = 1500;
+		cthis.mParentFormation.battleState.timeStep -= 1000;
+	}
+	else if(t == 49) //buff purple
+	{
+		frameid = sprite_text.frame_tangall;	
+		spriteSimId = SoftDefines.gfx_buff_boss;
+		animSimId = 2;		
+		scale = 1.0;
+		// isCenter = true;
+		timeAnim = 1500;
+		cthis.mParentFormation.battleState.timeStep -= 1000;
+	}
+	else if(t == 50) //buff purple
+		target.buff_status.immuneMagicYi = true;	
+	else if(t == 51) //buff purple
+		target.buff_status.unbreakableAlistar = true;	
+	else if(t == 52) //mushroom boom
+	{
+		spriteSimId = SoftDefines.gfx_teemo_mushroom;
+		animSimId = 0;
+		timeAnim = 1000;
+		animIndex = -1;
+		sound = Sound.SOUND_TEEMO_BOOM;
+		cthis.mParentFormation.battleState.timeStep -= 700;
+	}
+	else if(t == 53) //buff purple
+		target.buff_status.mushroomBuff = true;
+	else if(t == 54) //buff purple
+		target.buff_status.magicArmor = true;	
+	else if(t == 55) //buff purple
+		target.buff_status.hattung = true;	
+	else if(t == 56) //buff purple
+		target.buff_status.boom = true;
+	else if(t == 57) //silent
+		target.buff_status.isShieldRed = true;
+	else if(t == 58) //silent
+		target.buff_status.isShieldYellow = true;
+	else if(t == 59) //silent
+		target.buff_status.isShieldWhite = true;
+	else if(t == 60)//taunt, shen
+		target.buff_status.kayleUtil = true;
+	else if(t == 61)//taunt, shen
+		target.buff_status.taricUtil = true;
+	else if(t == 62)//taunt, shen
+		target.buff_status.wukongUtil = true;
+	else if(t == 63)//taunt, shen
+		target.buff_status.taricBuff = true;
+	else if(t == 64)//taunt, shen
+		target.buff_status.gnarRage = true;
+	else if(t == 65)//taunt, shen
+	{
+		target.buff_status.vayneBuff = true;
+		target.buff_status.vayneActiveSkill = true;
+	}else if(t == 66)//taunt, shen
+	{
+		target.buff_status.vayneValentineBuff = true;
+		target.buff_status.vayneValentineActiveSkill = true;
+	}else if(t == 67)//ressurect
+		target.buff_status.waitRes = true;
+	else if(t == 68)//ressurect
+		target.buff_status.isShieldPurple = true;
+	else if(t == 69)//knockout leesin shield
+		target.buff_status.isKnockoutLeesin = true;
+	else if(t == 70)//corki passive
+	{
+		target.buff_status.isReductDamage = true;
+		frameid = 23;//sprite_text.frame_giamsucmanh;
+	}
+	else if(t == 71) //ulti yi 3
+		target.buff_status.immuneMagicYi3 = true;
+
+	target.UpdateBuffStatus();
+	var funcScaleText = function(){};
+	if(frameid != -1)
+	{
+		funcScaleText = function(){
+			var frame = sprite.GetFrame (frameid, target.xOri, target.yOri + 50);
+			
+			frame.Scale(scale, scale);
+			target.ZoomOutInEffect(frame, effFollow);
+		}
+	}
+	if(animSimId != -1 && spriteSimId != -1)
+	{
+		var xTarget = Std_int(target.xOri);
+		var yTarget = Std_int(target.yOri);
+		if(isCenter)
+		{
+			xTarget = 0;
+			yTarget = target.GetFormation().IsPlayer() ? (280) : (-280);
+		}   
+		var shootanim = Resource.getSprite(spriteSimId).GetAnim (animSimId, xTarget, yTarget, false);
+		shootanim.Scale(scale, scale);
+		if(target.buffEff != null)
+			target.buffEff.AddEffectListener(function (arr) 
+			{
+				if(sound != "")
+					Sound.GetSound(sound).Play();	
+				funcScaleText();
+				target.mParentFormation.battleState.battleLayer.add(shootanim);
+				if(animIndex != -1)
+					target.mParentFormation.battleState.battleLayer.setChildIndex(shootanim, animIndex);
+			});
+		else
+		{
+			if(sound != "")
+				Sound.GetSound(sound).Play();	
+			funcScaleText();
+			target.mParentFormation.battleState.battleLayer.add(shootanim);
+			if(animIndex != -1)
+				target.mParentFormation.battleState.battleLayer.setChildIndex(shootanim, animIndex);
+		}
+
+		target.buffEff = new AnimEffect(false, shootanim, timeAnim, target.buffEff);
+		target.buffEff.AddObject(target.GetDisplayCard());
+		target.buffEff.SetEffectListener(function (arr) 
+				{
+					target.mParentFormation.battleState.battleLayer.remove(shootanim);
+					target.buffEff = null;
+				});
+		target.buffEff.Init();
+		target.mParentFormation.battleState.AddScript(target.buffEff);		
+	}else
+		funcScaleText();
+}
+
+var ResetBuffStatus = function(){
+	if(cthis.buffObject != null)
+		cthis.buffObject.removeAllChildren();
+	if(cthis.frontbuffObject != null)
+		cthis.frontbuffObject.removeAllChildren();
+	if(cthis.backbuffObject != null)
+		cthis.backbuffObject.removeAllChildren();
+	if(cthis.effectObjects != null)	
+	{
+		for(obj in cthis.effectObjects)
+			EffectBattleFactory.sCurState.textLayer.remove(obj);
+		cthis.effectObjects = [];
+	}
+	cthis.SetupInvisibleAnim(true);
+	cthis.SetupPowerUpAnim(true);
+	if(cthis.mDisplayCard != null && cthis.mDisplayCard.getChildByName("rage") != null)
+		cthis.mDisplayCard.removeChild(cthis.mDisplayCard.getChildByName("rage"));
+}
+
+if(func == "RemoveDebuffEffect")
+	RemoveDebuffEffect();
+if(func == "UpdateBuffStatus")
+	UpdateBuffStatus();
+if(func == "ResetBuffStatus")
+	ResetBuffStatus();
+if(func == "DebuffEffectHit")
+	DebuffEffectHit();

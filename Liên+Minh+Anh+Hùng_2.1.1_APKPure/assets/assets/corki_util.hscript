@@ -1,0 +1,117 @@
+var Math = Type.resolveClass ("Math");
+
+var OnFinishHideEffect = function (arr) { for(obj in arr) sCurLayer.remove(obj); }
+
+var MATH_PI = 3.141592653589793;
+
+var FocusCard = function (obj) 
+{
+	var focusBg = Resource.getSprite ("GFX_EFFECT_COVER", true).GetFrame (0);
+	focusBg.x = - GraphicsConfig.VIEW_WIDTH / 2;
+	focusBg.y = - GraphicsConfig.VIEW_HEIGHT / 2;
+	focusBg.scaleX = GraphicsConfig.VIEW_WIDTH / focusBg.data.bound.width;
+	focusBg.scaleY = GraphicsConfig.VIEW_HEIGHT / focusBg.data.bound.height;
+	focusBg.alpha = 0.0;
+	
+	sCurLayer.add (focusBg);
+	
+	var showFocus = new OpacityEffect(focusBg, 0.8, 200, null);
+	showFocus.Init();	
+	sCurState.AddScript(showFocus);
+	return focusBg;
+}
+var focusBg = FocusCard(attacker);
+attacker.isLocked = true;	
+attacker.GetDisplayCard().moveToTop();
+
+var isPlayer = attacker.GetFormation().IsPlayer();
+var effectSprite = Resource.getSprite (spriteId);
+var castAnim = effectSprite.GetAnim (castAnimId, Std_int(attacker.xOri), Std_int(attacker.yOri), false, renderMode);
+if(!isPlayer) castAnim.SetRotate (180);
+sCurLayer.add(castAnim);
+var castEffect = new SimulateAnimEffect(attacker.GetDisplayCard(), castAnim, 1000);
+castEffect.Init();
+castEffect.SetEffectListener(function (arr) 
+{
+	sCurLayer.remove(castAnim);
+	sCurLayer.remove(focusBg);
+});
+sCurState.AddScript(castEffect);
+
+var endEffect = [];
+var hitAnimArray = [];
+var lastEffect = castEffect;
+var length = defender.length;
+var index = 0;
+var speed2 = 0.9;
+while (index < length)
+{
+	var card = defender [index ++];
+	var centerX = card.GetDisplayCard().x;
+	var centerY = card.GetDisplayCard().y;
+	var deltaX = centerX - attacker.xOri;
+	var deltaY = centerY - attacker.yOri;
+	var angle = Math.atan2 (deltaY, deltaX) * 180 / MATH_PI;
+	var length2 = Math.sqrt (deltaX * deltaX + deltaY * deltaY);
+	var time = length2 / speed2;
+	var lastHit = index == length;
+	speed2 += 0.1;
+	
+	var arrow = effectSprite.GetAnim (lastHit ? travAnimBig : travAnim, attacker.xOri, attacker.yOri, true, renderMode);
+	arrow.scaleX = arrow.scaleY = (lastHit ? 1 : 0.75);
+	arrow.SetOpacity (0);
+	arrow.SetRotate (angle + 90);
+	sCurLayer.add (arrow);	
+	
+	var meff = new MovingEffect (arrow, deltaX, deltaY, time, lastEffect);
+	if (lastHit)
+	{
+		meff.SetEffectListener (OnFinishHideEffect);
+		meff.AddEffectListener (function OnFinishHideEffect(arr)
+		{
+			attacker.isLocked = false;
+			Sound.GetSound(sound).Play();
+			sCurLayer.remove (arrow);
+		});
+	}
+	else meff.AddEffectListener (function OnFinishHideEffect(arr)
+	{
+		Sound.GetSound(sound).Play();
+		sCurLayer.remove (arrow);
+	});
+	
+	meff.Init();
+	sCurState.AddScript(meff);
+	
+	var showeff = new OpacityEffect(arrow, 1.0, 50, lastEffect);
+	showeff.Init();
+	sCurState.AddScript (showeff);
+	
+	lastEffect = showeff;
+
+	var hAnim = effectSprite.GetAnim (hitAnim, Std_int(card.xOri), Std_int(card.yOri), false, renderMode);
+	hAnim.SetOpacity (0);
+	if (card.isBoss)
+		hAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);
+	
+	var showHitEff = new OpacityEffect (hAnim, 1.0, 20, meff);
+	showHitEff.Init();
+	sCurState.AddScript(showHitEff);
+	
+	var aeff = new AnimEffect (false, hAnim, 666, meff);
+	aeff.Init();
+	aeff.AddEffectListener(function (arr)
+	{
+		sCurLayer.remove (hAnim);
+	});
+	sCurState.AddScript(aeff);
+	
+	sCurLayer.add (hAnim);
+	
+	var anim = new SimulateAnimEffect (card.GetDisplayCard(), hAnim, 666, meff);			
+	anim.Init();
+	sCurState.AddScript(anim);
+	
+	endEffect.push(anim);
+}
+endEffect;

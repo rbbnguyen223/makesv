@@ -1,0 +1,252 @@
+===== crash #00 - null ptr r4+0x20: 0x7AF92C =====
+  0x07AD758  (khong co ten)
+  0x07AD778  (khong co ten)
+  0x07AD794  (khong co ten)
+  0x07ADEC8  (khong co ten)
+  0x07ADF2C  (khong co ten)
+  0x07ADFE8  (khong co ten)
+  0x07AE044  o_lb
+  0x07AEA8C  (khong co ten)
+  0x07AEB1C  (khong co ten)
+  0x07AEC78  (khong co ten)
+  0x07AEF00  (khong co ten)  <== CHUA DIA CHI NAY
+  0x07AFBB8  (khong co ten)
+  0x07AFBF8  (khong co ten)
+  0x07AFC38  (khong co ten)
+  0x07AFCA0  stick.wav
+  0x07AFE3C  (khong co ten)
+  0x07AFF14  card1
+  0x07B0414  (khong co ten)
+  0x07B0AB4  (khong co ten)
+  0x07B0AE4  (khong co ten)
+  0x07B0B14  (khong co ten)
+
+===== frame #01: 0x7AC874 =====
+  0x07A9DD8  (khong co ten)
+  0x07A9F58  (khong co ten)
+  0x07AA1E8  (khong co ten)
+  0x07AA270  RAID_BOSS_REBORN
+  0x07AAFA0  (khong co ten)
+  0x07AB2E4  (khong co ten)
+  0x07AB62C  (khong co ten)
+  0x07AB8F8  (khong co ten)
+  0x07ABBDC  (khong co ten)
+  0x07ABF38  (khong co ten)
+  0x07AC858  (khong co ten)  <== CHUA DIA CHI NAY
+  0x07AC894  (khong co ten)
+  0x07AC8BC  (khong co ten)
+  0x07AC8D4  (khong co ten)
+  0x07AC8FC  (khong co ten)
+  0x07AC934  (khong co ten)
+  0x07AC95C  (khong co ten)
+  0x07AD008  (khong co ten)
+  0x07AD03C  (khong co ten)
+  0x07AD0B4  (khong co ten)
+  0x07AD14C  GameStateNewbie
+
+===== frame #02: 0x7AC8C8 =====
+  0x07AA1E8  (khong co ten)
+  0x07AA270  RAID_BOSS_REBORN
+  0x07AAFA0  (khong co ten)
+  0x07AB2E4  (khong co ten)
+  0x07AB62C  (khong co ten)
+  0x07AB8F8  (khong co ten)
+  0x07ABBDC  (khong co ten)
+  0x07ABF38  (khong co ten)
+  0x07AC858  (khong co ten)
+  0x07AC894  (khong co ten)
+  0x07AC8BC  (khong co ten)  <== CHUA DIA CHI NAY
+  0x07AC8D4  (khong co ten)
+  0x07AC8FC  (khong co ten)
+  0x07AC934  (khong co ten)
+  0x07AC95C  (khong co ten)
+  0x07AD008  (khong co ten)
+  0x07AD03C  (khong co ten)
+  0x07AD0B4  (khong co ten)
+  0x07AD14C  GameStateNewbie
+  0x07AD214  (khong co ten)
+  0x07AD248  (khong co ten)
+
+===== frame #03: 0x8077A4 =====
+  0x08074E0  (khong co ten)
+  0x0807510  (khong co ten)
+  0x080752C  (khong co ten)
+  0x0807560  (khong co ten)
+  0x08075C4  (khong co ten)
+  0x0807620  (khong co ten)
+  0x0807648  (khong co ten)
+  0x08076B4  (khong co ten)
+  0x08076DC  (khong co ten)
+  0x0807750  (khong co ten)
+  0x0807778  (khong co ten)  <== CHUA DIA CHI NAY
+  0x08077F4  (khong co ten)
+  0x080781C  (khong co ten)
+  0x080783C  (khong co ten)
+  0x080786C  (khong co ten)
+  0x08078B4  (khong co ten)
+  0x08078DC  (khong co ten)
+  0x0807930  (khong co ten)
+  0x0807970  (khong co ten)
+  0x0807A08  (khong co ten)
+  0x0807ADC  (khong co ten)
+
+===== frame #04: 0x7AD624 =====
+  0x07AD03C  (khong co ten)
+  0x07AD0B4  (khong co ten)
+  0x07AD14C  GameStateNewbie
+  0x07AD214  (khong co ten)
+  0x07AD248  (khong co ten)
+  0x07AD2E8  (khong co ten)
+  0x07AD358  (khong co ten)
+  0x07AD4F8  (khong co ten)
+  0x07AD574  (khong co ten)
+  0x07AD5A0  (khong co ten)
+  0x07AD61C  (khong co ten)  <== CHUA DIA CHI NAY
+  0x07AD66C  (khong co ten)
+  0x07AD68C  (khong co ten)
+  0x07AD6AC  (khong co ten)
+  0x07AD6C8  (khong co ten)
+  0x07AD6D8  (khong co ten)
+  0x07AD718  (khong co ten)
+  0x07AD738  (khong co ten)
+  0x07AD758  (khong co ten)
+  0x07AD778  (khong co ten)
+  0x07AD794  (khong co ten)
+
+===== frame #05: 0x7B3D18 =====
+  0x07B2044  stick.wav
+  0x07B21E0  stick.wav
+  0x07B2364  stick.wav
+  0x07B24E8  (khong co ten)
+  0x07B25C0  (khong co ten)
+  0x07B2948  (khong co ten)
+  0x07B3240  (khong co ten)
+  0x07B35C4  (khong co ten)
+  0x07B3CA4  (khong co ten)
+  0x07B3CD4  (khong co ten)
+  0x07B3CFC  (khong co ten)  <== CHUA DIA CHI NAY
+  0x07B3D24  (khong co ten)
+  0x07B3D4C  (khong co ten)
+  0x07B3D74  (khong co ten)
+  0x07B3DA4  (khong co ten)
+  0x07B3DD8  (khong co ten)
+  0x07B3E50  (khong co ten)
+  0x07B3EA4  GetCurrentState
+  0x07B4070  (khong co ten)
+  0x07B40A8  (khong co ten)
+  0x07B4130  GameStateManager
+
+===== frame #06: 0xBFA000 =====
+  0x0BF8270  (khong co ten)
+  0x0BF82D0  (khong co ten)
+  0x0BF83B8  (khong co ten)
+  0x0BF8420  (khong co ten)
+  0x0BF8A28  (khong co ten)
+  0x0BF8A5C  (khong co ten)
+  0x0BF8A90  (khong co ten)
+  0x0BF8B4C  (khong co ten)
+  0x0BF9EA4  (khong co ten)
+  0x0BF9F28  (khong co ten)
+  0x0BF9FE8  (khong co ten)  <== CHUA DIA CHI NAY
+  0x0BFA050  (khong co ten)
+  0x0BFAAF8  (khong co ten)
+  0x0BFAC00  (khong co ten)
+  0x0BFAE50  TEXT_NOTIFY_LEAVING_SOLONG
+  0x0BFB8C0  WEBVIEW_CHANGE
+  0x0BFB9A0  (khong co ten)
+  0x0BFBAD0  (khong co ten)
+  0x0BFBEC8  (khong co ten)
+  0x0BFBEF8  (khong co ten)
+  0x0BFBF28  (khong co ten)
+
+===== frame #07: 0xBF80A8 =====
+  0x0BF68FC  (khong co ten)
+  0x0BF691C  (khong co ten)
+  0x0BF6940  (khong co ten)
+  0x0BF69E8  (khong co ten)
+  0x0BF6A84  (khong co ten)
+  0x0BF6AA0  (khong co ten)
+  0x0BF7D90  (khong co ten)
+  0x0BF7F1C  inactive
+  0x0BF7FA4  (khong co ten)
+  0x0BF7FBC  (khong co ten)
+  0x0BF8034  (khong co ten)  <== CHUA DIA CHI NAY
+  0x0BF80C0  (khong co ten)
+  0x0BF816C  (khong co ten)
+  0x0BF8270  (khong co ten)
+  0x0BF82D0  (khong co ten)
+  0x0BF83B8  (khong co ten)
+  0x0BF8420  (khong co ten)
+  0x0BF8A28  (khong co ten)
+  0x0BF8A5C  (khong co ten)
+  0x0BF8A90  (khong co ten)
+  0x0BF8B4C  (khong co ten)
+
+===== frame #08: 0xBF54F8 =====
+  0x0BF402C  (khong co ten)
+  0x0BF4048  (khong co ten)
+  0x0BF4068  (khong co ten)
+  0x0BF4130  (khong co ten)
+  0x0BF41BC  (khong co ten)
+  0x0BF41E0  (khong co ten)
+  0x0BF4248  (khong co ten)
+  0x0BF4268  _instance
+  0x0BF53D8  (khong co ten)
+  0x0BF540C  (khong co ten)
+  0x0BF5484  (khong co ten)  <== CHUA DIA CHI NAY
+  0x0BF5540  (khong co ten)
+  0x0BF55FC  (khong co ten)
+  0x0BF5628  (khong co ten)
+  0x0BF5654  (khong co ten)
+  0x0BF5680  (khong co ten)
+  0x0BF56AC  (khong co ten)
+  0x0BF5770  (khong co ten)
+  0x0BF57A4  PixmaGame
+  0x0BF5810  PixmaGame
+  0x0BF58C8  (khong co ten)
+
+===== frame #09 - entry/game loop: 0xC9F100 =====
+  0x0C9EAF8  Class
+  0x0C9EC0C  false
+  0x0C9ED2C  (khong co ten)
+  0x0C9EDB8  (khong co ten)
+  0x0C9EE28  (khong co ten)
+  0x0C9EEE4  (khong co ten)
+  0x0C9F014  #sfunction0
+  0x0C9F034  #sfunction0
+  0x0C9F084  #function1
+  0x0C9F09C  #function1
+  0x0C9F0EC  #sfunction1  <== CHUA DIA CHI NAY
+  0x0C9F13C  #function2
+  0x0C9F190  #sfunction2
+  0x0C9F1E0  #function3
+  0x0C9F238  #sfunction3
+  0x0C9F298  #function4
+  0x0C9F2F4  #sfunction4
+  0x0C9F35C  #function5
+  0x0C9F3C8  #sfunction5
+  0x0C9F438  #vfunction
+  0x0C9F4AC  #vsfunction
+
+===== vá 1-patch giữ lại: 0x4D9984 =====
+  0x04D85B8  (khong co ten)
+  0x04D8664  (khong co ten)
+  0x04D876C  pack
+  0x04D8B28  (khong co ten)
+  0x04D9374  (khong co ten)
+  0x04D93B4  (khong co ten)
+  0x04D93FC  (khong co ten)
+  0x04D9594  (khong co ten)
+  0x04D9708  (khong co ten)
+  0x04D9780  (khong co ten)
+  0x04D998C  user_leveling  <== CHUA DIA CHI NAY
+  0x04DAE3C  (khong co ten)
+  0x04DAE58  (khong co ten)
+  0x04DB008  (khong co ten)
+  0x04DB040  (khong co ten)
+  0x04DB210  (khong co ten)
+  0x04DB250  contents
+  0x04DB460  (khong co ten)
+  0x04DB4A0  (khong co ten)
+  0x04DB630  (khong co ten)
+  0x04DB69C  (khong co ten)

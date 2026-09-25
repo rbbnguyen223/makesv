@@ -1,0 +1,116 @@
+var OnFinishHideEffect = function (arr) 
+{
+	for(obj in arr)
+		sCurLayer.remove(obj);
+}
+
+var FocusCard = function (obj) 
+{
+	var focusBg = Resource.getSprite ("GFX_EFFECT_COVER", true).GetFrame (0);
+	focusBg.x = - GraphicsConfig.VIEW_WIDTH / 2;
+	focusBg.y = - GraphicsConfig.VIEW_HEIGHT / 2;
+	focusBg.scaleX = GraphicsConfig.VIEW_WIDTH / focusBg.data.bound.width;
+	focusBg.scaleY = GraphicsConfig.VIEW_HEIGHT / focusBg.data.bound.height;
+	focusBg.alpha = 0.0;
+	
+	sCurLayer.add (focusBg);
+	
+	var showFocus = new OpacityEffect(focusBg, 0.8, 200, null);
+	showFocus.Init();	
+	sCurState.AddScript(showFocus);
+	return focusBg;
+}
+var focusBg = FocusCard(attacker);
+attacker.isLocked = true;	
+attacker.GetDisplayCard().moveToTop();
+
+var atkUp = 7;
+var atkDown = 6;
+var hit = 2; 
+
+if(element == "fire")
+{
+	atkUp = 7;
+	atkDown = 6;
+	hit = 2; 
+}
+else if(element == "ice")
+{
+	atkUp = 15;
+	atkDown = 14;
+	hit = 10; 
+}
+
+var endEff = [];
+var hideeff = new OpacityEffect(attacker.GetDisplayCard(), -1, 100, null);
+hideeff.Init();
+sCurState.AddScript(hideeff);
+
+var atkX = 0;
+var atkY = 0;
+
+var sprite = Resource.getSprite (spriteId);
+var atkAnim = sprite.GetAnim (attacker.GetFormation().IsPlayer()?atkUp:atkDown, Std_int(atkX), Std_int(atkY), false, renderMode);
+
+var atkEff = new SimulateAnimEffect(attacker.GetDisplayCard(), atkAnim, 1700, hideeff);
+atkEff.AddEffectListener(function OnFinishHideEffect(arr)
+{
+	sCurLayer.remove(atkAnim);
+	attacker.ResetPosition();
+});
+atkEff.Init();
+sCurState.AddScript(atkEff);
+	
+hideeff.AddEffectListener(function OnFinishHideEffect(arr)
+{
+	attacker.GetDisplayCard().moveToTop ();
+	attacker.GetDisplayCard().x = atkX;
+	attacker.GetDisplayCard().y = atkY;
+	sCurLayer.add(atkAnim);						
+	attacker.GetDisplayCard().SetOpacity(1.0);
+});
+
+var i = 0;
+var dependAnim = atkEff;
+for(card in defender)
+{
+	var hitAnim = sprite.GetAnim (hit, Std_int(card.xOri), Std_int(card.yOri), false, renderMode);
+
+	if(card.isBoss)
+		hitAnim.Scale(GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS, GameStateCardBattle.SCALE_RATIO_NORMAL_BOSS);	
+	
+	var hitEff = new SimulateAnimEffect(card.GetDisplayCard(), hitAnim, 1000, atkEff);
+	hitEff.AddEffectListener(function OnFinishHideEffect(arr)
+	{
+		sCurLayer.remove(hitAnim);
+		
+		if(i == defender.length - 1)
+			cast(sCurState, GameStateBattleDungeon).nextStep = true;
+	});						
+	hitEff.Init();
+	sCurState.AddScript(hitEff);
+	endEff.push(hitEff);
+	
+	var cbUpdate = null;
+	cbUpdate = function(obj)
+	{
+		if(atkEff.TimeRemaining() < 700*AbstractEffect.mEffectSpeed)
+		{
+			sCurLayer.remove(focusBg);
+			sCurLayer.add(hitAnim);
+			hitEff.SetDependEffect(null);	
+			atkEff.RemoveCallbackPerUpdate(cbUpdate);
+			Sound.GetSound(Sound.SOUND_LIASSANDRA_BASICATTACK_NAME).Play();	
+		}
+	};
+	atkEff.AddCallbackPerUpdate(cbUpdate);
+
+	i++;
+	dependAnim = hitEff;
+}
+
+dependAnim.AddEffectListener (function OnFinishHideEffect(arr)
+{
+	attacker.isLocked = false;
+});
+endEff

@@ -1,0 +1,24 @@
+{
+  "info": [
+    {
+      "name": "Calculator",
+	  "disableInAsset":true,
+	  "disableFromServer":false,
+    },
+    {
+      "name": "CongratulateElement",
+	  "disableInAsset":false,
+	  "disableFromServer":false,
+    },
+    {
+      "name": "skill_map",
+	  "disableInAsset":false,
+	  "disableFromServer":false,
+    },
+    {
+      "name": "effect_card",
+	  "disableInAsset":false,
+	  "disableFromServer":false,
+    }
+  ]
+}
