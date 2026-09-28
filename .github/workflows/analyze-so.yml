@@ -23,9 +23,11 @@ jobs:
           echo '=== KEY STRINGS ==='
           strings -a -t x "$SO" | grep -Ei 'register|loginGame|CreateCharacter|GameStateNewbie|character|heroId|hasRole|isNew|roleName|newbie|gateway|socket|session|enter.?game|game.?data|error' | head -n 1000
           echo '=== DISASM KNOWN FUNCTIONS ==='
-          arm-linux-gnueabi-objdump -D -m arm --adjust-vma=0x10000 "$SO" > /tmp/dis.txt
-          for r in '7c2af4 7c2df0' 'd0b504 d0b850' 'd1f834 d1fb80'; do
+          for r in '7c2af4 7c2df0' 'd0b504 d0b850' 'd1f834 d1fb80' 'd0f834 d0f978'; do
             set -- $r
             echo "--- $1..$2 ---"
-            sed -n "/^[[:space:]]*0x\?$1:/,/^[[:space:]]*0x\?$2:/p" /tmp/dis.txt | head -n 700
+            arm-linux-gnueabi-objdump -d -m arm --adjust-vma=0x10000 --start-address=0x$1 --stop-address=0x$2 "$SO"
           done
+          echo '=== PROTOCOL STRINGS ONLY ==='
+          strings -a -t x "$SO" | grep -Ei '^ *[0-9a-f]+ +(register|loginGame|loginGameMapping|loginSessionRequest|loginSessionNewRequest|hasRole|isNew|heroId|roleName|uid|userId|list_character|FinishRegister|Start Session|STATE_REGISTERING|STATE_ON_ERROR|error_code|ERROR_CODE|ERROR_MESSAGE|SESSION_ID|connectSession|setSession)
+ || true
