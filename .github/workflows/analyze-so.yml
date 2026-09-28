@@ -26,7 +26,13 @@ jobs:
           for r in '7c2af4 7c2df0' 'd0b504 d0b850' 'd1f834 d1fb80' 'd0f834 d0f978'; do
             set -- $r
             echo "--- $1..$2 ---"
-            arm-linux-gnueabi-objdump -d -m arm --adjust-vma=0x10000 --start-address=0x$1 --stop-address=0x$2 "$SO"
+            echo "ARM:"; arm-linux-gnueabi-objdump -d -m arm --adjust-vma=0x10000 --start-address=0x$1 --stop-address=0x$2 "$SO"
+            echo "THUMB:"; arm-linux-gnueabi-objdump -d -m arm --adjust-vma=0x10000 -M force-thumb --start-address=0x$1 --stop-address=0x$2 "$SO"
+          done
+          echo '=== XREF CONSTANT SEARCH ==='
+          for a in cece1c cece34 cece44 cfc414 ce7e38 ceb208 d03d48; do
+            echo "--- references to 0x$a ---"
+            arm-linux-gnueabi-objdump -d -m arm --adjust-vma=0x10000 "$SO" | grep -Ei "($a|$(printf '%x' $((0x$a-0x10000))))" | head -n 80
           done
           echo '=== PROTOCOL STRINGS ONLY ==='
           strings -a -t x "$SO" | grep -Ei '^ *[0-9a-f]+ +(register|loginGame|loginGameMapping|loginSessionRequest|loginSessionNewRequest|hasRole|isNew|heroId|roleName|uid|userId|list_character|FinishRegister|Start Session|STATE_REGISTERING|STATE_ON_ERROR|error_code|ERROR_CODE|ERROR_MESSAGE|SESSION_ID|connectSession|setSession)' || true
