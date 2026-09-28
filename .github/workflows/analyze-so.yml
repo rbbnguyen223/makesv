@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - libApplicationMain.so
+      - rebuild.py
       - .github/workflows/analyze-so.yml
   workflow_dispatch:
 permissions:
