@@ -29,5 +29,4 @@ jobs:
             arm-linux-gnueabi-objdump -d -m arm --adjust-vma=0x10000 --start-address=0x$1 --stop-address=0x$2 "$SO"
           done
           echo '=== PROTOCOL STRINGS ONLY ==='
-          strings -a -t x "$SO" | grep -Ei '^ *[0-9a-f]+ +(register|loginGame|loginGameMapping|loginSessionRequest|loginSessionNewRequest|hasRole|isNew|heroId|roleName|uid|userId|list_character|FinishRegister|Start Session|STATE_REGISTERING|STATE_ON_ERROR|error_code|ERROR_CODE|ERROR_MESSAGE|SESSION_ID|connectSession|setSession)
- || true
+          strings -a -t x "$SO" | grep -Ei '^ *[0-9a-f]+ +(register|loginGame|loginGameMapping|loginSessionRequest|loginSessionNewRequest|hasRole|isNew|heroId|roleName|uid|userId|list_character|FinishRegister|Start Session|STATE_REGISTERING|STATE_ON_ERROR|error_code|ERROR_CODE|ERROR_MESSAGE|SESSION_ID|connectSession|setSession)' || true
