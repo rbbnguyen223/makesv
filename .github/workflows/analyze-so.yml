@@ -1,0 +1,61 @@
+name: Analyze libApplicationMain.so
+
+on:
+  push:
+    paths:
+      - libApplicationMain.so
+      - .github/workflows/analyze-so.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ARM binutils
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq binutils-arm-linux-gnueabi
+      - name: Analyze binary
+        shell: bash
+        run: |
+          set -e
+          SO=libApplicationMain.so
+          echo '=== FILE ==='
+          ls -l "$SO"
+          file "$SO"
+          readelf -h "$SO" | sed -n '1,25p'
+          echo '=== SECTIONS ==='
+          readelf -S "$SO" | sed -n '1,80p'
+          echo '=== KEY STRINGS ==='
+          strings -a -t x "$SO" | grep -Ei 'register|loginGame|login|CreateCharacter|GameStateNewbie|character|heroId|hasRole|isNew|roleName|Tải dữ liệu|load.*data|newbie|gateway|server|socket|handshake|session|enter.?game|game.?data|error' | head -n 500
+          echo '=== DISASM KNOWN FUNCTIONS ==='
+          arm-linux-gnueabi-objdump -D -m arm --adjust-vma=0x10000 "$SO" > /tmp/all.dis
+          for r in '0x7c2af4 0x7c2df0' '0xd0b504 0xd0b850' '0xd1f834 0xd1fb80'; do
+            set -- $r
+            echo "--- $1..$2 ---"
+            sed -n "/^[[:space:]]*$1:/,/^[[:space:]]*$2:/p" /tmp/all.dis | head -n 700
+          done
+          echo '=== XREF-LIKE REFERENCES TO PROTOCOL STRINGS ==='
+          python3 - <<'PY'
+          import re, subprocess
+          s=open('libApplicationMain.so','rb').read()
+          needles=[b'register',b'loginGame',b'hasRole',b'isNew',b'heroId',b'roleName',b'CreateCharacter',b'GameStateNewbie',b'Tai du lieu',b'character']
+          for n in needles:
+              pos=0
+              found=[]
+              while True:
+                  p=s.find(n,pos)
+                  if p<0: break
+                  found.append(p+0x10000); pos=p+1
+              print(f'-- {n.decode(errors="replace")} strings: {[hex(x) for x in found[:20]]}')
+              for a in found[:10]:
+                  h=f'{a:x}'
+                  hits=[]
+                  for line in open('/tmp/all.dis',errors='ignore'):
+                      if h in line:
+                          hits.append(line.rstrip())
+                          if len(hits)>=20: break
+                  for line in hits: print(line)
+          PY
