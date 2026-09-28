@@ -1,6 +1,7 @@
 # ==============================================================================
 # Project: Offline Local Mock Server for LMHB (lmah.vn)
 # Version: 3.9.7 - Full Code: Force Pre-existing Character on Gateway & TCP
+# Deep protocol analysis pending
 # ==============================================================================
 
 import asyncio
